@@ -1,0 +1,73 @@
+Received: from exchng4.physics.ox.ac.uk (163.1.244.243) by
+ EXCHANGE-CAS1.physics.ox.ac.uk (163.1.74.82) with Microsoft SMTP Server id
+ 14.1.323.3; Sat, 8 Oct 2011 16:07:02 +0100
+Received: from relay9.mail.ox.ac.uk ([163.1.2.169]) by
+ exchng4.physics.ox.ac.uk with Microsoft SMTPSVC(6.0.3790.4675);	 Sat, 8 Oct
+ 2011 16:07:01 +0100
+Received: from sx003.ddc-nl0105.slb.com ([199.6.154.22]
+ helo=nl0105mta01.mail.slb.com)	by relay9.mail.ox.ac.uk with esmtp (Exim 4.75)
+	(envelope-from <MSanders@slb.com>)	id 1RCYUP-0005YH-Vg	for
+ lhsee@physics.ox.ac.uk; Sat, 08 Oct 2011 16:07:02 +0100
+Received: from nl0105mta01.mail.slb.com (localhost.localdomain [127.0.0.1])	by
+ localhost (Postfix) with SMTP id DCA35590849	for <lhsee@physics.ox.ac.uk>;
+ Sat,  8 Oct 2011 15:06:59 +0000 (GMT)
+Received: from NL0230MBX02N1.DIR.slb.com (nl0230mbx02n1.dir.slb.com
+ [199.6.132.7])	(using TLSv1 with cipher AES128-SHA (128/128 bits))	(No client
+ certificate requested)	by nl0105mta01.mail.slb.com (Postfix) with ESMTPS id
+ C60E75906A3	for <lhsee@physics.ox.ac.uk>; Sat,  8 Oct 2011 15:06:59 +0000
+ (GMT)
+Received: from NL0230MBX05N2.DIR.slb.com (199.6.133.13) by
+ NL0230MBX02N1.DIR.slb.com (199.6.132.7) with Microsoft SMTP Server (TLS) id
+ 14.1.270.1; Sat, 8 Oct 2011 17:06:59 +0200
+Received: from NL0230MBX03N1.DIR.slb.com ([169.254.1.116]) by
+ NL0230MBX05N2.DIR.slb.com ([169.254.2.58]) with mapi id 14.01.0270.001; Sat,
+ 8 Oct 2011 17:06:59 +0200
+From: Michael Sanders <MSanders@slb.com>
+To: LHSee <lhsee@physics.ox.ac.uk>
+Subject: Application Feedback
+Thread-Topic: Application Feedback
+Thread-Index: AcyFy+wRgl7SCRYjRt+1+vkUo+Smkw==
+Date: Sat, 8 Oct 2011 16:06:57 +0100
+Message-ID: <v182v672x0m3aiw3goov949s.1318086456698@email.android.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: EXCHANGE-CAS1.physics.ox.ac.uk
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-SCL: 3
+X-MS-TNEF-Correlator:
+Content-Type: multipart/alternative;
+	boundary="_000_v182v672x0m3aiw3goov949s1318086456698emailandroidcom_"
+MIME-Version: 1.0
+
+--_000_v182v672x0m3aiw3goov949s1318086456698emailandroidcom_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+DQoNCioqKiBQbGVhc2Ugc2VuZCB0aGlzIGVtYWlsIG1lc3NhZ2UgYXMgaXQgaXMgY3VycmVudGx5
+IGZvcm1hdHRlZC4gVGhhbmtzISAqKioNCjxhbnN3ZXJGb3JtPg0KPHExPkZhaXJseSBJbnRlcmVz
+dGVkLjwvcTE+DQo8cTI+TmVpdGhlciBhZ3JlZSBvciBkaXNhZ3JlZTwvcTI+DQo8cTM+TmVpdGhl
+ciBhZ3JlZSBvciBkaXNhZ3JlZTwvcTM+DQo8cTQ+TmVpdGhlciBhZ3JlZSBvciBkaXNhZ3JlZTwv
+cTQ+DQo8cTU+NTErIHllYXJzIG9sZC48L3E1Pg0KPHE2PkRlZ3JlZSBsZXZlbC48L3E2Pg0KPG90
+aGVyPjwvb3RoZXI+DQo8bG9jPkdCPC9sb2M+DQoNCjwvYW5zd2VyRm9ybT5TZW50IGZyb20gU2Ft
+c3VuZyBNb2JpbGUNCg==
+
+--_000_v182v672x0m3aiw3goov949s1318086456698emailandroidcom_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <936CB26ED6DA664D8E2BAFE96D41F18B@slb.com>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5Pg0KPGJyPg0KPGJyPg0K
+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTo4NyUiPioqKiBQbGVhc2Ugc2VuZCB0aGlzIGVtYWlsIG1l
+c3NhZ2UgYXMgaXQgaXMgY3VycmVudGx5IGZvcm1hdHRlZC4gVGhhbmtzISAqKio8YnI+DQombHQ7
+YW5zd2VyRm9ybSZndDs8YnI+DQombHQ7cTEmZ3Q7RmFpcmx5IEludGVyZXN0ZWQuJmx0Oy9xMSZn
+dDs8YnI+DQombHQ7cTImZ3Q7TmVpdGhlciBhZ3JlZSBvciBkaXNhZ3JlZSZsdDsvcTImZ3Q7PGJy
+Pg0KJmx0O3EzJmd0O05laXRoZXIgYWdyZWUgb3IgZGlzYWdyZWUmbHQ7L3EzJmd0Ozxicj4NCiZs
+dDtxNCZndDtOZWl0aGVyIGFncmVlIG9yIGRpc2FncmVlJmx0Oy9xNCZndDs8YnI+DQombHQ7cTUm
+Z3Q7NTEmIzQzOyB5ZWFycyBvbGQuJmx0Oy9xNSZndDs8YnI+DQombHQ7cTYmZ3Q7RGVncmVlIGxl
+dmVsLiZsdDsvcTYmZ3Q7PGJyPg0KJmx0O290aGVyJmd0OyZsdDsvb3RoZXImZ3Q7PGJyPg0KJmx0
+O2xvYyZndDtHQiZsdDsvbG9jJmd0Ozxicj4NCjxicj4NCiZsdDsvYW5zd2VyRm9ybSZndDtTZW50
+IGZyb20gU2Ftc3VuZyBNb2JpbGU8L3NwYW4+DQo8L2JvZHk+DQo8L2h0bWw+DQo=
+
+--_000_v182v672x0m3aiw3goov949s1318086456698emailandroidcom_--

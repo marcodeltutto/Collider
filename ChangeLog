@@ -1,0 +1,85 @@
+08.08.2013 - Tom and Alan
+        * Randomized ordering of W and Z events for WZ game 3
+
+08.08.2013 - Tom
+	* Checkin version 1.0.4
+	* Briefing/Overview Document added
+
+01.08.2013 - Tom
+	* Final checkin
+	* Everything is here, and the 'downloadable events' functionality is partially implemented and documented
+
+10.07.2013 - Tom
+	* Live Event streaming infrastructure in place
+	* Theoretically it should work...
+	* I can't test it until the updated skim script is running at CERN though...
+
+10.07.2013 - Tom
+	* Event scanning games created, 3 difficulty levels
+	* z0 cut applied to tracks
+	* UI tweaks
+	* Removed a lot of fluff
+	* About to add the streaming events...
+
+01.07.2013 - Tom
+	* Oops, Not checked in for a while.
+	* Lots of stuff!
+
+05.06.2013 - Tom
+	* Now we're talking!
+	* We have MOAR GAME LOGIC!
+	* Buttons now 'select' events until 'check events' is clicked
+	* Games are selectable from a new 'game selection screen'
+	* Each game has a list of events which either show selected events, or marked events
+	* The buttons should be a bit nicer, but need to play with more resolutions...
+
+30.05.2013 - Tom
+	* Adding in a saved game feature
+		* Tracks progress through the games
+		* Tutorial at the moment resets each time
+	* Start of a download feature...
+	* Much of the stuff isn't ready...
+
+	* Game Logic! Finally the game buttons do something. Ugly at the moment, but can be tweaked.
+
+19.05.2013 - Tom
+	* Not much to see here, just making sure everything is checked in.
+
+17.05.2013 - Tom
+	* Added a 'game info' page to the landing screen - allows the user to read about the game then launch it
+	* Landing screen populated by an easy to write xml format - need to test web based, but it looks promising!
+	* A few bug fixes
+		* The animation now stops when it reaches the end of the detector
+		* Track calculation has a failure state - avoids infinite recursion
+	* Added a 'tutorial' section
+
+14.05.2013 - Tom
+	* Tuning some objects to make event scanning a little simpler
+	* Make calo towers a bit larger - perhaps some more sophisticated scaling here? Need to make large deposits obviously different from small ones
+	* Track transparency based on pT, higher pT = more visible
+	* MET arrow scaling length as well as width
+
+13.05.2013 - Tom
+	* pT cut on tracks - somewhere between 0.5 and 2 GeV might work?
+	* Event skimming script bins more finely in calo
+		* App code now reflects this
+	* Previous and Next event prototype buttons present (and working)
+	* Everything lines up! Hooray!
+
+13.05.2013 - Tom
+	* Fixed coordinate system mismatch
+	* ATLAS x,y,z corresponds to OpenGL -y,z,x
+	* HTTP streaming is working but an 'event manager' needs more work
+	* Event skimming script updated to use polar angle theta for calo binning
+
+08.05.2013 - Tom
+	* Prototype landing screen
+	* Allows loading the event display with different (preset for now) events
+	* Hopefully this should be simple enough to modify for event streaming
+
+30.04.2013 - Tom
+	* In Event Display menu
+	* Allows colour changes, hiding endcaps or all detectors and event animation
+
+22.04.2013 - Tom
+	* Initial Checkin

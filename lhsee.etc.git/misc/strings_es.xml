@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<resources>
+    <string name="app_name">LHSee</string>
+    <string name="menu_start">Empezar</string>
+    <string name="menu_stop">Parar</string>
+    <string name="menu_pause">Pausar</string>
+    <string name="menu_resume">Continuar</string>
+    <string name="menu_easy">F&#225;cil</string>
+    <string name="menu_medium">Medio</string>
+    <string name="menu_hard">Dif&#237;cil</string>
+    
+    <string name="main_menu_text">LHSee</string>
+    <string name="whatIsAtlas_text">&#191;Qu&#233; es ATLAS?</string>
+    <string name="threeD_text"> ATLAS en 3D</string>
+    <string name="Vagary_text">ATLAS en 2D</string>
+    <string name="HiggsHunt_text">Cazar el Bos&#243;n de Higgs</string>
+    <string name="stream_text">Eventos 2D por streaming</string>
+    <string name="stream3d_text">Eventos 3D por streaming</string>
+    <string name="stream_3d_text">Eventos 3D por streaming</string>
+    <string name="gallery_text">Galer&#237;a de Eventos</string>
+		<string name="credits_text">Cr&#233;ditos</string>
+		<string name="webview_text">Enlaces Web</string>
+
+    <string name="reset_zoom_title">Reiniciar Zoom</string>
+    <string name="change_view_title">Cambiar vista</string>
+		<!--<string name="test_event">Cargar evento de prueba</string>-->
+		<string name="test_event">Cargar evento top quark</string>
+    <string name="unload_event">Cerrar evento</string>
+		
+		<string name="event0">Evento de ejemplo 01</string>
+		<string name="event1">Evento de ejemplo 02</string>
+		<string name="event2">Evento de ejemplo 03</string>
+		<string name="event3">Evento de ejemplo 04</string>
+		<string name="event4">Evento de ejemplo 05</string>
+		<string name="event5">Evento de ejemplo 06</string>
+		<string name="event6">Evento de ejemplo 07</string>
+		<string name="event7">Evento de ejemplo 08</string>
+		<string name="event8">Evento de ejemplo 09</string>
+		<string name="event9">Evento de ejemplo 10</string>
+		<!--<string name="other_events">Cargar eventos de ejemplo</string>-->
+		<string name="other_events">Cargar eventos de prueba</string>
+		<string name="test_event1">evento 105200_190249</string>
+		<string name="test_event2">evento 106382_27470</string>
+
+		<string name="electron_switch_text">Mostrar/Ocultar electrones</string>
+		<string name="electron_switch_text_a">Destacar electrones</string>
+		<string name="electron_switch_text_b">Ocultar electrones</string>
+		<string name="jet_switch_text">Mostrar/Ocultar jets</string>
+		<string name="jet_switch_text_a">Destacar jets</string>
+		<string name="jet_switch_text_b">Ocultar jets</string>
+		<string name="scalebar_switch_text">Mostrar/Ocultar barra de escala</string>
+		<string name="scalebar_switch_text_a">Ocultar barra de escala</string>
+		<string name="scalebar_switch_text_b">Mostrar barra de escala</string>
+
+		<string name="okay">Aceptar</string>
+		<string name="cancel">Cancelar</string>
+
+        <string name="sim_download_warning">Un peque&#241;o v&#237;deo va a ser cargado desde nuestro servidor, de modo que para continuar se debe tener acceso a Internet. <!--Se recomienda disponer de una conexi&#243;n via wireless para evitar gastos adicionales desde la conexi&#243;n m&#243;vil.--></string>
+		<string name="menu_intro">Bienvenido a LHSee: esta app est&#225; dedicada a la F&#237;sica de Part&#237;culas en el detector ATLAS. Para comenzar, simplemente presiona el bot&#243;n del principio de la lista o prueba las actividades disponibles. </string>
+
+	<string name="track_step0">Las part&#237;culas producidas a partir de las colisiones de los haces de protones del LHC viajan pr&#225;cticamente a la velocidad de la luz (300 millones de metros por segundo). Estas nuevas part&#237;culas atravesar&#225;n los detectores, los cuales medir&#225;n sus direcciones, momentos cin&#233;ticos y su energ&#237;a.</string>
+	<string name="track_step1">Los primeros detectores que estas nuevas part&#237;culas atraviesan son los detectores de trazas. Estos detectores se encuentran a unos pocos cent&#237;metros de donde los protones colisionan. Las part&#237;culas cargadas producen electrones libres al atravesar las capas de silicio de dichos detectores. Y la se&#241;al producida por estos electrones puede ser medida mediante una electr&#243;nica especial. Esto es similar a lo que ocurre en el interior de las c&#225;maras digitales.</string>
+	<string name="track_step2">El camino de las part&#237;culas (conocido como traza) se reconstruye uniendo los puntos en los que dichas part&#237;culas depositan su carga. </string>
+	<string name="track_step3">ATLAS tiene dos imanes superconductores gigantes para curvar las part&#237;culas cargadas. Las part&#237;culas cargadas negat&#237;vamente se curvan en una direcci&#243;n y las positivas en la direcci&#243;n opuesta. Las part&#237;culas con alto momento se curvan muy poco, mientras que las part&#237;culas de bajo momento se curvan mucho.</string>
+	<string name="track_step4">Los detectores de trazas de part&#237;culas est&#225;n ensamblados en cilindros alrededor del punto de colisi&#243;n. Los haces de protones colisionan en el centro de la pantalla y forman nuevas part&#237;culas que salen en todas direcciones.. </string>
+	<string name="track_step5">Las trayectorias que describen las part&#237;culas se muestran como trazas en azul. Estas trazas son reconstru&#237;das usando programas de simulaci&#243;n inform&#225;tica. </string>
+	<string name="track_step6">Otra vista de los detectores de trazas en el plano paralelo a la direcci&#243;n de los haces de protones. Los protones vienen desde la izquierda y desde la derecha y colisionan en medio de la pantalla. Los puntos que dejan las part&#237;culas cargadas en los diferentes detectores de trazas de part&#237;culas permiten reconstruir las trazas de dichas part&#237;culas.  </string>
+	<string name="track_step7">Aqu&#237; se ven las mismas trazas en un corte longitudinal del detector. El detector de trazas es capaz de medir con much&#237;sima precisi&#243;n la carga y el momento de todas las part&#237;culas cargadas producidas en cada colisi&#243;n.</string>
+
+	<string name="calo_step0">Despu&#233;s de pasar a trav&#233;s de los detectores de trazas, las part&#237;culas atraviesan la siguiente parte del detector. </string>
+	<string name="calo_step1">Los calor&#237;metros, los cuales envuelven el detector interno, miden la energ&#237;a. El calor&#237;metro interno (en verde) es el m&#225;s sensible a fotones y electrones mientras que el calor&#237;metro externo est&#225; dise&#241;ado para detectar part&#237;culas que interaccionan fuertemente (conocidas como "hadrones"). </string>
+	<string name="calo_step2">Ambos calor&#237;metros absorben la energ&#237;a de las part&#237;culas en partes de metal muy denso. De modo que la energ&#237;a de &#233;stas se calcula a partir de varias muestras. La energ&#237;a depositada en funci&#243;n del tiempo puede verse en un osciloscopio y es similar a esto. </string>
+	<string name="calo_step3">En esta vista m&#225;s global, es posible ver los detectores de trazas a trav&#233;s del medio, estando el calor&#237;metro electromagn&#233;tico en verde y el calor&#237;metro hadr&#243;nico en rojo.</string>
+	<string name="calo_step4">La energ&#237;a depositada en cada detector se muestra como barras en verde oscuro y rojo en cada secci&#243;n del detector. </string>
+	<string name="calo_step5">Los calor&#237;metros se pueden ver tambi&#233;n desde un plano paralelo a los haces de protones, donde el detector de trazas envuelve todas las direcciones.</string>
+	<string name="calo_step6">Como antes, se puede ver c&#243;mo la misma energ&#237;a depositada en una vista perpendicular se distribuye en este plano a lo largo del detector despu&#233;s de cada colisi&#243;n. </string>
+<string name="calo_step7">Electrones y anti-electrones (tambi&#233;n llamados positrones) tienen carga lo que implica un dep&#243;sito de energ&#237;a en el calor&#237;metro electromagn&#233;tico. Mira las trazas y la energ&#237;a depositada. &#191;Puedes ver alg&#250;n electr&#243;n?</string>
+<string name="calo_step8">Los electrones est&#225;n destacados en azul.</string>
+<string name="calo_step9">De igual modo, las mismas trazas depositando la misma energ&#237;a pueden verse en el plano paralelo a los haces de protones.</string>
+<string name="calo_step10">El &#225;rea del detector donde un electr&#243;n se ha desintegrado est&#225; destacada en azul.</string>
+	
+	<string name="muon_step0">Ampliando la vista se puede ver el enorme sistema de trazas exterior (con sus 22 m de di&#225;metro). Este gigante es necesario para medir con gran precisi&#243;n el momento de los muones. Los muones son las &#250;nicas part&#237;culas cargadas que atraviesan los calor&#237;metros.</string>
+	<string name="muon_step1">Los puntos en el detector de muones se combinan con los puntos en el detector interno produciendo una traza total, en amarillo. Prueba a moverte alrededor del detector tocando la pantalla o pellizc&#225;ndola para hacer zoom y seguir la trayectoria del mu&#243;n.</string>
+	<string name="muon_step2">Cambiando nuevamente la vista, podemos ver la configuraci&#243;n de los detectores de muones en el plano paralelo a los haces de protones.</string>
+	<string name="muon_step3">En esta vista, de nuevo, podemos ver c&#243;mo las mismas trazas de los muones han recorrido el detector.</string>
+	
+	<string name="met_step0">La &#250;ltima medici&#243;n que ATLAS debe hacer es la del momento de las part&#237;culas que no interaccionan con el detector. En una colisi&#243;n, el momento total es el mismo antes y despu&#233;s de la colisi&#243;n. Esto se conoce como conservaci&#243;n del momento.</string>
+	<string name="met_step1">Los protones que colisionan en el LHC tienen mucha energ&#237;a por lo que un gran n&#250;mero de part&#237;culas pueden ser producidas en cada colisi&#243;n. De este modo, el momento total de todas las part&#237;culas producidas tiene que ser conservado. Aqu&#237; vemos un prot&#243;n viajando por la pantalla, el cual colisiona con otro prot&#243;n que viaja en sentido contrario.</string>
+	 
+	<string name="met_step2">Algunas veces las colisiones producen part&#237;culas que son invisibles al detector ATLAS. Si sumamos todos los momentos de todas las part&#237;culas en la direcci&#243;n el resultado tiene que ser cero. De este modo, cuando este resultado es distinto de cero se interpreta que una o varias part&#237;culas invisibles se han producido. Aqu&#237; se ha a&#241;adido la trayectoria de una part&#237;cula invisible en magenta.</string>
+	<string name="met_step3">En el visualizador, el vector del momento perdido se muestra en el plano transversal como una flecha en magenta. La flecha indica la direcci&#243;n en la cual el momento se ha perdido. Adem&#225;s, el ancho de la flecha indica el m&#243;dulo del vector; cuanto m&#225;s gruesa sea la flecha, mayor es el momento perdido.</string>
+
+	<string name="events_step0">Ahora estamos listos para empezar a identificar los tipos de eventos que podemos observar procedentes de las colisiones. En el primer evento podemos identificar un bos&#243;n W que se desintegra en un electr&#243;n y un neutrino. El electr&#243;n tiene un traza y deposita una cierta cantidad de energ&#237;a en el calor&#237;metro electromagn&#233;tico verde. El nuetrino es invisible por lo que se identifica como un vector del momento perdido (flecha magenta). Prueba a mover y hacer zoom pellizcando la pantalla.</string>
+		<string name="events_step1">Aqu&#237; podemos ver el mismo evento desde una vista lateral. Puedes ver el mismo cono estrecho de energ&#237;a depositada por el electr&#243;n.</string>
+		<string name="events_step2">Un bos&#243;n W puede tambi&#233;n desintegrarse en un mu&#243;n y un neutrino. Esto ocurre con la misma frecuencia con la que los W se desintegran en un electr&#243;n y un neutrino electr&#243;nico</string>
+		<string name="events_step3">Una vez m&#225;s, podemos ver un mu&#243;n viajando a trav&#233;s del detector.</string>
+		<string name="events_step4">Otro tipo de evento que es posible identificar es la desintegraci&#243;n del bos&#243;n Z en un electr&#243;n y su anti-part&#237;cula, un positr&#243;n. Cada part&#237;cula tiene una traza y deposita cierta energ&#237;a en el calor&#237;metro electromagn&#233;tico (verde).</string>
+		<string name="events_step5">Aqu&#237; vemos el mismo evento desde una vista lateral. Encuentra la traza y la energ&#237;a electromagn&#233;tica depositada por ambas part&#237;culas.</string>
+		<string name="events_step6">Un bos&#243;n Z tambi&#233;n se desintegra en un par de muones con la misma probabilidad. Las trazas de los muones est&#225;n destacadas en amarillo.</string>
+		<string name="events_step7">Aqu&#237; tenemos el mismo evento desde una vista lateral.</string>
+		<string name="events_step8">Nuestro &#250;ltimo evento no tiene ni electrones ni muones. Dos partones producen dos cascadas de hadrones, las cuales depositan energ&#237;a tanto en el calor&#237;metro electromagn&#233;tico (verde) como en el hadr&#243;nico (rojo). Estos eventos se producen un bill&#243;n de veces m&#225;s que la produci&#243;n de los bosones W y Z. Por lo tanto, como no son eventos interesantes son considerados como fondo.</string>
+		<string name="events_step9">Aqu&#237; est&#225; el mismo evento de fondo desde una vista lateral.</string>
+
+	<string name="animation_intro"> Esta secci&#243;n te mostrar&#225; c&#243;mo funciona cada parte del detector ATLAS usando animaciones. Para ir a la animaci&#243;n anterior o a la siguiente, haz clic en la flecha de la izquierda o de la derecha, o en el bot&#243;n de en medio para volver a reproducir la animaci&#243;n actual. Haz clic en el bot&#243;n men&#250; del dispositivo para mostrar la ayuda.\n
+		Hay 4 secciones que muestran:\n\n
+		Trazas:\n
+		C&#243;mo las trayectorias de las part&#237;culas cargadas se miden en el interior del detector ATLAS y c&#243;mo sus cargas y momentos son calculadas.\n\n
+		Calorimetr&#237;a:\n
+		C&#243;mo la energ&#237;a de las part&#237;culas se mide en los calor&#237;metros.\n\n
+		Momento perdido:\n
+		C&#243;mo el momento de part&#237;culas invisibles, es decir, que no interaccionan con el detector, es medido.\n\n
+		Muones:\n
+		C&#243;mo las trazas de los muones son calculadas.\n
+	</string>
+	<string name="animation_intro_title">&#161;Animaciones!</string> 
+	<string name="animation_menu_help">Ayuda</string> 
+	<string name="help">Ayuda</string> 
+	<string name="animation_menu_tracking">animar Trazas</string> 
+	<string name="animation_menu_calo">animar Calorimetr&#237;a</string> 
+	<string name="animation_menu_met">animar Part&#237;culas invisibles</string> 
+	<string name="animation_menu_muons">animar Muones</string> 
+
+	<string name="sixteenth_meter">0.0625m</string> 
+	<string name="eighth_meter">0.125m</string> 
+	<string name="quarter_meter">0.25m</string> 
+	<string name="half_meter">0.5m</string> 
+	<string name="meter">1.0m</string> 
+	<string name="two_meter">2.0m</string> 
+	<string name="four_meter">4.0m</string> 
+	<string name="eight_meter">8.0m</string> 
+
+	
+	<string name="stream_all">Ver todos</string> 
+
+
+		<!--3D button text -->
+		<string name="inner_detector_text_a">Mostrar detectores de trazas</string>
+		<string name="inner_detector_text_b">Ocultar detectores de trazas</string>
+
+		<string name="all_detectors_text_a">Mostrar todos los detectores</string>
+		<string name="all_detectors_text_b">Ocultar todos los detectores</string>
+
+		<string name="pixel_text_a">Mostrar Pixels</string>
+		<string name="pixel_text_b">Ocultar Pixels</string>
+		
+		<string name="sct_text_a">Mostrar SCT</string>
+		<string name="sct_text_b">Ocultar SCT</string>
+
+		<string name="trt_text_a">Mostrar TRT</string>
+		<string name="trt_text_b">Ocultar TRT</string>
+
+		<string name="endcaps_text_a">Mostrar Endcaps</string>
+		<string name="endcaps_text_b">Ocultar Endcaps</string>
+
+		<string name="calo_text_a">Mostrar Calorimetros</string>
+		<string name="calo_text_b">Ocultar Calorimetros</string>
+		
+		<string name="muon_text_a">Mostrar Muon</string>
+		<string name="muon_text_b">Ocultar Muon</string>
+		
+		<string name="split_text_a">Cortar los detectores por la mitad</string>
+		<string name="split_text_b">Re-ensamblar los detectores</string>
+
+		<string name="load_text">Cargar un evento de prueba</string>
+		<string name="threeD_help">Esta actividad muestra una representaci&#243;n tridimensional del detector ATLAS. Haciendo clic en el bot&#243;n men&#250; de tu dispositivo puedes elegir el mostrar u ocultar partes del detector. Los colores del detector son los mismos que en la representaci&#243;n en 2 dimensiones, excepto para los detectores de silicio, los cuales est&#225;n en amarillo y blanco.</string>
+		<string name="threeD_stream_help">En esta actividad los eventos registrados en tiempo real desde el detector ATLAS, en el CERN, son descargados por streaming hasta tu tel&#233;fono, (siempre y cuando el detector est&#233; recogiendo datos en este momento). Para m&#225;s opciones, haz clic en el bot&#243;n men&#250; de tu dispositivo.</string>
+		<string name="threeD_title">Stream ATLAS events in 3D</string>
+    <string name="back_to_list_text">Volver a la lista </string>
+    <string name="classify_text">&#191;Qu&#233; evento es &#233;ste? </string>
+    <string name="loading_text">Cargando, por favor espera </string>
+
+
+		<string name="event_143">Evento 143</string>
+		<string name="event_144">Evento 144</string>
+		<string name="event_166">Evento 166</string>
+		<string name="event_167">Evento 167</string>
+		<string name="event_153">Evento 153</string>
+		<string name="event_156">Evento 156</string>
+		<string name="event_159">Evento 159</string>
+		<string name="event_146">Evento 146</string>
+		<string name="event_157">Evento 157</string>
+		<string name="event_160">Evento 160</string>
+		<string name="event_152">Evento 152</string>
+		<string name="event_232">Evento 232</string>
+		<string name="event_008">Evento 008</string>
+		<string name="event_036">Evento 036</string>
+		<string name="event_052">Evento 052</string>
+		
+		<string name="choose_event_title">&#191;Qu&#233; evento piensas que es este?</string>
+
+		<string name="Wenu">W -> electr&#243;n o positr&#243;n y neutrino </string>
+		<string name="Wmunu">W -> mu&#243;n o anti-mu&#243;n y neutrino </string>
+		<string name="HfourL">Bos&#243;n de Higgs-> electr&#243;n o positr&#243;n y mu&#243;n o anti-mu&#243;n</string>
+		<string name="Zee">Z -> electr&#243;n y positr&#243;n </string>
+		<string name="Zmumu">Z -> mu&#243;n y anti-mu&#243;n </string>
+		<string name="dijet"> Fondo Dijet</string>
+		<string name="correct"> &#161;Correcto!</string>
+		<string name="incorrect"> &#161;Incorrecto!</string>
+		<string name="game_intro"> En esta actividad t&#250; puedes probar tu habilidad identificando algunos de los eventos producidos en las colisiones del LHC, usando el detector ATLAS. Simplemente selecciona un evento, y si piensas que sabes qu&#233; tipo de evento es, selecci&#243;nalo. Hay un evento que corresponde a la se&#241;al de un bos&#243;n de Higgs oculto en alg&#250;n lugar. Para m&#225;s opciones, haz clic en el bot&#243;n de men&#250; de tu dispositivo. Para m&#225;s informaci&#243;n acerca de los distintos tipos de eventos, &#233;chale un vistazo a la secci&#243;n &#191;Qu&#233; es ATLAS? o visita la web.</string>
+		<string name="stream_intro"> En esta actividad, los eventos registrados en tiempo real desde el detector ATLAS, en el CERN, son descargados por streamed hasta tu tel&#233;fono, (siempre y cuando el detector est&#233; recogiendo datos en este momento). Para m&#225;s opciones, haz clic en el bot&#243;n men&#250; de tu dispositivo.</string>
+		
+    <string name="getting_event">Descargar el siguiente evento</string>
+    <string name="no_connection">Por favor, conecta tu dispositivo a internet y prueba otra vez.</string>
+		<string name="stream_vid">V&#237;deo via streaming</string>
+		<string name="vid_small">M&#243;vil (peque&#241;o, 2.5MB)</string>
+		<string name="vid_high">M&#243;vil (grande, 4.5MB)</string>
+		<string name="vid_tablet">Tableta (?)</string>
+		<string name="game_complete_title">&#161;Felicidades!</string>
+		<string name="game_complete">&#161;Has identificado correctamente todos los eventos de la muestra! En el detector ATLAS, los haces de protones colisionan unas 40 millones de veces por segundo, pero &#250;nicamente unos 250 eventos se guardan. El "trigger" del sistema es el encargado de decidir si un evento ha sido interesante, bas&#225;ndose en decisiones como las que t&#250; acabas de tomar. Para m&#225;s informaci&#237;n sobre los detectores o el significado f&#237;sico de estos eventos, por favor, visita nuestra web.</string>
+		<string name="menu">Men&#250;</string>
+		<string name="anim_finished">Has completado tu secci&#243;n, para m&#225;s informaci&#243;n sobre los detectores y los tipos de eventos, visita nuestra web desde el men&#250;.</string>
+		<string name="anim_finished_title">Secci&#243;n completada</string>
+		<string name="event_info">Informaci&#243;n del evento.</string>
+		<string name="feedback_text">Comentarios</string>
+    <string name="feedbacktitle">Aqu&#237; puedes redactar tus comentarios y enviarlos al desarrollador:\n</string>
+    <string
+        name="feedbackname">Tu nombre</string>
+    <string
+        name="feedbackemail">Tu correo</string>
+    <string
+        name="feedbackbody">Detalles de tus sugerencias...</string>
+    <string
+        name="feedbackresponse">&#191;Quieres respuesta a tu comentario?</string>
+    <string
+        name="feedbackbutton">Enviar comentario</string>
+    <string
+        name="feedbacktype">Introducir respuesta:</string>
+
+    <string name="strong_agree">Completamente de acuerdo</string>
+    <string name="agree">De acuerdo</string>
+    <string name="neither_or">Sin opini&#243;n</string>
+    <string name="disagree">En desacuerdo</string>
+    <string name="strong_disagree">Completamente en desacuerdo</string>
+    <string
+        name="feedbacktype4">Error</string>
+    <string
+        name="feedbackmessagebody_format">A: El %1$s Departamento\n\n %2$s\n\n %3$s (%4$s) - %5$s
+    </string>
+    <string
+        name="feedbackmessagebody_responseyes">Se solicita una respuesta</string>
+    <string
+        name="feedbackmessagebody_responseno">No se solicita respuesta</string>
+    <string name="feedbackmessagesubject_format">Formulario de comentarios </string>
+    <string name="enterEmail">Introduce tu direcci&#243;n de correo:</string>
+    <string name="form_find_out_more">Esta app me ha hecho interesarme por la F&#237;sica de Part&#237;culas y por el LHC.</string>
+    <string name="form_developed_understanding">\nEsta app me ha permitido entender mejor la F&#237;sica de Part&#237;culas y el detector ATLAS.</string>
+    <string name="form_more_study">\nEsta app me ha motivado para estudiar m&#225;s F&#237;sica.</string>
+    <string name="form_age">\nActualmente tengo</string>
+    <string name="form_background">\nMi nivel de conocimientos en f&#237;sica es:</string>
+		<string name="form_lt_15"> menos de 15 a&#241;os de edad</string>
+		<string name="form_15_to_18"> entre 15 y 18 a&#241;os de edad</string>
+		<string name="form_over_18"> m&#225;s de 18 a&#241;os de edad</string>
+		<string name="no_gcse"> Muy bajo.</string>
+		<string name="gcse"> Colegio.</string>
+		<string name="alevel">Instituto.</string>
+		<string name="ugrad">Universidad.</string>
+		<string name="form_other">\nTus comentarios.</string>
+		<string name="form_dont_alter">*** Por favor, env&#237;a este correo tal y como est&#225;. &#161;Gracias! ***\n</string>
+		<string name="zoom">Disminuir/Aumentar</string>
+		<string name="zoom_instructions">Para disminuir o ampliar simplemente pellizca la pantalla con dos dedos.</string>
+		<string name="threeD_tour_text">Rotar</string>
+		<string name="rotation_text">Rotando</string>
+
+		<string name="vid_connect_error"> El v&#237;deo no parece estar disponible para este dispositivo. Puedes verlo en el canal de ATLAS de YouTube:\nhttp://www.youtube.com/user/TheATLASExperiment</string>
+		<string name="vid_connect_error_title"> Error de V&#237;deo</string>
+		<string name="id_tracks"> detector interno de trazas</string>
+		<string name="muon_tracks"> trazas de muones o anti-muones </string>
+		<string name="ele_or_pos"> electrones o positrones</string>
+		<string name="gev_of_met"> GeV de energ&#237;a perdida transversa.</string>
+
+        <string name="simulation_chat"> El gran colisionador de hadrones (LHC de sus siglas en ingl&#233;s (Large Hadron Collider)) es un acelerador de 27 km de longitud, situado bajo tierra en el Laboratorio Europeo para el Estudio de la F&#237;sica de Particulas (CERN), pr&#243;ximo a Ginebra, en Suiza. Bajo estas l&#237;neas se encuentra una simulaci&#243;n de c&#243;mo los haces de protones son acelerados en el LHC. Estas peque&#241;&#237;simas part&#237;culas viajan a trav&#233;s del anillo de 27 km de longitud, al 99.999999% de la velocidad de la luz, es decir, recorren dicho anillo 11 mil veces por segundo. La precisi&#243;n requerida para hacer colisionar estos protones es impresionante. Imagina tener que disparar agujas a ambos lados del oc&#233;ano Atl&#225;ntico y hacer que se encuentren a mitad del camino. La energ&#237;a total de los haces de protones es la misma que la que lleva un portaaviones viajando a unos 24 km/h. 			
+Los botones inferiores permiten comenzar una simulaci&#243;n.  Primero, &#233;stos pasan a trav&#233;s de varios aceleradores auxiliares, aumentando as&#237; la velocidad de los haces de protones en cada etapa. M&#225;s tarde, estos haces llegan al LHC donde colisionar&#225;n en el centro del detector ATLAS.</string>
+
+	<string name="get_next_event">Obtener un evento nuevo</string> 
+  <string name="dl_event_text">Descargando evento, por favor espera </string>
+	<string name="silicon_text">silicio </string>
+	<string name="straw_text">straws </string>
+	<string name="highlight_calos_item">calor&#237;metros </string>
+	<string name="highlight_muon">C&#225;maras de muones </string>
+	<string name="coll_occured">Tiempo entre colisiones: </string>
+		<string name="connTimeout"> La conexi&#243;n ha expirado. Pr favor prueba de nuevo. </string>
+		<string name="colliding_protons">Protones colisionando en el LHC.\n\nhttp://www.atlas.ch/multimedia/html-nc/animation-proton-event.html\nEl Experimento ATLAS &#169; 2011 CERN
+	 </string>
+	 <string name="atlas_assembly">Montaje del detector ATLAS.\n\nhttp://www.atlas.ch/multimedia/html-nc/built-in-one-minute.html\nEl Experimento ATLAS &#169; 2011 CERN </string>
+	 <string name="higgs_video">El origen de la masa.\n\nhttp://www.atlas.ch/contest/\nEl Experimento ATLAS &#169; 2011 CERN </string>
+	<string name="animation_pid">Identificar eventos</string> 
+	<string name="trans_proj">Proyecci&#243;n X-Y</string> 
+	<string name="para_proj">Proyecci&#243;n R-Z</string> 
+		<string name="timeout"> Tiempo agotado: Por favor, revisa tu conexi&#243;n.</string>
+		<string name="TheDefault"> Por defecto </string>
+		<string name="highlight_tracking">Detectores de trazas. </string>
+		<string name="highlight_calos">Calorimetros:\nVerde: Electromagn&#233;tico\nRojo: Hadr&#243;nico. </string>
+		<string name="highlight_tracking_item">Detector de trazas </string>
+    <string name="driveLHC_text">Explorar el LHC</string>
+		<string name="need_connection">Elegir que v&#237;deo reproducir:\n(se recomienda tener conexi&#243;n wifi)</string>
+        
+        <string name="vid_loading">" Video streaming..."</string>
+        
+        <string name="topics_interesting">Los temas tratados son interesantes.</string>
+		<string name="phys_level">El nivel de f&#237;sica de la aplicaci&#243;n era el adecuado.</string>
+		<string name="dev_understanding">Esta aplicaci&#243;n ha ayudado a mi comprensi&#243;n de la f&#237;sica de part&#237;culas y el LHC.</string>
+		<string name="encouraged_to_study">Esta aplicaci&#243;n me ha animado a estudiar F&#237;sica a un nivel m&#225;s alto.</string>
+		<string name="dont_know">No sabe \/ No contesta</string>
+		<string name="general_interest">En general, ¿hasta qu&#233; punto est&#225;s interesado en la F&#237;sica?</string>
+		<string name="very_interested">Muy interesado.</string>
+		<string name="fairly_interested">Bastante interesado.</string>
+		<string name="not_interested">Nada interesado.</string>
+		<string name="age_u11">Menos de 11.</string>
+		<string name="age_11_16">11-16 años.</string>
+		<string name="age_17_18">17-18 años.</string>
+		<string name="age_19_21">19-21 años.</string>
+		<string name="age_22_35">22-35 años.</string>
+		<string name="age_36_50">36-50 años.</string>
+		<string name="age_51_plus">51+ años.</string>
+		<string name="credits_body_text">Diseño del contenido: Chris Boddy y Alan Barr\nSoftware: Chris Boddy\n\n\n Agradecemos sinceramente las contribuciones de nuestros colegas en la colaboraci&#243;n ATLAS y el grupo de divulgaci&#243;n de ATLAS, y a Ben Waugh y Adam Davidson por compartir su dominio de la visualizaci&#243;n de datos. Revisado por Sam Whitehead, Phil Jones, Dan Short, Alex Pinder y el resto del grupo de ATLAS de Oxford. \n\nTraducci&#243;n a otros idiomas:\Franc&#233;s: Hugo Beauchemin \n Alem&#225;n: Alex Dafinca\nItaliano: Caterina Doglioni\n Español: Carlos Escobar\nSueco: Elias Coniavitis\nChino: Zhijun Liang\n\n Logo e icono: Ben Wynne\n\n Subvencionado por el Science and Technology Facilities Council del Reino Unido. \nhttp://www.stfc.ac.uk/\nDatos del Experimento ATLAS del CERN.\nhttp://atlas.ch/\nwww.cern.ch</string>
+		<string name="market_description_text">
+	¿Quieres saber c&#243;mo Cazar al Bos&#243;n de Higgs utilizando tu tel&#233;fono? ¿Alguna vez te has preguntado c&#243;mo funcionan los experimentos del Gran Colisionador de Hadrones, y c&#243;mo son las colisiones? 
+    
+	Los cient&#237;ficos del experimento m&#225;s grande del mundo - el Gran Colisionador de Hadrones en el CERN, Ginebra (Large Hadron Collider, LHC, en ingl&#233;s) - est&#225;n intentando responder cuestiones fundamentales sobre la naturaleza del universo, el origen de la masa, y la estructura del espacio y el tiempo. LHSee permite que cualquiera con un smartphone Android o una tableta PC pueda acceder al Colisionador de Hadrones. Diseñado por cient&#237;ficos de la Universidad de Oxford en colaboraci&#243;n con el experimento ATLAS del CERN, ha sido diseñado para poder ser utilizado tanto para los que son expertos como para los que no. 
+    
+	Por primera vez, puedes recibir en directo la informaci&#243;n de las colisiones que ocurren en los detectores subterr&#225;neos de Ginebra en tu Android o tableta PC. Adem&#225;s de tener una gran n&#250;mero de utilidades educativas, la aplicaci&#243;n te permite interactuar con las colisiones mediante gr&#225;ficos 3D. Tambi&#233;n puedes descubrir c&#243;mo funcionan las diferentes partes del detector, c&#243;mo identificar diferentes tipos de colisi&#243;n, e incluso poner a prueba tus nuevas habilidades jugando el juego "Caza el Higgs".
+    
+			P&#225;gina web:
+			http://www2.physics.ox.ac.uk/about-us/outreach/public/lhsee 
+	</string>
+	<string name="market_promo_text"> LHSee: descubre qu&#233; ocurre en el Gran Colisionador de Hadrones </string>
+</resources>

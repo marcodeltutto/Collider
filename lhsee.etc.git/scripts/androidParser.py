@@ -1,0 +1,272 @@
+#!/usr/bin/env python
+from xml.dom.minidom import parseString
+import sys
+import math
+import os
+
+
+"""append new_file_uri to steering file 'list_uri'"""
+def AddToAndroidList(new_file_uri,list_uri,MAX_EVENTS,dest_dir,full_path,logger):
+    try:
+        list_file = open(list_uri,'r')
+    except IOError:
+        #if there is no file, create an empty one using list_uri
+        list_file = open(list_uri,'w')
+        list_file.write('\n<xml>\n<Events>\n</Events>\n</xml>')
+        list_file.close()
+        list_file = open(list_uri,'r')
+    #logger.debug("Android: new_file_uri = "+new_file_uri)
+    #open list file and parse into DOM
+    data = list_file.read()
+    dom = parseString(data)
+    #Add new file URI as an 'Event'
+    new_entry = dom.createElement('Event')
+    new_entry_attr = dom.createTextNode(new_file_uri)
+    new_entry.appendChild(new_entry_attr)
+    dom.childNodes[0].appendChild(new_entry)
+    #make sure no more than 50 'Event's
+    entry_to_remove=0
+    if len(dom.getElementsByTagName('Event')) > MAX_EVENTS:
+        #remove first (oldest) entry 
+        entry_to_remove = dom.childNodes[0].childNodes[1]
+        dom.childNodes[0].removeChild(entry_to_remove)
+
+    list_file.close()
+    #now over-write the file
+    list_file = open(list_uri,'w')
+    list_file.write(dom.toxml())
+    list_file.close()
+
+    if entry_to_remove!=0:
+        fileToRemovePath=str(entry_to_remove.toxml())
+        #print fileToRemovePath.rstrip('</Event>').split('/')
+        fileNameParts = fileToRemovePath.rstrip('</Event>').split('/')
+        fileNameToRemove = fileNameParts[len(fileNameParts)-2]+'/'+fileNameParts[len(fileNameParts)-1]
+        #print 'removing',fileNameToRemove 
+        os.system('rm '+fileNameToRemove)
+
+
+
+"""take input JiveXML URI and create stripped Android XML"""
+def convertAndroidXML(input_file_uri,output_file_uri):
+
+    input_file = open(input_file_uri,'r')
+    output_file = open(output_file_uri,'w')
+
+    data = input_file.read()
+    #parse the xml you got from the file
+    dom = parseString(data)
+    # ID-track, muon-Track, MET, Electron and Jet containers to keep
+    containers = [
+        ('ETMis','MET_RefFinal'),('Track','ConvertedMBoyTracks'),('Track','Tracks'),('Electron','ElectronCollection'),('Track','ConvertedMuIdCBTracks'),('Track', 'CombinedInDetTracks')]
+    #calorimeters to be histogrammed
+    calos = ['LAr','TILE']
+    #track parameters to remove before writing out
+    trackStufftoRemove = ['covMatrix','trackAuthor','barcode','chi2','driftSign','hits','id','isOutlier','numDoF','numHits']
+    #electron parameters to remove before writing out
+    electronStufftoRemove =['clusterIndex','clusterKey','hitsBLayer','isEM','label','pdgId','trackKey']
+    jetStufftoRemove =['cells']
+    
+    
+    output_file.write('<xml>')
+    
+    #event tag
+    event = dom.getElementsByTagName("Event")[0]
+    event_atts = '<Event version="'+event.attributes["version"].value+'" runNumber="'+event.attributes["runNumber"].value +'" eventNumber="'+event.attributes["eventNumber"].value +'" dataTime="'+event.attributes["dateTime"].value +'">\n'
+    output_file.write(event_atts)
+
+    print event_atts
+
+    #now do calorimeter histograms...
+    #binning resolution
+    nbins = 256
+    threeD_nbins = 32
+
+    #YX-plane binning
+    phi_bin_width = 2*math.pi/nbins 
+    #RZ plane binning
+    psi_bin_width = math.pi/nbins 
+
+    threeD_phi_width = 2*math.pi/ threeD_nbins
+    threeD_psi_width = math.pi/ threeD_nbins
+
+    calo_cut = 0.1 #200 MeV cut on calo cell transverse energy 
+    for calo in calos:
+        #setup 1D histograms
+        phi_histo = []
+        psi_histo = []
+        for bin in range(nbins):
+            phi_histo.append(0)
+            psi_histo.append(0)
+    
+        #setup 2D profile in phi vs psi
+        threeD_histo = []
+        for phi_bin in range(threeD_nbins):
+            threeD_histo.append([])
+            for psi_bin in range(threeD_nbins):
+                threeD_histo[phi_bin].append(0)
+
+        for elements in dom.getElementsByTagName(calo):
+            #get the XML elements
+            energy = elements.getElementsByTagName("energy")[0]
+            eta = elements.getElementsByTagName("eta")[0]
+            phi = elements.getElementsByTagName("phi")[0]
+            #make them strings
+            energy =  str(energy.toxml())
+            eta =  str(eta.toxml())
+            phi =  str(phi.toxml())
+            #make them lists
+            energy = energy.split()
+            eta = eta.split()
+            phi = phi.split()
+            #print energy 
+            #loop over cell energies omittting the opening/closing tag
+            for cell in range(1,(len(energy)-1)):
+                et = math.fabs(float(energy[cell])/math.cosh(float(eta[cell])))
+                #calo energy transverse cut
+                if et > calo_cut:
+                    #which phi bin
+                    phi_ = float(phi[cell])
+                    print phi_
+                    print math.pi
+                    if phi_<0:
+                        phi_ = phi_+(2*math.pi)
+                    phi_bin = int ( phi_/(2*math.pi) * nbins)
+                    print phi_
+                    print phi_bin
+                    #psi (angle in the pz-pt plane)
+                    psi = float(2*math.atan(float(math.exp(-1*float(eta[cell])))))
+                    #math.atan2(1,(math.sinh(float(eta[cell]))))
+                    #if float(phi[cell]) > 0  : 
+                    #    psi = -psi
+                    #    if psi > -math.pi/2: psi = -math.pi/2 -math.fabs(math.fabs(math.pi/2)-math.fabs(psi))
+                    #    else : psi =  -math.pi/2 +math.fabs(math.fabs(math.pi/2)-math.fabs(psi))
+                    if psi<0:
+                        psi = psi+(math.pi)
+    
+                    psi_bin = int ((psi)*nbins/(math.pi))
+                    #add et of cell to this bin
+                    phi_histo[phi_bin] =  phi_histo[phi_bin]+ et
+                    psi_histo[psi_bin] =  psi_histo[psi_bin]+ et
+                    #2D profile
+                    print psi
+                    print psi_bin
+    
+                    threeD_phi_bin = int(phi_*(threeD_nbins/(2*math.pi)))
+                    threeD_psi_bin = int(psi*(threeD_nbins/(math.pi)))
+                    print threeD_psi_bin
+                    threeD_histo[threeD_phi_bin][threeD_psi_bin] += et
+                    #print 'HERE, threeD_phi_bin = ',threeD_phi_bin,
+    
+            #write the phi histogram values to file
+            # output_file.write('<%sPhiHisto>\n' %calo)
+            # for _bin in range(nbins): 
+            #     output_file.write('%.1f' % phi_histo[_bin]+' ')
+            # output_file.write('</%sPhiHisto>\n' %calo)
+            # output_file.write('<%sPsiHisto>\n' %calo)
+            # for _bin in range(nbins): 
+            #     output_file.write('%.1f' % psi_histo[_bin]+' ')
+            # output_file.write('</%sPsiHisto>\n' %calo)
+    
+            #write the 2d profile Et profile in phi,psi
+            output_file.write('<%s3DEt>\n' %calo)
+            for phi_bin in range(threeD_nbins):
+                for psi_bin in range(threeD_nbins):
+                    #only write bins with >1GeV of energy 
+                    if (threeD_histo[phi_bin][psi_bin]> 0.6):output_file.write('%.1f' % threeD_histo[phi_bin][psi_bin]+' ')
+            output_file.write('</%s3DEt>\n' %calo)
+            output_file.write('<%s3Dphi>\n' %calo)
+            for phi_bin in range(threeD_nbins):
+                for psi_bin in range(threeD_nbins):
+                    #only write bins with >1GeV of energy 
+                    if (threeD_histo[phi_bin][psi_bin]> 0.6):output_file.write(str(phi_bin)+' ')
+            output_file.write('</%s3Dphi>\n' %calo)
+            output_file.write('<%s3Dpsi>\n' %calo)
+            for phi_bin in range(threeD_nbins):
+                for psi_bin in range(threeD_nbins):
+                    #only write bins with >1GeV of energy 
+                    if (threeD_histo[phi_bin][psi_bin]> 0.6):output_file.write(str(psi_bin)+' ')
+            output_file.write('</%s3Dpsi>\n' %calo)
+    
+    
+    
+    #for tag,key in containers.iteritems():
+    for container in containers:
+        tag,key = container[0],container[1]
+    
+        for elements in dom.getElementsByTagName(tag):
+            print elements.attributes["storeGateKey"].value
+            if not elements.attributes["storeGateKey"].value==key: continue
+            track_bit = parseString(elements.toxml())
+            for quant in trackStufftoRemove:
+                try:
+                    x = elements.getElementsByTagName(quant)[0]
+                    elements.removeChild(x)
+                except:
+                    pass
+            for quant in electronStufftoRemove:
+                try:
+                    x = elements.getElementsByTagName(quant)[0]
+                    elements.removeChild(x)
+                except:
+                    pass
+            for quant in jetStufftoRemove:
+                try:
+                    x = elements.getElementsByTagName(quant)[0]
+                    elements.removeChild(x)
+                except:
+                    pass
+
+            print output_file.write(elements.toxml())
+        
+            #print elements.toxml()
+            print output_file.write("\n")
+        
+    output_file.write('</Event>')
+    output_file.write('</xml>')
+    input_file.close()
+    output_file.close()
+    return output_file
+
+def UpdateAndroidXMLFiles(src_dir,dest_dir,list_uri,external_path,MAX_EVENTS,logger):
+    #XML files in src
+    src_files = os.listdir(src_dir)
+    xml_src_files = [file_uri for file_uri in src_files if file_uri.endswith('.xml')] 
+    xml_src_files.sort()
+    print xml_src_files
+    new_src_files_to_convert = []
+    for src_file_uri in xml_src_files[-MAX_EVENTS:]:
+        #logger.debug("Android: checking source file "+src_file_uri)
+        FoundFile = False
+        for dest_file_uri in os.listdir(dest_dir):
+            if  dest_file_uri=='Android.'+src_file_uri:
+                FoundFile=True
+                print "<Event type=\"\" file="+"\"MassGame/Android."+src_file_uri+"\"/>"
+                #logger.debug("Found file")
+                break
+        if not FoundFile:
+            #logger.debug("Converting: "+src_file_uri)
+            new_src_files_to_convert.append(src_file_uri)
+        
+        #if len(new_src_files_to_convert) > 10: break
+    
+    if len(new_src_files_to_convert) >= min(1,MAX_EVENTS):
+        for src_file_uri in new_src_files_to_convert:
+                convertAndroidXML(src_dir+'/'+src_file_uri,dest_dir+'/Android.'+src_file_uri)
+                new_android_file_path = dest_dir+'/Android.'+src_file_uri
+                #file too small, not pretty enough (or empty)
+                if os.path.getsize(new_android_file_path) < 100:
+                    os.remove(new_android_file_path)
+                #keep, add to list
+                else:
+                    AddToAndroidList(external_path+'Android.'+src_file_uri,list_uri,MAX_EVENTS,dest_dir,external_path,logger)
+
+
+
+def main():
+    #UpdateAndroidXMLFiles('test_src','test_dest','test_list.xml','FULLPATH',15,'logger')
+    #UpdateAndroidXMLFiles('higgs2012/xml','higgs2012_stripped/','test_list_higgs.xml','FULLPATH',15,'logger')
+    UpdateAndroidXMLFiles('MINERVA_15/group_01','MinervaSkim','MinervaSkim/test_list.xml','FULLPATH',40,'logger')
+
+if __name__== '__main__':
+    main()

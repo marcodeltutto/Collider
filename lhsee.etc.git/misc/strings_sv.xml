@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LHSee</string>
+    <string name="menu_start">Start</string>
+    <string name="menu_stop">Stopp</string>
+    <string name="menu_pause">Paus</string>
+    <string name="menu_resume">Fortsätt</string>
+    <string name="menu_easy">Lätt</string>
+    <string name="menu_medium">Medium</string>
+    <string name="menu_hard">Svår</string>
+    
+    <string name="main_menu_text">LHSee </string>
+    <string name="whatIsAtlas_text">Vad är ATLAS? </string>
+    <string name="threeD_text"> ATLAS i 3D</string>
+    <string name="Vagary_text">ATLAS i 2D </string>
+    <string name="HiggsHunt_text">Jaga efter Higgsbosonen </string>
+    <string name="stream_text">Streama 2-D Händelser</string>
+    <string name="stream3d_text">Streama 3-D Händelser</string>
+    <string name="stream_3d_text">Streama 3-D Händelser</string>
+    <string name="gallery_text">Händelsegalleri </string>
+		<string name="credits_text">Medverkande </string>
+		<string name="webview_text">Webblänkar </string>
+
+
+    <string name="reset_zoom_title">Återställ Zoom</string>
+    <string name="change_view_title">Byt Vy</string>
+		<!--<string name="test_event">Ladda testhändelse</string>-->
+		<string name="test_event">Ladda händelse med toppkvarkar </string>
+    <string name="unload_event">Stäng händelse</string>
+		
+		<string name="event0">Exempelhändelse 01</string>
+		<string name="event1">Exempelhändelse 02</string>
+		<string name="event2">Exempelhändelse 03</string>
+		<string name="event3">Exempelhändelse 04</string>
+		<string name="event4">Exempelhändelse 05</string>
+		<string name="event5">Exempelhändelse 06</string>
+		<string name="event6">Exempelhändelse 07</string>
+		<string name="event7">Exempelhändelse 08</string>
+		<string name="event8">Exempelhändelse 09</string>
+		<string name="event9">Exempelhändelse 10</string>
+		<!--<string name="other_events">Ladda exempelhändelser</string>-->
+		<string name="other_events">Ladda testhändelser</string>
+		<string name="test_event1">händelse 105200_190249</string>
+		<string name="test_event2">händelse 106382_27470</string>
+
+		<string name="electron_switch_text">Visa/Dölj elektroner</string>
+		<string name="electron_switch_text_a">Markera elektroner</string>
+		<string name="electron_switch_text_b">Dölj elektroner</string>
+		<string name="jet_switch_text">Visa/Dölj jets</string>
+		<string name="jet_switch_text_a">Markera jets</string>
+		<string name="jet_switch_text_b">Dölj jets</string>
+		<string name="scalebar_switch_text">Visa/Dölj Skala</string>
+		<string name="scalebar_switch_text_a">Dölj Skala</string>
+		<string name="scalebar_switch_text_b">Visa Skala</string>
+
+		<string name="okay">OK</string>
+		<string name="cancel">Avbryt</string>
+		<string name="need_connection">Välj video att streama:</string>
+
+		<string name="sim_download_warning">En kort video kommer nu att streamas från vår server och för att fortsätta måste du vara uppkopplad till Internet. <!--Du rekommenderas att vara uppkopplad till ett trådlöst nätverk för att undvika att din mobiloperatör debiterar dig för dataöverföringen.--></string>
+		<string name="menu_intro">Välkommen till LHSee: appen om Partikelfysik vid ATLAS-detektorn! För att sätta igång trycker du helt enkelt på knappen högst upp på listan och tar dig sedan ner genom de olika aktiviteterna. </string>
+
+	<string name="track_step0">Partiklar som produceras vid en protonkollision i LHC rör sig nästan alla med en hastighet nära ljustes (300 miljoner meter per sekund). Vår nyskapade partikel kommer nu att passera genom ett antal detektorer som kommer att mäta dess riktning, rörelsemängdsmoment och energi.</string>
+	<string name="track_step1">De första detektorerna den passerar är spårdetektorerna. Dessa befinner sig några centimeter från det ställe där protonerna kolliderade. Laddade partiklar producerar fria elektroner i varje kisellager de passerar. En signal från dessa fria elektroner kan mätas med elektronik. Detta påminner om vad som händer inne i din digitala kamera.</string>
+	<string name="track_step2">Partikelns väg genom detektorn (kallad spår) återskapas genom att förena punkterna där partikeln passerat genom kiseln.</string>
+	<string name="track_step3">ATLAS har två enorma supraledande magnetsystem för att böja laddade partiklars bana. Negativt och positivt laddade partiklar böjer av åt olika håll. Partiklar med högt rörelsemängdsmoment böjs enbart lite, medan partiklar med lågt rörelsemångdsmoment böjs väldigt mycket.</string>
+	<string name="track_step4">Lagren av spårdetektorer är byggda i cylindrar kring kollisionspunkten. Protonerna kolliderar i mitten av din skärm och de nybildade partiklarna strålar ut i alla riktningar.</string>
+	<string name="track_step5">Partiklarnas banor visas som ljusblå spår. Dessa spår skapades genom att använda en datorsimulerad händelse. </string>
+	<string name="track_step6">En annan bild av spårdetektorerna i planet som är parallellt med de inkommande protonerna. Protonerna kommer från vänster och från höger och kolliderar i mitten av skärmen. Punkterna som lämnas i spårdetektorerna gör det möjligt att skapa spåren. </string>
+	<string name="track_step7">Här ser vi samma spår i den longitudinella skärningen av detektorn. Spårdetektorn kan med hög noggranhet mäta laddning och rörelsemängdsmoment av alla laddade partiklar som produceras i varje kollision.</string>
+
+	<string name="calo_step0">Efter att ha passerat genom spårdetektorerna fortsätter sedan partiklarna till detektorns nästa del. </string>
+	<string name="calo_step1">Kalorimetrar, utanför den inre detektorn, mäter energin. Den inre kalorimetern (grön) är mest känslig för fotoner och elektroner. Den yttre kalorimetern är utformad för starkt växelverkande partiklar (som kallas för "hadroner"). </string>
+	<string name="calo_step2">Båda kalorimetrarna absorberar energi i metall av hög densitet. Den ursprungliga partikelns energi bestäms genom samplingmätningarna. Den deponerade energin som en funktion av tid skulle kunna ses på ett oscilloskop och se ut så här. </string>
+	<string name="calo_step3">I denna bredare vy, ser du spårdetektorerna i mitten, den elektromagnetiska kalorimetern i grönt och den hadroniska kalorimetern i rött.</string>
+	<string name="calo_step4">Energideponeringar i detektorerna visas som mörkare gröna och röda streck i varje del av detektron. </string>
+	<string name="calo_step5">Kalorimetrarna kan även ses i ett plan parallelt med de inkommande protonerna. De omslutander spårdetektorerna från alla håll. </string>
+	<string name="calo_step6">Som tidigare kan du här se hur samma energideponeringar från den vinkelräta vyn fördelas i detta plan över hela detektorn efter varje kollisionshändelse. </string>
+<string name="calo_step7">Elektroner och anti-elektroner (protoner) har ett laddat spår som pekar mot en stor deponering av energi i den elektromagnetiska kalorimetern.  Kolla på spåren och energideponeringarna. Kan du se några potentiella elektroner (elektronkandidater)?</string>
+<string name="calo_step8">Elektronkandidaterna är nu markerade i blått.</string>
+<string name="calo_step9">På samma sätt kan nu samma spår ses pekandes mot samma energideponeringar i ett plan parallellt mot protonstrålarna.</string>
+<string name="calo_step10">Området i detektorn där en elektron har sönderfallit är nu markerat i blått.</string>
+	
+	<string name="muon_step0">Nu zoomar vi ut ytterligare och ser det enorma (22m diameter) yttre spårdetektorsystemet. Dess enorma storlek behövs för att noggrant kunna mäta myoners rörelsemängdsmoment. Myoner är de enda laddade partiklar som penetrerar kalorimetrarna. </string>
+	<string name="muon_step1">Träffar i myondetektorerna kombineras med träffar från myoner i den inre detektorn och producerar det totala myonspåret, som visas i gult. Prova att flytta runt detektorn genom att peka på skärmen eller nyp för att zooma in och följa myonens spår.</string>
+	<string name="muon_step2">Nu byter vi vy igen och kan se konfigurationen av myondetektorerna i ett plan parallelt mot de inkommande protonerna.</string>
+	<string name="muon_step3">Vi kan igen se hur samma myonspår har tagit sig igenom detektorn i denna vy. </string>
+	
+	<string name="met_step0">Slutligen, ytterligare något som ATLAS vill mäta är rörelsemängdsmomentet på partiklar som inte interagerar alls med detektorn. I en kollision är det totala rörelsemängdsmomentet detsamma före och efter kollisionen. Detta benämns rörelsemängdsmomentets bevarande.</string>
+	<string name="met_step1">Protonerna som kolliderar i LHC har mycket hög energi, så det kan produceras många nya partiklar vid varje kollision. Totala rörelsemängdsmomentet av alla dessa partiklar kommer att bevaras. Här ser vi en proton som rör sig bort från skärmen och som kolliderar med en annan proton som rör sig i motsatt riktning.</string>
+	 
+	<string name="met_step2">Ibland producerar kollisionerna partiklar som är osynliga för alla delar av ATLAS-detektorn. Om vi adderar rörelsemängdsmomentet av alla partiklar i planet som är vinkelrät mot strålarna borde vi få noll som resultat. En stor obalans indikerar att en osynlig partikel har skapats. Här har banan av en osynlig partikel lagts till i magenta.</string>
+	<string name="met_step3">I händelse-displayen visas det saknade rörelsemängdsmomentets vektor i det transversa planet som en magentafärgad pil. Pilen visar i vilken riktning det saknas rörelsemängdsmoment. Vidden på pilen visar hur stor vektron är; ju fetare pil, desto mer rörelsemängdsmoment saknas.</string>
+
+	<string name="events_step0">Vi är nu redo att börja identifiera vilken sorts händelser som har inträffat genom partiklarna som har producerats. Den första händelse vi kan identifiera är en W boson som sönderfaller till en elektron och en neutrino. Elektronen har ett spår och en deponering i den gröna elektromagnetiska kalorimetern. Neutrinon är osynlig, så vi identifierar den genom det saknade rörelsemängdsmomentets vektor (magenta pil). Prova att flytta runt och zooma in genom att nypa på skärmen.</string>
+		<string name="events_step1">Här ser vi samma händelse från sidan. Du kan se samma smala kon av energi som deponerats av elektronen.</string>
+		<string name="events_step2">En W boson kan även sönderfalla till en myon och en neutrino. Detta händer lika ofta som sönderfallet till elektron och neutrino.</string>
+		<string name="events_step3">Här kan vi igen se hur myonen färdas genom detektorn.</string>
+		<string name="events_step4">En annan typ av händelse vi nu kan identifiera är en Z boson som sönderfaller till en elektron och dess antipartikel, en positron. Båda dessa har var sitt spår och deponerar elektromagnetisk energi (grönt).</string>
+		<string name="events_step5">Här är samma händelse från sidovyn. Leta efter spåret och den elektromagnetiska energideponeringen från var och en av de två partiklarna.</string>
+		<string name="events_step6">En Z boson kan lika ofta också sönderfalla till ett myonpar. Myonspår är markerade i gult.</string>
+		<string name="events_step7">Här är samma händelse, sedd från sidan.</string>
+		<string name="events_step8">Vår sista händelse har varken elektroner eller myoner. Två hadron-skurar har producerats, som lämnar energi både i den elektromagnetiska (grön) och hadroniska (röd) kalorimetern. Dessa händelser förekommer en miljard gånger oftare än vad W och Z bosoner produceras. Detta är en oönskad bakgrund för alla andra mätningar.</string>
+		<string name="events_step9">Här är samma bakgrundshändelse från sidan.</string>
+
+	<string name="animation_intro"> Här visas vad varje del av ATLAS-detektorn gör och hur detta framställs i händelse-displayen med hjälp av animeringar. För att gå till föregående eller följande steg av en animering, klicka på vänster eller höger pil på skärmen, eller mittenknappen för att spela om det pågående steget. Klicka på mobilens menyknapp för hjälp.\n
+		Det finns 4 avsnitt som visar:\n
+		Spårning:\n
+		Hur laddade partiklars banor mäts i mitten av ATLAS-detektorn och hur deras laddning och rörelsemängdsmoment beräknas.\n
+		Kalorimetri:\n
+		Hur partiklars energi mäts i kalorimetrarna.\n
+		Saknat Rörelsemängdsmoment:\n
+		Hur rörelsemängdsmomentet av osynliga partiklar, som inte interagerar med detektorn, mäts.\n
+		Myoner: Hur spår från myoner kan bestämmas.\n
+	</string>
+	<string name="animation_intro_title">Animationer!</string> 
+	<string name="animation_menu_help">Hjälp</string> 
+	<string name="help">Hjälp</string> 
+	<string name="animation_menu_tracking">starta Spårdetektorer</string> 
+	<string name="animation_menu_calo">starta Kalorimetrar</string> 
+	<string name="animation_menu_met">starta Osynliga Partiklar</string> 
+	<string name="animation_menu_muons">starta Myoner</string> 
+
+	<string name="sixteenth_meter">0.0625m</string> 
+	<string name="eighth_meter">0.125m</string> 
+	<string name="quarter_meter">0.25m</string> 
+	<string name="half_meter">0.5m</string> 
+	<string name="meter">1.0m</string> 
+	<string name="two_meter">2.0m</string> 
+	<string name="four_meter">4.0m</string> 
+	<string name="eight_meter">8.0m</string> 
+
+	
+	<string name="get_next_event">Nästa händelse</string> 
+	<string name="stream_all">Konstant Streaming</string> 
+
+
+		<!--3D button text -->
+		<string name="inner_detector_text_a">Visa spårdetektorer</string>
+		<string name="inner_detector_text_b">Dölj spårdetektrorer</string>
+
+		<string name="all_detectors_text_a">Visa alla detektorer</string>
+		<string name="all_detectors_text_b">Dölj alla detektorer</string>
+
+		<string name="pixel_text_a">Visa Pixel-detektorn</string>
+		<string name="pixel_text_b">Dölj Pixel-detektorn</string>
+		
+		<string name="sct_text_a">Visa SCT</string>
+		<string name="sct_text_b">Dölj SCT</string>
+
+		<string name="trt_text_a">Visa TRT</string>
+		<string name="trt_text_b">Dölj TRT</string>
+
+		<string name="endcaps_text_a">Visa Lock</string>
+		<string name="endcaps_text_b">Dölj Lock</string>
+
+		<string name="calo_text_a">Visa Kalorimetrar</string>
+		<string name="calo_text_b">Dölj Kalorimetrar</string>
+		
+		<string name="muon_text_a">Visa Myondetektorer</string>
+		<string name="muon_text_b">Dölj Myondetektorer</string>
+		
+		<string name="split_text_a">Klyv detektorer på mitten</string>
+		<string name="split_text_b">Återmontera detektorer</string>
+
+		<string name="load_text">Ladda Testhändelse</string>
+		<string name="threeD_help">Denna Aktivitet visar en fullständigt 3-dimensionell representation av ATLAS-detektorn. Genom att klicka på mobilens menyknapp kan du välja att visa eller dölja varje del av detektorn. Detektorernas färger är desamma som  i den 2-dimensionella händelse-displayen, förutom kisellagren som visas i gult och vitt.</string>
+		<string name="threeD_stream_help">Händelser som insamlas i realtid av ATLAS-detektorn på CERN streamas i denna aktivitet live till din mobil (under förutsättning att detektorn just nu samlar data) och visas i 3D. Klicka på mobilens menyknapp för olika alternativ.</string>
+		<string name="threeD_title">Streama ATLAS händelser i 3D</string>
+    <string name="back_to_list_text">Tillbaks till Listan </string>
+    <string name="classify_text">Vilken händelse är detta? </string>
+    <string name="loading_text">Laddar, var god vänta </string>
+
+
+		<string name="event_143">Händelse 143</string>
+		<string name="event_144">Händelse 144</string>
+		<string name="event_166">Händelse 166</string>
+		<string name="event_167">Händelse 167</string>
+		<string name="event_153">Händelse 153</string>
+		<string name="event_156">Händelse 156</string>
+		<string name="event_159">Händelse 159</string>
+		<string name="event_146">Händelse 146</string>
+		<string name="event_157">Händelse 157</string>
+		<string name="event_160">Händelse 160</string>
+		<string name="event_152">Händelse 152</string>
+		<string name="event_232">Händelse 232</string>
+		<string name="event_008">Händelse 008</string>
+		<string name="event_036">Händelse 036</string>
+		<string name="event_052">Händelse 052</string>
+		
+		<string name="choose_event_title">Vilken händelse tror du detta är?</string>
+
+		<string name="Wenu">W -> elektron eller positron och  neutrino </string>
+		<string name="Wmunu">W -> myon eller anti-myon och  neutrino </string>
+		<string name="HfourL">Higgsboson-> elektron-positron och myon anti-myon</string>
+		<string name="Zee">Z -> elektron och positron </string>
+		<string name="Zmumu">Z -> myon och anti-myon </string>
+		<string name="dijet"> Bakgrundshändelse med 2 jet</string>
+		<string name="correct"> Rätt!</string>
+		<string name="incorrect"> Inte rätt!</string>
+		<string name="game_intro"> I denna aktivitet kan du pröva dina nya kunskaper genom att försöka identifiera några av de olika händelser som produceras i kollisioner, med hjälp av ATLAS-detektorn. Välj helt enkelt en händelse och om du tror att du vet vad det är, välj en händelsetyp. Det finns även en händelse med en Higgsboson gömd bland händelserna. Som vanligt kan du klicka på mobilens menyknapp för fler alternativ. Kolla på avsnittet om vad ATLAS-detektorn är eller besök hemsidan för mer information om händelsetyperna. </string>
+		<string name="stream_intro"> Händelser som insamlas i realtid av ATLAS-detektorn på CERN streamas i denna aktivitet live till din mobil (under förutsättning att detektorn just nu samlar data). Klicka på mobilens menyknapp för olika alternativ.</string>
+		
+    <string name="getting_event">Hämtar nästa händelse</string>
+    <string name="no_connection">Var god koppla upp mobilen till internet och försök igen.</string>
+		<string name="vid_small">Mobil (liten, 2.5MB)</string>
+		<string name="vid_high">Mobil (stor, 4.5MB)</string>
+		<string name="vid_tablet">Platta (?)</string>
+		<string name="game_complete_title">Grattis!</string>
+		<string name="game_complete">Du har framgångsrikt identifierat alla händelser i samlingen. Vid ATLAS-experimentet, kolliderar protonuppsättningar ungefär 40 miljoner gånger per sekund, men endast 250 händelser sparas. Mjukvara som kallas för "trigger" bestämmer huruvida en händelse ska sparas genom att avgöra vad som skedde i händelsen, ungefär som du just har gjort. Besök vår hemsida för mer information om detektorerna eller betydelsen av dessa händelser.</string>
+		<string name="menu">Meny</string>
+		<string name="anim_finished">Du har avslutat detta avsnitt.  Besök vår hemsida från menyn för mer information om detektorerna eller händelsetyperna.</string>
+		<string name="anim_finished_title">Avsnitt avklarat</string>
+		<string name="event_info">Händelseinfo.</string>
+		<string name="feedback_text">Feedback</string>
+    <string name="feedbacktitle">Fyll i synpunkter att skicka till programutvecklaren:\n</string>
+    <string
+        name="feedbackname">Namn</string>
+    <string
+        name="feedbackemail">E-post</string>
+    <string
+        name="feedbackbody">Synpunkter...</string>
+    <string
+        name="feedbackresponse">Vill du få svar via e-post?</string>
+    <string
+        name="feedbackbutton">Skicka din Feedback</string>
+    <string
+        name="feedbacktype">Ange din uppfattning:</string>
+
+    <string name="strong_agree">Instämmer helt</string>
+    <string name="agree">Instämmer</string>
+    <string name="neither_or">Varken instämmer eller tar avstånd</string>
+    <string name="disagree">Instämmer inte</string>
+    <string name="strong_disagree">Instämmer inte alls</string>
+    <string
+        name="feedbacktype4">Bugg</string>
+    <string
+        name="feedbackmessagebody_format">To: The %1$s Department\n\n %2$s\n\n %3$s (%4$s) - %5$s
+    </string>
+    <string
+        name="feedbackmessagebody_responseyes">Önskar svar</string>
+    <string
+        name="feedbackmessagebody_responseno">Önskar inte svar</string>
+    <string name="feedbackmessagesubject_format">Feedback på applikationen </string>
+    <string name="enterEmail">Ange e-postadress:</string>
+    <string name="form_find_out_more">Denna app gör att jag vill lära mig mer om Partikelfysik och LHC</string>
+    <string name="form_developed_understanding">\nDenna app har ökat min förståelse för Partikelfysik och ATLAS experimentet.</string>
+    <string name="form_more_study">\nDenna app har fått mig att fundera på att studera fysik på en högre nivå.</string>
+    <string name="form_age">\nJag är</string>
+    <string name="form_background">\nNivån på mina fysikkunskaper är:</string>
+		<string name="form_lt_15"> under 15 år</string>
+		<string name="form_15_to_18"> 15 - 18 år</string>
+		<string name="form_over_18"> över 18 år</string>
+		<string name="no_gcse"> Låg. </string>
+		<string name="gcse"> GCSE / Standard Grade.</string>
+		<string name="alevel">A-Level / Advanced Higher.</string>
+		<string name="ugrad">Degree level.</string>
+		<string name="form_other">\nÖvriga kommentarer.</string>
+		<string name="form_dont_alter">*** Skicka detta e-postmeddelande som det nu är formatterat. Tack! ***\n</string>
+		<string name="zoom">Zooma in/ut</string>
+		<string name="zoom_instructions">För att zooma in eller ut: nyp på skärmen med två fingrar.</string>
+		<string name="threeD_tour_text">Rotera</string>
+		<string name="rotation_text">Roterar</string>
+
+		<string name="vid_connect_error"> Videon tycks inte vara tillgänglig för din mobil. Videon kan ses på ATLAS youtube kanal\nhttp://www.youtube.com/user/TheATLASExperiment</string>
+		<string name="vid_connect_error_title"> Videofel</string>
+		<string name="id_tracks"> spår från den inre detektorn</string>
+		<string name="muon_tracks"> spår från myoner eller anti-myoner </string>
+		<string name="ele_or_pos"> elektroner eller positroner</string>
+		<string name="gev_of_met"> GeV av saknad transvers energi.</string>
+
+		<string name="topics_interesting">De ämnen som behandlades var intressanta. </string>
+		<string name="phys_level">Nivån på fysiken i appen var lagom.</string>
+		<string name="dev_understanding">Denna app har utvecklat min förståelse för partikelfysik och för LHC.</string>
+		<string name="encouraged_to_study">Denna app har fått mig att fundera på att studera fysik på en högre nivå</string>
+		<string name="dont_know">Jag vet inte \/ Ej applicerbart.</string>
+		<string name="general_interest">Hur intresserad av fysik är du, rent allmänt?</string>
+		<string name="very_interested">Mycket intresserad.</string>
+		<string name="fairly_interested">Ganska intresserad.</string>
+		<string name="not_interested">Inte alls intresserad.</string>
+		<string name="age_u11">Under 11 år.</string>
+		<string name="age_11_16">11-16 år.</string>
+		<string name="age_17_18">17-18 år.</string>
+		<string name="age_19_21">19-21 år.</string>
+		<string name="age_22_35">22-35 år.</string>
+		<string name="age_36_50">36-50 år.</string>
+		<string name="age_51_plus">51+ år.</string>
+		<string name="credits_body_text">Innehållsdesign: Chris Boddy och Alan Barr\n\n\nMjukvara: Chris Boddy\nwww-pnp.physics.ox.ac.uk/~boddy\n\n\nTack till ATLAS kollaborationen och ATLAS Outreach grupp för deras samarbete och förslag, och till Ben Waugh och Adam Davidson för att de delat med sig av sin expertis inom datavisualisering. Konsultation och testning: Sam Whitehead, Phil Jones, Dan Short, Alex Pinder m.fl. i Oxfords ATLAS grupp.\n\nInternationellt Språkstöd:\nFranska:Hugo Beauchemin\nTyska: Alex Dafinca\nItalienska: Caterina Doglioni\nSpanska: Carlos Escobar\nSvenska: Elias Coniavitis\nKinesiska: Zhijun Liang\n\nLogotyp och knappgrafik: Ben Wynne\n\nFinansierat av UK Science and Technology Facilities Council.\nhttp://www.stfc.ac.uk/\nData från ATLAS Experimentet på CERN.\nhttp://atlas.ch/\nwww.cern.ch</string>
+		<string name="market_description_text">Vill du lära dig att jaga efter Higgsbosonen med hjälp av din telefon? Har du någonsin undrat hur experimenten vid LHC (Large Hadron Collider) fungerar, och hur kollisionerna där ser ut? 
+			Vetenskapsmän vid världens största vetenskapliga experiment - Large Hadron Collider på CERN, Geneve - försöker besvara grundläggande frågor kring universums natur, massans ursprung samt strukturen hos tid och rum.  LHSee gör LHC tillgänglig för vem som helst med en Android smartphone eller tablet PC. Appen är skriven av vetenskapsmän från universitetet i Oxford i samarbete med ATLAS experimentet på CERN och den är utformad för användning av både experter och icke-experter.
+			För första gången kan du nu fånga kollisionshändelser live från de underjordiska detektorerna i Geneve och stråla över dem till din telefon. Du får tillgång till en mängd information och du kan dessutom interagera med kollisionshändelserna i full 3D-grafik. Du kan även lära dig hur de olika delarna av detektorn fungerar, hur man kan identifiera olika sorters kollisioner samt testa dina nya färdigheter med spelet "Jaga efter Higgs". 
+			Websida:
+			http://www2.physics.ox.ac.uk/about-us/outreach/public/lhsee 
+	</string>
+	<string name="market_promo_text"> LHSee: upptäck vad som händer på LHC.</string>
+
+
+
+		<string name="timeout"> Timeout: Kontrollera din anslutning.</string>
+		<string name="TheDefault"> Standard </string>
+		<string name="colliding_protons">Protoner som kolliderar i LHC. \n\nhttp://www.atlas.ch/multimedia/html-nc/animation-proton-event.html\nThe ATLAS Experiment &#169; 2011 CERN</string>
+		<string name="atlas_assembly">Montering av ATLAS detektorn. \n\nhttp://www.atlas.ch/multimedia/html-nc/built-in-one-minute.html\nThe ATLAS Experiment &#169; 2011 CERN</string>
+		<string name="higgs_video">Massans ursprung.\n\nhttp://www.atlas.ch/contest/\nThe ATLAS Experiment &#169; 2011 CERN </string>
+		<string name="highlight_muon">Myondetektorer. </string>
+		<string name="highlight_calos_item">Kalorimetrar. </string>
+    <string name="driveLHC_text">Kör LHC </string>
+		<string name="connTimeout"> Anslutningen avbröts. Försök igen senare. </string>
+		<string name="highlight_tracking">Spårdetektorer. </string>
+		<string name="highlight_calos">Kalorimetrar:\nGrön: Electromagnetisk\nRöd: Hadronisk. </string>
+		<string name="highlight_tracking_item">Spårdetektorer. </string>
+		<string name="stream_vid">Välj Video</string>
+		<string name="simulation_chat"> Stora Hadronkollideraren (LHC - Large Hadron Collider) är en 27 km lång accelerator. Den ligger under jorden vid CERN-laboratoriet utanför Geneve i Schweiz. Nedan finner du en simulering av hur LHC accelererar protoner. Dessa pyttesmå partiklar rör sig runt den 27 km långa ringen 11 tusen gånger per sekund, med 99.999999% av ljusets hastighet. Precisionen som krävs för att få dem att kollidera är imponerande. Föreställ dig att stickor skjuts från var sin sida tvärs över Atlanten och att man lyckas få dem att mötas. Strålens totala energi är densamma som ett hangarfartygs som framförs i c:a 25 km/tim.
+
+Knapparna nedan startar en simulering av protoner. Först passerar de ett antal acceleratorer och ökar farten för varje gång. Slutligen hamnar de i själva LHC där de kolliderar i mitten av ATLAS-detektorn. Det finns även två extrafilmer som kan vara av intresse.</string>
+
+<string name="animation_pid">Identifiering av händelser</string> 
+	<string name="trans_proj">X-Y projektion</string> 
+	<string name="para_proj">R-Z projektion</string> 
+  <string name="dl_event_text">Tankar hem händelse, v.g. vänta </string>
+		<string name="vid_loading">" Streamar video..."</string>
+	<string name="silicon_text">kisel </string>
+	<string name="straw_text">strån </string>
+	<string name="coll_occured">Kollisionstid: </string>
+</resources>

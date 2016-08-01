@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml>
+  <EventsFromXML>
+    <Event type="ttbar">test_event.xml</Event>
+  </EventsFromXML>
+  
+</xml>

@@ -1,0 +1,28 @@
+Copyright @2012 Pocketeers Limited.  All rights reserved.
+
+IwGame and associated classes and components are provided “as is” and “without” any form of warranty. Yours, your employers, your companies, company employees, your clients use of IwGame is completely at your own risk. We are not obligated to provide any kind of support in any shape or form. 
+
+You are free to use IwGame in your projects in part or in whole as long as the header comments remain in-tact. Whilst you are not obliged to mention your usage of IwGame in your products it would be great and beneficial to let us know as we can publicise your product on our blog and other web sites / services (Our blog receives over 200,000 hits per month)  However, if you use any part of the IwGame extensions system, which includes extension actors, extension scenes or extension modifiers then you are required to mention usage of the IwGame Engine in your products credits or on your products support website. For clarity the following sections of the IwGame SDK are classed as extensions:
+
+All user interface classes
+Particles or connector actors
+Programs and commands
+Follow heading modifier
+
+The notification in your product can be in text or image format and can be something as simple as a thank you in your credits such as “Powered by the IwGame Engine” or “IwGame Engine Powered”. Alternatively you can include the IwGame logo either in your credits or somewhere in your frnot-end. The logo is available on the official IwGame Engine support site. If you wish to give credit on your support web site then please ensure that you place a visible link back to www.drmop.com or www.iwgameengine.com along with the text similar to that shown above.
+
+You may not use the IwGame Engine or any of its parts to create products that can be used to create other apps and games for mobile devices without express prior written notice from an executive of Pocketeers Limited with the correct authority to grant authorisation. 
+
+You may not claim the IwGame engine or  its documentation as your own work or package it up and include it in any kind of middle ware product without express prior written notice from an executive of Pocketeers Limited with the correct authority to grant authorisation. You may not publicly host any source code that is part of the IwGame Engine, the source will be hosted at http://www.drmop.com/index.php/iwgame-engine/ 
+
+Please note that these licensing terms apply to all versions of the IwGame Engine.
+
+Also note that IwGame utilises zlib, libpng and Box2D, so please take note of those licenses.
+
+Our aim is to promote IwGame as a viable cross platform game engine built on top of the Marmalade SDK, so any publicity will serve to not only help increase public awareness of IwGame in the development community but also increase awareness of the Marmalade SDK, who made this all possible.
+
+If you would like to let us know that you are using IwGame in your products then please get in touch with us at admin@pocketeers.co.uk. We also appreciate any comments or feedback.
+
+If you would like us to develop your product using the IwGame engine then please get in touch at  admin@pocketeers.co.uk
+
+All code, scripts and assets that accompany the game cOnnecticOns / Puzzle Friends are protected under copyright by Pocketeers Limited @2012 and may not be re-used in your existing products. You may use the code base for cOnnecticOns as a reference / learning tool only. If you have any queries about what you can and cannot use then please get in touch with us.

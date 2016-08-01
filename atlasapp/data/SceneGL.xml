@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<xml>
+    <!-- Menu Scene-->
+    <LoadXOML File="HUDScene.xml"/>
+
+    
+  
+    <IwGxScene Name="IwGxScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true" AllowSuspend="false">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" VelocityDamping="0.8, 0.8" IgnoreActors="false" />
+        
+        
+      <!--<StackPanel Name="SP1" Size="300, -20" Background="PanelBrush" Orientation="vertical" AlignH="centre" AlignV="top" SizeToContent="none" >
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Icon Background="Button1Brush" />
+        </StackPanel>-->
+
+
+      <!--StackPanel Name="SP1" Size="-20, -20" Background="PanelBrush" Orientation="vertical" AlignH="centre" AlignV="center" SizeToContent="none" Docking="bottomleft">
+        <Label Name="MenuBotton" Background="Button2Brush" Size="-90, -90" SelectedColour="128, 255, 200, 128" Text="Show Menu" Font="trebuchet_12"
+          OnBeginTouch="MenuBeginTouch" OnEndTouch="MenuEndTouch" OnTapped="ShowMenuAction">
+
+
+          <Actions Name="MenuBeginTouch">
+            <Action Method="SetTimeline" Param1="buttonin_anim" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+          </Actions>
+          <Actions Name="MenuEndTouch">
+            <Action Method="SetTimeline" Param1="buttonout_anim" />
+          </Actions>
+          <Actions Name="ShowMenuAction">
+        
+            <Action Method="SetTimeline" Param1="fly_in2" Param2="HUDScene" />
+            <Action Method="SetCurrentScene" Param1="HUDScene" />
+
+          </Actions>
+
+        </Label>
+      </StackPanel-->
+
+      <!--<LoadXOML File="test_detectors.xml" />-->
+     
+     <!--<Label Background="ShowMenu" Size="-10, -20" SelectedColour="128, 255, 200, 128" Text="Show Menu" Font="trebuchet_12"  HitTest="true" />-->
+    </IwGxScene>
+
+    
+    <LoadXOML File="hunt_higgs_intro.xml"/>
+  
+  </xml>

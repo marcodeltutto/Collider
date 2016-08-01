@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<xml>
+
+
+  <Template Name="sliderTemplate">
+    <Icon Background="Button2Brush" Size="-95, 0" draggable="false" >
+      <Slider Name="Slider_$base$" Value="0.5" ValueRange="0, 1" SliderSize="-80"
+      Background="Button1Brush" SelectedColour="255, 200, 200, 255" Size="48, 48"
+      SliderType="horizontal" Binding="$boundTo$"/>
+    </Icon>
+  </Template>
+
+  <Template Name="listBoxEntryTemplate">
+    <Label Name="ListItemA$index$" Size="-40, 70" Background="SmallPanelBrush"
+           BackgroundColour="210, 210, 210, 255" SelectedColour="80, 80, 255, 255"
+           Font="trebuchet_12" TextColour="255, 255, 255, 255"
+           SelectedTextColour="255, 255, 255, 255" Margin="10, 10, 10, 10" SelectType="toggle"
+           Selected="false" />
+  </Template>
+
+
+
+  <!--<Scene Name="HUDScene" Style="GenericSceneStyle" Camera="HUDCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Batch="false" AllowFocus="true" VirtualTransform="800, 480" Visible="true">-->
+  <Scene Name="HUDScene" Style="GenericSceneStyle" Camera="HUDCam" Colour="255,255,255,255" Batch="false" AllowFocus="true" VirtualTransform="800, 480" Visible="true">
+    <!-- Create a camera -->
+    <Camera Name="HUDCam" Position="0, -2000" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" VelocityDamping="0.8, 0.8" IgnoreActors="false" />
+
+    <Variable Name="MenuActive" Type="bool" Value="false" />
+
+    <Variable Name="slider_test1" Type="float" Value="15" />
+    
+    <Variable Name="slider_red_value" Type="float" Value="0.5" />
+    <Variable Name="slider_green_value" Type="float" Value="0.5" />
+    <Variable Name="slider_blue_value" Type="float" Value="0.5" />
+    <Variable Name="slider_alpha_value" Type="float" Value="1.0" />
+    
+    <Variable Name="ListBoxItems" Type="arraystring" Size="7" 
+              Value="Tracks, Muons, Silicon Detectors, TRT, Electromagnetic Calorimeter, Hadronic Calorimeter, Muon Detectors" />
+    
+    
+    
+    <!--Colours-->
+    <Canvas Name="View1" Size="-40, -80" Background="PanelBrush" BackgroundColour="200, 255, 255, 255" >
+      
+      <!--<Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Colour scheme" AlignH="centre" Font="trebuchet_12" TextColour="255,255,255,255" TextMargin="10,10,0,0"/>-->
+        
+      
+      <ListBox Name="PrimitivesListBox" Size="-90, 64" Background="PanelBrush" Docking="top"
+                MultiSelect="false" ItemsData="ListBoxItems" ItemsTargetType="text"
+                ItemsTemplate="ListBoxEntryTemplate" HitTest="true" Draggable="false"
+                Orientation="horizontal" ClipMargin="5, 5, 5, 5" UseParentOpacity="false" Margin="5, 5, 5, 5" />
+      
+      
+      <StackPanel Name="SP_sliders"  Size="-90, -80" Background="PanelBrush" Orientation="vertical" Docking="bottom"  Margin="10, 10, 10, 10">
+        <!--<FromTemplate Template="sliderTemplate" base="red" boundTo="[Value]slider_red_value"/>-->
+        <Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Red" AlignH="right" Font="trebuchet_12" TextColour="255,0,0,255" TextMargin="10,10,0,0">
+          <Slider Name="Slider_red" Value="0.5" ValueRange="0, 255" SliderSize="-80"
+          Background="Button1Brush" SelectedColour="255, 200, 200, 255" Size="48, 48"
+          SliderType="horizontal"/>
+        </Label>
+
+        <Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Green" AlignH="right" Font="trebuchet_12" TextColour="0,255,0,255" TextMargin="10,10,0,0">
+          <Slider Name="Slider_green" Value="0.5" ValueRange="0, 255" SliderSize="-80"
+          Background="Button1Brush" SelectedColour="255, 200, 200, 255" Size="48, 48"
+          SliderType="horizontal"/>
+        </Label>
+
+        <Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Blue" AlignH="right" Font="trebuchet_12" TextColour="0,0,255,255" TextMargin="10,10,0,0">
+          <Slider Name="Slider_blue" Value="0.5" ValueRange="0, 255" SliderSize="-80"
+          Background="Button1Brush" SelectedColour="255, 200, 200, 255" Size="48, 48"
+          SliderType="horizontal" />
+        </Label>
+
+        <Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Transparency" AlignH="right" Font="trebuchet_12" TextColour="255,255,255,255" TextMargin="10,10,0,0">
+          <Slider Name="Slider_alpha" Value="0.5" ValueRange="0, 255" SliderSize="-80"
+          Background="Button1Brush" SelectedColour="255, 200, 200, 255" Size="48, 48"
+          SliderType="horizontal" />
+        </Label>
+        
+      </StackPanel>
+    </Canvas>
+
+    <!-- Other Options-->
+
+    <StackPanel Name="otherOptions"  Size="-20, 0" Background="PanelBrush" Orientation="vertical" Docking="left"  Margin="10, 10, 10, 10">
+      <Label Name ="projectionButton" Background="Button2Brush" Size="-95, 0" draggable="false" Text="Transverse Projection" AlignH="centre"
+               Font="trebuchet_12" TextMargin="10,10,0,0" SelectType="toggle" Selected="false"
+               BackgroundColour="210, 210, 210, 255" SelectedColour="80, 80, 255, 255"
+             OnBeginTouch="projBeginTouch" OnEndTouch="projEndTouch" OnTapped="HideMenuAction">
+
+         <Actions Name="projBeginTouch">
+            <Action Method="SetTimeline" Param1="buttonin_anim" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        <Actions Name="projEndTouch">
+          <Action Method="SetTimeline" Param1="buttonout_anim" />
+        </Actions>
+        <Actions Name="HideMenuAction">
+          <Action Method="SetCurrentScene" Param1="IwGxScene" />
+            <Action Method="SetTimeline" Param1="fly_out" Param2="HUDScene" />
+            <Action Method="SetVar" Param1="MenuActive" Param2="false" Param3="HUDScene" />
+        </Actions>
+      </Label>
+
+      <Label Name ="detectorVisiblityButton" Background="Button2Brush" Size="-95, 0" draggable="false" Text="Hide Detectors" AlignH="centre"
+               Font="trebuchet_12" TextMargin="10,10,0,0" SelectType="toggle" Selected="false" SelectedText ="Show Detectors"
+               BackgroundColour="210, 210, 210, 255" SelectedColour="80, 80, 255, 255"
+             OnBeginTouch="showDetsBeginTouch" OnEndTouch="showDetsEndTouch" OnTapped="HideMenuAction">
+
+        <Actions Name="showDetsBeginTouch">
+          <Action Method="SetTimeline" Param1="buttonin_anim" />
+          <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        <Actions Name="showDetsEndTouch">
+          <Action Method="SetTimeline" Param1="buttonout_anim" />
+        </Actions>
+        <Actions Name="HideMenuAction">
+          <Action Method="SetCurrentScene" Param1="IwGxScene" />
+            <Action Method="SetTimeline" Param1="fly_out" Param2="HUDScene" />
+            <Action Method="SetVar" Param1="MenuActive" Param2="false" Param3="HUDScene" />
+        </Actions>
+      </Label>
+
+      <Label Name ="animateEventButton" Background="Button2Brush" Size="-95, 0" draggable="false" Text="Animate Event" AlignH="centre"
+               Font="trebuchet_12" TextMargin="10,10,0,0" SelectType="toggle" Selected="false"
+               BackgroundColour="210, 210, 210, 255" SelectedColour="80, 80, 255, 255"
+             OnBeginTouch="aminateEventBeginTouch" OnEndTouch="animateEventEndTouch" OnTapped="HideMenuAction">
+
+        <Actions Name="animateEventBeginTouch">
+          <Action Method="SetTimeline" Param1="buttonin_anim" />
+          <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        <Actions Name="animateEventEndTouch">
+          <Action Method="SetTimeline" Param1="buttonout_anim" />
+        </Actions>
+        <Actions Name="HideMenuAction">
+          <Action Method="SetCurrentScene" Param1="IwGxScene" />
+            <Action Method="SetTimeline" Param1="fly_out" Param2="HUDScene" />
+            <Action Method="SetVar" Param1="MenuActive" Param2="false" Param3="HUDScene" />
+        </Actions>
+      </Label>
+
+      <Label Name ="protonAnimateEventButton" Background="Button2Brush" Size="-95, 0" draggable="false" Text="Animate Event with Proton" AlignH="centre"
+              Font="trebuchet_12" TextMargin="10,10,0,0" SelectType="toggle" Selected="false"
+              BackgroundColour="210, 210, 210, 255" SelectedColour="80, 80, 255, 255"
+            OnBeginTouch="aminateEventBeginTouch" OnEndTouch="animateEventEndTouch" OnTapped="HideMenuAction">
+
+        <Actions Name="animateEventBeginTouch">
+          <Action Method="SetTimeline" Param1="buttonin_anim" />
+          <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        <Actions Name="animateEventEndTouch">
+          <Action Method="SetTimeline" Param1="buttonout_anim" />
+        </Actions>
+        <Actions Name="HideMenuAction">
+          <Action Method="SetCurrentScene" Param1="IwGxScene" />
+            <Action Method="SetTimeline" Param1="fly_out" Param2="HUDScene" />
+            <Action Method="SetVar" Param1="MenuActive" Param2="false" Param3="HUDScene" />
+        </Actions>
+      </Label>
+      <!--
+      <Label Name="FacebookButton" Background="Button2Brush" Size="-45, -10" SelectedColour="128, 255, 200, 128" Text="Post to Facebook." Font="trebuchet_12" OnBeginTouch="FBBeginTouch" OnEndTouch="FBEndTouch" OnTapped="FBHideAction">
+        <Actions Name="FBBeginTouch">
+          <Action Method="SetTimeline" Param1="buttonin_anim" />
+          <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        <Actions Name="FBEndTouch">
+          <Action Method="SetTimeline" Param1="buttonout_anim" />
+        </Actions>
+        <Actions Name="FBHideAction">
+          <Action Method="SetCurrentScene" Param1="IwGxScene" />
+          <Action Method="SetTimeline" Param1="fly_out" Param2="HUDScene" />
+        </Actions>
+
+      </Label>
+      -->
+      
+      <!--<Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Take Screenshot" AlignH="centre"
+             Font="trebuchet_12"  TextMargin="10,10,0,0"/>-->
+    </StackPanel>
+    
+    <Timeline Name="scene_fade_in" AutoPlay="true">
+      <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+    </Timeline>
+
+    <StackPanel Name="SP2" Size="80, 80" Orientation="vertical" AlignH="centre" AlignV="center" SizeToContent="none" Docking="topleft">
+      <Label Name="MenuBotton" Background="MenuBrush" Size="64, 64" SelectedColour="128, 255, 200, 128" Text="" Font="trebuchet_12" 
+             OnBeginTouch="MenuBeginTouch" OnEndTouch="MenuEndTouch" OnTapped="HideMenuAction">
+
+        <Actions Name="MenuBeginTouch">
+          <Action Method="SetTimeline" Param1="buttonin_anim" />
+          <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        <Actions Name="MenuEndTouch">
+          <Action Method="SetTimeline" Param1="buttonout_anim" />
+        </Actions>
+        <Actions Name="HideMenuAction">
+          <Action Method="SetCurrentScene" Param1="IwGxScene" />
+            <Action Method="SetTimeline" Param1="fly_out" Param2="HUDScene" />
+            <Action Method="SetVar" Param1="MenuActive" Param2="false" Param3="HUDScene" />
+        </Actions>
+
+      </Label>
+    </StackPanel>
+    
+    
+
+  </Scene>
+</xml>

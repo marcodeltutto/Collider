@@ -1,0 +1,15 @@
+S3E runtime Crashlog
+--------------------
+
+System Information:
+
+   SDK Version    : 6.0.1 [310907] (S3E ABI v4.34.0)
+   OS             : WINDOWS (3)
+   OS Version     : Windows 6.1 (4.0)
+   Device ID      : Windows Simulator (0x1)
+   Device Class   : WINDOWS_GENERIC (3000)
+   Phone Number   : 0044123456789
+
+Crash Information:
+
+Memory exception (11) attempting to access: DDDDDDDD [ip=523953BF]

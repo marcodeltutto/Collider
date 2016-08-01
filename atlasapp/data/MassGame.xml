@@ -1,0 +1,322 @@
+<?xml version="1.0" ?>
+<xml>
+
+<ClassificationGame name="Mass Game 1" author="Tom McLaughlan" massgame="true">
+    
+<Link title="Mass Plot" url="http://www.hep.ph.bham.ac.uk/DiscoveringParticles/upload_test.php"/>
+    
+    <Histo name="Whist" bins="12" start="50" end="90"/>
+    <Histo name="Zhist" bins="12" start="60" end="100"/>
+    
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59690368.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59621882.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68852426.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68770418.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59691030.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59434170.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59642452.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59664255.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68724126.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68793194.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59512489.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59501750.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68830984.xml"/>
+    <!-- extra jet reco as electron/photon><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59672143.xml"/-->
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68828265.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59507617.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68756655.xml"/>
+    <!-- extra muon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59508532.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59676040.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68841469.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59509393.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68705652.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68847148.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59440802.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68706547.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59597350.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68702931.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59574893.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68779089.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59513785.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68668038.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68816031.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68780601.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59610266.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68656775.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68909050.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59534933.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59566537.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68709491.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59532550.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68832283.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68797839.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59684665.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59448862.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68835544.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59662041.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59556062.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59484207.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59627540.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59605100.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68810589.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68797772.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59658159.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59604872.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59675996.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59521842.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68830763.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68668469.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59486874.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68917033.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68668159.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68852462.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59473004.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59678470.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59457182.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59576115.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59697574.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59449202.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59449958.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59522294.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59661810.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68718034.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68733836.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68701330.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68893217.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59563548.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68886768.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68718368.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68816819.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59565409.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68724550.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59630340.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59600954.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68706776.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68855898.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59597553.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59650796.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59628146.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59497921.xml"/>
+    <!-- large met --><Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59489355.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68687730.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68827000.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68850146.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59476034.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68853729.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59643073.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59467322.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68664114.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59613634.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68669136.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59669306.xml"/>
+    <!-- small met ><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59614770.xml"/-->
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68809340.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59500242.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59532277.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59494399.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59633758.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68711443.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59439719.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68694098.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68669471.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68852021.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_60129507.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59506967.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59508559.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59461411.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68746840.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59672241.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59499682.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59510467.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68669934.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68841359.xml"/>
+    <!-- extra muon, small met ><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59625867.xml"/-->
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68748072.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59604099.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68786571.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68832301.xml"/>
+    <!-- large met --><Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59649654.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59590274.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68869357.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59442531.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68792207.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59567102.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68794379.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59568925.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68750443.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68809285.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59634857.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68700225.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68654095.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68738023.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59630691.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68783384.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59616766.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68728476.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68665054.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68856887.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59435885.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68723345.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68704009.xml"/>
+    <!-- extra electron/jet ><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59435032.xml"/-->
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59681744.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59556264.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68673966.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59520305.xml"/>
+    <!-- 2GeV mass! ><Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68675946.xml"/-->
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59527804.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59584646.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68662658.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68838413.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59475302.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59569346.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68768930.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68814556.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68724756.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68762616.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68808943.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59447285.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59684592.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59516197.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59597242.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59506887.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59621877.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68887294.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59664675.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68730224.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68728162.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68779714.xml"/>
+    <!-- jet reco as electron and photon ><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59600399.xml"/-->
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68724167.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68826800.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68851956.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68659394.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68853696.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68737230.xml"/>
+    <!-- electron is misaligned ><Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59693617.xml"/-->
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68679372.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59467679.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68848153.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59459972.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59596651.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68803180.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59651064.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68733260.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59665994.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59580110.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59538421.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59478940.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59565890.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68670457.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59490120.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59550490.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68717747.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59686873.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68845185.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68904970.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59447337.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68663670.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68697897.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68784064.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59523998.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_60143898.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68764457.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68673956.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68852793.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59626585.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59521426.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59524416.xml"/>
+    <!-- small met ><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59606036.xml"/-->
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59679729.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59458415.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68693875.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68673925.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68772499.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68715788.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59670668.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59556056.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_60127167.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68743034.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59472541.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59526390.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68756522.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59609647.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68662824.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59502640.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68782658.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68721856.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68841811.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68711683.xml"/>
+    <!-- large met --><Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59441660.xml"/>
+    <!-- barely any met ><Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68757274.xml"/-->
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59517523.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59463366.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68689442.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59572124.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59513914.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59542393.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59551350.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68821726.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59672208.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68857172.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59621339.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68808628.xml"/>
+    <Event type="Z to muon+antimuon" file="MassGame/Android.JiveXML_191933_68858247.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59510499.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59681321.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59687073.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59602186.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68673545.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59463698.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59531172.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59574377.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59514900.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59517078.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59583653.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59547720.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68773635.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59639247.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59493250.xml"/>
+    <!-- barely any met ><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59669516.xml"/-->
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59490630.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68667443.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68852009.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68659187.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68682371.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68703647.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68739399.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59653740.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59603840.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59618292.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59653054.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68709906.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68881053.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59624179.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59672199.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59626516.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59447614.xml"/>
+    <!-- electron reco as photon --><Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59693345.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68827806.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68723254.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59631109.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59497321.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68853628.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59616811.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59498703.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59545490.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59594349.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59470180.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59513324.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59629113.xml"/>
+    <!-- extra jet reco as electron ><Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59493171.xml"/-->
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59507909.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68723790.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59635608.xml"/>
+    <Event type="Z to electron+positron" file="MassGame/Android.JiveXML_191933_59481408.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59661518.xml"/>
+    <Event type="W to electron+neutrino" file="MassGame/Android.JiveXML_191933_59680623.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68855125.xml"/>
+    <Event type="W to muon+neutrino" file="MassGame/Android.JiveXML_191933_68742715.xml"/>
+</ClassificationGame>
+    
+</xml>

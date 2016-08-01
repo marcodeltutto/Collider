@@ -1,0 +1,13 @@
+subproject zlib
+
+includepath h
+
+files
+{
+    (h)
+    [h]
+    png.h
+    pngconf.h
+}
+
+library ".,png"

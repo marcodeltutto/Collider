@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <Events parentIsCG="true">
+    <Event type="qcdJets">minerva_event_143.xml</Event>
+    <Event type="qcdJets">minerva_event_146.xml</Event>
+    <Event type="qcdJets">minerva_event_232.xml</Event>
+    <Event type="qcdJets">minerva_event_167.xml</Event>
+    
+    <Event type="Wenu">minerva_event_153.xml</Event>
+    <Event type="Wenu">minerva_event_156.xml</Event>
+    <Event type="Wenu">minerva_event_159.xml</Event>
+    
+    <Event type="Wmunu">minerva_event_157.xml</Event>
+    <Event type="Wmunu">minerva_event_160.xml</Event>
+    
+    <Event type="Higgs4l">minerva_event_166.xml</Event>
+    <Event type="Higgs4l">minerva_higgs_event.xml</Event>
+    
+    <Event type="Zee">minerva_event_144.xml</Event>
+    <Event type="Zee">minerva_event_008.xml</Event>
+
+    <Event type="Zmumu">minerva_event_036.xml</Event>
+    <Event type="Zmumu">minerva_event_052.xml</Event>
+  </Events>
+</xml>

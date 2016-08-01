@@ -1,0 +1,10 @@
+CIwResGroup
+{
+	name "Common"
+
+	// Graphics
+
+	// Fonts
+    "./Gulim.gxfont" { ttfCacheSize 512 }
+
+}

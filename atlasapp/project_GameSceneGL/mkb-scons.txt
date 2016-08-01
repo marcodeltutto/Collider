@@ -1,0 +1,4 @@
+SCONS;build_gamescenegl_scons_x86;
+SCONS;build_gamescenegl_scons_naclx86_64;
+SCONS;build_gamescenegl_scons_aarch64;
+SCONS;build_gamescenegl_scons_arm;

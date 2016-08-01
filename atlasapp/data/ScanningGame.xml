@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<xml>
+
+<ClassificationGame name="W and Z Game" author="Tom McLaughlan">
+    
+<Link title="Online Help" url="http://epweb2.ph.bham.ac.uk/user/mclaughlan/lhsee/web/lhsee/"/>
+    
+    <!-- ELECTRON STREAM! -->
+    
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59434170.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59434193.xml"/>
+    <Event type="Z to electron+positron" file="WandZGame/Android.JiveXML_191933_59459102.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59448862.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59449202.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59449958.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59450534.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59453690.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59455233.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59455768.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59457152.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59474340.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59475302.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59476224.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59478940.xml"/>
+    <Event type="Z to electron+positron" file="WandZGame/Android.JiveXML_191933_59481408.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59481872.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59483208.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59484207.xml"/>
+    <Event type="W to electron+neutrino" file="WandZGame/Android.JiveXML_191933_59487014.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68687564.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68687730.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68689373.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68689442.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68691555.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68691561.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68693093.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68693103.xml"/>
+    <Event type="Z to muon+antimuon" file="WandZGame/Android.JiveXML_191933_68693875.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68694098.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68697813.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68697897.xml"/>
+    <Event type="Z to muon+antimuon" file="WandZGame/Android.JiveXML_191933_68698433.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68700225.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68700643.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68701330.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68701828.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68702931.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68703353.xml"/>
+    <Event type="W to muon+neutrino" file="WandZGame/Android.JiveXML_191933_68703647.xml"/>
+    
+</ClassificationGame>
+    
+</xml>

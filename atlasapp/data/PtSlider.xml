@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<xml>
+    
+    
+    <Template Name="sliderTemplate">
+        <Icon Background="Button2Brush" Size="-95, 0" draggable="false" >
+            <Slider Name="Slider_$base$" Value="0.5" ValueRange="0, 1" SliderSize="-80"
+            Background="Button1Brush" SelectedColour="255, 200, 200, 255" Size="48, 48"
+            SliderType="horizontal" Binding="$boundTo$"/>
+        </Icon>
+    </Template>
+    
+    
+    <!--<Scene Name="HUDScene" Style="GenericSceneStyle" Camera="HUDCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Batch="false" AllowFocus="true" VirtualTransform="800, 480" Visible="true">-->
+    <Scene Name="ColourScene" Style="GenericSceneStyle" Camera="ColourCam" Colour="255,255,255,255" Batch="false" AllowFocus="true" VirtualTransform="800, 480" Visible="false" >
+        <!-- Create a camera -->
+        <Camera Name="ColourCam" Position="0, -2000" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" VelocityDamping="0.8, 0.8" IgnoreActors="false" />
+        
+        <!--Variable Name="MenuActive" Type="bool" Value="false" /-->
+        
+        
+        <Variable Name="slider_pt_value" Type="float" Value="1.0" />
+        
+        
+        <!--Colours-->
+        
+        <Canvas Name="View1" Size="-40, -100" Background="BlackBox" BackgroundColour="0,0,0,200" Text="" Font="gulim">
+            
+            <!--<Label Background="Button2Brush" Size="-95, 0" draggable="false" Text="Colour scheme" AlignH="centre" Font="gulim" TextColour="255,255,255,255" TextMargin="10,10,0,0"/>-->
+            
+            <StackPanel Name="SP_sliders"  Size="-95, -80"  Orientation="vertical" Docking="bottom"  Margin="10, 10, 10, 10" UseParentOpacity="false">
+
+                <!--Label Background="BlackBox" Size="-90, 32" draggable="false" Text="Transparency" AlignH="left" Font="gulim" TextColour="255,255,255,255" TextMargin="0,0,0,0" /-->
+                <Label Background="Groove" Size="-95, 0" draggable="false" Text="pt_cut" AlignH="right" Font="gulim" TextColour="255,255,255,255" TextMargin="10,10,0,0">
+                    <Slider Name="Slider_pt" Value="0.5" ValueRange="0, 50" SliderSize="-70"
+                    Background="Slider" BackgroundColour="200,200,200,225" SelectedColour="255, 255, 255, 255" Size="48, 48"
+                    SliderType="horizontal" />
+                </Label>
+                
+            </StackPanel>
+            
+        </Canvas>
+    </Scene>
+</xml>

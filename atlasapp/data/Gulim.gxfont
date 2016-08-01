@@ -1,0 +1,6 @@
+CIwGxFont
+{
+	name "Gulim"
+	ttf "Gulim.ttf"
+    ttfPointSize 12
+}

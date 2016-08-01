@@ -1,0 +1,13 @@
+ResGroupResources:
+	CIwGxFontTTFont (0xc084661d)
+		"Gulim" (0xf88ddc3)
+		Size: 224798
+	ResList 'CIwGxFontTTFont' pos:37 size:224808
+
+	CIwGxFont (0xa68776be)
+		"Gulim" (0xf88ddc3)
+		Size: 31
+	ResList 'CIwGxFont' pos:224845 size:41
+
+ResGroupResources: Wrote 224853 bytes to CIwResGroup "Common"
+

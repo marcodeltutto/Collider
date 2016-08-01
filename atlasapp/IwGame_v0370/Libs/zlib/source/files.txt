@@ -1,0 +1,16 @@
+adler32.c
+crc32.c
+deflate.c
+files.txt
+gzclose.c
+gzlib.c
+gzread.c
+gzwrite.c
+infback.c
+inffast.c
+inflate.c
+inftrees.c
+minigzip.c
+trees.c
+uncompr.c
+zutil.c

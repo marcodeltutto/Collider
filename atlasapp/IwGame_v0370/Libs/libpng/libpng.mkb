@@ -1,0 +1,43 @@
+#!/usr/bin/env mkb
+option lib
+target png
+subproject libpng
+
+upstream
+{
+    url="http://source.ideaworks3d.com/upstream/libpng-1.2.34.tar.bz2"
+}
+
+subproject zlib
+
+files
+{
+    ("upstream")
+
+    [h]
+    png.h
+    pngconf.h
+
+    [source]
+    png.c
+    pngerror.c
+    pnggccrd.c
+    pngget.c
+    pngmem.c
+    pngpread.c
+    pngread.c
+    pngrio.c
+    pngrtran.c
+    pngrutil.c
+    pngset.c
+    pngtrans.c
+    pngvcrd.c
+    pngwio.c
+    pngwrite.c
+    pngwtran.c
+    pngwutil.c
+}
+
+# TODO: Remove module_options once build machines are set to use RVCT 3.0 by default.
+# and VC6 support is dropped.
+subproject ../../module_options

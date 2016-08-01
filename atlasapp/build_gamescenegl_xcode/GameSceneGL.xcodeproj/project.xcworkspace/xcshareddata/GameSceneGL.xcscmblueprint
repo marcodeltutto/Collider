@@ -1,0 +1,42 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4525493e-7705-40b1-a816-d608a930855b++8782",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "4525493e-7705-40b1-a816-d608a930855b" : {
+
+    },
+    "4525493e-7705-40b1-a816-d608a930855b++8782" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5B1B83BB23E0A22715411014103A3EC7E6E70780" : 0,
+    "4525493e-7705-40b1-a816-d608a930855b" : 0,
+    "4525493e-7705-40b1-a816-d608a930855b++8782" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "36700B3B-6611-497A-A65A-BADD2DD886A7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5B1B83BB23E0A22715411014103A3EC7E6E70780" : "AppEasyCoreSDK\/",
+    "4525493e-7705-40b1-a816-d608a930855b" : "",
+    "4525493e-7705-40b1-a816-d608a930855b++8782" : "atlasapp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GameSceneGL",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "build_gamescenegl_xcode\/GameSceneGL.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn+ssh:\/\/svn.cern.ch\/reps\/lhsee",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4525493e-7705-40b1-a816-d608a930855b"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/home\/boddy\/git_repos\/atlasapp.git\/",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4525493e-7705-40b1-a816-d608a930855b++8782"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mrmop\/AppEasyCoreSDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5B1B83BB23E0A22715411014103A3EC7E6E70780"
+    }
+  ]
+}

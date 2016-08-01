@@ -1,0 +1,239 @@
+#!/usr/bin/env mkb
+options
+{
+#	module_path="../IwGame"
+	module_path="IwGame_v0370"
+}
+
+debug_defines
+{
+IW_USE_CALLSTACK
+}
+
+subprojects
+{
+	IwGame
+	derbh
+}
+
+includepath
+{
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	# Game
+	Game.cpp
+	Game.h
+	Main.cpp
+	Main.h
+	#GameSceneGL.cpp
+	#GameSceneGL.h
+	GLMesh.cpp
+	GLMesh.h
+	GLCone.cpp
+	GLCone.h
+	GLCube.cpp
+	GLCube.h
+	GLEndcap.cpp
+	GLEndcap.h
+	GLCylinder.cpp
+	GLCylinder.h
+	GLDonut.cpp
+	GLDonut.h
+	GLArrow.cpp
+	GLArrow.h
+	MeshGroup.cpp
+	MeshGroup.h
+	My3DUtils.h
+	ABoxFromXML.cpp
+	ABoxFromXML.h
+	ACylinderFromXML.cpp
+	ACylinderFromXML.h
+	EndcapFromXML.cpp
+	EndcapFromXML.h
+	EventFromXML.cpp
+	EventFromXML.h
+	EventManager.cpp
+	EventManager.h
+	FileUtils.cpp
+	FileUtils.h
+	LandingScreen.cpp
+	LandingScreen.h
+	WebBrowser.cpp
+	WebBrowser.h
+	GameLogicScene.cpp
+	GameLogicScene.h
+	LiveScene.cpp
+	LiveScene.h
+	ColourStore.cpp
+	ColourStore.h
+	Tracks.cpp
+	Tracks.h
+	CaloTowers.cpp
+	CaloTowers.h
+	Animation.cpp
+	Animation.h
+	IwGxScene.cpp
+	IwGxScene.h
+	ClassificationGame.cpp
+	ClassificationGame.h
+	TMath.h
+	GAMarmalade.cpp
+	GAMarmalade.h
+
+	[Data]
+	(data)
+	Fonts.group
+	Common.xml
+	UIStyle.xml
+	test_detectors.xml
+	MenuScene.xml
+	ColourScene.xml
+	LandingScreen.xml
+	LandingMenu.xml
+	WebBrowserScene.xml
+	GameScene.xml
+	LiveScene.xml
+
+	Credits.xml
+
+	TestList.xml
+	WandZGame1.xml
+	WandZGame2.xml
+	WandZGame3.xml
+
+	hunt_higgs_game.xml
+	
+	eventDisplay.xml
+	
+	HiggsGame.xml
+
+	empty.xml
+
+	electron.xml
+	muon.xml
+	neutrino.xml
+	jet.xml
+}
+
+assets
+{
+	(data)
+
+	Common.xml
+	UIStyle.xml
+	test_detectors.xml
+	MenuScene.xml
+	ColourScene.xml
+	hunt_higgs_game.xml
+	eventDisplay.xml
+	LandingScreen.xml
+	WebBrowserScene.xml
+	LandingMenu.xml
+	GameScene.xml
+	LiveScene.xml
+	
+	Credits.xml
+
+	TestList.xml
+	WandZGame1.xml
+	WandZGame2.xml
+	WandZGame3.xml
+
+	Gulim.ttf	
+
+	test_image.jpg
+	menu.png
+	box.png
+	boxunder.png
+	boxoutline.png
+	back.png
+	next.png
+	prev.png
+	pointright.png
+	pointleft.png
+	home.png
+	refresh.png
+	slide.png
+	slide_groove.png
+	cross.png
+	qmark.png
+	icon32.png
+	icon36.png
+	icon48.png
+	icon64.png
+	icon72.png
+	icon128.png
+
+	HiggsGame.xml
+
+	empty.xml
+
+	electron.xml
+	muon.xml
+	neutrino.xml
+	jet.xml
+
+	"HiggsGame"
+	"WandZGame1"
+	"WandZGame2"
+	"WandZGame3"
+	"icons"
+	"images"
+
+	(data-ram/data-gles1, data)
+	fonts.group.bin
+
+}
+
+#### AUTO GENERATED deployment settings from DeployTool.exe. Do not edit below this line ####
+deployments
+{
+	["Default"]
+	android-aliasname='txmandroid'
+	android-icon='data/icon48.png'
+	android-icon-hdpi='data/icon72_and.png'
+	android-icon-ldpi='data/icon36.png'
+	android-icon-mdpi='data/icon48.png'
+	android-keypass='OxfordPhysicsThing'
+	android-keystore='my-release-key.keystore'
+	android-manifest='AndroidManifest.xml'
+	android-pkgname='com.mclaughlan.collider'
+	android-storepass='OxfordPhysicsThing'
+	app-icf='data/app.icf'
+	assets='Default'
+	caption='Collider'
+	copyright='University of Oxford'
+	embed-icf=1
+	iphone-appid='com.mclaughlan.collider'
+	iphone-bundle-localisations='en'
+	iphone-bundle-url-name='com.mclaughlan.collider'
+	iphone-bundle-url-schemes='fb141331202732781'
+	iphone-enable-4inch-retina=1
+	iphone-icon='data/icon57.png'
+	iphone-icon-high-res='data/icon114.png'
+	iphone-icon-ipad='data/icon72.png'
+	iphone-icon-ipad-high-res='data/icon144.png'
+	iphone-icon-ipad-search='data/icon50.png'
+	iphone-icon-ipad-search-high-res='data/icon100.png'
+	iphone-icon-settings='data/icon29.png'
+	iphone-icon-settings-high-res='data/icon58.png'
+	iphone-info-plist='Info.plist'
+	iphone-no-splash=1
+	iphone-prerendered-icon=1
+	iphone-provisioning-profile='profiles/ColliderAppStore.mobileprovision'
+	iphone-sign-for-distribution=1
+	iphone-signing-identity='iPhone Distribution: ian mcarthur'
+	itunes-artwork='data/icon512_ios.png'
+	manufacturer='mclaughlan'
+	name='collider'
+	provider='mclaughlan'
+	version-major=1
+	version-minor=0
+	version-revision=4
+	version-string='1.0.4'
+}

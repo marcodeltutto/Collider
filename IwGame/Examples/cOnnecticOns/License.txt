@@ -1,0 +1,6 @@
+cOnnectcOns Game Archive - Copyright 2012 Pocketeers Limited.  All rights reserved.
+
+These coded instructions, statements, and computer programs contain proprietary information of Pocketeers Limited that is used in an actual commercial product known as cOnnecticOns. This source code has been provided as a working example of the IwGame Engine. You are hereby granted permission to use this code to learn to create your own products using the IwGame Engine as long as the product(s) in question vary significantly in design to cOnnecticOns.
+
+You may NOT use in any commercial form the art work, audio or derivatives of such art work or audio that accompanies this archive without prior written permission of a director of Pocketeers Limited,
+

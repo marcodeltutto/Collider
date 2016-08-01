@@ -1,0 +1,8 @@
+CIwResGroup
+{
+	name "Level1"
+
+	// Graphics
+	"./sprites.png"
+	"./block.png"
+}

@@ -1,0 +1,147 @@
+# 1 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent.cpp"
+# 1 "e:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\build_useragent_android_linux_scons_arm//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "./temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent.cpp"
+# 13 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent.cpp"
+# 1 "../source/h/UserAgent_internal.h" 1
+# 18 "../source/h/UserAgent_internal.h"
+# 1 "e:/marmalade/6.1/s3e/h/s3eTypes.h" 1
+# 35 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 49 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 72 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 94 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 106 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+
+
+
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 224 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 244 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef unsigned short s3eWChar;
+# 254 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 19 "../source/h/UserAgent_internal.h" 2
+# 1 "../h/UserAgent.h" 1
+# 21 "../h/UserAgent.h"
+extern "C" {
+
+
+
+
+
+s3eBool UserAgentAvailable();
+
+const char* getUserAgent();
+
+}
+# 20 "../source/h/UserAgent_internal.h" 2
+# 1 "../source/h/UserAgent_autodefs.h" 1
+# 21 "../source/h/UserAgent_internal.h" 2
+
+
+
+
+
+
+
+s3eResult UserAgentInit();
+
+
+
+
+s3eResult UserAgentInit_platform();
+
+
+
+
+
+void UserAgentTerminate();
+
+
+
+
+void UserAgentTerminate_platform();
+const char* getUserAgent_platform();
+# 14 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent.cpp" 2
+s3eResult UserAgentInit()
+{
+
+    return UserAgentInit_platform();
+}
+
+void UserAgentTerminate()
+{
+
+    UserAgentTerminate_platform();
+}
+
+const char* getUserAgent()
+{
+ return getUserAgent_platform();
+}

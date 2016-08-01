@@ -1,0 +1,41 @@
+#!/usr/bin/env mkb
+options
+{
+	module_path="../IwGame;Libs"
+}
+
+subprojects
+{
+	IwGame
+}
+
+includepath
+{
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	# Game
+	Game.cpp
+	Game.h
+	Main.cpp
+	Main.h
+
+	[Data]
+	(data)
+	Common.group
+	HelloWorld.xml
+}
+
+assets
+{
+	(data)
+	HelloWorld.xml
+
+	(data-ram/data-gles1, data)
+	common.group.bin
+}
+

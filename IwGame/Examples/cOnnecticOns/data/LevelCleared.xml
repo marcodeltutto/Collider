@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Scene Name="LevelComplete" Style="GenericSceneStyle" Camera="Cam" Current="true" Timeline="fly_in" Batch="false" OnGainedFocus="GainedFocus">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 500" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Create scene gained focus actions -->
+        <Actions Name="GainedFocus">
+            <Action Method="HideScene" Param1="PauseMenu" />
+        </Actions>
+
+        <!-- Create restart round actions -->
+        <Actions Name="RestartRound">
+            <Action Method="KillScene" Param1="LevelComplete" />
+            <Action Method="SetTimeline" Param1="scene_fade_current_round" Param2="GameScene" />
+            <Action Method="SetTimeline" Param1="scene_fade_out" Param2="HUDScene" />
+        </Actions>
+
+        <!-- Create next round actions -->
+        <Actions Name="NextRound">
+            <Action Method="KillScene" Param1="LevelComplete" />
+            <Action Method="SetTimeline" Param1="scene_fade_next_round" Param2="GameScene" />
+            <Action Method="SetTimeline" Param1="scene_fade_out" Param2="HUDScene" />
+        </Actions>
+
+        <!-- Create scene fly in timeline -->
+        <Animation Name="fly_in" Type="vec2" Duration="1.1" >
+            <Frame Value="0, 500"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, 50"  Time="1.1" />
+        </Animation>
+        <Timeline Name="fly_in" AutoPlay="true">
+            <Animation Anim="fly_in" Target="Position" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fly out timeline -->
+        <Animation Name="fly_out" Type="vec2" Duration="1.5" >
+            <Frame Value="0, 50"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, -50"  Time="0.3" Easing="cubicin" />
+            <Frame Value="0, 50"  Time="0.5" Easing="cubicout" />
+            <Frame Value="0, 500"  Time="1.5"/>
+        </Animation>
+        <Timeline Name="fly_out" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestartRound"/>
+        </Timeline>
+        <Timeline Name="fly_out2" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="NextRound"/>
+        </Timeline>
+
+        <!-- Create depth zoom in timeline -->
+        <Animation Name="score_bob" Type="vec2" Duration="1.0" >
+            <Frame Value="1.0, 1.0"  Time="0.0" Easing="cubicout" />
+            <Frame Value="1.3, 1.3"  Time="0.4" Easing="cubicin" />
+            <Frame Value="1.0, 1.0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="score_bob" AutoPlay="true">
+            <Animation Anim="score_bob" Target="Scale" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create dialog background overlay -->
+        <InertActor Name="Dialog1" Position="0, 0" Size="515, 241" SrcRect="0, 0, 515, 241" Image="sprites2" Depth="1.0" />
+
+        <!-- Create round failed text overlay -->
+        <InertActor Name="RoundFailed" Position="0, -90" Size="206, 25" SrcRect="667, 207, 206, 25" Image="sprites2" Depth="1.0" Visible="false" />
+
+        <!-- Create round completed text overlay -->
+        <InertActor Name="RoundComplete" Position="0, -90" Size="255, 31" SrcRect="667, 176, 255, 31" Image="sprites2" Depth="1.0" Visible="false" />
+
+        <!-- Create round score actor -->
+        <ActorText Name="RoundScore" Position="100, -16" Rect="0, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="0" Colour="20, 40, 100, 255" Scale="1.0" AlignH="left" Timeline="score_bob" />
+        
+        <!-- Create bonus score actor -->
+        <ActorText Name="BonusScore" Position="100, 36" Rect="0, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="0" Colour="200, 40, 40, 255" Scale="1.0" AlignH="left" Timeline="score_bob" />
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim1" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim2" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim3" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim1" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim2" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim3" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create restart button -->
+        <InertActor Name="Restart" Position="-150, 120" Size="152, 70" SrcRect="515, 0, 152, 70" Image="sprites2" OnTapped="RestartAction" OnBeginTouch="RestartBeginTouch" OnEndTouch="RestartEndTouch">
+            <Actions Name="RestartAction">
+                <Action Method="SetTimeline" Param1="fly_out" Param2="LevelComplete" />
+            </Actions>
+            <Actions Name="RestartBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim1" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="RestartEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim1" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create continue button -->
+        <InertActor Name="Continue" Position="150, 120" Size="152, 70" SrcRect="515, 70, 152, 70" Image="sprites2" OnTapped="ContinueAction" OnBeginTouch="ContinueBeginTouch" OnEndTouch="ContinueEndTouch">
+            <Actions Name="ContinueAction">
+                <Action Method="SetTimeline" Param1="fly_out2" Param2="LevelComplete" />
+            </Actions>
+            <Actions Name="ContinueBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim2" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="ContinueEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim2" />
+            </Actions>
+        </InertActor>
+
+        <!-- Post score to Facebook -->
+        <InertActor Name="Facebook" Position="0, 220" Size="227, 102" SrcRect="582, 653, 227, 102" Image="sprites2" OnTapped="FacebookAction" OnBeginTouch="FacebookBeginTouch" OnEndTouch="FacebookEndTouch">
+            <Actions Name="FacebookAction">
+                <Action Method="PostFacebook" />
+            </Actions>
+            <Actions Name="FacebookBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim3" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="FacebookEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim3" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create a template that defines an explosion bomb -->
+        <Template Name="ExplosionTemp">
+            <ActorParticles Name="$name$" Image="sprites1" Position="$pos$" Scale="$scale$" Depth="$depth$" Layer="1" VelAngMode="random" VelMode="random" AngMode="random" ScaleMode="random"
+                            PositionRange="100, 100" AngleRange="0, 360" AngVelRange="-5, 5" ScaleRange="0.25, 0.5" DepthRange="0.5, 1.0" VelRange="-2, 2, -2, 2" ScaleVelRange="0, -0.1" DepthVelRange="0, 0" Visible="false">
+                <Particle Position="0, 0" VelocityDamping="0.95, 0.95" SrcRect="908, 440, 100, 100" ColourVelocity="0, 0, 0, -4" Duration="2" Repeat="-1" SpawnDelay="0" />
+                <Particle Position="0, 0" VelocityDamping="0.95, 0.95" SrcRect="908, 440, 100, 100" ColourVelocity="0, 0, 0, -4" Duration="2" Repeat="-1" SpawnDelay="0.4" />
+                <Particle Position="0, 0" VelocityDamping="0.95, 0.95" SrcRect="908, 440, 100, 100" ColourVelocity="0, 0, 0, -4" Duration="2" Repeat="-1" SpawnDelay="0.8" />
+                <Particle Position="0, 0" VelocityDamping="0.95, 0.95" SrcRect="908, 440, 100, 100" ColourVelocity="0, 0, 0, -4" Duration="2" Repeat="-1" SpawnDelay="1.2" />
+                <Particle Position="0, 0" VelocityDamping="0.95, 0.95" SrcRect="908, 440, 100, 100" ColourVelocity="0, 0, 0, -4" Duration="2" Repeat="-1" SpawnDelay="1.6" />
+            </ActorParticles>
+        </Template>
+        
+        <!-- CReate record score particle anim -->
+        <FromTemplate Template="ExplosionTemp" name="RecordParticles1" pos="40, -20" scale="1.0" depth="1.0" />
+        <FromTemplate Template="ExplosionTemp" name="RecordParticles2" pos="110, -20" scale="1.0" depth="1.0" />
+
+    </Scene>
+
+
+
+</xml>

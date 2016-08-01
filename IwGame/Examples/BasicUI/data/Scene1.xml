@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="-100, -100" />
+        <!--Set Property="CanvasSize" Value="1024, 768" /-->
+        <!--Set Property="CanvasFit" Value="best" /-->
+        <Set Property="CanvasFit" Value="none" />
+        <Set Property="CanvasOrigin" Value="centre" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+        <Set Property="Physics" Value="false" />
+    </Style>
+
+    <LoadXOML File="UIStyle.xml" />
+    
+    <Scene Name="GameScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" />
+
+        <!-- Create a basic list box -->
+        <ListBox Name="Menu" Size="-90, -90" Background="PanelBrush" AlignH="centre" ClipMargin="10, 10, 10, 10" SelectedIndex="1">
+            <Label Background="Button1Brush" Size="-80, -20" SelectedColour="128, 255, 200, 255" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, -20" SelectedColour="128, 255, 200, 255" Text="Option 2" Font="trebuchet_12" />
+            <Label Background="Button1Brush" Size="-90, -20" SelectedColour="128, 255, 200, 255" Text="Option 3" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, -20" SelectedColour="128, 255, 200, 255" Text="Option 4" Font="trebuchet_12" />
+            <Label Background="Button1Brush" Size="-90, -20" SelectedColour="128, 255, 200, 255" Text="Option 5" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, -20" SelectedColour="128, 255, 200, 255" Text="Option 6" Font="trebuchet_12" />
+            <Label Background="Button1Brush" Size="-90, -20" SelectedColour="128, 255, 200, 255" Text="Option 7" Font="trebuchet_12" />
+        </ListBox>
+
+    </Scene>
+
+</xml>

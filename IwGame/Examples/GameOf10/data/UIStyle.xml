@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xml>
+    <!-- Create UI font -->
+    <!--ResourceGroup Name="Fonts" GroupFile="Fonts.group" Preload="true" /-->
+    <Font Name="font1" Location="Serif.ttf" AutoPointSize="50" PointSize="0" Preload="true" />
+    <Font Name="smallfont1" Location="Serif.ttf" AutoPointSize="60" PointSize="0" Preload="true" />
+
+    <!-- Load UI image atlas -->
+    <Image Name="ui_image" Location="ui.png" Preload="false" Format="RGBA_8888" Filter="true" />
+
+    <!-- Create UI brushes -->
+    <Brush Name="Button1Brush" Image="ui_image" SrcRect="320, 70, 200, 70" Type="9patch" ScaleArea="7, 8, 186, 54" />
+    <Brush Name="Button2Brush" Image="ui_image" SrcRect="320, 140, 200, 70" Type="9patch" ScaleArea="8, 8, 184, 54" />
+    <Brush Name="CheckBoxOffBrush" Image="ui_image" SrcRect="320, 210, 48, 48" Type="image" />
+    <Brush Name="CheckBoxOnBrush" Image="ui_image" SrcRect="368, 210, 48, 48" Type="image" />
+    <Brush Name="PanelBrush" Image="ui_image" SrcRect="0, 0, 320, 320" Type="9patch" ScaleArea="12, 15, 296, 290" />
+    <Brush Name="SmallPanelBrush" Image="ui_image" SrcRect="320, 0, 200, 70" Type="9patch" ScaleArea="8, 8, 184, 54" />
+
+    <Brush Name="ButtonBrush2" Image="ui_image" SrcRect="0, 458, 222, 68" Type="9patch" ScaleArea="8, 7, 206, 54" />
+
+    <Animation Name="Flashing" Type="vec2" Duration="1">
+        <Frame Value="0.8, 0.8" Time="0" Easing="quadin" />
+        <Frame Value="1.2, 1.2" Time="0.5" Easing="quadin" />
+        <Frame Value="0.8, 0.8" Time="1" Easing="quadin" />
+    </Animation>
+    <Animation Name="Still" Type="vec2" Duration="2">
+        <Frame Value="1.0, 1.0" Time="0" />
+        <Frame Value="1.0, 1.0" Time="2" />
+    </Animation>
+    <Timeline Name="StillAnim" AutoPlay="true">
+        <Animation Anim="Still" Repeat="0" Target="Scale"/>
+    </Timeline>
+
+
+</xml>

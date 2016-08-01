@@ -1,0 +1,242 @@
+options
+{
+	module_path="Libs"
+}
+
+packages
+{
+}
+
+defines
+{
+    IW_GXFONT_TTF
+    IW_REMOVE_DUPLICATES
+}
+
+subprojects
+{
+	lua-vec
+	iw2d
+	iwgl
+	iwgxfont
+	iwresmanager
+	iwhttp
+	s3eWebView
+	SoundEngine
+	box2d
+	s3eFacebook
+	s3eIOSAppStoreBilling
+#	s3eAndroidMarketBilling
+        s3eAndroidGooglePlayBilling
+	UserAgent
+}
+
+includepath
+{
+	h
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	IwGame.cpp
+	IwGameActions.cpp
+	IwGameAds.cpp
+	IwGameAdsMediator.cpp
+	IwGameAdsView.cpp
+	IwGameAdsViewAnimator.cpp
+	IwGameAnim.cpp
+	IwGameActor.cpp
+	IwGameActorExt.cpp
+	IwGameActorParticles.cpp
+	IwGameAudio.cpp
+	IwGameBrush.cpp
+	IwGameBox2d.cpp
+	IwGameCam.cpp
+	IwGameCamera.cpp
+	IwGameDataIO.cpp
+	IwGameFacebook.cpp
+	IwGameFile.cpp
+	IwGameFont.cpp
+	IwGameHttp.cpp
+	IwGameInput.cpp
+	IwGameImage.cpp
+	IwGameMarket.cpp
+	IwGameModifier.cpp
+	IwGameModifierExt.cpp
+	IwGamePlatform.cpp
+	IwGameProgram.cpp
+	IwGameRemoteReq.cpp
+	IwGameRender2d.cpp
+	IwGameResources.cpp
+	IwGameScene.cpp
+	IwGameScript.cpp
+	IwGameScriptLua.cpp
+	IwGameSettings.cpp
+	IwGameShapes.cpp
+	IwGameSprite.cpp
+	IwGameString.cpp
+	IwGameStyles.cpp
+	IwGameTemplates.cpp
+	IwGameUI.cpp
+	IwGameUIBigImage.cpp
+	IwGameUIGrid.cpp
+	IwGameUIImageView.cpp
+	IwGameUIListBox.cpp
+	IwGameUINavBar.cpp
+	IwGameUIPanels.cpp
+	IwGameUIPicker.cpp
+	IwGameUISlider.cpp
+	IwGameUIStepper.cpp
+	IwGameUITabBar.cpp
+	IwGameUITextView.cpp
+	IwGameUIToolBar.cpp
+	IwGameUIWebView.cpp
+	IwGameUtil.cpp
+	IwGameXml.cpp
+	IwGameVideo.cpp
+	IwGameXoml.cpp
+
+	[Source/Marm]
+	(source/Marm)
+	IwGamePlatformAudioMarm.cpp
+	IwGamePlatformCommsMarm.cpp
+	IwGamePlatformFileMarm.cpp
+	IwGamePlatformFontMarm.cpp
+	IwGamePlatformInputMarm.cpp
+	IwGamePlatformMarm.cpp
+	IwGamePlatformMediaMarm.cpp
+	IwGamePlatformOtherMarm.cpp
+	IwGamePlatformSysMarm.cpp
+	IwGamePlatformUIMarm.cpp
+	IwGamePlatformDisplayMarm.cpp
+
+	[Source/Lua]
+	(source/lua)
+	IwGameLuaAction.cpp
+	IwGameLuaActor.cpp
+	IwGameLuaBrush.cpp
+	IwGameLuaCamera.cpp
+	IwGameLuaFacebook.cpp
+	IwGameLuaFont.cpp
+	IwGameLuaGen.cpp
+	IwGameLuaHttp.cpp
+	IwGameLuaImage.cpp
+	IwGameLuaInput.cpp
+	IwGameLuaMarket.cpp
+	IwGameLuaMedia.cpp
+	IwGameLuaPhysics.cpp
+	IwGameLuaProgram.cpp
+	IwGameLuaResource.cpp
+	IwGameLuaScene.cpp
+	IwGameLuaShape.cpp
+	IwGameLuaTemplate.cpp
+	IwGameLuaTimeline.cpp
+	IwGameLuaVariable.cpp
+
+	[h]
+	(h)
+	IwGame.h
+	IwGameActions.h
+	IwGameAds.h
+	IwGameAdsMediator.h
+	IwGameAdsView.h
+	IwGameAdsViewAnimator.h
+	IwGameAnim.h
+	IwGameActor.h
+	IwGameActorExt.h
+	IwGameActorParticles.h
+	IwGameAudio.h
+	IwGameBrush.h
+	IwGameBox2d.h
+	IwGameCam.h
+	IwGameCamera.h
+	IwGameDataIO.h
+	IwGameFacebook.h
+	IwGameFile.h
+	IwGameFont.h
+	IwGameHttp.h
+	IwGameInput.h
+	IwGameImage.h
+	IwGameMarket.h
+	IwGameModifier.h
+	IwGameModifierExt.h
+	IwGamePlatform.h
+	IwGameProgram.h
+	IwGameRemoteReq.h
+	IwGameRender2d.h
+	IwGameResources.h
+	IwGameScript.h
+	IwGameScriptLua.h
+	IwGameScene.h
+	IwGameSettings.h
+	IwGameShapes.h
+	IwGameSprite.h
+	IwGameString.h
+	IwGameStyles.h
+	IwGameTypes.h
+	IwGameTemplates.h
+	IwGameUI.h
+	IwGameUIBigImage.h
+	IwGameUIGrid.h
+	IwGameUIImageView.h
+	IwGameUIListBox.h
+	IwGameUINavBar.h
+	IwGameUIPanels.h
+	IwGameUIPicker.h
+	IwGameUISlider.h
+	IwGameUIStepper.h
+	IwGameUITabBar.h
+	IwGameUITextView.h
+	IwGameUIToolBar.h
+	IwGameUIWebView.h
+	IwGameUtil.h
+	IwGameXml.h
+	IwGameVideo.h
+	IwGameXoml.h
+
+	[h/Marm]
+	(h/Marm)
+	IwGamePlatformAudioMarm.h
+	IwGamePlatformCommsMarm.h
+	IwGamePlatformFileMarm.h
+	IwGamePlatformFontMarm.h
+	IwGamePlatformInputMarm.h
+	IwGamePlatformMarm.h
+	IwGamePlatformMediaMarm.h
+	IwGamePlatformOtherMarm.h
+	IwGamePlatformSysMarm.h
+	IwGamePlatformUIMarm.h
+	IwGamePlatformDisplayMarm.h
+
+	[h/Lua]
+	(h/lua)
+	IwGameLuaAction.h
+	IwGameLuaActor.h
+	IwGameLuaBrush.h
+	IwGameLuaCamera.h
+	IwGameLuaFacebook.h
+	IwGameLuaFont.h
+	IwGameLuaGen.h
+	IwGameLuaHttp.h
+	IwGameLuaImage.h
+	IwGameLuaInput.h
+	IwGameLuaMarket.h
+	IwGameLuaMedia.h
+	IwGameLuaPhysics.h
+	IwGameLuaProgram.h
+	IwGameLuaResource.h
+	IwGameLuaScene.h
+	IwGameLuaShape.h
+	IwGameLuaTemplate.h
+	IwGameLuaTimeline.h
+	IwGameLuaVariable.h
+
+	[docs]
+	(docs)
+	XOML.xsd
+	Changes.txt
+
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Scene Name="ConfirmDialog" Style="GenericSceneStyle" Camera="ConfirmCam" Current="true" Timeline="fly_in2" Batch="false">
+
+        <!-- Create a camera -->
+        <Camera Name="ConfirmCam" Position="0, 500" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Create scene detsruction actions -->
+        <Actions Name="RestoreFocus">
+            <Action Method="SetCurrentScene" Param1="MenuScene" />
+        </Actions>
+
+        <!-- Create scene fly in timeline -->
+        <Animation Name="fly_in2" Type="vec2" Duration="1.0" >
+            <Frame Value="0, 500"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, 0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="fly_in2" AutoPlay="false">
+            <Animation Anim="fly_in2" Target="Position" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fly out timeline -->
+        <Animation Name="fly_out" Type="vec2" Duration="1.5" >
+            <Frame Value="0, 0"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, -50"  Time="0.3" Easing="cubicin" />
+            <Frame Value="0, 0"  Time="0.5" Easing="cubicout" />
+            <Frame Value="0, 500"  Time="1.5"/>
+        </Animation>
+        <Timeline Name="fly_out" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+
+        <!-- Create dialog background overlay -->
+        <InertActor Name="Dialog1" Position="0, 0" Size="582, 278" SrcRect="0, 423, 582, 278" Image="sprites2" Depth="1.0" />
+
+        <!-- Create round score actor -->
+        <ActorText Name="ConfirmText" Position="0, -55" Rect="0, 0, 500, 300" Angle="0" Font="trebuchet_12" Text="Resetting records will destroy all previous round score records and round completed states" Colour="20, 40, 100, 255" Scale="1.0" AlignH="left" />
+        <ActorText Name="ConfirmText2" Position="0, 38" Rect="0, 0, 500, 300" Angle="0" Font="trebuchet_12" Text="Select Reset to confirm" Colour="20, 40, 100, 255" Scale="1.0" AlignH="left" />
+        
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim1" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim2" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim1" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim2" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create restart button -->
+        <InertActor Name="Reset" Position="-150, 120" Size="152, 70" SrcRect="667, 241, 152, 70" Image="sprites2" OnTapped="ResetAction" OnBeginTouch="ResetBeginTouch" OnEndTouch="ResetEndTouch">
+            <Actions Name="ResetAction">
+                <Action Method="ResetRecords" />
+                <Action Method="SetTimeline" Param1="fly_out" Param2="ConfirmDialog" />
+            </Actions>
+            <Actions Name="ResetBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim1" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="ResetEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim1" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create continue button -->
+        <InertActor Name="Cancel" Position="150, 120" Size="152, 70" SrcRect="819, 241, 152, 70" Image="sprites2" OnTapped="CancelAction" OnBeginTouch="CancelBeginTouch" OnEndTouch="CancelEndTouch">
+            <Actions Name="CancelAction">
+                <Action Method="SetTimeline" Param1="fly_out" Param2="ConfirmDialog" />
+            </Actions>
+            <Actions Name="CancelBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim2" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="CancelEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim2" />
+            </Actions>
+        </InertActor>
+        
+    </Scene>
+
+
+
+</xml>

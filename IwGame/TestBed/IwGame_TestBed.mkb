@@ -1,0 +1,53 @@
+#!/usr/bin/env mkb
+options
+{
+	module_path="$MARMALADE_ROOT/examples;../"
+}
+
+subprojects
+{
+	IwGame
+}
+
+includepath
+{
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	# Game
+	ActorPlayer.cpp
+	ActorPlayer.h
+	Common.h
+	Game.cpp
+	Game.h
+	Main.cpp
+	Main.h
+	TestActor.cpp
+	TestActor.h
+
+	[Data]
+	(data)
+	Level1.group
+	Audio.group
+	Scene1.xml
+	Scene2.xml
+	Common.xml
+}
+
+assets
+{
+	(data)
+	music.mp3
+	Scene1.xml
+	Scene2.xml
+	Common.xml
+
+	(data-ram/data-gles1, data)
+	level1.group.bin
+	audio.group.bin
+}
+

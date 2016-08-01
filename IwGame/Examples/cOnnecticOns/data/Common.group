@@ -1,0 +1,10 @@
+CIwResGroup
+{
+	name "Common"
+
+	// Graphics
+
+	// Fonts
+	"./trebuchet_12.gxfont"
+
+}

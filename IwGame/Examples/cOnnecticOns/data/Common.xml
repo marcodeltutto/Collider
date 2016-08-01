@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<xml>
+    <Style Name="">
+    </Style>
+    <Style Name="BasicActorStyle">
+        <Set Property="Size" Value="60, 60" />
+        <Set Property="Angle" Value="0" />
+        <Set Property="SrcRect" Value="0, 0, 36, 40" />
+        <Set Property="Image" Value="frog" />
+        <Set Property="Timeline" Value="Player1Intro1" />
+        <Set Property="Shape" Value="PlayerShape" />
+        <Set Property="Box2dMaterial" Value="BounceyBall" />
+        <Set Property="CollisionFlags" Value="1, 1, 1" />
+    </Style>
+
+    <Style Name="BasicActorStyle2">
+        <Set Property="Size" Value="60, 60" />
+        <Set Property="Angle" Value="0" />
+        <Set Property="SrcRect" Value="0, 0, 36, 40" />
+        <Set Property="Image" Value="frog" />
+        <Set Property="Timeline" Value="Player1Intro1" />
+    </Style>
+    
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="800, 480" />
+        <Set Property="FixAspect" Value="true" />
+        <Set Property="LockWidth" Value="true" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+    </Style>
+
+    <ResourceGroup Name="Audio" GroupFile="Audio.group" Preload="true" />
+    <ResourceGroup Name="Common" GroupFile="Common.group" Preload="true" />
+
+    <Image Name="sprites1" Location="sprites1.png" Preload="true" />
+    <Image Name="sprites2" Location="sprites2.png" Preload="true" />
+
+    <Font Name="trebuchet_12" Location="Common" />
+    
+    <!-- Create scene fade in animation -->
+    <Animation Name="fade_in" Type="vec4" Duration="5" >
+        <Frame Value="64, 128, 200, 0"  Time="0.0" Easing="quadin" />
+        <Frame Value="255, 255, 255, 255"  Time="2.0"/>
+    </Animation>
+
+    <!-- Create scene fade out animation -->
+    <Animation Name="fade_out" Type="vec4" Duration="1" >
+        <Frame Value="255, 255, 255, 255"  Time="0" Easing="quadin" />
+        <Frame Value="64, 128, 200, 0"  Time="1.0"/>
+    </Animation>
+
+    <!-- Create quick scene fade out animation -->
+    <Animation Name="quick_fade_out" Type="vec4" Duration="1" >
+        <Frame Value="255, 255, 255, 255"  Time="0.0" Easing="quadin" />
+        <Frame Value="64, 128, 200, 0"  Time="1.0"/>
+    </Animation>
+
+    <!-- Create global start round variable -->
+    <Variable Name="EditorConnecticons" Type="int" Value="2" />
+    <Variable Name="StartRound" Type="int" Value="1" />
+    <Variable Name="MaxZones" Type="int" Value="3" />
+    <Variable Name="Zone" Type="int" Value="0" />
+    
+    <!-- Global actions -->
+    <!-- Start next round action -->
+    <Actions Name="RestartCurrentRound">
+        <Action Method="KillScene" Param1="GameScene" />
+        <Action Method="KillScene" Param1="HUDScene" />
+        <Action Method="KillScene" Param1="PauseMenu" />
+        <Action Method="StartRound" />
+    </Actions>
+    <!-- Start next round action -->
+    <Actions Name="StartNextRound">
+        <Action Method="KillScene" Param1="GameScene" />
+        <Action Method="KillScene" Param1="HUDScene" />
+        <Action Method="KillScene" Param1="PauseMenu" />
+        <Action Method="NextRound" />
+    </Actions>
+    <!-- Quit game actions -->
+    <Actions Name="QuitGame">
+        <Action Method="KillScene" Param1="GameScene" />
+        <Action Method="KillScene" Param1="HUDScene" />
+        <Action Method="KillScene" Param1="PauseMenu" />
+        <Action Method="LoadXOML" Param1="Menu.xml" />
+    </Actions>
+
+
+
+</xml>

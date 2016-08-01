@@ -1,0 +1,51 @@
+#!/usr/bin/env mkb
+options
+{
+	module_path="../IwGame;Libs"
+}
+
+subprojects
+{
+	IwGame
+}
+
+includepath
+{
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	# Game
+	Game.cpp
+	Game.h
+	Main.cpp
+	Main.h
+
+	[Data]
+	(data)
+	Fonts.group
+	UIStyle.xml
+	Scene1.xml
+}
+
+assets
+{
+	(data)
+	UIStyle.xml
+	Scene1.xml
+	ui.png
+	image1.png
+	image2.png
+	image3.png
+	image4.png
+	image5.png
+	image6.png
+	image7.png
+
+	(data-ram/data-gles1, data)
+	fonts.group.bin
+}
+

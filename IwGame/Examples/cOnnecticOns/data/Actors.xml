@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<xml>
+    
+    <!-- Create physics material and shape for counters -->
+    <Box2DMaterial Name="SolidMover" Type="kinematic" Density="1.0" Friction="0.5" Restitution="0.8" />
+    <Box2DMaterial Name="Bouncey" Type="dynamic" Density="1.0" Friction="0.5" Restitution="0.8" />
+    <Box2DMaterial Name="SuperBouncey" Type="dynamic" Density="1.0" Friction="0.5" Restitution="1.0" />
+    <Box2DMaterial Name="Sticky" Type="dynamic" Density="1.0" Friction="0.1" Restitution="0.1" />
+    <Shape Name="CounterShape" Type="circle" radius="40" />
+    <Shape Name="CounterShapeBig" Type="circle" radius="60" />
+    <Shape Name="CounterShapeMed" Type="circle" radius="30" />
+    <Shape Name="ObstacleHShape" Type="box" width="138" height="51" />
+    <Shape Name="ObstacleHVhape" Type="box" width="51" height="138" />
+
+    <!-- Create tapped animation -->
+    <Animation Name="tapped_anim" Type="float" Duration="0.5" >
+        <Frame Value="1.0"    Time="0.0" Easing="cubicin" />
+        <Frame Value="0.8"    Time="0.25" Easing="cubicout" />
+        <Frame Value="1.0"    Time="0.5"/>
+    </Animation>
+
+    <Animation Name="face_anim" Type="rect" Duration="0.5" >
+        <Frame Value="93, 558, 76, 58"    Time="0.0" />
+        <Frame Value="169, 558, 76, 58"    Time="0.1" />
+        <Frame Value="245, 558, 76, 58"    Time="0.2" />
+        <Frame Value="321, 558, 76, 58"    Time="0.3" />
+        <Frame Value="397, 558, 76, 58"    Time="0.4" />
+    </Animation>
+    
+    <!-- Create a template that defines a counter -->
+    <Template Name="CounterTemp">
+        <Timeline Name="$base$tapped_anim" AutoPlay="true" Local="false">
+            <Animation Anim="tapped_anim" Target="Depth" Repeat="1" />
+        </Timeline>
+        <Timeline Name="$base$face_anim" AutoPlay="false" Local="false">
+            <Animation Anim="face_anim" Target="SrcRect" Repeat="2" />
+        </Timeline>
+        <Counter Name="Counter$base$" Position="$pos$" Type="1" Size="81, 80" Layer="0" CounterColour="$colour$" Image="sprites1" Depth="$depth$" Shape="CounterShape" Box2dMaterial="Bouncey" CollisionFlags="1, 1, 1" Collidable="true" OnTapped="TappedAction" Timeline="$base$tapped_anim">
+            <InertActor Name="Counter$base$M" Size="38, 29" Image="sprites1" SrcRect="397, 558, 76, 58" Origin="0, 15" HitTest="false" Depth="0" Timeline="$base$face_anim" />
+            <Actions Name="TappedAction">
+                <Action Method="playTimeline" />
+            </Actions>
+        </Counter>
+    </Template>
+
+    <!-- Create a template that defines a big counter -->
+    <Template Name="BigCounterTemp">
+        <Timeline Name="$base$tapped_anim" AutoPlay="true" Local="false">
+            <Animation Anim="tapped_anim" Target="Depth" Repeat="1" />
+        </Timeline>
+        <Timeline Name="$base$face_anim" AutoPlay="false" Local="false">
+            <Animation Anim="face_anim" Target="SrcRect" Repeat="2" />
+        </Timeline>
+        <Counter Name="Counter$base$" Position="$pos$" Type="1" Size="120, 120" Layer="0" CounterColour="$colour$" Image="sprites1" Depth="$depth$" Shape="CounterShapeBig" Box2dMaterial="Sticky" CollisionFlags="1, 1, 1" Collidable="true" OnTapped="TappedAction" Timeline="$base$tapped_anim" Health="2">
+            <InertActor Name="Counter$base$M" Size="38, 29" Image="sprites1" SrcRect="397, 558, 76, 58" Origin="0, 15" HitTest="false" Depth="0" Timeline="$base$face_anim" />
+            <Actions Name="TappedAction">
+                <Action Method="playTimeline" />
+            </Actions>
+        </Counter>
+    </Template>
+
+    <!-- Create a template that defines a medium counter -->
+    <Template Name="MediumCounterTemp">
+        <Timeline Name="$base$tapped_anim" AutoPlay="true" Local="false">
+            <Animation Anim="tapped_anim" Target="Depth" Repeat="1" />
+        </Timeline>
+        <Timeline Name="$base$face_anim" AutoPlay="false" Local="false">
+            <Animation Anim="face_anim" Target="SrcRect" Repeat="2" />
+        </Timeline>
+        <Counter Name="Counter$base$" Position="$pos$" Type="1" Size="60, 60" Layer="0" CounterColour="$colour$" Image="sprites1" Depth="$depth$" Shape="CounterShapeMed" Box2dMaterial="SuperBouncey" CollisionFlags="1, 1, 1" Collidable="true" OnTapped="TappedAction" Timeline="$base$tapped_anim">
+            <InertActor Name="Counter$base$M" Size="38, 29" Image="sprites1" SrcRect="397, 558, 76, 58" Origin="0, 15" HitTest="false" Depth="0" Timeline="$base$face_anim" />
+            <Actions Name="TappedAction">
+                <Action Method="playTimeline" />
+            </Actions>
+        </Counter>
+    </Template>
+
+    <!-- Create a template that defines wall obstacle -->
+    <Template Name="WallTemp">
+        <InertActor Name="Obstacle$base$" Type="2" Position="$pos$" Size="138, 51" Angle="$angle$" AngularVelocity="$angvel$" SrcRect="800, 240, 138, 51" Image="sprites1" Shape="ObstacleHShape" Box2dMaterial="$material$" CollisionFlags="1, 1, 1" Collidable="true" />
+    </Template>
+
+
+    <!-- Create a template that defines an explosion bomb -->
+    <Template Name="ExplosionTemp">
+        <ActorParticles Name="Explosion$name$" Image="sprites1" Position="$pos$" Scale="$scale$" Depth="$depth$" Layer="1" AngularVelocity="0" VelMode="random" AngMode="random" ScaleMode="random"
+                        PositionRange="100, 100" AngleRange="0, 360" ScaleRange="0.5, 1.5" DepthRange="0.5, 1.0" VelRange="-15, 15, 0, 15" AngVelRange="5, 5" ScaleVelRange="0, 0.1" DepthVelRange="0, 0">
+            <Particle Count="10" Position="0, 0" VelocityDamping="0.95, 0.95" SrcRect="908, 440, 100, 100" ColourVelocity="0, 0, 0, -5" Duration="2" Repeat="1" SpawnDelay="0" Gravity="10"/>
+        </ActorParticles>
+    </Template>
+
+
+</xml>

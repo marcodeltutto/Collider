@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<xml>
+
+    <LoadXOML File="ConfirmDialog.xml" />
+    <LoadXOML File="Help.xml" />
+    
+    <Scene Name="MenuScene" Style="GenericSceneStyle" Camera="MenuCam" Current="true" Timeline="scene_fade" Colour="64, 128, 200, 0" OnGainedFocus="GainedFocusAction" OnKeyBack="ExitGame" Batch="false">
+
+        <!-- Define images -->
+        <Image Name="Background" Location="title_bg.png" Preload="true" />
+
+        <!-- Create a camera-->
+        <Camera Name="MenuCam" Position="0, 0" Angle="0" Scale="1.0" />
+
+        <!-- Select level actions -->
+        <Actions Name="GotoZoneSelect">
+            <Action Method="LoadXOML" Param1="ZoneSelect.xml" />
+            <Action Method="KillScene" Param1="MenuScene" />
+            <Action Method="KillScene" Param1="ConfirmDialog" />
+            <Action Method="KillScene" Param1="HelpDialog" />
+        </Actions>
+
+        <!-- Select editor actions -->
+        <Actions Name="GotoEditor">
+            <Action Method="LoadXOML" Param1="EditLevelSelect.xml" />
+            <Action Method="KillScene" Param1="MenuScene" />
+            <Action Method="KillScene" Param1="ConfirmDialog" />
+            <Action Method="KillScene" Param1="HelpDialog" />
+        </Actions>
+
+        <!-- Exit game actions -->
+        <Actions Name="ExitGame">
+            <Action Method="Exit" />
+        </Actions>
+
+        <!-- Gained focus action -->
+        <Actions Name="GainedFocusAction">
+        </Actions>
+
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="GotoZoneSelect" />
+        </Timeline>
+
+        <!-- Create scene fade out and statr editor timeline -->
+        <Timeline Name="scene_fade_out_edit" AutoPlay="true">
+            <Animation Anim="fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="GotoEditor" />
+        </Timeline>
+
+        <!-- Create physics materials -->
+        <Box2DMaterial Name="Solid" Type="static" Density="1.0" Friction="1.0" Restitution="0.1" />
+        <Box2DMaterial Name="BounceyBall" Type="dynamic" Density="1.0" Friction="0.9" Restitution="0.6" />
+
+        <!-- Create collision shapes -->
+        <Shape Name="ButtonShape" Type="box" width="200" height="90" />
+        <Shape Name="StartButtonShape" Type="box" width="300" height="135" />
+        <Shape Name="FloorShape" Type="box" width="800" height="30" />
+        <Shape Name="WallShape" Type="box" width="20" height="480" />
+
+        <!-- Create wiggle animation -->
+        <Animation Name="wiggle_anim" Type="float" Duration="4" >
+            <Frame Value="0"    Time="0.0"/>
+            <Frame Value="1.1"  Time="1.0"/>
+            <Frame Value="-1.1" Time="2.0"/>
+            <Frame Value="0"    Time="3.0"/>
+        </Animation>
+        <Timeline Name="wiggle_anim" AutoPlay="true">
+            <Animation Anim="wiggle_anim" Target="angularvelocity" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create background animation-->
+        <Animation Name="background_anim" Type="vec2" Duration="10" >
+            <Frame Value="-100, 0"  Time="0.0" Easing="quadin" />
+            <Frame Value="0, 100"  Time="2" Easing="quadout"/>
+            <Frame Value="100, 200"  Time="4" Easing="quadin"/>
+            <Frame Value="0, 100"  Time="6" Easing="quadout"/>
+            <Frame Value="-100, 0"  Time="8" Easing="quadin"/>
+        </Animation>
+        <Animation Name="background_anim2" Type="float" Duration="10" >
+            <Frame Value="0"  Time="0" Easing="quadin" />
+            <Frame Value="20"  Time="2" Easing="quadout"/>
+            <Frame Value="0"  Time="4" Easing="quadin"/>
+            <Frame Value="-20"  Time="6" Easing="quadout"/>
+            <Frame Value="0"  Time="8" Easing="quadin"/>
+        </Animation>
+        <Timeline Name="background_anim" AutoPlay="true">
+            <Animation Anim="background_anim" Target="Position" Repeat="0" StartAtTime="0" />
+            <Animation Anim="background_anim2" Target="Angle" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create title animation-->
+        <Animation Name="title_anim" Type="vec2" Duration="10" >
+            <Frame Value="-1000, -180"  Time="0.0" Easing="quadin" />
+            <Frame Value="0, -180"  Time="2" />
+        </Animation>
+        <Animation Name="title_anim2" Type="float" Duration="2" >
+            <Frame Value="1.2"  Time="0" Easing="quadin" />
+            <Frame Value="0.9"  Time="1" Easing="quadout" />
+            <Frame Value="1.2"  Time="2" />
+        </Animation>
+        <Timeline Name="title_anim" AutoPlay="true">
+            <Animation Anim="title_anim" Target="Position" Repeat="1" StartAtTime="0" />
+            <Animation Anim="title_anim2" Target="Depth" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create star animations -->
+        <Animation Name="star_fall_anim1" Type="vec2" Duration="3" >
+            <Frame Value="-600, -200"  Time="0" />
+            <Frame Value="600, -200"  Time="3" />
+        </Animation>
+        <Animation Name="star_fall_anim2" Type="vec2" Duration="3" >
+            <Frame Value="-800, -100"  Time="0" />
+            <Frame Value="600, -100"  Time="3" />
+        </Animation>
+        <Animation Name="star_fall_anim3" Type="vec2" Duration="3" >
+            <Frame Value="-1000, 0"  Time="0" />
+            <Frame Value="600, 0"  Time="3" />
+        </Animation>
+        <Animation Name="star_fall_anim4" Type="vec2" Duration="3" >
+            <Frame Value="-1200, 100"  Time="0" />
+            <Frame Value="600, 100"  Time="3" />
+        </Animation>
+        <Animation Name="star_fade_anim" Type="vec4" Duration="3" >
+            <Frame Value="0, 0, 0, 255"  Time="0" />
+            <Frame Value="0, 0, 0, 50"  Time="3" />
+        </Animation>
+
+        <!-- Create star actor styles -->
+        <Style Name="StarStyle">
+            <Set Property="Colour" Value="0, 0, 0, 255" />
+            <Set Property="Rect" Value="-100, -50, 200, 100" />
+            <Set Property="Font" Value="trebuchet_12" />
+            <Set Property="HitTest" Value="false" />
+            <Set Property="IsCollidable" Value="false" />
+            <Set Property="AlignH" Value="centre" />
+            <Set Property="AlignV" Value="middle" />
+        </Style>
+
+        <Box2DMaterial Name="Bouncey" Type="dynamic" Density="1.0" Friction="0.9" Restitution="0.6" />
+        
+        <!-- Create a template for star actors -->
+        <Template Name="StarTemp">
+            <Timeline Name="star_fall_anim$base$" AutoPlay="true" Local="false">
+                <Animation Anim="star_fall_anim$base$" Target="Position" Repeat="0" StartAtTime="$delay$" />
+                <Animation Anim="star_fade_anim" Target="Colour" Repeat="0" StartAtTime="$delay$" />
+            </Timeline>
+            <ActorText Name="Star$base$" Style="StarStyle" Position="-1000, 0" Text="$text$" AngularVelocity="$angvel$" Timeline="star_fall_anim$base$" Depth="1.0" Layer="1" />
+        </Template>
+
+        <!-- Create background actor -->
+        <InertActor Name="Background" Position="0, 0" Size="1024, 1024" Angle="0" SrcRect="0, 0, 1024, 1024" Colour="255, 255, 255, 255" Image="Background" Timeline="background_anim" />
+
+        <!-- Create title actor -->
+        <InertActor Name="Title" Position="0, -180" Size="662, 92" Angle="0" SrcRect="0, 241, 662, 92" Colour="255, 255, 255, 255" Image="sprites2"  Timeline="title_anim" />
+        
+        <!-- Instantiate star actors -->
+        <FromTemplate Template="StarTemp" base="1" text="x=y+z" delay="1" angvel="1" />
+        <FromTemplate Template="StarTemp" base="2" text="a=(b+c)(b*c)" delay="0.5" angvel="2" />
+        <FromTemplate Template="StarTemp" base="3" text="y=sin(theta)" delay="1.5" angvel="1.5" />
+        <FromTemplate Template="StarTemp" base="4" text="(x*y)(a+B)z" delay="0.75" angvel="2.5" />
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin2_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin3_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin4_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin5_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out ainmation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout2_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout3_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout4_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout5_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create menu actors -->
+        <InertActor Name="WallL" Position="-400, 0" Size="20, 480" Angle="0" SrcRect="0, 0, 8, 8" Image="sprites1" Shape="WallShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" />
+        <InertActor Name="WallL" Position="400, 0" Size="20, 480" Angle="0" SrcRect="0, 0, 8, 8" Image="sprites1" Shape="WallShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" />
+        <InertActor Name="Floor" Position="0, 224" Size="800, 160" Angle="0" SrcRect="0, 0, 800, 160" Image="sprites1" Shape="FloorShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" />
+        <InertActor Name="Help" Position="0, -200" Size="200, 90" Angle="-15" SrcRect="400, 333, 200, 90" Image="sprites2" Shape="ButtonShape" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" Timeline="wiggle_anim"  OnBeginTouch="HelpBeginTouch" OnEndTouch="HelpEndTouch" OnTapped="ShowHelpAction">
+            <Actions Name="HelpBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="HelpEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim" />
+            </Actions>
+            <Actions Name="ShowHelpAction">
+                <Action Method="SetCurrentScene" Param1="HelpDialog" />
+                <Action Method="SetTimeline" Param1="fly_in2" Param2="HelpDialog" />
+            </Actions>
+        </InertActor>
+        <InertActor Name="Options" Position="0, -350" Size="200, 90" Angle="-15" SrcRect="200, 333, 200, 90" Image="sprites2" Shape="ButtonShape" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" Timeline="wiggle_anim"  OnBeginTouch="OptionsBeginTouch" OnEndTouch="OptionsEndTouch" OnTapped="ResetAction">
+            <Actions Name="OptionsBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin2_anim" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="OptionsEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout2_anim" />
+            </Actions>
+            <Actions Name="ResetAction">
+                <Action Method="SetCurrentScene" Param1="ConfirmDialog" />
+                <Action Method="SetTimeline" Param1="fly_in2" Param2="ConfirmDialog" />
+            </Actions>
+        </InertActor>
+        <InertActor Name="Editor" Position="-200, -300" Size="200, 90" Angle="15" SrcRect="582, 563, 200, 90" Image="sprites2" Shape="ButtonShape" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" Timeline="wiggle_anim" OnTapped="EditGamePress" OnBeginTouch="EditBeginTouch" OnEndTouch="EditEndTouch">
+            <Actions Name="EditGamePress">
+                <Action Method="SetTimeline" Param1="scene_fade_out_edit" Param2="MenuScene" />
+                <Action Method="SetTimeline" Param1="throw_anim" Param2="Help" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="EditBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin3_anim" />
+            </Actions>
+            <Actions Name="EditEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout3_anim" />
+            </Actions>
+        </InertActor>
+        <InertActor Name="NewGame" Position="0, -500" Size="300, 135" Angle="15" SrcRect="0, 333, 200, 90" Image="sprites2" Shape="StartButtonShape" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" Timeline="wiggle_anim" OnTapped="NewGamePress" OnBeginTouch="NewBeginTouch" OnEndTouch="NewEndTouch">
+            <Actions Name="NewGamePress">
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="MenuScene" />
+                <Action Method="SetTimeline" Param1="throw_anim" Param2="Help" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="NewBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin4_anim" />
+            </Actions>
+            <Actions Name="NewEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout4_anim" />
+            </Actions>
+        </InertActor>
+        <InertActor Name="MoreGames" Position="-120, -650" Size="200, 90" Angle="15" SrcRect="782, 563, 200, 90" Image="sprites2" Shape="ButtonShape" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" Timeline="wiggle_anim" OnTapped="MoreGamePress" OnBeginTouch="MoreBeginTouch" OnEndTouch="MoreEndTouch">
+            <Actions Name="MoreGamePress">
+                <Action Method="PlaySound" Param1="ui_tap" />
+                <Action Method="Launch" Param1="http://www.appliter.com" />
+            </Actions>
+            <Actions Name="MoreBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin5_anim" />
+            </Actions>
+            <Actions Name="MoreEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout5_anim" />
+            </Actions>
+        </InertActor>
+
+        <Box2DMaterial Name="Bouncey2" Type="dynamic" Density="1.0" Friction="0.5" Restitution="0.8" />
+        <Shape Name="CounterShape" Type="circle" radius="40" />
+        <!-- Create a template that defines a counter -->
+        <Template Name="CounterTemp2">
+            <InertActor Name="Counter$base$" Position="$pos$" Type="1" Size="81, 80" Layer="0" SrcRect="$src_rect$" Image="sprites1" Depth="$depth$" Shape="CounterShape" Box2dMaterial="Bouncey2" CollisionFlags="1, 1, 1" Collidable="true" />
+        </Template>
+
+        <FromTemplate Template="CounterTemp2" base="1" pos="-100, -100" depth="1.0" src_rect="800, 160, 81, 80" />
+        <FromTemplate Template="CounterTemp2" base="2" pos="100, -150" depth="1.0" src_rect="800, 0, 81, 80" />
+        <FromTemplate Template="CounterTemp2" base="3" pos="-100, -450" depth="1.0" src_rect="800, 80, 81, 80" />
+        <FromTemplate Template="CounterTemp2" base="4" pos="100, -450" depth="1.0" src_rect="881, 0, 81, 80" />
+        <FromTemplate Template="CounterTemp2" base="5" pos="0, -650" depth="1.0" src_rect="881, 160, 81, 80" />
+        <FromTemplate Template="CounterTemp2" base="6" pos="200, -650" depth="1.0" src_rect="881, 80, 81, 80" />
+
+
+        <!-- Create throw away animation -->
+        <Animation Name="throw_anim" Type="vec2" Duration="2" >
+            <Frame Value="0, -50"  Time="0.0"/>
+            <Frame Value="0, 0"  Time="2.0"/>
+        </Animation>
+        <Timeline Name="throw_anim" AutoPlay="true">
+            <Animation Anim="throw_anim" Target="Velocity" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+
+    </Scene>
+</xml>

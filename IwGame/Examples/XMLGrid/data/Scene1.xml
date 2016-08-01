@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="-100, -100" />
+        <Set Property="CanvasFit" Value="none" />
+        <Set Property="CanvasOrigin" Value="centre" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+        <Set Property="Physics" Value="false" />
+    </Style>
+
+    <LoadXOML File="UIStyle.xml" />
+    
+    <Scene Name="GameScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" />
+
+        <!-- Create grid cell actor templates -->
+        <Template Name="GridItemTemp1">
+            <Label Name="Grid1Item$index$" Size="-20, 90" Background="Button1Brush" BackgroundColour="200, 200, 200, 255" SelectedColour="200, 255, 200, 255" Font="trebuchet_12" GridPos="$gridpos$" HitTest="true" SelectType="toggle" Selected="false" />
+        </Template>
+        <Template Name="GridItemTemp2">
+            <Label Name="Grid2Item$index$" Size="-20, 90" Background="SmallPanelBrush" BackgroundColour="200, 200, 200, 255" SelectedColour="200, 255, 200, 255" Font="trebuchet_12" GridPos="$gridpos$" HitTest="true" SelectType="normal" Selected="false" />
+        </Template>
+        <Template Name="GridItemTemp3">
+            <Label Name="Grid3Item$index$" Size="-40, 90" Background="SmallPanelBrush" BackgroundColour="200, 200, 200, 255" SelectedColour="200, 255, 200, 255" Font="trebuchet_12" GridPos="$gridpos$" HitTest="true" SelectType="normal" Selected="false" />
+        </Template>
+        <Template Name="GridItemTemp4">
+            <Label Name="Grid4Item$index$" Size="-20, 90" Background="SmallPanelBrush" BackgroundColour="200, 200, 200, 255" SelectedColour="200, 255, 200, 255" Font="trebuchet_12" GridPos="$gridpos$" HitTest="true" SelectType="normal" Selected="false" />
+        </Template>
+
+        <!-- Create data that will be bound to grid columns -->
+        <Variable Name="ListBoxItemsXML" Type="xml" />
+        <File Name="File3" Location="test1.xml" FileType="xml" Preload="true" Variable="ListBoxItemsXML" />
+        <Variable Name="GridItems1" Type="arraystring" Size="1" BindXML="ListBoxItemsXML:Chapter:Brush" />
+        <Variable Name="GridItems2" Type="arraystring" Size="1" BindXML="ListBoxItemsXML:Chapter:Name" />
+        <Variable Name="GridItems3" Type="arraystring" Size="1" BindXML="ListBoxItemsXML:Chapter:Description" />
+        <Variable Name="GridItems4" Type="arraystring" Size="1" BindXML="ListBoxItemsXML:Chapter:Pages" />
+
+        <!-- Generate the grid -->
+        <Grid Name="ItemsGrid" Size="-100, -100" Background="PanelBrush" BackgroundColour="255, 255, 255, 255" HitTest="true" ClipMargin="10, 10, 10, 10" MultiSelect="false" SelectedIndex="5" UseParentOpacity="false">
+            <RowDefinition Name="r0" AlignV="middle" Height="100" />
+            <ColumnDefinition Name="c0" AlignH="left" Width="-20" ItemsData="GridItems1" ItemsTemplate="GridItemTemp1" ItemsTargetType="background" />
+            <ColumnDefinition Name="c1" AlignH="left" Width="-20" ItemsData="GridItems2" ItemsTemplate="GridItemTemp2" ItemsTargetType="text" />
+            <ColumnDefinition Name="c2" AlignH="left" Width="-40" ItemsData="GridItems3" ItemsTemplate="GridItemTemp3" ItemsTargetType="text" />
+            <ColumnDefinition Name="c3" AlignH="left" Width="-20" ItemsData="GridItems4" ItemsTemplate="GridItemTemp4" ItemsTargetType="text" />
+        </Grid>
+
+
+    </Scene>
+
+</xml>

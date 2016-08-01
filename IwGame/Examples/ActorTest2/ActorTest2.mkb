@@ -1,0 +1,57 @@
+#!/usr/bin/env mkb
+options
+{
+	module_path="../IwGame;Libs"
+}
+
+subprojects
+{
+	IwGame
+}
+
+includepath
+{
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	# Game
+	Game.cpp
+	Game.h
+	Main.cpp
+	Main.h
+
+	[Data]
+	(data)
+	Scene1.xml
+}
+
+assets
+{
+	(data)
+	Scene1.xml
+	image1.png
+	image2.png
+	image3.png
+	image4.png
+	image5.png
+	image6.png
+	image7.png
+
+	(data-ram/data-gles1, data)
+}
+
+deployments
+{
+	["Android"]
+	name='ActorTest2'
+	caption='ActorTest2'
+	manufacturer='Pocketeers Limited'
+	provider='Pocketeers Limited'
+	version-major=1
+	version-minor=0
+}
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xml>
+    <!-- Load resource group that contains out font -->
+    <ResourceGroup Name="Common" GroupFile="Common.group" Preload="true" />
+
+    <!-- Create a font from the resource group -->
+    <Font Name="trebuchet_12" Location="Common" />
+
+    <!-- Create a scene -->
+    <Scene Name="MyScene" CanvasSize="320, 480" FixAspect="false" LockWidth="false" Current="true" Batch="false">
+        
+        <!-- Create a text actor -->
+        <ActorText Rect="-100, -20, 200, 40" Font="trebuchet_12" Text="Hello World" Colour="255, 255, 255, 255" />
+        
+    </Scene>
+
+
+</xml>

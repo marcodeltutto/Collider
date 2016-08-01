@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<xml>
+    <Scene Name="ZoneBackgroundScene" Style="GenericSceneStyle" Camera="ZoneSelectBGCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Extents="-500, -250, 1000, 500" AllowFocus="true">
+        <!-- Define images -->
+        <Image Name="Background" Location="title_bg.png" Preload="true" />
+        
+        <!-- Create a camera -->
+        <Camera Name="ZoneSelectBGCam" Position="0, 0" Angle="0" Scale="1.0" />
+
+        <!-- Go to select level actions -->
+        <Actions Name="GotoLevelSelect">
+            <Action Method="KillScene" Param1="ZoneBackgroundScene" />
+            <Action Method="KillScene" Param1="ZoneButtonsScene" />
+            <Action Method="LoadXOML" Param1="LevelSelect.xml" />
+        </Actions>
+
+        <!-- Go to select custom level actions -->
+        <Actions Name="GotoCustomLevelSelect">
+            <Action Method="KillScene" Param1="ZoneBackgroundScene" />
+            <Action Method="KillScene" Param1="ZoneButtonsScene" />
+            <Action Method="LoadXOML" Param1="LevelSelect2.xml" />
+        </Actions>
+
+        <!-- Go back actions -->
+        <Actions Name="GoBack">
+            <Action Method="KillScene" Param1="ZoneBackgroundScene" />
+            <Action Method="KillScene" Param1="ZoneButtonsScene" />
+            <Action Method="LoadXOML" Param1="Menu.xml" />
+        </Actions>
+
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade_in" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline that goes to level select after fade -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="GotoLevelSelect"  />
+        </Timeline>
+
+        <!-- Create scene fade out timeline that goes to custom level select after fade -->
+        <Timeline Name="scene_fade_out_custom" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="GotoCustomLevelSelect"  />
+        </Timeline>
+
+        <!-- Create scene fade out timeline that gos back to previous location after fade -->
+        <Timeline Name="scene_fade_out_go_back" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="GoBack"  />
+        </Timeline>
+
+        <!-- Create title animation-->
+        <Animation Name="title_anim" Type="vec2" Duration="10" >
+            <Frame Value="-1000, -180"  Time="0.0" Easing="quadin" />
+            <Frame Value="0, -180"  Time="2" />
+        </Animation>
+        <Animation Name="title_anim2" Type="float" Duration="2" >
+            <Frame Value="1.2"  Time="0" Easing="quadin" />
+            <Frame Value="0.9"  Time="1" Easing="quadout" />
+            <Frame Value="1.2"  Time="2" />
+        </Animation>
+        <Timeline Name="title_anim" AutoPlay="true">
+            <Animation Anim="title_anim" Target="Position" Repeat="1" StartAtTime="0" />
+            <Animation Anim="title_anim2" Target="Depth" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create wiggle animation -->
+        <Animation Name="wiggle_anim" Type="float" Duration="4" >
+            <Frame Value="0"    Time="0.0"/>
+            <Frame Value="0.1"  Time="1.0"/>
+            <Frame Value="-0.1" Time="2.0"/>
+            <Frame Value="0"    Time="3.0"/>
+        </Animation>
+        <Timeline Name="wiggle_anim" AutoPlay="true">
+            <Animation Anim="wiggle_anim" Target="angularvelocity" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create background animation-->
+        <Animation Name="background_anim" Type="vec2" Duration="10" >
+            <Frame Value="-100, 0"  Time="0.0" Easing="quadin" />
+            <Frame Value="0, 100"  Time="2" Easing="quadout"/>
+            <Frame Value="100, 200"  Time="4" Easing="quadin"/>
+            <Frame Value="0, 100"  Time="6" Easing="quadout"/>
+            <Frame Value="-100, 0"  Time="8" Easing="quadin"/>
+        </Animation>
+        <Animation Name="background_anim2" Type="float" Duration="10" >
+            <Frame Value="0"  Time="0" Easing="quadin" />
+            <Frame Value="20"  Time="2" Easing="quadout"/>
+            <Frame Value="0"  Time="4" Easing="quadin"/>
+            <Frame Value="-20"  Time="6" Easing="quadout"/>
+            <Frame Value="0"  Time="8" Easing="quadin"/>
+        </Animation>
+        <Timeline Name="background_anim" AutoPlay="true">
+            <Animation Anim="background_anim" Target="Position" Repeat="0" StartAtTime="0" />
+            <Animation Anim="background_anim2" Target="Angle" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <InertActor Name="Background" Position="0, 0" Size="1024, 1024" Angle="0" SrcRect="0, 0, 1024, 1024" Colour="255, 255, 255, 255" Image="Background" Timeline="background_anim" HitTest="false" />
+
+        <!-- Create title actor -->
+        <InertActor Name="Title" Position="0, -180" Size="662, 92" Angle="0" SrcRect="0, 241, 662, 92" Colour="255, 255, 255, 255" Image="sprites2"  Timeline="title_anim" HitTest="false" />
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        
+        <!-- Create Back button -->
+        <InertActor Name="Back" Position="0, 200" Size="152, 70" SrcRect="515, 140, 152, 70" Image="sprites2" OnTapped="BackAction" OnBeginTouch="BackBeginTouch" OnEndTouch="BackEndTouch">
+            <Actions Name="BackAction">
+                <Action Method="SetTimeline" Param1="scene_fade_out_go_back" Param2="ZoneBackgroundScene" />
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ZoneButtonsScene" />
+            </Actions>
+            <Actions Name="BackBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="BackEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim" />
+            </Actions>
+        </InertActor>
+
+    </Scene>
+
+    <ZoneSelectScene Name="ZoneButtonsScene" Style="GenericSceneStyle" Camera="ZoneSelectCam" Current="true" OnKeyBack="BackPressed" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Extents="0, -250, 1024, 500" Batch="false">
+
+        <!-- Back pressed actions -->
+        <Actions Name="BackPressed">
+            <Action Method="SetTimeline" Param1="scene_fade_out_go_back" Param2="ZoneBackgroundScene" />
+            <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ZoneButtonsScene" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+
+        <!-- Create a camera-->
+        <Camera Name="ZoneSelectCam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="true" VelocityDamping="0.92, 0.92" />
+
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade_in" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button scale animations -->
+        <Animation Name="scale_in"   Type="vec2" Duration="1" >
+            <Frame Value="1.0, 1.0"  Time="0.0" Easing="quadin" />
+            <Frame Value="1.2, 1.2"  Time="0.5" Easing="quadOut" />
+            <Frame Value="1.0, 1.0"  Time="1.0"/>
+        </Animation>
+
+        <!-- Create button chosen animation -->
+        <Animation Name="button_chosen" Type="float" Duration="2" >
+            <Frame Value="0"      Time="0.0" Easing="quadOut" />
+            <Frame Value="720"    Time="2"/>
+        </Animation>
+        <Animation Name="scale_out"   Type="vec2" Duration="2" >
+            <Frame Value="1.0, 1.0"  Time="0.0" Easing="quadin" />
+            <Frame Value="0.1, 0.1"  Time="1.0" />
+        </Animation> 
+        <Timeline Name="button_chosen" AutoPlay="true">
+            <Animation Anim="button_chosen" Target="Angle" Repeat="1" />
+            <Animation Anim="scale_out" Target="Scale" Repeat="1" />
+        </Timeline>
+
+        <!-- Create lock animation -->
+        <Animation Name="lock_scale_anim" Type="vec2" Duration="2" >
+            <Frame Value="1.0, 1.0"      Time="0" Easing="quadOut" />
+            <Frame Value="1.2, 1.2"    Time="1"  Easing="quadIn" />
+            <Frame Value="1.0, 1.0"      Time="2"/>
+        </Animation>
+        <Timeline Name="lock_scale_anim" AutoPlay="true">
+            <Animation Anim="lock_scale_anim" Target="Scale" Repeat="0" />
+        </Timeline>
+
+        <!-- Create level button actor styles -->
+        <Style Name="LevelButtonStyle">
+            <Set Property="Size" Value="252, 176" />
+            <Set Property="SrcRect" Value="667, 0, 252, 176" />
+            <Set Property="Image" Value="sprites2" />
+        </Style>
+        <Style Name="LevelButtonTextStyle">
+            <Set Property="Colour" Value="0, 0, 0, 255" />
+            <Set Property="Rect" Value="-100, -50, 200, 100" />
+            <Set Property="Font" Value="trebuchet_12" />
+            <Set Property="Scale" Value="1.0" />
+            <Set Property="Angle" Value="0" />
+            <Set Property="Origin" Value="0, 0" />
+            <Set Property="HitTest" Value="false" />
+        </Style>
+
+        <!-- Create a zone select button -->
+        <Template Name="Temp1">
+            <Timeline Name="scale_in$zone$" AutoPlay="true">
+                <Animation Anim="scale_in" Target="scale" Repeat="1" StartAtTime="0" />
+            </Timeline>
+            <InertActor Name="Zone$zone$" Style="LevelButtonStyle" Position="$pos$" OnBeginTouch="BeginTouch1$zone$" OnTapped="StartZone$zone$" HitTest="false" >
+                <InertActor Name="ZoneCn$zone$" Position="0, 0" Size="81, 80" SrcRect="$src_rect$" Image="sprites1" Depth="0" Collidable="false" HitTest="false" />
+                <ActorText Style="LevelButtonTextStyle" Position="0, 60" Text="Zone $zone$" Depth="0" />
+                <Actions Name="StartZone$zone$">
+                    <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ZoneButtonsScene" />
+                    <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ZoneBackgroundScene" />
+                    <Action Method="SetTimeline" Param1="button_chosen" />
+                    <Action Method="SetVar" Param1="Zone" Param2="$zone$" />
+                </Actions>
+                <Actions Name="BeginTouch1$zone$">
+                    <Action Method="SetTimeline" Param1="scale_in$zone$"/>
+                    <Action Method="PlaySound" Param1="ui_tap" />
+                </Actions>
+                <InertActor Name="ZoneComplete$zone$" Size="148, 134" Image="sprites2" SrcRect="582, 423, 148, 134" Position="0, -20" HitTest="false" Depth="0" Timeline="lock_scale_anim" />
+                <InertActor Name="ZoneLocked$zone$" Size="106, 140" Image="sprites2" SrcRect="730, 423, 106, 140" Position="0, -20" HitTest="false" Depth="0" Timeline="lock_scale_anim" />
+            </InertActor>
+        </Template>
+
+        <!-- Create a custom zone select button -->
+        <Template Name="Temp2">
+            <Timeline Name="scale_in$zone$" AutoPlay="true">
+                <Animation Anim="scale_in" Target="scale" Repeat="1" StartAtTime="0" />
+            </Timeline>
+            <InertActor Name="Zone$zone$" Style="LevelButtonStyle" Position="$pos$" OnBeginTouch="BeginTouch1$zone$" OnTapped="StartZone$zone$" Colour="255, 255, 200, 255" >
+                <InertActor Name="ZoneCn$zone$" Position="0, 0" Size="81, 80" SrcRect="$src_rect$" Image="sprites1" Depth="0" Collidable="false" HitTest="false" />
+                <ActorText Style="LevelButtonTextStyle" Position="0, 60" Text="Custom Zone" Depth="0" />
+                <Actions Name="StartZone$zone$">
+                    <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ZoneButtonsScene" />
+                    <Action Method="SetTimeline" Param1="scene_fade_out_custom" Param2="ZoneBackgroundScene" />
+                    <Action Method="SetTimeline" Param1="button_chosen" />
+                    <Action Method="SetVar" Param1="Zone" Param2="$zone$" />
+                </Actions>
+                <Actions Name="BeginTouch1$zone$">
+                    <Action Method="SetTimeline" Param1="scale_in$zone$"/>
+                    <Action Method="PlaySound" Param1="ui_tap" />
+                </Actions>
+            </InertActor>
+        </Template>
+
+        <!-- Create level select button actors-->        
+        <FromTemplate Template="Temp1" pos="0, 0" zone="1" src_rect="800, 160, 81, 80" />
+        <FromTemplate Template="Temp1" pos="300, 0" zone="2" src_rect="800, 0, 81, 80" />
+        <FromTemplate Template="Temp1" pos="600, 0" zone="3" src_rect="800, 80, 81, 80" />
+        <!--FromTemplate Template="Temp1" pos="900, 0" zone="4" src_rect="881, 0, 81, 80" /-->
+        <FromTemplate Template="Temp2" pos="900, 0" zone="11" src_rect="881, 0, 81, 80" />
+
+    </ZoneSelectScene>
+</xml>

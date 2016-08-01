@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<xml>
+    <!-- Load the pause menu scene -->
+    <LoadXOML File="PauseMenu.xml" />
+
+    <GameScene Name="GameScene" Style="GenericSceneStyle" Camera="GameCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Extents="-1000, -400, 2000, 800" Current="true" Gravity="0, 0" GameMode="normal" OnGainedFocus="GainedFocusAction" >
+
+        <!-- Set up level specific variables -->
+        <Variable Name="MaxCounters" Type="int" Value="12" />
+        <Variable Name="Connecticons" Type="int" Value="3" />
+
+        <!-- Scene Actions -->
+        <Actions Name="GainedFocusAction">
+            <Action Method="BringSceneToFront" Param1="HUDScene" />
+        </Actions>
+
+        <!-- Load main actors -->
+        <LoadXOML File="Actors.xml" />
+
+        <!-- Create a camera -->
+        <Camera Name="GameCam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade_in" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out and restart current round timeline -->
+        <Timeline Name="scene_fade_current_round" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="RestartCurrentRound" />
+        </Timeline>
+
+        <!-- Create scene fade out and start next round timeline -->
+        <Timeline Name="scene_fade_next_round" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="StartNextRound" />
+        </Timeline>
+
+        <!-- Create scene fade out and start next round timeline -->
+        <Timeline Name="scene_fade_quit" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="QuitGame" />
+        </Timeline>
+
+        <!-- Add background -->
+        <InertActor Name="Background" Position="0, 0" Size="800, 480" SrcRect="0, 0, 800, 480" Image="sprites1" Depth="1.0" IsTappable="false" HitTes="false" />
+
+        <!-- Add walls -->
+        <Box2DMaterial Name="Solid" Type="static" Density="1.0" Friction="1.0" Restitution="0.1" />
+        <Shape Name="WallVShape" Type="box" width="20" height="480" />
+        <InertActor Name="WallL" Position="-410, 0" Size="20, 480" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallVShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+        <InertActor Name="WallR" Position="410, 0" Size="20, 480" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallVShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+        <Shape Name="WallHShape" Type="box" width="800" height="20" />
+        <InertActor Name="WallT" Position="0, -250" Size="800, 20" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallHShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+        <InertActor Name="WallB" Position="0, 250" Size="800, 20" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallHShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+
+        <!-- Obstacles -->
+        <InertActor Name="Obstacle1" Type="2" Position="0, 0" Size="51, 138" SrcRect="962, 0, 51, 138" Image="sprites1" Shape="ObstacleHVhape" Box2dMaterial="Bouncey" CollisionFlags="1, 1, 1" Collidable="true" />
+
+        <!-- Instantiate counters  -->
+        <FromTemplate Template="CounterTemp" base="1" pos="-200, -150" depth="1.0" colour="blue" />
+        <FromTemplate Template="CounterTemp" base="2" pos="-200, -50" depth="1.0" colour="blue" />
+        <FromTemplate Template="CounterTemp" base="3" pos="-200, 50" depth="1.0" colour="green" />
+        <FromTemplate Template="CounterTemp" base="4" pos="-200, 150" depth="1.0" colour="green" />
+        <FromTemplate Template="CounterTemp" base="5" pos="200, -150" depth="1.0" colour="yellow" />
+        <FromTemplate Template="CounterTemp" base="6" pos="200, -50" depth="1.0" colour="yellow" />
+        <FromTemplate Template="CounterTemp" base="7" pos="200, 50" depth="1.0" colour="red" />
+        <FromTemplate Template="CounterTemp" base="8" pos="200, 150" depth="1.0" colour="red" />
+        <FromTemplate Template="CounterTemp" base="9" pos="-50, -120" depth="1.0" colour="purple" />
+        <FromTemplate Template="CounterTemp" base="10" pos="50, 120" depth="1.0" colour="purple" />
+        <FromTemplate Template="CounterTemp" base="11" pos="120, -200" depth="1.0" colour="purple" />
+        <FromTemplate Template="CounterTemp" base="12" pos="-120, 200" depth="1.0" colour="purple" />
+
+
+    </GameScene>
+
+    <!-- Load in-game HUD -->
+    <LoadXOML File="hud.xml" />
+
+    <!--LoadXOML File="OutOfFrogs.xml" /-->
+
+</xml>

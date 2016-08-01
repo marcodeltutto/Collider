@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<xml>
+
+    <!-- Create a scene to contain our logo actors -->
+    <Scene Name="IntroScene" Style="GenericSceneStyle" Camera="IntroCam" Timeline="camera_zoom" Current="true" OnGainedFocus="GainedFocus" Batch="false">
+        <Actions Name="GainedFocus">
+            <Action Method="SetBGColour" Param1="64, 128, 200, 255" />
+        </Actions>
+
+        <!-- End of logo actions -->
+        <Actions Name="NextScene">
+            <!--Action Method="LoadXOML" Param1="Scene1.xml" /-->
+            <Action Method="PlayMusic" Param1="music.mp3" />
+            <Action Method="LoadXOML" Param1="Menu.xml" />
+            <Action Method="KillScene" Param1="IntroScene" />
+        </Actions>
+
+        <!-- Create a camera-->
+        <Camera Name="IntroCam" Position="0, 0" Angle="0" Scale="1.0" />
+
+        <!-- Create delayed fade out animation -->
+        <Animation Name="fade_out" Type="vec4" Duration="5" >
+            <Frame Value="255, 255, 255, 255" Time="3" />
+            <Frame Value="64, 128, 200, 0"  Time="5"/>
+        </Animation>
+        
+        <!-- Create a zoom animation for the camera -->
+        <Animation Name="camera_zoom" Type="float" Duration="5" >
+            <Frame Value="2"  Time="0.0" Easing="quadout" />
+            <Frame Value="0.75" Time="2.0" />
+        </Animation>
+        <Timeline Name="camera_zoom" AutoPlay="true">
+            <Animation Anim="camera_zoom" Target="Scale" Repeat="1" StartAtTime="0" OnEnd="NextScene" />
+            <Animation Anim="fade_out" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Define logo image -->        
+        <Image Name="logo" Location="logo.png" Preload="true" />
+
+        <!-- Create animations for the logo pieces -->
+        <Animation Name="x_axis" Type="vec2" Duration="4" >
+            <Frame Value="500, 0"  Time="0.0" Easing="quadout" />
+            <Frame Value="0, 0" Time="2.0" />
+        </Animation>
+        <Animation Name="x_axis2" Type="vec2" Duration="4" >
+            <Frame Value="600, 0"  Time="0.0" Easing="quadout" />
+            <Frame Value="0, 0" Time="2.25" />
+        </Animation>
+        <Animation Name="scale_axis" Type="float" Duration="4" >
+            <Frame Value="1"  Time="0.0" Easing="quadout" />
+            <Frame Value="1.25" Time="2.0" />
+        </Animation>
+        <Animation Name="spin_axis" Type="float" Duration="4" >
+            <Frame Value="180"  Time="0.0" Easing="quadin" />
+            <Frame Value="90"  Time="1.0" Easing="quadout" />
+            <Frame Value="0" Time="2.0" />
+        </Animation>
+        <Timeline Name="orbit1" AutoPlay="true">
+            <Animation Anim="x_axis" Target="Position" Repeat="1" />
+            <Animation Anim="scale_axis" Target="ScaleY" Repeat="1" />
+        </Timeline>
+        <Timeline Name="orbit2" AutoPlay="true">
+            <Animation Anim="x_axis" Target="Position" Repeat="1" />
+            <Animation Anim="scale_axis" Target="ScaleY" Repeat="1" />
+            <Animation Anim="spin_axis" Target="Angle" Repeat="1" />
+        </Timeline>
+        <Timeline Name="orbit3" AutoPlay="true">
+            <Animation Anim="x_axis2" Target="Position" Repeat="1" />
+            <Animation Anim="scale_axis" Target="ScaleY" Repeat="1" />
+        </Timeline>
+
+        <!-- Define the logo actors -->
+        <InertActor Name="logo" Position="0, 0" Size="1024, 300" Angle="0" SrcRect="0, 0, 1024, 300" Image="logo" Timeline="orbit1" />
+        <InertActor Name="logo" Position="0, 0" Size="1024, 300" Angle="0" SrcRect="0, 0, 1024, 300" Image="logo" Timeline="orbit2" Colour="255, 255, 255, 128" />
+        <InertActor Name="logo" Position="0, 0" Size="1024, 300" Angle="0" SrcRect="0, 0, 1024, 300" Image="logo" Timeline="orbit3" Colour="255, 255, 255, 64" />
+
+        <ActorText Name="Text1" Position="0, -260" Rect="-400, -50, 800, 100" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="Developed By Pocketeers Limited" Colour="255, 255, 255, 255" Scale="1.5" />
+        <ActorText Name="Text2" Position="0, 250" Rect="-200, -50, 400, 100" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="www.drmop.com" Colour="255, 255, 255, 255" Italic="true" Scale="1.5" />
+
+    </Scene>
+
+</xml>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xml>
+    <Style Name="BasicActorStyle">
+        <Set Property="Size" Value="60, 60" />
+        <Set Property="Angle" Value="0" />
+        <Set Property="SrcRect" Value="0, 0, 36, 40" />
+        <Set Property="Image" Value="frog" />
+        <Set Property="Timeline" Value="Player1Intro1" />
+        <Set Property="Shape" Value="PlayerShape" />
+        <Set Property="Box2dMaterial" Value="BounceyBall" />
+        <Set Property="CollisionFlags" Value="1, 1, 1" />
+    </Style>
+
+    <Style Name="BasicActorStyle2">
+        <Set Property="Size" Value="60, 60" />
+        <Set Property="Angle" Value="0" />
+        <Set Property="SrcRect" Value="0, 0, 36, 40" />
+        <Set Property="Image" Value="frog" />
+        <Set Property="Timeline" Value="Player1Intro1" />
+    </Style>
+    
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="-100, -100" />
+        <!--Set Property="CanvasSize" Value="1024, 768" /-->
+        <Set Property="CanvasFit" Value="best" />
+        <!--Set Property="CanvasFit" Value="none" /-->
+        <Set Property="CanvasOrigin" Value="centre" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+        <Set Property="Physics" Value="false" />
+    </Style>
+
+    <!--LoadXOML File="http://www.drmop.com/Custom.xml" /-->
+    <LoadXOML File="Custom.xml" />
+
+
+</xml>

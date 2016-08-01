@@ -1,0 +1,26 @@
+CIwResGroup
+{
+	name "Audio"
+
+	// Sound sample WAV files
+	"./explosion.wav"
+
+	// Create sound specs (can be thought of as sound materials)
+	CIwSoundSpec
+	{
+		name		"explosion"		# The name we want to use to refer to this sound effect in out code
+		data		"explosion"		# The WAv file name (without .wav
+		vol 		1				# Default volume to be played at
+		loop		false			# Do we want this sound effect to play forever?
+	}
+
+	// Create a sound group to contain all of our sound specs
+	CIwSoundGroup
+	{
+		name		"sound_effects"	# Name of our sound group
+		maxPolyphony 8				# Maximum sounds that can be played simultaneously
+		killOldest	false			# Tell system not to stop the oldest sound effects frmo playing if we run out of channels
+		addSpec		"explosion"		# Add the explosion sound spec to our sound group
+	}
+
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Scene Name="HUDScene" Style="GenericSceneStyle" Camera="HUDCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Batch="false" AllowFocus="true">
+
+        <!-- Create a camera -->
+        <Camera Name="HUDCam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+        
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade_in" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create score anim -->
+        <Animation Name="score_anim" Type="vec2" Duration="0.5" >
+            <Frame Value="1.4, 1.4" Time="0.0" Easing="cubicout" />
+            <Frame Value="1.0, 1.0" Time="0.5" />
+        </Animation>
+        <Timeline Name="score_anim" AutoPlay="false">
+            <Animation Anim="score_anim" Target="Scale" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create start button  anim -->
+        <Animation Name="start_anim" Type="vec2" Duration="1.0" >
+            <Frame Value="1.0, 1.0" Time="0.0" Easing="cubicout" />
+            <Frame Value="1.2, 1.2" Time="0.75" Easing="cubicin" />
+            <Frame Value="1.0, 1.0" Time="1.0" />
+        </Animation>
+        <Timeline Name="start_anim" AutoPlay="true">
+            <Animation Anim="start_anim" Target="Scale" Repeat="0" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Creatr counter count anim -->
+        <Animation Name="counter_anim" Type="float" Duration="0.5" >
+            <Frame Value="0" Time="0.0" />
+            <Frame Value="180" Time="0.25" />
+            <Frame Value="0" Time="0.5" />
+        </Animation>
+        <Timeline Name="counter_anim" AutoPlay="false">
+            <Animation Anim="counter_anim" Target="Angle" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="connecticons_anim" AutoPlay="false">
+            <Animation Anim="counter_anim" Target="Angle" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create HUD background -->
+        <InertActor Name="HUDBG" Position="0, -200" Size="474, 73" SrcRect="0, 482, 474, 73" Image="sprites1" HitTest="false" Colour="255, 255, 255, 200" />
+
+        <!-- Add number of bombs remaining -->
+        <ActorText Name="Round" Position="-195, -189" Rect="0, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="" Colour="20, 40, 100, 255" Scale="1.0" AlignH="centre" HitTest="false" />
+
+        <!-- Add number of bombs remaining -->
+        <ActorText Name="Timer" Position="-122, -189" Rect="0, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="" Colour="20, 40, 100, 255" Scale="1.0" AlignH="centre" Timeline="counter_anim" HitTest="false" />
+
+        <!-- Add number of bombs remaining -->
+        <ActorText Name="Connecticons" Position="-48, -189" Rect="0, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="" Colour="20, 40, 100, 255" Scale="1.0" AlignH="centre" Timeline="connecticons_anim" HitTest="false" />
+
+        <!-- Add score -->
+        <ActorText Name="Score" Position="155, -212" Rect="0, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="0" Colour="20, 40, 100, 255" Scale="1.0" AlignH="left" Timeline="score_anim" HitTest="false" />
+
+        <!-- Add record score -->
+        <ActorText Name="RecordScore" Position="165, -186" Rect="-100, 0, 200, 60" Angle="0" Font="trebuchet_12" AngularVelocity="0" Text="0" Colour="255, 80, 80, 255" Scale="0.7" AlignH="left" HitTest="false" />
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin2_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout2_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create menu button -->
+        <InertActor Name="MenuButton" Position="-300, -200" Size="81, 84" SrcRect="800, 356, 81, 84" Image="sprites1" OnBeginTouch="MenuBeginTouch" OnEndTouch="MenuEndTouch" OnTapped="MenuTapped">
+            <Actions Name="MenuBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="MenuEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim" />
+            </Actions>
+            <Actions Name="MenuTapped">
+                <Action Method="DeactivateScene" Param1="GameScene" />
+                <Action Method="DeactivateScene" Param1="HUDScene" />
+                <Action Method="ShowScene" Param1="PauseMenu" />
+                <Action Method="SetCurrentScene" Param1="PauseMenu" />
+                <Action Method="SetTimeline" Param1="fly_in3" Param2="PauseMenu" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create start button -->
+        <InertActor Name="StartButton" Position="300, -200" Size="81, 84" SrcRect="881, 356, 81, 84" Image="sprites1" OnBeginTouch="StartBeginTouch" OnEndTouch="StartEndTouch" OnTapped="StartTapped" Timeline="start_anim">
+            <Actions Name="StartBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin2_anim" />
+                <Action Method="HideActor" Param1="MenuButton" />
+                <Action Method="PlaySound" Param1="start" />
+            </Actions>
+            <Actions Name="StartEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout2_anim" />
+            </Actions>
+            <Actions Name="StartTapped">
+                <Action Method="Shoot" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create record score ainmation -->
+        <Animation Name="timer_anim" Type="vec2" Duration="1.0" >
+            <Frame Value="2.0, 2.0"  Time="0.0" />
+            <Frame Value="1.0, 1.0"  Time="0.5" />
+            <Frame Value="2.0, 2.0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="timer_anim" AutoPlay="true">
+            <Animation Anim="timer_anim" Target="Scale" Repeat="0" />
+        </Timeline>
+
+        <!-- Add record score -->
+        <ActorText Name="CountDownTimer" Position="0, 0" Rect="-100, 0, 200, 60" Angle="0" Font="trebuchet_12" Text="" Colour="255, 80, 80, 255" Scale="2.0" AlignH="center" Visible="true" Timeline="timer_anim" HitTest="false" />
+
+
+    </Scene>
+
+</xml>
+

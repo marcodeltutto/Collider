@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<xml>
+    <Style Name="BasicActorStyle">
+        <Set Property="Size" Value="60, 60" />
+        <Set Property="Angle" Value="0" />
+        <Set Property="SrcRect" Value="0, 0, 36, 40" />
+        <Set Property="Image" Value="Sprites" />
+        <Set Property="Timeline" Value="Player1Intro1" />
+        <Set Property="Shape" Value="PlayerShape" />
+        <Set Property="Box2dMaterial" Value="BounceyBall" />
+        <Set Property="CollisionFlags" Value="1, 1, 1" />
+    </Style>
+
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="320, 480" />
+        <Set Property="FixAspect" Value="true" />
+        <Set Property="LockWidth" Value="false" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+    </Style>
+
+    <ResourceGroup Name="Audio" GroupFile="Audio.group" Preload="true" />
+    <ResourceGroup Name="Level1" GroupFile="Level1.group" Preload="true" />
+    <Image Name="Sprites" Location="Level1" Preload="true" />
+    <Image Name="Block" Location="Level1" Preload="true" />
+    <Image Name="Buddy" Location="http://www.battleballz.com/bb_icon.gif" Preload="true" Blocking="false" />
+    <Animation Name="PlayerImageAnim" Type="rect" Duration="0.8" >
+        <Atlas Count="8" Size="36, 40" Position="0, 0" Pitch="1024, 40" Width="1024" Duration="0.1"/>
+        <!--Frame Value="0, 0,   36, 40" Time="0.0" />
+        <Frame Value="0, 40,  36, 40" Time="0.1" />
+        <Frame Value="0, 80,  36, 40" Time="0.2" />
+        <Frame Value="0, 120, 36, 40" Time="0.3" />
+        <Frame Value="0, 160, 36, 40" Time="0.4" />
+        <Frame Value="0, 200, 36, 40" Time="0.5" />
+        <Frame Value="0, 240, 36, 40" Time="0.6" />
+        <Frame Value="0, 280, 36, 40" Time="0.7" /-->
+    </Animation>
+    <Animation Name="SpinAnim1" Type="float" Duration="8" >
+        <Frame Value="0"   Time="0.0" />
+        <Frame Value="90"  Time="2.0" />
+        <Frame Value="180" Time="4.0" />
+        <Frame Value="270" Time="6.0" />
+        <Frame Value="360" Time="8.0" />
+    </Animation>
+    <Animation Name="ScaleAnim1" Type="float" Duration="4" >
+        <Frame Value="0.1"  Time="0.0" />
+        <Frame Value="1.0"  Time="1.0" />
+        <Frame Value="1.5"  Time="2.0" />
+        <Frame Value="1.6"  Time="3.0" />
+        <Frame Value="1.65" Time="4.0" />
+    </Animation>
+    <Animation Name="ColourAnim1" Type="vec4" Duration="4" >
+        <Frame Value="255, 255, 255, 0"    Time="0.0" />
+        <Frame Value="255, 255, 255, 200"  Time="1.0" />
+        <Frame Value="255, 255, 255, 255"  Time="2.0" />
+        <Frame Value="255, 255, 255, 200"  Time="3.0" />
+        <Frame Value="255, 255, 255, 0"    Time="4.0" />
+    </Animation>
+    <Animation Name="SceneTransition1" Type="vec2" Duration="2" >
+        <Frame Value="0, 0"    Time="0.0" />
+        <Frame Value="480, 0"  Time="2.0" />
+    </Animation>
+    <Animation Name="PlayerStates" Type="string">
+        <Frame Value="State1" Time="0" />
+        <Frame Value="State2" Time="0.5" />
+        <Frame Value="State3" Time="1.0" />
+        <Frame Value="State4" Time="1.5" />
+    </Animation>
+    <Shape Name="Alien" Type="circle" radius="100" />
+    <Shape Name="Platform1" Type="polygon">
+        <Point Value="-100, -100" />
+        <Point Value="-100, -200" />
+        <Point Value="100, -100" />
+        <Point Value="100, 100" />
+        <Point Value="-100, 100" />
+    </Shape>
+
+    <Camera Name="CommonCam" Position="0, 0" Angle="0" Scale="1.0" />
+    <Camera Name="Scene3CamA" Position="0, 0" Angle="-20" Scale="1.0" />
+    <Camera Name="Scene3CamB" Position="0, 0" Angle="20" Scale="1.0" />
+
+    <Variable Name="PlayerName" Type="string" Value="Player One" />
+    <Variable Name="PlayerScore" Type="int" Value="0" />
+    <Variable Name="PlayColour" Type="vec4" Value="255, 128, 64, 8" />
+
+</xml>

@@ -1,0 +1,496 @@
+IwGame 0.4 Changes:
+* Apple Wizard tool added, easy wizard to help guide developers through the Apple iOS sign-up, certificate generation, provisioning etc..
+* Over 60 XOML / Lua examples added showing how to use the many parts of the IwGame engine core
+* New XOML documentation added, outlining the complete XOML and Lua API's in depth
+* Lua API added which enables apps to be developed without C++ or a combination
+* New Script resource type added which enables scripts to be included via XOML. Globally declared scripts will exist in the global script space, whilst scene local scripts will be local to the scene
+* Support for Video Camera streaming added (IWGameCam)
+* New XOML resource type added that enables declaration of Video cam in XOML and streaming to a image (CIwGameVideoCam)
+* Sound effects have been moved into the XOML system. You can now define and play back music and sound effects from XOML
+* New RemoteReq XOML type added that enables you to make POST and GET requests declaratively
+* New XOML actions added / old ones removed
+ * FromTemplate - Instantiate a XOML template from an action
+ * PauseTimeline - Pauses a a timeline
+ * CallGlobalScript - Calls a script in the global script space
+ * ChangevideoCam - Modifies a VideoCam instance (start / stop)
+ * Activate / Deactive scene removed
+ * CallScript - Calls a script
+ * Inline - Executes script inline
+ * RemoteReq - Executes a remote request
+* Action / command parameters now support 5 parameters instead of 4
+* CIwGameActionsManager now supports removal of actions with removeActions
+* Actors / Sprites now support Orphan feature which enables them to be displayed outside their normal parent-chld hierarchy. This enables them to be layer sorted with other actors
+* Actors now support percentage positioning using the new PercPos actor property. When PercPos is set to true the actors Position property is classed as a percentage of the devices screen size
+* Actors / Sprites now have a new property called IgnoreCamera. Actors with this property set to true will ignore the scenes camera transform
+* Actors now have getProperty() method that can be used to retrieve actor properties
+* Actors now have an OnTick event that can call an actions list each time the actor is updated (each frame)
+* Actors have other new methods including CheckCollisionRect(), getDistanceBetween() and getAngleBetween()
+* Actors have many more properties that can now be set from XOML
+* Actors can now handle up to 5 simultaneous Begin / End touch and Tapped events in XONL
+* IwGameAds now sends correct user-agent for iOS and Android
+* CIwGameAnimTimelinesManager now allows removal of timelines
+* Image Brushes now support setting of UV coordinates directly using new UV property
+* XML parser pooling system changed from global to per XML parser instance, pools are auto calculated. This eliminates the need to set up XML pools.
+* Files can now transfer their data into a script when loaded
+* CIwGameImage has been extended to support CIwTexture instead of CIw2DImage, also now supports dynamic images that can be modified
+* CIwGameImage now has SaveBmp(), SaveTga(), SavePng() and SaveJpg() methods
+* New CIwGameModScript modifier added to enable actors / scenes to call scripts
+* Commands can now be conditionally executed using conditions
+* New Commands added to program system - add_var, get_var, if_var, call_script, call_global_script, inline, from_template, music, sound, wait, debug_text, remote_req
+* ChangeProgram action now supports restart command
+* Scenes now support new ScriptEngine tag which defines which script engine the scene should use
+* Scenes now support setProperty() and getProperty()
+* Scenes now have an OnTick event that can call an actions list each time the scene is updated (each frame)
+* Scene allos setting of physics time step with new PhysicsTimestep property
+* Most sprite, actor and scene parameters that were fixed point based and now floating point based
+* CIwGameSprite now has new methods SimpleTestOverlap() and TestOverlap()
+* CIwGameBitmapSprite now supports direct setting of its Uv coordinates
+* WebView (CIwGameUIWebView) completely reworked. Now uses device coordinates and can now show dynamic html / javascript
+* XOML variables can now be made persistent so that their values are saved and restored between sessions
+* XOML array variables can now be populated from comma delimited data, elements will be split at commas
+* Variables can now be removed from CIwGameXomlVariableManager
+* New CIwGameSettings class added that is used to save and restore engine settings. Currently controls debug trace output level and enable / disable device power saving
+* Many new error checks and error / warning messages added throughout
+* Slider, Imageview and TextView now support binding to integer variables
+* Labels and TextViews now have a new property TextUseParentOpacity. When set to true the labels text will scale its opacity by the label images opacity, default is not to scale
+* ActivateScene and DeactivateScene actions removed, activation / deactivation rolled into resume / suspend
+* Actors with no size or SrcRect defined will default to 100% proportional sizing
+* SetVar action now supports the generation of a random number in the same way that set_var command does
+* SetVar action and set_var command when called on an array will now fill the whole array, including the random version
+* SetVar action and set_var command now support generation of random characers with randchar
+* P1, P2, P3, P4, P5 can now be used instead of Param1, Param2, Param3, Param4, Param5 for command and actions parameters
+* All commands can now accept variable substitutions for parameters
+* Conditions can now be used on arrays for string searches, number comparisons etc..
+* Added new system variable array called touches. This array of integers represents the x, y, touched status of 5 simultaneous touches
+* Variables passed as action and command parameters now cached to speed up access
+* Raw script can now be executed inline using the new "Inline" action and "inline" command. P2 specifies scene in which to run the script (omit to run in global script space)
+* Actors that have Draggable set to true will also set Hittest to true unless you override it
+* All files are now Preload and Blocking by default
+* If you now try to add a resource that already exists in the scope it is loaded then a warning will be displayed and the resource will be overwritten
+* WebView now supports new Html attribute which can be used to pass html to the web view to be displayed
+* WebView now works in screen coordinates and not virtual canvas coordinates
+* Actors now have new UserData property that can be use to store a single integer, can be used to store index into script table / array for additional data
+* Html Ads are now integrated via the web view (see section 20 of XOML User Guide)
+* WebView now has OnError event handler which is called if the web view is not available
+* VideoCam now has OnError event handler which is called if camera fails to start
+* TTF local font loading reworked to use memory buffers
+* String class optimised to minimise memory allocations and data copying
+* String class now supports Occurrences() and Split() methods
+* Internal slot array optimised to reduce memory allocations
+* TTF local font loading reworked to use memory buffers
+* Particles defined within a Particle Actor have a new property called Attached. When set to true the particles will follow the emitter, if false then they do not.
+* Image brushes now have a new Tiled property that allows you to enable / disable tiling of the brush
+* BUG FIX: Sprites no longer appear at origin on first frame
+* BUG FIX: Fixed problems with CIwGameAnimInstance 
+* BUG FIX: Scene layering fixed and optimised
+* BUG FIX: Crash when deleting or adding scenes at the same time as removing them
+* BUG FIX: Scene layers now taken into account when processing touches
+* BUG FIX: Patch9 based actor clipping bug fixed
+* BUG FIX: Text margin for labels now fixed
+* BUG FIX: Crash when assigning invalid timeline to scene
+* BUG FIX: Template parameter case issue fixed
+* BUG FIX: Nop command now returns immediately
+* BUG FIX: Crash when not assigning brush a type. Defaults to Image with a warning
+* BUG FIX: WebView was not positioned correctly when scene origin was set to something other than centre
+* BUG FIX: Web view now works on iOS and Android (does not work on Windows)
+* BUG FIX: AspectLock fixed
+* BUG FIX: None batched sprites now render correctly at edges
+* BUG FIX: Deleting particle actor that was child of another actor crashed when removing particle actor
+* BUG FIX: Particle actor placed inside parent actor didn't scale by parents opacity when UseParentOpacity set
+* BUG FIX: Particle angvelmode, scalevelmode, depthvelmode names corrected
+* BUG FIX: Empty Param2 in FromTenplate action / commands crash
+* BUG FIX: Fixed changing orientation resizing
+* BUG FIX: Touch panning glitch fixed
+* BUG FIX: Crash fixes in CIwGameDataFile
+* BUG FIX: Compass fix
+* BUG FIX: Actors OnCreate event was not working
+* BUG FIX: Deleting scene crash
+* BUG FIX: Crash when invalid animations added to a timeline
+* Many other small additions and bug fixes that we forgot to note :)
+
+IwGame 0.37 Changes:
+* Marmalade 6.1 fixes
+
+IwGame 0.36 Changes:
+* IwGame can now be put into Open GL compatible mode, which allows mixing of raw GL with IwGame rendering
+* New variable type added called CIwGameXomlVariableXML. This variable type is used to store structured XML data. XML files can be loaded and assigned to an XML variable at which point they will be parsed into an XML tree which can be accessed later.
+* All action parameters can now take variables as parameters as well as values
+* Array variables have a new property called BindXML. BindXML will bind XML data to an array. The binding can pick specific tag / attributes out of XML data and bind it to the array. The format of BindXML is BindXML=”XML_Variable_Name:XML_Tag:XML_Attribute”
+* New File type added to XOML that allows loading, conversion and binding of generic local and remote files to variables
+* New LoadFile action added to XOML which enables files to be force loaded or replacement of an already loaded files data
+* New SetKeyFocus action added which allows you to switch which actor has key focus
+* New IwGameVideo added. Marmalade video play back wrapped up into CIwGameVideoPlayer. XOML also supports Video resource types (local and remote)
+* New UI control added called VideoOverlay. This UI control allows you to display a video located locally or remotely as a UI element. Supports AutoPlay, Volume, Repeat, OnStart, OnEnd, OnPause, OnResume events and control playback using command property
+* Support added to sprites and actors for an AlphaMode
+* Actors can now be conditionally loaded
+* Support added for true type fonts, located in resource groups, in local files or on a web server. Fonts that are generated from the same external font TTF file will re-use already downloaded TTF to save re-download
+* Support added to fonts for auto point size calculation based on max screen dimensions vs number of lines allowed on display when creating fonts from TTF’s
+* Fonts that are defined without preload will only be loaded when an actor that uses it is displayed.
+* Timelines are no longer stored in the resource system. They now have their own timelines manager. Actors and scenes have their own timelines manager and a global timeline manager is also available. This cuts down the noise in the main resource manager, makes resource and timeline searches faster and allows timelines to be declared local to an actor
+* Actions are no longer stored in the resource system. They now have their own actions manager. Actors and scenes have their own actions manager and a global actions manager is also available. This cuts down the noise in the main resource manager, makes resource and actions searches faster and allows actions to be declared local to an actor
+* System:9 added to check if pointer is available
+* Preset animations now resize to fit screen orientation changes
+* Labels now have an AutoHeight parameter that causes them to resize to fit the height of the text that they contain
+* UI components can now be marked as SizeToContent, which causes them to base their size on the content that they contain. Siznig can be locked to a specific axis using x, y, xy or none
+* OnKeyBack / OnKeyHome support added to UI actors
+* List Box now supports key navigation
+* Optimisations: Optimised scene and sprite systems to eliminate the thousands of allocs / deallocs every second in complex scenes (if you check metrics you will notice that free and malloc are being called like mad). Unfortunately this has meant limiting the range of layers for scenes to 10. Any scenes with a layer order of 10 or more will now be rendered after layers 0-9 and in no particular order
+* StackPanel now supports horizontal centering in horizontal orientation and vertical centering in vertical orientation
+* Actor brush can now be the target of an animation
+* Support added to actors for separate x and y position bindings / properties and animation targets
+* XOML variables can now be created conditionally
+* Image based actors / UI now support AspectLock property. This allows you to lock the aspect ratio of an actor that is sized using proportional sizing. For example, if you have an icon inside a horizontal stack panel who’s height is proportional to the size of the scene, ordinarily if you made the proportional size of the icon 50% on both axis, it would get stretched on the x-axis. By setting the AspectLock to the y axis, the height of the icon will be locked to 50% of the height of the stack panel, but the width of the icon will be calculated based on the size of the brush / src_rect that is used to represent the icon.
+* Pre-defined animations PA_ScrollOnFromLeft etc now only affect the relevant axis
+* Timeline has new TimeScale attribute which scales the rate at which animations within the timeline are played back. Actors also have a new target property called TimeScale, which can be used to adjust the TimeScale of the currently attached timeline (can be set via set property, bindings or animation target)
+* New wait_var_is_value command added to program system. This command will pause program execution until a variables value is a specified value
+* CIwGameString now has a Split method which splits a string into an array of strings using a specified separator
+* Images will no longer be converted to a default RGBA5551 format, if no format is specified. You can also set the format via code (must be set before calling Init())
+* Updated grid / list box controls to work with dynamic data
+* Condition variable operands can now be variables and condition variables can now use arrays
+* Inverse conditions are now available for all elements that use conditions by pre-pending the exclamation mark ‘!’ character to the front of the condition variable name
+* Animations now have categories
+* Added new extension modifier CIwGameModCollisionNotiify. If you attach this modifier to an actor and define OnCollisionBegin / OnCollisionEnd event handlers you can execute actions based on collision between different objects. A mask can also be provided when defining the modifier to allow masking of actors by type
+* Added new XMLGrid example app which shows how to bind XML data to a grid
+* Added ActorTest example (shows parent / child actors in XOML)
+* Added ActorTest2 example (shows many actors in XOML)
+* Added GameSceneGL example (shows how to mix raw Open GL with IwGame)
+* Added Game Of 10 example game (100% XOML driven)
+* BUG FIX: Grid auto column / row sizing was broken
+* BUG FIX: Fixed grid cell horizontal alignment. Also fixed grid resizing when orientation changes
+* BUG FIX: ListBox crashes when re-assigning a new array to an already existing ListBox
+* BUG FIX: When an action is declared in the scene and called from an actor event it wasn’t being found
+* BUG FIX: Fonts were not being searched for by name
+* BUG FIX: Sprites transform is now rebuilt when changing opacity from 0 to some other value
+* BUG FIX: Fixed many crashes related to duplicated resources
+* BUG FIX: Ad click not recognised when ads view not inside a scene
+* BUG FIX: Grid row horizontal alignment fixed
+* BUG FIX: Grid orientation change resizing fixed
+* BUG FIX: When a scene / actor is created it will now update its data bindings immediately after creation
+* BUG FIX: Can now set Background, SelectedBackground and DisabledBackground to NULL, which will remove the background image of the control
+
+IwGame 0.35 Changes:
+* XOML schema added. This enables error checking, intellisense and auto completion when creating XOML
+* New user interface system added, enabling IwGame as an app developemnt platform. IwGameUI has the following features
+  * Static and proprtional sizing an margins
+  * Buttons / toggle / sticky buttons with OnToggledOn and OnToggledOff events
+  * Labels
+  * Text input boxes
+  * Sliders (horizontal and vertical)
+  * Canvas - Allows organisation of content on a large scrollable canvas area as well as docking of content to edges
+  * Stack panels and wrap panels (horizontal and vertical) allow organisation of content in vertical and horizontal stacks
+  * Wrap panel (horizontal and vertical), works much in the same way as an orinary stack panel exceot content that overflows the edge of the panel will wrap down to the next line or across to the next column
+  * Listbox (horizontal and vertical) allows organisation and selection of content using sigle and multi-select. Can use templates and bindings for automatic binding of data to the list box
+  * Grid allows the display and navigation of two dimensional data, each column or the whole grid can be bound to data and templates.
+  * Image view that allows the display and navigation of large images (supports panning and pinch zoom), can also contain any other UI or actor
+  * Text view that allows the display and navigation of text (supports panning and pinch zoom)
+  * Web view - A wrapper for Marmalades Web API. Multiple web views cn abe instantiated inside the UI
+  * TabBar (horizontal and vertical) - A tab bar allows the display of multiple pages or views of content. The tab bar can be orientated horizontally or vertically. Tab bar can appear at top, bottom, left or right of control area. View swicthing can also be animated using a selection of preset animations or using your own custom animations.
+  * All UI elements are supported in XOML, fully bindable and integrates directly into all other systrems including the animation system.
+  * Container UI elements will clip children. Container actors also allow the specification of a clip margin.
+  * Scrolling and zooming supports iOS style spring effect to place contents back into position when going over boundaries
+  * All UI elements support hide and show timelines
+* Rendering system now supports 9-patch rendering using 9-patch brushes
+* Sprite system now supports 4 parameter skewing
+* IwGameInput system reworked to make it more multi-touch friendly
+* XOML now fully supports multi-touch events (up to 5 simultaneous events)
+* Event bubbling added, enabling touch events to travel up to parent actors
+* Actors and scenes now support proportional sizing
+* Actors now support margins and docking to screen edges
+* Actor touch events now provide the touch index that causes the event
+* Sprites / actors can now scale their opacity by their parents
+* Delta animations targeting position, scale, rotation, colour and opacity will apply the update from the original value that was assigned to the actor
+* Actors now support simple bindings. Simple bindings are a simple binding of a variable to an actors property without having to create a full bindings list
+* Actors can now be created from a brush. Using brushes instead of images, allows you to create image based actors without having specify a visual size
+* Scenes and actors now support dynamic resizing and orientation changes
+* Support for array variables added
+* System XOML variable array added. Allows you to query current display width, height, mode, device type, multi-touch / compass, accelerometer, keyboard support. Also provides a rating hint as to the size of the display, which you can be used to determine size of fonts etc
+* New program / command system added, This new system is a very powerful way of creating game or app flow logic in XOML
+* New DebugText action that displays the value of a XOML variable / text to the debug output
+* New ChangeProgram action that allows the modification of running programs
+* New CIwGameAnimUtil class added that enables creation of simple timelines in code
+* Images now support filtering and format conversion in code and in XOML
+* CIwGameRender2d now supports rendering of images fom short vectors. These types of images will not use the data cache
+* Actor / sprite rendering optimised to cut down processing of actors / sprites not on screen or visible
+* Sprite system completely changed to support heirarchical rendering
+* Text rendering optimised when not rotated
+* Fonts, images and XOML files can now be conditionally loaded
+* Scene FixedAspect and LockWIdth have been deprecated. Scenes now use the new CanvasFit option which supports canvas fitting to Width, Height, Both, None and Best Fit
+* Physics can be disabled for a complete scene to reduce processing
+* IwGame class now uses layer ordering to determine priority of touch events
+* Re-arranged XOML tags and tag attributes, placing more commonly used tags / attributes earlier to speed up XOML parsing
+* Touch focus is now released when user touches an actor and moves their finger away from the actor by more than double the radius. Touch focus is also released when camera is panned in scenes that have touch panning enabled.
+* Frame rate cap has been removed
+* BUG FIX: When releasing scene touch panning on an actor it no longer takes it as a tap on the actor
+* BUG FIX: Mip-mapping globally disabled as it was causnig many rendering artefect issues
+* BUG FIX: camera touch pan scaling, camera pan now follows finger accurately
+* BUG FIX: Attempting to instantiate a template inside an actor crashed has now been fixed
+* BUG FIX: Fixed issue with bool variable add method
+* BUG FIX: CIwGameActor::setAngularVelocityDamping() fixed
+* BUG FIX: Fixed issue where releasing a scene touch pan on an actor will send the OnBeginTouch event to the actor
+
+IwGame 0.34 Changes:
+* Fixed Marmalade 6.0 compile error
+* JPEG loading support has been removed as this is now supported by Marmalade image classes
+* New extensions system added (pass true for enable_extensions in IwGame::Init() to enable, enabled by default) - Extensions are none standard IwGame code that will be added over the coming months to support game specific features
+* Actions now have a 4th parameter
+* New modifier system added that allows you to add funtionality units to actors and scene. This enables a build from blocks style development
+* New AddModifier action that can be used to add a modifier to an actor or scene and modifier its behaviour in real-time
+* New ChangeModifier action that can be used to change the active state or remove a modifier from an actor or scene
+* Actors can now be marked as draggable. A draggable actor can be moved aruond by the user using their finger
+* New SetProperty action added for actors. You can now directly change the properties of an actor using actions. Can also be used to add torque and force onto actors under control of the physics system
+* New AddProperty action added for actors. This action can be used to add a value onto the peoperties of an actor
+* IwGame now supports brushes in code and in XOML. Brushes can be created and attached to actors saving you from having to specify image and SrcRect for each actor. This enables actor styling across any actors
+* CIwGameActorImage can now be instantiated from XOML using the ActorImage tag
+* New XOML atlas inner tag added to animations to allow auto generation of sprite atlas frames
+* Support has been added for joints (distance, revolute, prismatic, pulley and wheel joints are supported in code and in XOML)
+* A scenes physics update can now be changed between constant time step and variable
+* Box2D materials now support bullet, fixed rotation and gravity scaling parameters
+* Checks for duplicates added to resources, variables, actions, modifiers, class creators
+* New CIwGameActorConnector extension actor added - This actor will size and orientate itself so that it connects two static / dynamic points in space (can target moving actors)
+* New CIwGameModFollowHeading modifier extension added - When added to an existing actor the actor can be controlled using headnig and speed instead of velocity
+* CIwGameImage::CreatePNG() now supports RGBA_8888
+* Two basic Hello World examples added, one that displays text in code and another that uses XOML
+* BUG FIX: IwGameBox2d now coompiles on Mac without error
+* BUG FIX: CIwGameBox2dBody::setFixture() now behaves as expected
+* BUG FIX: Collision flags are now restored when turning an object from none collidable to collidable
+* BUG FIX: Memory leak in CIwGameActorImage::SetSrcDest(), SetSrcRect() and SetDestSize()
+* BUG FIX: Fixed problem with html parsing in CIwGameAds::ExtractLinkAndImageFromtHTML()
+* BUG FIX: CIwGameImage::CreatePNG() crash bug fixed
+
+
+IwGame 0.33 Changes:
+* In-app purchasing added for Android and iOS (IwGameMarket)
+* Scenes can now be augmented after they have been created (like partial classes)
+* Scenes can now be layered visually
+* New SetAllTimelines action added to XOML that will set the timeline of all curent scenes
+* SetVariable action now allows you to specify the scene in which the variable lives
+* Resources can now be tagged with a tag name
+* New RemoveResource and RemoveResources actions
+* new CallActions action added that enables execution of other actions lists
+* Actor now has ScaleX and ScaleY bindings
+* Relative actor depth is now 0 for linked actors
+* UDID removed from IwGameAds for iOS
+* Scenes now have a ClipStatic property that will force the clipping area of a scene to stay in place on screen instead of moving with the scene
+* BUG FIX: Scene NotifyResuming now called properly
+* BUG FIX: CIwGameAnimInstance::setAnimation() no longer crashes if NULL is passed
+* BUG FIX: IwGameAdsView sprites are now updated correctly
+
+IwGame 0.32 Changes:
+* New XOML RemoveAllScenes action added - This will remove all scenes excluding the scene that is provided
+* Data bindings now added to XOML - You can now create a bindings list which pair properties up to variables. Changes made to those variables will bautomaticaly be applied to the object that they are bound to. 
+* Actors and Scenes now support data bindings
+* Conditions variables now added to XOML - A condition variable allows you to string together some basic logic based on the value of other variables, these can then be attached to Actions to create conditional actions
+* Actions and Action groups now support conditional variables
+* IIwGameXomlResource now have parents
+* CIwGameString now supports encoding / decoding to / from hex
+* CIwGameSprite now has a RebuildTransformNow() method
+* CIwGameSprite now has an update method where the trabnsform will be rebuilt. This ensures that all transforms have been buuilt before rendering
+* CIwGameScene now has a PreDestroy() method which gets called when a request to destroy a scene is received
+* CIwGameActorImage now has a SetSrcRect() method
+* Added sound and music volume control to CIwGameAudio
+* CIwGameSound now accepts a paramater that allows you to specify volume, frequency and panning when playing a sound effect
+* BUG FIX: PNG lib fix for Visual Studio 2008
+* BUG FIX: Mac compile issues
+* BUG FIX: CIwGameSprite setScale() fixed
+* BUG FIX: Precision issues graphical glitches at lower resolutions
+* BUG FIX: Actor collilsion size now read correctly from XOML
+* BUG FIX: CIwGameActorText text aligment now applie correctly
+* BUG FIX: When an actor or scene has a timeline attached, the first frame was not benig set before displaying the object
+* BUG FIX: CIwGameTextSprite hit test fixed
+* BUG FIX: CIwGameAds - VServ local now set correctly
+* BUG FIX: CIwGameScene - initial camera transform is now built correctly
+* BUG FIX: CIwGameString::URLEncode now calculates correct buffer size
+* BUG FIX: CIwGameString::URLDecode now checks for the correct character
+* BUG FIX: Infinite loop removed from CIwGameXmlNode::GetAttribute()
+
+IwGame 0.31 Changes:
+* cOnnecticOns full commercial game with source and assets provided as an example of engine usage
+* CIwGameFacebook added - Currently provides login and wall posting access
+* New AddVariable action added which allows you to add a positive or negative value to a XOML variable with limits
+* New EnterValue action added that brings up the devices keyboard allowing the user to enter a value into a XOML variable
+* New UpdateText action added will update a text actor with the value of a variable
+* New Exit action added that allows the user to exit the game
+* 3rd paramater added to XOML actions
+* DoSleep added to CIwGameBox2dWorld to enable / disable object sleeping, also added to scene XOM
+* IIwGameXomlResource now has an actual type, allowing type checking for exact object types
+* OnKeyBack and OnKeyMenu events added to scene and XOML. These fire when back and menu keys are pressed
+* BUG FIX: CIwGameSprite position and origin now 32 bit vectors, which helps prevent positions overflowing
+* BUG FIX: When a scene is destroyed and it has touch focus it was causing a crash
+* BUG FIX: If a scene becomes inactive or invisible it now loses touch focus
+* BUG FIX: Velocity / angular velocity now applied when actors have no physics attached
+* BUG FIX: JPEG image data is now correctly converted from BGR to RGB
+* BUG FIX: CIwGameString, find index now properly reset
+
+IwGame 0.30 Changes:
+* Support added for particle based actors via CIwGameActorParticle and CIwGameActorParticles as well as XOML via ActorParticles and Particle tags. Particles can be defined individually or in batches using random parameters. Particles have position, linear velocity, angular velocity, scale velocity, colour velocity, depth velocity, velocity damping, lifespan and repeat
+* Support for Marmalade fonts has been added via CIwGameFont wrapper and a new XOML Font tag
+* All rendering now uses IwGx instead of Iw2D. This offers more control over rendering as well as makes the code more portable / versatile in the future
+* All internal rendering upgraded to sub pixel coordinates offering MUCH smoother rendernig
+* New 2D rendering class added CIwGameRender2d. This cklass allows batch rendering of primitives and rendering of text CIwGxFontPreparedData prepared text
+* New very powerful template system added to XOML. The template system allows you to create a complex piece of XOML using paramaters that can be passed in when the template is instantiated. Templates can also be instantiated from code using CIwGameTemplate::Instantiate()
+* CIwGame::addScene() can now auto bring a scene to the front of scene stack
+* New global actions added to XOML - Launch, setBGColour, SetCurrentScene and BringtSceneToFront
+* Actors and sprites now have a depth property allowing you to add 3D depth to them
+* Actors and sprites now have an origin attribute
+* Support added for sprites and actors for none uniform scaling
+* Support added for linked actors. A linked actor will utilise the transform, colour and visibility of the actor it is linked to. In XOML, you can use the new LinkedTo tag to set linkage or the more natural and readable method of defining actors within actor tags. This system allows complex multi-patr actors to be created and animated
+* Actors now support OnCreate and OnDestroy events in code and in XOML
+* Scenes now support OnCreate, OnDestroy OnGainedFocus and OnLostFocus events in code and in XOML
+* New text based actor and sprite types added CIwGameActorText and CIwGameTextSprite.
+* Animation system now supports linear, quadratic, cubic and quartic on / out easing in code and in XOML. In addition value interpolation can be enabled / disabled
+* Aimations now support absolute and delta values
+* Animation timelines now support OnStart, OnEnd and OnRepeat events in code and in XOML
+* CIwGameAudio::PlayMusic now supports repetition with additional parameter in XOML
+* New CIwGameSlotArray class added for efficient resizable arrays
+* Actor Box2D collision system was broken and inefficient. The system has been completely reworked and now uses the new more efficient CIwGameSlotArray
+* CIwGameBox2dBody now has new awake and active methods
+* CIwGameCamera now supports velocity, damping and touch panning. Touch panning will pan the camera to follow the users finger
+* More than one scene can now receive input events using the new AllowFocus functionality in code and in XOML
+* New findClosestActor and findFurthestActor methods added to CIwGameScene
+* CIwGameBitmapSprite now supports colour per vertex
+* CIwGameSpriteManager supports enabling / disabling of batching and a new centre of projection property for depth used by depth sprites
+* CIwGameInput reworked to better support multi-touch
+* PlayTimeline, StopTimeline and SetTimeline now supports a second parameter which points to the scene or actor that the timeline change should be made to
+* Actors can now be marked for hit testing in XOML
+* Image files can now be loaded directly from XOML without the need for Marmalade resources files
+* CIwGameScene and CIwGameActor based objects are now marked as destroyed when they are removed so they cannot be found in a scene or actor search
+* CIwGameXmlNode now supports cloning
+* Bug Fix: Actors now take into account their visibility when being hit tested
+* Bug Fix: CIwGameActor::setCollidable no works
+* Bug Fix: StartTimeline action now restarts a stopped timline properly
+* Bug Fix: Clipping rect is now transform by the scenes transform (will not clip correctly against rotated scenes however)
+* Bug Fix: XML parser fixes
+* Bug Fix: CIwGame game scene switch scene bug fixes
+* Bug Fix: CIwGameAds::ErrorFromResponse fix that were causing some valid ads to be in error
+* Bug Fix: CIwGameAnim fixes
+* Bug Fix: Polygon based Box2D bodies now fixed
+* Bug Fix: Sprite rendering transform fixed
+* Bug Fix: CIwGameBitmapSprite with no loaded image no longer crash
+* Bug Fix: CiwGameString crashes fixed (were causing rare problems with XML system)
+* Bug Fix: Fixed issue with CIwGameXmlAttribute::GetValueAsColour not checking for correct parameter count
+* Bug Fix: On device scene shut down camera deletion fixed
+
+IwGame 0.29 Changes:
+* New style system added to XOML. Actors and scenes can now use a style to reduce repetition
+* Actors and scenes now handle events such as OnSuspend, OnTapped, OnBeginTouch etc.. When an event fires it executes a collection of actions
+* Actions added to XOML to allow definition of collections of actions that can be executed. Many default actions are suppported such as ChangeScene, KillScene, PlayTimeline, PlaySound etc.. Custom actions can also be added to extend the system
+* CIwGame now handles touch begin touch, end touch and tapped events
+* CIwGame now has new Postdraw() method for adding in custom post draw rendering
+* Actors can now be made tappable and now handle OnTapped(), OnBeginTouch() and OnEndTouchEvents()
+* Actors have new HitTest() method that can be used to check if a point is inside the actors visual
+* XOML now supports creation of cameras
+* XOML now supports creation of variables and update of variables using actions, supports string, bool, int, float, vec2, vec3 and vec4
+* XOML files can now load other XOML files with new LoadXOML tag as well as LoadXOML action
+* Scenes now support a type field
+* CIwGameBitmapSprite now supports image transforms (flips. mirrors etc) which can be also applied to actors visuals using FlipX and FlipY attributes
+* You now change the current time of a CIwGameAnimInstance and CIwGameAnimTimeline
+* Bug Fix - Actor visibile state now works properly
+* Bug Fix - CIwGameShape::setShape() now works
+* Bug Fix - Transform is now reset after CIwGameAdsView finishes rendering
+* Bug Fix - JPEG file detection fixed, was not detecting certain types of JPEG files
+* Bug fix - CIwGameString::FindNext() crash fixed
+
+IwGame 0.281 Changes:
+* Actor / scene Box2D implementation switched from multi-inheritence to composition
+* Bug Fix - Fixed issue with incorrect actor orientation when placed under Box2D control
+* bug Fix - Values for velocity, angular velocity etc were not being applied in XOML
+
+IwGame 0.28 Changes:
+* Image, resource group and timeline managers have been collapsed into a single resource manager. All calls to scene and global resource managers should go through getResourceManager()
+* All resource types can now be marked as managed
+* New Box2D IwGame classes added
+* Box2D integrated into the scene, actor system as well as XOML. Box2D can be disabled by undefining IW_GAME_BOX2D in IwGameBox2d.h
+* New shape system added IwGameShapes that allows you to define box, circle and polygon shapes, also available in XOML
+* XOML tag names and attrbutes are now case insensitive
+* Scenes XOML now supports Gravity and WorldScale
+* Actor XOML now supports new tags Box2dMaterial, Shape, COM (centre of mass), Sensor and CollisionFlags
+* Timelines can now be shared across different actors and scenes without them playing back too fast and not updating properly
+* CIwGameActor now has a new mthod removeVisual() which removes the actors visual from the scenes visual sprite manager
+* ToLower() and ToLower() methods added to CiwGameXml. These methods will convert all tag name and attribute names to lower or upper case (values are left untouched)
+
+IwGame 0.27 Changes:
+* Added new customisable mark-up language XOML that allows you to declare most IwGame obects declaratively, including scenes, custom actors, images, resource groups, animations, animation timelines
+* CIwGameAnimManager has been removed and replaced with the much more powerful CIwGameAnimTimeline, paving the way for very powerful actor and scene animations
+* Animation system has been completely changed to use a proper key frame interpolation system
+* Support for animation targets to automate update of object properties
+* CIwGameActorImage initialisation no longer requires a scene or an animtion. CIwGameActorImage initial image source rectangle now matches the initial size of the actor
+* setCollisionSize() added to CIwGameActor to allow setting of collision size from a radius
+* CIwGameDataInput and CIwGameDataOutput stream classes added
+* Simple, fast pooled memory XML parser added (CIwGameXml)
+* CIwGameResourceGroup system added to encapsulate Marmalade resource groups
+* Global and scene local resoure systems added
+* CIwGameImage can now be instantiated 3 ways, from memory buffer, from file or from web file
+* CiwGameImage initialisation from memory buffer no longer requires specification of the is_jpeg flag
+* Blocking parameter can now be passed to CIwGameImage::Load()
+* CIwGameScene scenes can now be assigned a colour. All contained actors will be scaled by the colour, allowing flash and fade effects
+* CIwGameBitmapSprite::setSrcRect() now takes a CIwRect
+* FRAME_SPEED_LOCK_MS now added to set frame rate cap
+* CIwGame::Init() changed to CIwGame::Init(bool enable_http), passing true will boot up the HTTP manager and allow you to use it in-game
+* Bug Fix - CIwGameHttp crashed if a request came back after the object was shut down
+* Bug fix - CIwGameActor::setCollisionRect() bug fixed
+* Bug fix - All actors were being treated as though they were collidable
+* Bug fix - Sprites no lnoger try to render themselves if their associated image is not yet loaded
+
+IwGame v0.26 Changes:
+* Bug fix - Actor crash bug when no camera assigned to the scene
+* Bug Fix - Fixed CIwGameHttp crash bug
+* Bug Fix - Fixed ad rendering crash bug
+* Bug Fix - Deleted scenes are now removed at the end of a frame and not immediately
+* Big fix - Scenes with no attached camera didnt set transform correctly
+* Big fix - Sprite hit test could be called before transform was set up
+* Accelerometer support added to CIwGameInput
+* Compass support added to CIwGameInput
+* CIwGameAdsMediator added to mediate ad requests between multiple ad providers to improve fill rate
+* Support for VServ, Mojiva, Millenial Media and AdModa ad providers added
+* ExtraInfo added to ad requests to allow custom information to be passed to ad providers
+* Added URLDecode method to CIwGameString
+
+IwGame v0.25 Changes:
+* Added first draft of IwGame engine manual in PDF, Word 97 and OpenOffice formats.
+* Added CIwGame::BringSceneToFont() to allow bringin of scenes to the top of the scene stack
+* Added naming to animations in CIwGameAnim
+* Added ne findAnimation() methods to CIwGameAnimManager
+* CIwGameSound SetVolume and SetPitch() now taking floating point values
+* Added support for active and visibility to CIwGameScene scenes
+* Fixed some string comparison issues
+* Can now stop auto ad requests using CIwGameAdsView::setNewAdInterval(0)
+* Fixed issue where bad ad requests were not timing out in CIwGameAdsView
+
+IwGame v0.24 Changes:
+* Bug fix - Headers are now applied to CIwGameHttp GET requests
+* Added CIwGameHttpManager::DetermineUserAgent() to build a browser compatible user-agent
+* Added CIwGameHttpManager::DetermineIPAddress() to determine the users IP address. Please change PING_DOMAIN to your own domain!
+* Added CIwGameString::Replace(char chr, char with) char string replacment method
+* Added CIwGameString::Contains(char c) to check if a string contains a particular char
+* Added CIwGameString::URLEncode(const char* str) to url encode an ascii string
+* Added CIwGameUtils::GetGraphicModeName(int width, int height) returns VGA style naming graphics mode
+* Addeed CIwGameAd - Main ad request class which requests and retrievs ads from a variety of ad providers (Inner-active and Adfonic are supported at the moment)
+* Added CIwGameAdView - Requests ads at set intervals and displays them using animations, can cache ads
+* Added CIwGameAdsViewAnimator, a basic example animator that can be used to animate ads in a CIwGameAdsView
+
+IwGame v0.23 Changes:
+* Changed CIwGameFile::Open(const char* path, const char* mode, bool blocking), we now use mode instead of read / write flag
+* Added new CIwGameFile::Seek(int offset, s3eFileSeekOrigin origin) method
+* Replaced CIwGameHttpPostData::AddHeader() with CIwGameHttpPostData::SetHeader() to allwo replacement of http headers
+* Added ClearRequests() and CancelRequests() to CIwGameHttpManager() allowing us to clear the request queue and cancel any in progress http requests
+* Added CIwGameImage::CreatePNG(int& size) to CIwGameImage to allow the creation of memory based PNG files
+* Added pngilb and zlib dependents
+* Removed two bugs from CIwGameInput, one that was stopping button / key presses and another that preventing keyboard update if touch screen wasn't present (doh!)
+* Addes helper support to CIwGameInput for detecting touched, tapped, delta change and back / menu buttons
+* Fixed CIwGameScene::removeActor(CIwGameActor* actor) bug (could not remove unnamed actors)
+* Fixed CwGameScene::removeActor(unsigned int name_hash) (would not deallocate pooled actors for re-use)
+* Fixed sprites initial state as invisible bug in CiwGameSprite
+* Added CIwGameSprite::HitTest(int x, int y) which basically tests to see if a screen point is inside a sprite (takes into account scaling and rotation)
+* Moved Width and Height from CIwGameBitmapSprite to CIwGameprite, makes sense that all sprites would need to have a size
+* Added CIwGameAudio, CIwGameSound and CIwGameSoundCollection classed to support playback of sound effects and music
+* Added visual layers to sprites and actor system allowing sprites / actors to be depth layered
+* Added support for clipping in CIwGameScene. The scene can now be clipped to a rectangular area of virtual canvas
+* Bindings system optimised
+* IwGame has been made into its own standalone project
+* The IwGame Testbed has now been moved to the TestBed folder
+
+IwGame v0.22 Changes:
+* CIwGameHttp and associated classes added to enable queued HTTP GET and POST requests
+* CIwGameImage upgraded to support JPEG and creation of images from memory based files
+* CIwGameFile added to support loading and saving of local files as well as loading of remote files
+* CIwGameString added to support string builder type strings, cutting down on memory allocations. Also includes stream type searching and other utilities

@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<xml>
+    <Scene Name="HelpDialog" Style="GenericSceneStyle" Camera="HelpCam" Current="true" OnKeyBack="BackPressed" Timeline="fly_in2" Batch="false">
+
+        <!-- Create a camera -->
+        <Camera Name="HelpCam" Position="0, 500" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Create scene detsruction actions -->
+        <Actions Name="RestoreFocus">
+            <Action Method="ActivateScene" Param1="GameScene" />
+            <Action Method="ActivateScene" Param1="HUDScene" />
+            <Action Method="ActivateScene" Param1="ObjectSelect" />
+            <Action Method="SetCurrentScene" Param1="GameScene" />
+        </Actions>
+
+        <!-- Back pressed actions -->
+        <Actions Name="BackPressed">
+            <Action Method="SetTimeline" Param1="fly_out" Param2="HelpDialog" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+        
+        <!-- Create scene fly in timeline -->
+        <Animation Name="fly_in2" Type="vec2" Duration="1.0" >
+            <Frame Value="0, 500"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, 0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="fly_in2" AutoPlay="false">
+            <Animation Anim="fly_in2" Target="Position" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fly out timeline -->
+        <Animation Name="fly_out" Type="vec2" Duration="1.5" >
+            <Frame Value="0, 0"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, -50"  Time="0.3" Easing="cubicin" />
+            <Frame Value="0, 0"  Time="0.5" Easing="cubicout" />
+            <Frame Value="0, 500"  Time="1.5"/>
+        </Animation>
+        <Timeline Name="fly_out" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+
+        <!-- Create dialog background overlay -->
+        <InertActor Name="Dialog1" Position="0, 0" Size="640, 300" SrcRect="0, 423, 582, 278" Image="sprites2" Depth="1.0" />
+
+        <!-- Create Help overlay -->
+        <InertActor Name="Help" Position="0, -110" Size="84, 25" SrcRect="919, 140, 84, 25" Image="sprites2" Depth="1.0" />
+
+        <!-- Create help text -->
+        <ActorText Name="HelpText" Position="0, -6" Rect="0, 0, 700, 300" Angle="0" Font="trebuchet_12" Text="Add items via the edit item menu then place them with your finger. Drag the central gravity indicator to change gravity. Change the number of connecticons available to complete the round then tap PLAY to test your custom levels. To remove an item drag it to the bottom of the screen." Colour="20, 40, 100, 255" Scale="0.75" AlignH="left" />
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim1" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim2" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim1" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim2" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create back button -->
+        <InertActor Name="Back" Position="0, 135" Size="152, 70" SrcRect="515, 140, 152, 70" Image="sprites2" OnTapped="BackAction" OnBeginTouch="BackBeginTouch" OnEndTouch="BackEndTouch">
+            <Actions Name="BackAction">
+                <Action Method="SetTimeline" Param1="fly_out" Param2="HelpDialog" />
+            </Actions>
+            <Actions Name="BackBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim1" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="BackEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim1" />
+            </Actions>
+        </InertActor>
+
+    </Scene>
+
+    <Scene Name="PauseMenu" Style="GenericSceneStyle" Camera="PauseCam" Current="true" OnKeyBack="BackPressed" Timeline="fly_in3">
+
+        <!-- Create a camera -->
+        <Camera Name="PauseCam" Position="0, 600" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Restore game scene -->
+        <Actions Name="RestoreFocus">
+            <Action Method="ActivateScene" Param1="GameScene" />
+            <Action Method="ActivateScene" Param1="HUDScene" />
+            <Action Method="ActivateScene" Param1="ObjectSelect" />
+            <Action Method="SetCurrentScene" Param1="GameScene" />
+        </Actions>
+
+        <!-- Back pressed actions -->
+        <Actions Name="BackPressed">
+            <Action Method="SetTimeline" Param1="fly_out_back" Param2="PauseMenu" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+
+        <!-- Create scene fly in timeline -->
+        <Animation Name="fly_in3" Type="vec2" Duration="1.0" >
+            <Frame Value="0, 600"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, 0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="fly_in3" AutoPlay="false">
+            <Animation Anim="fly_in3" Target="Position" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fly out timeline -->
+        <Animation Name="fly_out" Type="vec2" Duration="1.5" >
+            <Frame Value="0, 0"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, -50"  Time="0.3" Easing="cubicin" />
+            <Frame Value="0, 0"  Time="0.5" Easing="cubicout" />
+            <Frame Value="0, 600"  Time="1.5"/>
+        </Animation>
+        <Timeline Name="fly_out" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+        <Timeline Name="fly_out_back" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+
+        <!-- Create dialog background overlay -->
+        <InertActor Name="Dialog1" Position="0, 0" Size="582, 278" SrcRect="0, 423, 582, 278" Image="sprites2" Depth="1.0" />
+
+        <!-- Create paused text overlay -->
+        <InertActor Name="PausedText" Position="0, -100" Size="111, 25" SrcRect="873, 207, 111, 25" Image="sprites2" Depth="1.0" />
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim1" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim2" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim3" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim1" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim2" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim3" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create back button -->
+        <InertActor Name="Back" Position="-120, 10" Size="200, 90" SrcRect="600, 333, 200, 90" Image="sprites2" OnTapped="BackAction" OnBeginTouch="BackBeginTouch" OnEndTouch="BackEndTouch">
+            <Actions Name="BackAction">
+                <Action Method="SetTimeline" Param1="fly_out_back" Param2="PauseMenu" />
+            </Actions>
+            <Actions Name="BackBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim1" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="BackEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim1" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create Quit button -->
+        <InertActor Name="Quit" Position="120, 10" Size="200, 90" SrcRect="800, 333, 200, 90" Image="sprites2" OnTapped="QuitAction" OnBeginTouch="QuitBeginTouch" OnEndTouch="QuitEndTouch">
+            <Actions Name="QuitAction">
+                <Action Method="SetTimeline" Param1="fly_out" Param2="PauseMenu" />
+                <Action Method="PlayMusic" Param1="music.mp3" Param2="0" />
+            </Actions>
+            <Actions Name="QuitBeginTouch">
+                <Action Method="SetTimeline" Param1="scene_fade_quit" Param2="GameScene" />
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="HUDScene" />
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ObjectSelect" />
+                <Action Method="SetTimeline" Param1="buttonin_anim2" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="QuitEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim2" />
+            </Actions>
+        </InertActor>
+
+    </Scene>
+
+    <Scene Name="HUDScene" Style="GenericSceneStyle" Camera="HUDCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Batch="false" AllowFocus="true">
+        <!-- Create a camera -->
+        <Camera Name="HUDCam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade_in" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin2_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin3_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin4_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin5_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out ainmation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout2_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout3_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout4_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout5_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create menu button -->
+        <InertActor Name="HelpButton" Position="-200, -200" Size="81, 84" SrcRect="636, 482, 81, 84" Image="sprites1" OnBeginTouch="HelpBeginTouch" OnEndTouch="HelpEndTouch" OnTapped="HelpTapped">
+            <ActorText Name="HelpButtonHint" Origin="0, 50" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="Show Help" Visible="false" Scale="0.75" />
+            <Actions Name="HelpBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim" />
+                <Action Method="ShowActor" Param1="HelpButtonHint" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="HelpEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim" />
+                <Action Method="HideActor" Param1="HelpButtonHint" />
+            </Actions>
+            <Actions Name="HelpTapped">
+                <Action Method="DeactivateScene" Param1="GameScene" />
+                <Action Method="DeactivateScene" Param1="HUDScene" />
+                <Action Method="ShowScene" Param1="HelpDialog" />
+                <Action Method="SetCurrentScene" Param1="HelpDialog" />
+                <Action Method="SetTimeline" Param1="fly_in2" Param2="HelpDialog" />
+            </Actions>
+        </InertActor>
+
+        <InertActor Name="MenuButton" Position="-300, -200" Size="81, 84" SrcRect="800, 356, 81, 84" Image="sprites1" OnBeginTouch="MenuBeginTouch" OnEndTouch="MenuEndTouch" OnTapped="MenuTapped">
+            <ActorText Name="MenuButtonHint" Origin="0, 50" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="Pause Menu" Visible="false" Scale="0.75" />
+            <Actions Name="MenuBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim" />
+                <Action Method="ShowActor" Param1="MenuButtonHint" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="MenuEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim" />
+                <Action Method="HideActor" Param1="MenuButtonHint" />
+            </Actions>
+            <Actions Name="MenuTapped">
+                <Action Method="DeactivateScene" Param1="GameScene" />
+                <Action Method="DeactivateScene" Param1="HUDScene" />
+                <Action Method="ShowScene" Param1="PauseMenu" />
+                <Action Method="SetCurrentScene" Param1="PauseMenu" />
+                <Action Method="SetTimeline" Param1="fly_in3" Param2="PauseMenu" />
+            </Actions>
+        </InertActor>
+        
+        <!-- Create edit button -->
+        <InertActor Name="EditButton" Position="200, -200" Size="81, 84" SrcRect="474, 482, 81, 84" Image="sprites1" OnBeginTouch="EditBeginTouch" OnEndTouch="EditEndTouch" OnTapped="EditTapped">
+            <ActorText Name="EditButtonHint" Origin="0, 50" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="Add New Item" Visible="false" Scale="0.75" />
+            <Actions Name="EditBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin2_anim" />
+                <Action Method="ShowActor" Param1="EditButtonHint" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="EditEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout2_anim" />
+                <Action Method="HideActor" Param1="EditButtonHint" />
+            </Actions>
+            <Actions Name="EditTapped">
+                <Action Method="DeactivateScene" Param1="GameScene" />
+                <Action Method="DeactivateScene" Param1="HUDScene" />
+                <Action Method="ShowScene" Param1="ObjectSelect" />
+                <Action Method="SetCurrentScene" Param1="ObjectSelect" />
+                <Action Method="SetTimeline" Param1="fly_in3" Param2="ObjectSelect" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create test button -->
+        <InertActor Name="TestButton" Position="300, -200" Size="81, 84" SrcRect="555, 482, 81, 84" Image="sprites1" OnBeginTouch="TestBeginTouch" OnEndTouch="TestEndTouch" OnTapped="TestTapped">
+            <ActorText Name="TestButtonHint" Origin="0, 50" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="Go to Test Rounds" Visible="false" Scale="0.75" />
+            <ActorText Name="PlayButton" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="255, 0, 0, 255" Text="Play" />
+            <Actions Name="TestBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin3_anim" />
+                <Action Method="ShowActor" Param1="TestButtonHint" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="TestEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout3_anim" />
+                <Action Method="HideActor" Param1="TestButtonHint" />
+            </Actions>
+            <Actions Name="TestTapped">
+                <Action Method="SetTimeline" Param1="scene_fade_play" Param2="GameScene" />
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="HUDScene" />
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="ObjectSelect" />
+                <Action Method="SetVar" Param1="Zone" Param2="11" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create change connecticons buttons -->
+        <InertActor Name="ConnectButton2" Position="0, -200" Size="81, 84" SrcRect="555, 482, 81, 84" Image="sprites1">
+            <ActorText Name="ConnectButton" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="2" />
+            <InertActor Name="DownButton" Position="-60, 0" Angle="-90" Size="48, 51" SrcRect="868, 299, 48, 51" Image="sprites1" Depth="0" OnBeginTouch="DownBeginTouch" OnEndTouch="DownEndTouch" OnTapped="DownTapped">
+                <Actions Name="DownBeginTouch">
+                    <Action Method="SetTimeline" Param1="buttonin4_anim" />
+                    <Action Method="PlaySound" Param1="ui_tap" />
+                </Actions>
+                <Actions Name="DownEndTouch">
+                    <Action Method="SetTimeline" Param1="buttonout4_anim" />
+                </Actions>
+                <Actions Name="DownTapped">
+                    <Action Method="AddVar" Param1="EditorConnecticons" Param2="-1" Param3="0" />
+                    <Action Method="UpdateText" Param1="ConnectButton" Param2="EditorConnecticons" />
+                </Actions>
+            </InertActor>
+            <InertActor Name="UpButton" Position="60, 0" Angle="90" Size="48, 51" SrcRect="868, 299, 48, 51" Image="sprites1" Depth="0" OnBeginTouch="UpBeginTouch" OnEndTouch="UpEndTouch" OnTapped="UpTapped">
+                <Actions Name="UpBeginTouch">
+                    <Action Method="SetTimeline" Param1="buttonin5_anim" />
+                    <Action Method="PlaySound" Param1="ui_tap" />
+                </Actions>
+                <Actions Name="UpEndTouch">
+                    <Action Method="SetTimeline" Param1="buttonout5_anim" />
+                </Actions>
+                <Actions Name="UpTapped">
+                    <Action Method="AddVar" Param1="EditorConnecticons" Param2="1" Param3="10" />
+                    <Action Method="UpdateText" Param1="ConnectButton" Param2="EditorConnecticons" />
+                </Actions>
+            </InertActor>
+        </InertActor>
+        <!--ActorText Name="ConnectButton" Position="0, -200" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="0" OnBeginTouch="ConnectBeginTouch" OnEndTouch="ConnectEndTouch" OnTapped="ConnectTapped">
+            <Actions Name="ConnectBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="ConnectEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim" />
+            </Actions>
+            <Actions Name="ConnectTapped">
+                <Action Method="EnterValue" Param1="Enter Connecticon Count" Param2="EditorConnecticons" />
+                <Action Method="UpdateText" Param1="ConnectButton" Param2="EditorConnecticons" />
+            </Actions>
+        </ActorText-->
+
+    
+    
+    </Scene>
+    
+    <Scene Name="ObjectSelect" Style="GenericSceneStyle" Camera="Cam" Current="true" OnKeyBack="BackPressed" Timeline="fly_in3">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 600" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Restore game scene -->
+        <Actions Name="RestoreFocus">
+            <Action Method="ActivateScene" Param1="GameScene" />
+            <Action Method="ActivateScene" Param1="HUDScene" />
+            <Action Method="ActivateScene" Param1="ObjectSelect" />
+            <Action Method="SetCurrentScene" Param1="GameScene" />
+        </Actions>
+
+        <!-- Back pressed actions -->
+        <Actions Name="BackPressed">
+            <Action Method="SetTimeline" Param1="fly_out" Param2="ObjectSelect" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+
+        <!-- Create scene fly in timeline -->
+        <Animation Name="fly_in3" Type="vec2" Duration="1.0" >
+            <Frame Value="0, 600"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, 0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="fly_in3" AutoPlay="false">
+            <Animation Anim="fly_in3" Target="Position" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fly out timeline -->
+        <Animation Name="fly_out" Type="vec2" Duration="1.5" >
+            <Frame Value="0, 0"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, -50"  Time="0.3" Easing="cubicin" />
+            <Frame Value="0, 0"  Time="0.5" Easing="cubicout" />
+            <Frame Value="0, 600"  Time="1.5"/>
+        </Animation>
+        <Timeline Name="fly_out" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+
+        <!-- Create dialog background overlay -->
+        <InertActor Name="Dialog1" Position="0, 0" Size="1024, 614" SrcRect="0, 423, 582, 278" Image="sprites2" Depth="1.0" />
+        
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Add normal bugs -->
+        <SelectorActor Name="Blue" Type="2" Position="-300, -200" Size="81, 80" SrcRect="800, 0, 81, 80" Image="sprites1" />
+        <SelectorActor Name="Green" Type="3" Position="-200, -200" Size="81, 80" SrcRect="881, 0, 81, 80" Image="sprites1" />
+        <SelectorActor Name="Orange" Type="4" Position="-100, -200" Size="81, 80" SrcRect="800, 80, 81, 80" Image="sprites1" />
+        <SelectorActor Name="Purple" Type="5" Position="0, -200" Size="81, 80" SrcRect="881, 80, 81, 80" Image="sprites1" />
+        <SelectorActor Name="Red" Type="6" Position="100, -200" Size="81, 80" SrcRect="800, 160, 81, 80" Image="sprites1" />
+        <SelectorActor Name="Yellow" Type="7" Position="200, -200" Size="81, 80" SrcRect="881, 160, 81, 80" Image="sprites1" />
+
+        <!-- Add large bugs -->
+        <SelectorActor Name="BlueL" Type="8" Position="-300, -100" Size="120, 120" SrcRect="800, 0, 81, 80" Image="sprites1" />
+        <SelectorActor Name="GreenL" Type="9" Position="-180, -100" Size="120, 120" SrcRect="881, 0, 81, 80" Image="sprites1" />
+        <SelectorActor Name="OrangeL" Type="10" Position="-60, -100" Size="120, 120" SrcRect="800, 80, 81, 80" Image="sprites1" />
+        <SelectorActor Name="PurpleL" Type="11" Position="60, -100" Size="120, 120" SrcRect="881, 80, 81, 80" Image="sprites1" />
+        <SelectorActor Name="RedL" Type="12" Position="180, -100" Size="120, 120" SrcRect="800, 160, 81, 80" Image="sprites1" />
+        <SelectorActor Name="YellowL" Type="13" Position="300, -100" Size="120, 120" SrcRect="881, 160, 81, 80" Image="sprites1" />
+
+        <!-- Add small bugs -->
+        <SelectorActor Name="BlueS" Type="14" Position="-300, 0" Size="60, 60" SrcRect="800, 0, 81, 80" Image="sprites1" />
+        <SelectorActor Name="GreenS" Type="15" Position="-200, 0" Size="60, 60" SrcRect="881, 0, 81, 80" Image="sprites1" />
+        <SelectorActor Name="OrangeS" Type="16" Position="-100, 0" Size="60, 60" SrcRect="800, 80, 81, 80" Image="sprites1" />
+        <SelectorActor Name="PurpleS" Type="17" Position="0, 0" Size="60, 60" SrcRect="881, 80, 81, 80" Image="sprites1" />
+        <SelectorActor Name="RedS" Type="18" Position="100, 0" Size="60, 60" SrcRect="800, 160, 81, 80" Image="sprites1" />
+        <SelectorActor Name="YellowS" Type="19" Position="200, 0" Size="60, 60" SrcRect="881, 160, 81, 80" Image="sprites1" />
+
+        <!-- Add walls -->
+        <SelectorActor Name="WallH" Type="20" Position="-300, 70" Size="70, 26" SrcRect="800, 240, 138, 51" Image="sprites1" />
+        <SelectorActor Name="WallV" Type="21" Position="-240, 70" Size="70, 26" SrcRect="800, 240, 138, 51" Image="sprites1" Angle="90"/>
+        <SelectorActor Name="WallH2" Type="22" Position="-180, 70" Size="70, 26" SrcRect="800, 240, 138, 51" Image="sprites1" Angle="45"/>
+        <SelectorActor Name="WallH3" Type="23" Position="-110, 70" Size="70, 26" SrcRect="800, 240, 138, 51" Image="sprites1" Angle="-45"/>
+        <SelectorActor Name="WallH" Type="24" Position="-50, 70" Size="70, 26" SrcRect="800, 240, 138, 51" Image="sprites1" AngularVelocity="-2" />
+        <SelectorActor Name="WallH" Type="25" Position="10, 70" Size="70, 26" SrcRect="800, 240, 138, 51" Image="sprites1" AngularVelocity="2" />
+
+        <!-- Add dynamic walls -->
+        <SelectorActor Name="DWallH" Type="26" Position="-300, 140" Size="70, 26" SrcRect="800, 240, 138, 51" Colour="255, 120, 120, 255" Image="sprites1" />
+        <SelectorActor Name="DWallV" Type="27" Position="-240, 140" Size="70, 26" SrcRect="800, 240, 138, 51" Colour="255, 120, 120, 255" Image="sprites1" Angle="90"/>
+        <SelectorActor Name="DWallH2" Type="28" Position="-180, 140" Size="70, 26" SrcRect="800, 240, 138, 51" Colour="255, 120, 120, 255" Image="sprites1" Angle="45"/>
+        <SelectorActor Name="DWallH3" Type="29" Position="-110, 140" Size="70, 26" SrcRect="800, 240, 138, 51" Colour="255, 120, 120, 255" Image="sprites1" Angle="-45"/>
+        <SelectorActor Name="DWallH" Type="30" Position="-50, 140" Size="70, 26" SrcRect="800, 240, 138, 51" Colour="255, 120, 120, 255" Image="sprites1" AngularVelocity="-2" />
+        <SelectorActor Name="DWallH" Type="31" Position="10, 140" Size="70, 26" SrcRect="800, 240, 138, 51" Colour="255, 120, 120, 255" Image="sprites1" AngularVelocity="2" />
+
+    </Scene>
+
+    <EditScene Name="GameScene" Style="GenericSceneStyle" Camera="GameCam" Timeline="scene_fade_in" Colour="64, 128, 200, 0" Extents="-1000, -400, 2000, 800" Current="true" Gravity="0, 0" GameMode="normal" OnGainedFocus="GainedFocusAction" OnKeyBack="BackPressed" Batch="false" >
+
+        <!-- Set up level specific variables -->
+        <Variable Name="MaxCounters" Type="int" Value="2" />
+        <Variable Name="Connecticons" Type="int" Value="1" />
+        
+        <!-- Scene Actions -->
+        <Actions Name="GainedFocusAction">
+            <Action Method="BringSceneToFront" Param1="HUDScene" />
+        </Actions>
+
+        <!-- Load main actors -->
+        <LoadXOML File="Actors.xml" />
+
+        <!-- Create a camera -->
+        <Camera Name="GameCam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Quit editor action -->
+        <Actions Name="QuitEdit">
+            <Action Method="KillScene" Param1="HelpDialog" />
+            <Action Method="KillScene" Param1="GameScene" />
+            <Action Method="KillScene" Param1="HUDScene" />
+            <Action Method="KillScene" Param1="PauseMenu" />
+            <Action Method="KillScene" Param1="ObjectSelect" />
+            <Action Method="LoadXOML" Param1="EditLevelSelect.xml" />
+        </Actions>
+
+        <!-- PLay level action -->
+        <Actions Name="PlayLevel">
+            <Action Method="KillScene" Param1="HelpDialog" />
+            <Action Method="KillScene" Param1="GameScene" />
+            <Action Method="KillScene" Param1="HUDScene" />
+            <Action Method="KillScene" Param1="PauseMenu" />
+            <Action Method="KillScene" Param1="ObjectSelect" />
+            <Action Method="LoadXOML" Param1="LevelSelect2.xml" />
+        </Actions>
+
+        <!-- Back pressed actions -->
+        <Actions Name="BackPressed">
+            <Action Method="DeactivateScene" Param1="GameScene" />
+            <Action Method="DeactivateScene" Param1="HUDScene" />
+            <Action Method="ShowScene" Param1="PauseMenu" />
+            <Action Method="SetCurrentScene" Param1="PauseMenu" />
+            <Action Method="SetTimeline" Param1="fly_in3" Param2="PauseMenu" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+
+        <!-- Create scene fade in timeline -->
+        <Timeline Name="scene_fade_in" AutoPlay="true">
+            <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fade out timeline -->
+        <Timeline Name="scene_fade_out" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        
+        <!-- Create scene fade out and start next round timeline -->
+        <Timeline Name="scene_fade_quit" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="QuitEdit" />
+        </Timeline>
+
+        <!-- Create scene fade out and start next round timeline -->
+        <Timeline Name="scene_fade_play" AutoPlay="true">
+            <Animation Anim="quick_fade_out" Target="Colour" Repeat="1" StartAtTime="0" OnEnd="PlayLevel" />
+        </Timeline>
+
+        <!-- Add background -->
+        <InertActor Name="Background" Position="0, 0" Size="800, 480" SrcRect="0, 0, 800, 480" Image="sprites1" Depth="1.0" IsTappable="false" HitTest="false" />
+        
+        <!-- Add walls -->
+        <Box2DMaterial Name="Solid" Type="static" Density="1.0" Friction="1.0" Restitution="0.1" />
+        <Shape Name="WallVShape" Type="box" width="20" height="480" />
+        <InertActor Name="WallL" Position="-410, 0" Size="20, 480" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallVShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+        <InertActor Name="WallR" Position="410, 0" Size="20, 480" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallVShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+        <Shape Name="WallHShape" Type="box" width="800" height="20" />
+        <InertActor Name="WallT" Position="0, -250" Size="800, 20" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallHShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+        <InertActor Name="WallB" Position="0, 250" Size="800, 20" SrcRect="32, 32, 32, 32" Image="sprites1" Shape="WallHShape" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" Collidable="true" />
+
+        <GravityPlacerActor Name="GravityDirection" Position="0, 0" Size="93, 200" SrcRect="0, 558, 93, 200" Image="sprites1" Depth="1.0">
+            <ActorText Name="GravityDirectionText" Depth="0" Font="trebuchet_12" Rect="-100, -50, 200, 100" Colour="0, 0, 0, 255" Text="0, 0" />
+        </GravityPlacerActor>
+
+
+    </EditScene>
+
+</xml>

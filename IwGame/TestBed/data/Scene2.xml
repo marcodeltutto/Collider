@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Scene Name="GameScene2" CanvasSize="320, 480" FixAspect="true" LockWidth="false" Colour="0, 0, 255, 255" AllowSuspend="false" Camera="CommonCam">
+        <Timeline Name="Player1Intro2" AutoPlay="true">
+            <Animation Anim="PlayerImageAnim" Target="SrcRect" Repeat="0" StartAtTime="1"/>
+            <Animation Anim="SpinAnim1" Target="Angle" Repeat="4" StartAtTime="10"/>
+        </Timeline>
+        <TestActor Name="Player1" Position="0, 0" Size="100, 100" Angle="45" SrcRect="0, 0, 36, 40" Image="Sprites" Timeline="TimelineTest" />
+    </Scene>
+
+</xml>

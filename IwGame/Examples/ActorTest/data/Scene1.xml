@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="-100, -100" />
+        <!--Set Property="CanvasSize" Value="1024, 768" /-->
+        <!--Set Property="CanvasFit" Value="best" /-->
+        <Set Property="CanvasFit" Value="none" />
+        <Set Property="CanvasOrigin" Value="centre" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+        <Set Property="Physics" Value="false" />
+    </Style>
+
+    <Image Name="Image1" Location="image1.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image2" Location="image2.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image3" Location="image3.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image4" Location="image4.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image5" Location="image5.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image6" Location="image6.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image7" Location="image7.png" Preload="false" Format="RGBA_8888" Filter="true" />
+
+    <Animation Name="fade_in" Type="vec4" Duration="10" >
+      <Frame Value="255, 255, 255, 128"  Time="0.0" Easing="quadin" />
+      <Frame Value="255, 255, 255, 255"  Time="10.0"/>
+    </Animation>
+
+    <Timeline Name="scene_fade_in" AutoPlay="true">
+      <Animation Anim="fade_in" Target="Colour" Repeat="1" StartAtTime="0" />
+    </Timeline>
+    
+    <LoadXOML File="UIStyle.xml" />
+    
+    <Scene Name="GameScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true" Timeline="scene_fade_in">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="true" />
+
+        <!-- Create brushes -->
+        <Brush Name="brush1" Image="image1" SrcRect="0, 0, 91, 92" />
+        <Brush Name="brush2" Image="image2" SrcRect="0, 0, 81, 80" />
+        <Brush Name="brush3" Image="image3" SrcRect="0, 0, 81, 80" />
+        <Brush Name="brush4" Image="image4" SrcRect="0, 0, 81, 80" />
+        <Brush Name="brush5" Image="image5" SrcRect="0, 0, 81, 84" />
+        <Brush Name="brush6" Image="image6" SrcRect="0, 0, 81, 84" />
+        <Brush Name="brush7" Image="image7" SrcRect="0, 0, 81, 80" />
+
+        <ActorImage Brush="brush1" Position="0, 0" UseParentOpacity="false">
+            <ActorImage Brush="brush2" Position="50, 0">
+                <ActorImage Brush="brush3" Position="50, 0">
+                    <ActorImage Brush="brush4" Position="50, 0">
+                        <ActorImage Brush="brush5" Position="50, 0">
+                            <ActorImage Brush="brush6" Position="50, 0">
+                                <ActorImage Brush="brush7" Position="50, 0" />
+                            </ActorImage>
+                        </ActorImage>
+                    </ActorImage>
+                </ActorImage>
+            </ActorImage>
+        </ActorImage>
+
+    </Scene>
+
+</xml>

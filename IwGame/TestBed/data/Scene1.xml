@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<xml>
+    <LoadXOML File="Common.xml" />
+
+    <Timeline Name="Scene1Anim" AutoPlay="true">
+        <Animation Anim="SpinAnim1" Target="Angle" Repeat="1" StartAtTime="0"/>
+        <Animation Anim="ScaleAnim1" Target="Scale" Repeat="1" StartAtTime="0"/>
+    </Timeline>
+
+    <Timeline Name="Timeline1" AutoPlay="true">
+        <Animation Anim="SpinAnim1" Target="Angle" Repeat="0" StartAtTime="0"/>
+    </Timeline>
+    <Timeline Name="Timeline2" AutoPlay="true">
+        <Animation Anim="ScaleAnim1" Target="Scale" Repeat="0" StartAtTime="0"/>
+    </Timeline>
+
+    <Animation Name="TimelineTest" Type="string" Duration="10" >
+        <Frame Value="Timeline1" Time="0" />
+        <Frame Value="Timeline2" Time="1" />
+        <Frame Value="Timeline1" Time="2" />
+        <Frame Value="Timeline2" Time="3" />
+    </Animation>
+    <Timeline Name="TimelineTest" AutoPlay="true">
+        <Animation Anim="TimelineTest" Target="Timeline" Repeat="0" StartAtTime="0"/>
+    </Timeline>
+
+    <Scene Name="GameScene" CanvasSize="320, 480" FixAspect="true" LockWidth="false" Colour="128, 128, 128, 255" Timeline="Scene1Anim" Camera="CommonCam" AllowSuspend="true">
+        <Timeline Name="Player1Intro" AutoPlay="true">
+            <Animation Anim="PlayerImageAnim" Target="SrcRect" Repeat="0" StartAtTime="0"/>
+            <Animation Anim="SpinAnim1" Target="Angle" Repeat="4" StartAtTime="10"/>
+            <Animation Anim="ColourAnim1" Target="Colour" Repeat="10" StartAtTime="2"/>
+        </Timeline>
+        <TestActor Name="Player1" Position="-100, 0" Size="100, 100" Angle="45" SrcRect="0, 0, 36, 40" Image="Sprites" Timeline="Player1Intro" />
+        <TestActor Name="Player2" Position="0, 0" Size="100, 100" Angle="-45" SrcRect="0, 0, 36, 40" Image="Sprites" />
+        <TestActor Name="Player3" Position="0, 100" Size="100, 100" Angle="0" SrcRect="0, 0, 64, 64" Image="Buddy" />
+    </Scene>
+    
+    <!--Scene Name="GameScene2" CanvasSize="320, 480" FixAspect="true" LockWidth="false" Colour="0, 0, 255, 255" AllowSuspend="false" Camera="CommonCam">
+        <Timeline Name="Player1Intro2" AutoPlay="true">
+            <Animation Anim="PlayerImageAnim" Target="SrcRect" Repeat="0" StartAtTime="1"/>
+            <Animation Anim="SpinAnim1" Target="Angle" Repeat="4" StartAtTime="10"/>
+        </Timeline>
+        <TestActor Name="Player1" Position="0, 0" Size="100, 100" Angle="45" SrcRect="0, 0, 36, 40" Image="Sprites" Timeline="TimelineTest" />
+    </Scene-->
+
+    <Animation Name="CameraAnim1" Type="string" Duration="4" >
+        <Frame Value="Scene3CamA" Time="0" />
+        <Frame Value="Scene3CamB" Time="2" />
+    </Animation>
+    <Timeline Name="GameScene3Anim" AutoPlay="false">
+        <Animation Anim="CameraAnim1" Target="Camera" Repeat="0" StartAtTime="0"/>
+    </Timeline>
+
+    <LoadXOML File="Scene2.xml" />
+
+    <Scene Name="GameScene3" Style="GenericSceneStyle" Camera="Scene3CamA" Timeline="GameScene3Anim" Current="true" OnSuspend="SuspendActions">
+        <Actions Name="SuspendActions">
+            <Action Method="SetTimeline" Param1="SceneTransition1" />
+        </Actions>
+        <Timeline Name="SceneTransition1" AutoPlay="true">
+            <Animation Anim="SceneTransition1" Target="Position" Repeat="1" StartAtTime="0"/>
+        </Timeline>
+        <Box2DMaterial Name="Solid" Type="static" Density="1.0" Friction="1.0" Restitution="0.1" />
+        <Box2DMaterial Name="BounceyBall" Type="dynamic" Density="1.0" Friction="0.9" Restitution="0.6" />
+        <Shape Name="PlayerShape" Type="box" width="50" height="50" />
+        <Shape Name="Wall" Type="box" width="20" height="480" />
+        <Shape Name="Floor" Type="box" width="320" height="20" />
+        <Shape Name="Block" Type="box" width="200" height="30" />
+        <Timeline Name="Player1Intro1" AutoPlay="true">
+            <Animation Anim="PlayerImageAnim" Target="SrcRect" Repeat="0" StartAtTime="1"/>
+        </Timeline>
+        <Timeline Name="Player1Intro2" AutoPlay="false">
+            <Animation Anim="SpinAnim1" Target="Angle" Repeat="0" StartAtTime="0"/>
+        </Timeline>
+        <TestActor Name="Floor" Style="BasicActorStyle" Position="0, 200" Size="320, 20" Angle="0" SrcRect="0, 0, 32, 32" Image="Block" Shape="Floor" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" />
+        <TestActor Name="LeftWall" Style="BasicActorStyle" Position="-140, 0" Size="20, 480" Angle="0" SrcRect="0, 0, 32, 32" Image="Block" Shape="Wall" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" />
+        <TestActor Name="RightWall" Style="BasicActorStyle" Position="140, 0" Size="20, 480" Angle="0" SrcRect="0, 0, 32, 32" Image="Block" Shape="Wall" Box2dMaterial="Solid" CollisionFlags="1, 1, 1" />
+        <TestActor Name="Nlock1" Style="BasicActorStyle" Position="0, -100" Size="200, 30" Image="Block" Shape="Block" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" />
+        <TestActor Name="Block2" Style="BasicActorStyle" Position="0, -200" Size="200, 30" Image="Block" Shape="Block" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" />
+        <TestActor Name="Block3" Style="BasicActorStyle" Position="0, -300" Size="200, 30" Image="Block" Shape="Block" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" />
+        <TestActor Name="Block4" Style="BasicActorStyle" Position="0, -400" Size="200, 30" Image="Block" Shape="Block" Box2dMaterial="BounceyBall" CollisionFlags="1, 1, 1" />
+        <TestActor Name="Player1" Style="BasicActorStyle" Position="0, -50" Size="30, 30" Angle="45" AngularVelocity="1" />
+        <TestActor Name="Player2" Style="BasicActorStyle" Position="0, -150" OnBeginTouch="HideGameScene" OnEndTouch="ShowGameScene" >
+            <Actions Name="HideGameScene">
+                <Action Method="HideScene" Param1="GameScene" />
+                <Action Method="PlaySound" Param1="Explosion" />
+            </Actions>
+            <Actions Name="ShowGameScene">
+                <Action Method="ShowScene" Param1="GameScene" />
+            </Actions>
+        </TestActor>
+        <TestActor Name="Player3" Style="BasicActorStyle" Position="50, -250" />
+        <TestActor Name="Player4" Style="BasicActorStyle" Position="0, -1000" OnTapped="Actions1" OnBeginTouch="BeginAction" OnEndTouch="EndAction" FlipY="true">
+            <Actions Name="Actions1">
+                <Action Method="SuspendScene" Param1="GameScene3" />
+            </Actions>
+            <Actions Name="BeginAction">
+                <!--Action Method="PlayTimeline" Param1="Player1Intro1" /-->
+            </Actions>
+            <Actions Name="EndAction">
+                <!--Action Method="LoadXOML" Param1="Scene2.xml" Param2="" />
+                <Action Method="SetVar" Param1="PlayerScore" Param2="100" /-->
+            </Actions>
+        </TestActor>
+    </Scene>
+</xml>

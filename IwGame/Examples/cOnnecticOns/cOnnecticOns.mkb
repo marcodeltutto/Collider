@@ -1,0 +1,275 @@
+#!/usr/bin/env mkb
+options
+{
+	module_path="../IwGame"
+}
+
+subprojects
+{
+	IwGame
+	derbh
+}
+
+includepath
+{
+	source
+}
+
+files
+{
+	[Source]
+	(source)
+	# Game
+	Common.h
+	Game.cpp
+	Game.h
+	GameScene.cpp
+	GameScene.h
+	EditScene.cpp
+	EditScene.h
+	LevelSelectScene.cpp
+	LevelSelectScene.h
+	ZoneSelectScene.cpp
+	ZoneSelectScene.h
+	Main.cpp
+	Main.h
+	CounterActor.cpp
+	CounterActor.h
+	ConnectActor.cpp
+	ConnectActor.h
+	InertActor.cpp
+	InertActor.h
+	FloaterActor.cpp
+	FloaterActor.h
+	SelectorActor.cpp
+	SelectorActor.h
+	PlacerActor.cpp
+	PlacerActor.h
+	GravityPlacerActor.cpp
+	GravityPlacerActor.h
+
+	[Data]
+	(data)
+	Common.group
+	Audio.group
+
+	Actors.xml
+	Common.xml
+	Intro.xml
+	Menu.xml
+	Help.xml
+	ZoneSelect.xml
+	ZoneLocked.xml
+	LevelSelect.xml
+	LevelSelect2.xml
+	EditLevelSelect.xml
+	ConfirmDialog.xml
+	PauseMenu.xml
+	LevelCleared.xml
+	GameComplete.xml
+	hud.xml
+	Editor.xml
+
+	Scene1.xml
+	Scene2.xml
+	Scene3.xml
+	Scene4.xml
+	Scene5.xml
+	Scene6.xml
+	Scene7.xml
+	Scene8.xml
+	Scene9.xml
+	Scene10.xml
+	Scene11.xml
+	Scene12.xml
+	Scene13.xml
+	Scene14.xml
+	Scene15.xml
+	Scene16.xml
+	Scene17.xml
+	Scene18.xml
+	Scene19.xml
+	Scene20.xml
+	Scene21.xml
+	Scene22.xml
+	Scene23.xml
+	Scene24.xml
+	Scene25.xml
+	Scene26.xml
+	Scene27.xml
+	Scene28.xml
+	Scene29.xml
+	Scene30.xml
+}
+
+assets
+{
+	(data)
+	"Default~iphone.png"			#IOS ONLY
+	"Default@2x~iphone.png"			#IOS ONLY
+	"Default~ipad.png"			#IOS ONLY
+
+	music.mp3
+
+	Actors.xml
+	Common.xml
+	Intro.xml
+	Menu.xml
+	Help.xml
+	ZoneSelect.xml
+	ZoneLocked.xml
+	LevelSelect.xml
+	LevelSelect2.xml
+	EditLevelSelect.xml
+	ConfirmDialog.xml
+	PauseMenu.xml
+	LevelCleared.xml
+	GameComplete.xml
+	hud.xml
+	Editor.xml
+
+	Scene1.xml
+	Scene2.xml
+	Scene3.xml
+	Scene4.xml
+	Scene5.xml
+	Scene6.xml
+	Scene7.xml
+	Scene8.xml
+	Scene9.xml
+	Scene10.xml
+	Scene11.xml
+	Scene12.xml
+	Scene13.xml
+	Scene14.xml
+	Scene15.xml
+	Scene16.xml
+	Scene17.xml
+	Scene18.xml
+	Scene19.xml
+	Scene20.xml
+	Scene21.xml
+	Scene22.xml
+	Scene23.xml
+	Scene24.xml
+	Scene25.xml
+	Scene26.xml
+	Scene27.xml
+	Scene28.xml
+	Scene29.xml
+	Scene30.xml
+
+	Scene101.xml
+	Scene102.xml
+	Scene103.xml
+	Scene104.xml
+	Scene105.xml
+	Scene106.xml
+	Scene107.xml
+	Scene108.xml
+	Scene109.xml
+	Scene110.xml
+	Scene111.xml
+	Scene112.xml
+	Scene113.xml
+	Scene114.xml
+	Scene115.xml
+	Scene116.xml
+	Scene117.xml
+	Scene118.xml
+	Scene119.xml
+	Scene120.xml
+
+	title_bg.png
+	sprites1.png
+	sprites2.png
+	logo.png
+	Splash.jpg						#ANDROID ONLY
+
+	music.mp3
+	eor.mp3
+
+	(data-ram/data-gles1, data)
+	common.group.bin
+	audio.group.bin
+}
+
+deployments
+{
+	["Android"]
+	name='cOnnecticOns'
+	caption='cOnnecticOns'
+	manufacturer='Pocketeers Limited'
+	provider='Pocketeers Limited'
+	version-major=1
+	version-minor=0
+
+	android-icon=data/icons/Android_48x48.png
+	android-icon-hdpi=data/icons/Android_72x72.png
+	android-icon-ldpi=data/icons/Android_36x36.png
+	android-icon-mdpi=data/icons/Android_48x48.png
+
+	android-manifest=AndroidManifest.xml
+}
+
+deployments
+{
+	["Blackberry"]
+	name='cOnnecticOns'
+	caption='cOnnecticOns'
+	manufacturer='Pocketeers Limited'
+	provider='Pocketeers Limited'
+	version-major=1
+	version-minor=0
+
+	splashscreen='data/Splash/Splash.jpg'
+	icon=data/icons/Blackberry.png
+}
+
+deployments
+{
+	["iPhone"]
+	name='cOnnecticOns'
+	caption='cOnnecticOns'
+	manufacturer='Pocketeers Limited'
+	provider='Pocketeers Limited'
+	version-major=1
+	version-minor=0
+
+	iphone-splash="data/Default~iphone.png"
+
+	iphone-icon="data/icons/iPhoneIcon.png"
+	iphone-icon-ipad="data/icons/iPadIcon.png"
+	iphone-icon-high-res="data/icons/iPhone4Icon.png"
+}
+
+deployments
+{
+	["Bada"]
+	name='cOnnecticOns'
+	caption='cOnnecticOns'
+	manufacturer='Pocketeers Limited'
+	provider='Pocketeers Limited'
+	version-major=1
+	version-minor=0
+
+	bada-icon=data/icons/Bada.png
+	bada-splash=data/BadaSplash.png
+	splashscreen='data/BadaSplash.png'
+}
+
+deployments
+{
+	["Bada 2.0"]
+	name='cOnnecticOns'
+	caption='cOnnecticOns'
+	manufacturer='Pocketeers Limited'
+	provider='Pocketeers Limited'
+	version-major=1
+	version-minor=0
+
+	bada-icon=data/icons/Bada.png
+	bada-splash=data/BadaSplash.png
+	splashscreen='data/BadaSplash.png'
+}
+

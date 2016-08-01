@@ -1,0 +1,124 @@
+Marmalade Makefile Builder v6.1.1 [326649]
+Copyright (C) 2001-2012 Marmalade.
+
+e:\Marmalade\6.1\s3e\makefile_builder\mkb.py E:\Marmalade\6.1\extensions\UserAgent\UserAgent_android.mkb -v3
+Building project: e:/Marmalade/6.1/extensions/UserAgent/UserAgent_android.mkb
+setting root dir: e:\marmalade\6.1\extensions
+found 23 plugins
+('IPHONE', 'SCONS', 'ARM')               -> iphone
+('IPHONE', 'SCONS', 'X86')               -> iphone
+('IPHONE', 'XCODE', 'ARM')               -> iphone
+('IPHONE', 'XCODE', 'X86')               -> iphone
+('IPHONE_LIB', 'SCONS', 'ARM')           -> iphone
+('IPHONE_LIB', 'SCONS', 'X86')           -> iphone
+('JAVA', 'NONE', 'ALL')                  -> java
+('LINUX', 'SCONS', 'AMD64')              -> linux_scons
+('LINUX', 'SCONS', 'ARM')                -> linux_scons
+('LINUX', 'SCONS', 'MIPS')               -> linux_scons
+('LINUX', 'SCONS', 'X86')                -> linux_scons
+('NULL', 'NULL', 'NULL')                 -> null
+('OSX', 'SCONS', 'X86')                  -> osx_scons
+('OSX', 'XCODE', 'X86')                  -> osx_xcode
+('S3E', 'MAKE', 'ARM')                   -> s3e_make
+('S3E', 'QMAKE', 'ARM')                  -> s3e_qmake
+('S3E', 'QMAKE', 'X86')                  -> s3e_qmake
+('S3E', 'SCONS', 'ARM')                  -> s3e_scons
+('S3E', 'SCONS', 'MIPS')                 -> s3e_scons
+('S3E', 'SCONS', 'X86')                  -> s3e_scons
+('S3E', 'VC10', 'ARM')                   -> s3e_vc6
+('S3E', 'VC10', 'MIPS')                  -> s3e_vc6
+('S3E', 'VC10', 'X86')                   -> s3e_vc6
+('S3E', 'VC6', 'ARM')                    -> s3e_vc6
+('S3E', 'VC6', 'X86')                    -> s3e_vc6
+('S3E', 'VC7', 'ARM')                    -> s3e_vc6
+('S3E', 'VC7', 'X86')                    -> s3e_vc6
+('S3E', 'VC71', 'ARM')                   -> s3e_vc6
+('S3E', 'VC71', 'X86')                   -> s3e_vc6
+('S3E', 'VC8', 'ARM')                    -> s3e_vc6
+('S3E', 'VC8', 'MIPS')                   -> s3e_vc6
+('S3E', 'VC8', 'X86')                    -> s3e_vc6
+('S3E', 'VC9', 'ARM')                    -> s3e_vc6
+('S3E', 'VC9', 'MIPS')                   -> s3e_vc6
+('S3E', 'VC9', 'X86')                    -> s3e_vc6
+('S3E', 'WEB', 'X86')                    -> s3e_web
+('S3E', 'XCODE', 'ARM')                  -> s3e_xcode
+('S3E', 'XCODE', 'X86')                  -> s3e_xcode
+('WIN32', 'VC10', 'AMD64')               -> win32_vc6
+('WIN32', 'VC10', 'X86')                 -> win32_vc6
+('WIN32', 'VC6', 'X86')                  -> win32_vc6
+('WIN32', 'VC7', 'X86')                  -> win32_vc6
+('WIN32', 'VC71', 'X86')                 -> win32_vc6
+('WIN32', 'VC8', 'AMD64')                -> win32_vc6
+('WIN32', 'VC8', 'X86')                  -> win32_vc6
+('WIN32', 'VC9', 'X86')                  -> win32_vc6
+processing: e:/Marmalade/6.1/extensions/UserAgent/UserAgent_android.mkb [None]
+parsed: e:/Marmalade/6.1/extensions/UserAgent/UserAgent_android.mkb
+processing: e:/Marmalade/6.1/extensions/UserAgent/UserAgent_android.mkb [None]
+parsed: e:/Marmalade/6.1/extensions/UserAgent/UserAgent_android.mkb
+get_target_triples: ['SCONS', 'ARM'] (<type 'list'>)
+get_target_triples1 -> [('LINUX', 'SCONS', 'ARM')]
+setting dll -> 1
+setting output-name -> lib/android/libUserAgent.so
+setting output-name-debug -> lib/android/libUserAgent_d.so
+Subproject search path:
+  e:\marmalade\6.1\modules
+  e:\marmalade\6.1\extensions
+  e:\marmalade\6.1\modules\legacy
+  e:\marmalade\6.1\extensions\legacy
+  e:\marmalade\6.1\extensions\useragent
+  e:\marmalade\6.1
+loading mkf: [e:\marmalade\6.1\extensions\useragent] 'UserAgent_build'
+processing: e:/marmalade/6.1/extensions/useragent/useragent_build.mkf [None]
+parsed: e:/marmalade/6.1/extensions/useragent/useragent_build.mkf
+loading extension: make_extension
+e:/marmalade/6.1/extensions/useragent/useragent_build.mkf(23) : warning: extension builder has moved.  Please update you mkf to use 's3e/edk/build/edk_builder.py'
+processing extension: e:\marmalade\6.1\extensions\useragent\UserAgent.s4e
+Subproject search path:
+  e:\marmalade\6.1\modules
+  e:\marmalade\6.1\extensions
+  e:\marmalade\6.1\modules\legacy
+  e:\marmalade\6.1\extensions\legacy
+  e:\marmalade\6.1\extensions\useragent
+  e:\marmalade\6.1
+loading mkf: 'e:\marmalade\6.1/s3e/edk'
+processing: e:/marmalade/6.1/s3e/edk/edk.mkf [None]
+parsed: e:/marmalade/6.1/s3e/edk/edk.mkf
+set mkb env: EDK_BUILDER=e:\marmalade\6.1/s3e/edk/builder
+add_libpath: e:/marmalade/6.1/s3e/edk/lib/android
+add_lib: None edk [compiler=None]
+add_lib: None libplaceholderplaceholderplaceholderplaceholderplaceholder [compiler=None]
+add_lib: None c [compiler=None]
+add_lib: None m [compiler=None]
+add_lib: None log [compiler=None]
+add_lib: None gnustl_static [compiler=None]
+add_lib: None gcc [compiler=None]
+processed: e:/marmalade/6.1/s3e/edk/edk.mkf
+processed: e:/marmalade/6.1/extensions/useragent/useragent_build.mkf
+processed: e:/Marmalade/6.1/extensions/UserAgent/UserAgent_android.mkb
+using build directory 'build_useragent_android_linux_scons_arm'
+using plugin 'linux_scons' for target 'LINUX_SCONS_ARM'
+adding PATH: e:\Program Files\Android\android-ndk\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin
+path found:  e:/Program Files/Android/android-ndk/sources/cxx-stl/gnu-libstdc++\include
+using gcc toolchain: arm-linux-androideabi-gcc []
+using gcc toolchain: arm-linux-androideabi-gcc []
+do_documentation
+writing defines file: macros.defs in e:\Marmalade\6.1\extensions\UserAgent\build_useragent_android_linux_scons_arm
+possible target: e:/Marmalade/6.1/extensions/UserAgent/lib/android/libUserAgent.so
+possible target: e:/Marmalade/6.1/extensions/UserAgent/lib/android/libUserAgent_d.so
+possible target: e:/Marmalade/6.1/extensions/UserAgent/lib/android/libUserAgent.map
+possible target: e:/Marmalade/6.1/extensions/UserAgent/lib/android/libUserAgent_d.map
+Wrote file 'SConstruct'.
+Not writing file 'temp_defines_debug.h' (up-to-date)
+Not writing file 'temp_defines_release.h' (up-to-date)
+Executing: 'e:\marmalade\6.1\s3e\bin\scons.bat -Q verbose=1 compiler=arm-linux-androideabi-gcc'
+not using distcc as DISTCC_HOSTS is not set
+CCFLAGS   = -O3 -include temp_defines_release.h -fsigned-char -fno-strict-aliasing -Wno-psabi -fvisibility=hidden -fno-short-enums -Wall -fomit-frame-pointer -fmessage-length=0 -Wno-unused -Wno-parentheses -save-temps -ffunction-sections -mstructure-size-boundary=8 -mfloat-abi=soft -mthumb-interwork -march=armv4t
+CXXFLAGS  = -fno-exceptions
+LINKFLAGS = -Wl,-Bsymbolic -Wl,--no-undefined --sysroot="e:\Program Files\Android\android-ndk\platforms\android-9/arch-arm" -Wl,--gc-sections -Wl,--as-needed -mthumb-interwork -Wl,-Map="e:/Marmalade/6.1/extensions/UserAgent/lib/android/libUserAgent.map"
+SHLINKFLAGS = $LINKFLAGS -shared
+CC        = arm-linux-androideabi-gcc
+CXX       = arm-linux-androideabi-g++
+arm-linux-androideabi-g++ -o E:\Marmalade\6.1\extensions\UserAgent\lib\android\libUserAgent.so -Wl,-Bsymbolic -Wl,--no-undefined --sysroot="e:\Program Files\Android\android-ndk\platforms\android-9/arch-arm" -Wl,--gc-sections -Wl,--as-needed -mthumb-interwork -Wl,-Map="e:/Marmalade/6.1/extensions/UserAgent/lib/android/libUserAgent.map" -shared release\UserAgent_platform.os release\UserAgent.os release\UserAgent_register.os -LE:\Marmalade\6.1\s3e\edk\lib\android "-LE:\Program Files\Android\android-ndk\sources\cxx-stl\gnu-libstdc++\libs\armeabi" "-LE:\Program Files\Android\android-ndk\platforms\android-9\arch-arm\usr\lib" -ledk -lplaceholderplaceholderplaceholderplaceholderplaceholder -lc -lm -llog -lgnustl_static -lgcc
+error: Executing 'e:\marmalade\6.1\s3e\bin\scons.bat -Q verbose=1 compiler=arm-linux-androideabi-gcc' failed. (return code 2)
+FAILED (error code=3)
+Press any key to continue . . . 

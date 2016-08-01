@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xml>
+
+    <GameSceneGL Name="GameSceneGL" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" VelocityDamping="0.8, 0.8" IgnoreActors="false" />
+
+        <StackPanel Name="SP1" Size="300, -100" Background="PanelBrush" Orientation="vertical" AlignH="centre" AlignV="top" SizeToContent="none" >
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Label Background="Button2Brush" Size="-90, 100" SelectedColour="128, 255, 200, 128" Text="Option 1" Font="trebuchet_12" />
+            <Icon Background="Button1Brush" />
+        </StackPanel>
+
+    </GameSceneGL>
+
+</xml>

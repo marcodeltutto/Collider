@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Scene Name="PauseMenu" Style="GenericSceneStyle" Camera="PauseCam" Current="true" OnKeyBack="BackPressed" Timeline="fly_in3">
+
+        <!-- Create a camera -->
+        <Camera Name="PauseCam" Position="0, 500" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" />
+
+        <!-- Restore game scene -->
+        <Actions Name="RestoreFocus">
+            <Action Method="ActivateScene" Param1="GameScene" />
+            <Action Method="ActivateScene" Param1="HUDScene" />
+            <Action Method="SetCurrentScene" Param1="GameScene" />
+        </Actions>
+
+        <!-- Back pressed actions -->
+        <Actions Name="BackPressed">
+            <Action Method="SetTimeline" Param1="fly_out_back" Param2="PauseMenu" />
+            <Action Method="PlaySound" Param1="ui_tap" />
+        </Actions>
+
+        <!-- Create scene fly in timeline -->
+        <Animation Name="fly_in3" Type="vec2" Duration="1.0" >
+            <Frame Value="0, 500"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, 0"  Time="1.0" />
+        </Animation>
+        <Timeline Name="fly_in3" AutoPlay="false">
+            <Animation Anim="fly_in3" Target="Position" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create scene fly out timeline -->
+        <Animation Name="fly_out" Type="vec2" Duration="1.5" >
+            <Frame Value="0, 0"  Time="0.0" Easing="cubicout" />
+            <Frame Value="0, -50"  Time="0.3" Easing="cubicin" />
+            <Frame Value="0, 0"  Time="0.5" Easing="cubicout" />
+            <Frame Value="0, 500"  Time="1.5"/>
+        </Animation>
+        <Timeline Name="fly_out" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+        <Timeline Name="fly_out_back" AutoPlay="true">
+            <Animation Anim="fly_out" Target="Position" Repeat="1" StartAtTime="0" OnEnd="RestoreFocus"/>
+        </Timeline>
+
+        <!-- Create dialog background overlay -->
+        <InertActor Name="Dialog1" Position="0, 0" Size="582, 278" SrcRect="0, 423, 582, 278" Image="sprites2" Depth="1.0" />
+
+        <!-- Create paused text overlay -->
+        <InertActor Name="PausedText" Position="0, -100" Size="111, 25" SrcRect="873, 207, 111, 25" Image="sprites2" Depth="1.0" />
+        
+        <!-- Create button in animation -->
+        <Animation Name="buttonin_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="255, 255, 255, 255"  Time="0.0" />
+            <Frame Value="200, 200, 200, 100"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonin_anim1" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim2" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonin_anim3" AutoPlay="true">
+            <Animation Anim="buttonin_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create button out animation -->
+        <Animation Name="buttonout_anim" Type="vec4" Duration="0.25" >
+            <Frame Value="200, 200, 200, 100"  Time="0.0" />
+            <Frame Value="255, 255, 255, 255"  Time="0.25" />
+        </Animation>
+        <Timeline Name="buttonout_anim1" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim2" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+        <Timeline Name="buttonout_anim3" AutoPlay="true">
+            <Animation Anim="buttonout_anim" Target="Colour" Repeat="1" StartAtTime="0" />
+        </Timeline>
+
+        <!-- Create restart button -->
+        <InertActor Name="Back" Position="-120, 10" Size="200, 90" SrcRect="600, 333, 200, 90" Image="sprites2" OnTapped="BackAction" OnBeginTouch="BackBeginTouch" OnEndTouch="BackEndTouch">
+            <Actions Name="BackAction">
+                <Action Method="SetTimeline" Param1="fly_out_back" Param2="PauseMenu" />
+            </Actions>
+            <Actions Name="BackBeginTouch">
+                <Action Method="SetTimeline" Param1="buttonin_anim1" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="BackEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim1" />
+            </Actions>
+        </InertActor>
+
+        <!-- Create Quit button -->
+        <InertActor Name="Quit" Position="120, 10" Size="200, 90" SrcRect="800, 333, 200, 90" Image="sprites2" OnTapped="CancelAction" OnBeginTouch="CancelBeginTouch" OnEndTouch="CancelEndTouch">
+            <Actions Name="CancelAction">
+                <Action Method="SetTimeline" Param1="fly_out" Param2="PauseMenu" />
+                <Action Method="PlayMusic" Param1="music.mp3" Param2="0" />
+            </Actions>
+            <Actions Name="CancelBeginTouch">
+                <Action Method="SetTimeline" Param1="scene_fade_quit" Param2="GameScene" />
+                <Action Method="SetTimeline" Param1="scene_fade_out" Param2="HUDScene" />
+                <Action Method="SetTimeline" Param1="buttonin_anim2" />
+                <Action Method="PlaySound" Param1="ui_tap" />
+            </Actions>
+            <Actions Name="CancelEndTouch">
+                <Action Method="SetTimeline" Param1="buttonout_anim2" />
+            </Actions>
+        </InertActor>
+
+    </Scene>
+
+
+
+</xml>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xml>
+    <!-- Create UI font -->
+    <ResourceGroup Name="Fonts" GroupFile="Fonts.group" Preload="true" />
+    <Variable Name="LowResCheck" Type="condition" Value="system:3 LTE 2" />
+    <Variable Name="HighResCheck" Type="condition" Value="system:3 GT 2" />
+    <Font Name="trebuchet_12" ResourceName="trebuchet_12" Location="Fonts" Condition="LowResCheck" />
+    <Font Name="trebuchet_12" ResourceName="trebuchet_14" Location="Fonts" Condition="HighResCheck" />
+
+    <!-- Load UI image atlas -->
+    <Image Name="ui_image" Location="ui.png" Preload="false" Format="RGBA_8888" Filter="true" />
+
+    <!-- Create UI brushes -->
+    <Brush Name="Button1Brush" Image="ui_image" SrcRect="320, 70, 200, 70" Type="9patch" ScaleArea="7, 8, 186, 54" />
+    <Brush Name="Button2Brush" Image="ui_image" SrcRect="320, 140, 200, 70" Type="9patch" ScaleArea="8, 8, 184, 54" />
+    <Brush Name="CheckBoxOffBrush" Image="ui_image" SrcRect="320, 210, 48, 48" Type="image" />
+    <Brush Name="CheckBoxOnBrush" Image="ui_image" SrcRect="368, 210, 48, 48" Type="image" />
+    <Brush Name="PanelBrush" Image="ui_image" SrcRect="0, 0, 320, 320" Type="9patch" ScaleArea="12, 15, 296, 290" />
+    <Brush Name="SmallPanelBrush" Image="ui_image" SrcRect="320, 0, 200, 70" Type="9patch" ScaleArea="8, 8, 184, 54" />
+
+    <Brush Name="ButtonBrush2" Image="ui_image" SrcRect="0, 458, 222, 68" Type="9patch" ScaleArea="8, 7, 206, 54" />
+
+</xml>

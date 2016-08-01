@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<xml>
+
+    <Style Name="GenericSceneStyle">
+        <Set Property="CanvasSize" Value="-100, -100" />
+        <!--Set Property="CanvasSize" Value="1024, 768" /-->
+        <!--Set Property="CanvasFit" Value="best" /-->
+        <Set Property="CanvasFit" Value="none" />
+        <Set Property="CanvasOrigin" Value="centre" />
+        <Set Property="Colour" Value="255, 255, 255, 255" />
+        <Set Property="AllowSuspend" Value="false" />
+        <Set Property="Physics" Value="false" />
+    </Style>
+
+    <Image Name="Image1" Location="image1.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image2" Location="image2.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image3" Location="image3.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image4" Location="image4.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image5" Location="image5.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image6" Location="image6.png" Preload="false" Format="RGBA_8888" Filter="true" />
+    <Image Name="Image7" Location="image7.png" Preload="false" Format="RGBA_8888" Filter="true" />
+
+    <Scene Name="GameScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true">
+
+        <!-- Create a camera -->
+        <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="true" IgnoreActors="true" />
+
+        <!-- Create brushes -->
+        <Brush Name="brush1" Image="image1" SrcRect="0, 0, 91, 92" />
+        <Brush Name="brush2" Image="image2" SrcRect="0, 0, 81, 80" />
+        <Brush Name="brush3" Image="image3" SrcRect="0, 0, 81, 80" />
+        <Brush Name="brush4" Image="image4" SrcRect="0, 0, 81, 80" />
+        <Brush Name="brush5" Image="image5" SrcRect="0, 0, 81, 84" />
+        <Brush Name="brush6" Image="image6" SrcRect="0, 0, 81, 84" />
+        <Brush Name="brush7" Image="image7" SrcRect="0, 0, 81, 80" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, -250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, -250" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, -200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, -200" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, -150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, -150" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, -100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, -100" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, -50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, -50" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, 0" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, 0" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, 50" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, 50" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, 100" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, 100" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, 150" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, 150" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, 200" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, 200" />
+
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-250, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-200, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-150, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="-100, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="0, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="50, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="100, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="150, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="200, 250" />
+        <ActorImage Size="70, 70" Angle="10" Image="Image1" HitTest="false" Layer="1"  Position="250, 250" />
+
+    </Scene>
+
+</xml>

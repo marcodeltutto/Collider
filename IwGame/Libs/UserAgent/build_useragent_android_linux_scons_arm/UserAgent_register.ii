@@ -1,0 +1,341 @@
+# 1 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp"
+# 1 "e:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\build_useragent_android_linux_scons_arm//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "./temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp"
+# 13 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp"
+# 1 "../source/h/UserAgent_autodefs.h" 1
+# 14 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp" 2
+# 1 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h" 1
+# 15 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+# 1 "e:/marmalade/6.1/s3e/h/s3eTypes.h" 1
+# 35 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 49 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 72 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 94 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 106 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+
+
+
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 224 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 244 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef unsigned short s3eWChar;
+# 254 "e:/marmalade/6.1/s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 16 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h" 2
+# 1 "e:\\Program Files\\Android\\android-ndk\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h" 1 3 4
+# 40 "e:\\Program Files\\Android\\android-ndk\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 102 "e:\\Program Files\\Android\\android-ndk\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 17 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h" 2
+
+extern "C" {
+# 68 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+typedef void (*s3eEdkCallbackCompleteFn)(uint32 extID, int32 notification, void* systemData, void* instance, int32 returnCode, void* completeData);
+# 80 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+typedef int32 (*s3eEdkCallbackSpecific) (void* instance, void* systemData, void* userData);
+# 95 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+enum s3eEdkCallback
+{
+# 105 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+    S3E_EDK_IPHONE_OSROTATION = 100,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONDIDBECOMEACTIVE,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONWILLRESIGNACTIVE,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONDIDENTERBACKGROUND,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONWILLENTERFOREGROUND,
+# 141 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+    S3E_EDK_IPHONE_DID_RECEIVE_LOCAL_NOTIFICATION,
+# 153 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+    S3E_EDK_IPHONE_DID_RECEIVE_REMOTE_NOTIFICATION,
+
+
+
+
+
+    S3E_EDK_IPHONE_HANDLEOPENURL,
+
+    S3E_EDK_CALLBACK_MAX
+};
+# 213 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksEnqueue(uint32 extID,
+                                 int notification,
+                                 void* systemData =__null,
+                                 int sysDataSize =0,
+                                 void* instance =__null,
+                                 s3eBool oneShot =(0),
+                                 s3eEdkCallbackCompleteFn =__null,
+                                 void* completeData =__null);
+# 287 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksRegister(uint32 extID,
+                                  int maxNotification,
+                                  int notification,
+                                  s3eCallback callback,
+                                  void* userData,
+                                  s3eBool requireUnique);
+# 341 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksRegisterSpecific(uint32 extID,
+                                          int maxNotification,
+                                          int notification,
+                                          s3eEdkCallbackSpecific callback,
+                                          void* userData,
+                                          s3eBool requireUnique,
+                                          void* instance);
+# 400 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksRegisterInternal(uint32 extID,
+                                                     int32 maxNotification,
+                                                     int notification,
+                                                     s3eCallback callback,
+                                                     void* userData,
+                                                     s3eBool requireUnique);
+# 429 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksUnRegister(uint32 extID,
+                                    int maxNotification,
+                                    int notification,
+                                    s3eCallback callback,
+                                    void* instance =__null);
+# 449 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void s3eEdkCallbacksUnRegisterDevice(uint32 extID, void* instance =__null);
+# 463 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eBool s3eEdkCallbacksIsRegistered(uint32 extID, int32 notification, void* instance =__null);
+# 506 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+void s3eEdkSurfaceSetSize(s3eBool synchronous =(0), int width =0, int height =0, int pitch =0);
+# 525 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkMallocOS(int size, s3eBool bMsgOnFail =1);
+# 537 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkReallocOS(void* item, int size, s3eBool bMsgOnFail =1);
+
+
+
+
+
+
+extern "C" void s3eEdkFreeOS(void* item);
+# 562 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eBool s3eEdkIsInitialised(uint32 extID);
+# 574 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+typedef void s3eEdkDLLHandle;
+# 587 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eEdkDLLHandle* s3eEdkLibraryOpen(const char* name);
+# 607 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkLibraryGetSymbol(s3eEdkDLLHandle* handle, const char* name);
+# 619 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkLibraryClose(s3eEdkDLLHandle* handle);
+# 628 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" const char* s3eEdkLibraryError();
+# 643 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+typedef void* (*s3eEdkThreadFunc)();
+
+
+
+
+
+
+
+typedef void (*s3eEdkThreadVoidFunc)();
+# 664 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+void* s3eEdkThreadRunOnOS(s3eEdkThreadFunc fn, int n_args, ...);
+
+
+
+
+
+extern "C" void* s3eEdkThreadRunOnOSV(s3eEdkThreadFunc fn, int n_args, va_list args);
+# 683 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+void s3eEdkThreadRunOnOSAsync(s3eEdkThreadVoidFunc fn, int n_args, ...);
+
+extern "C" void s3eEdkThreadRunOnOSAsyncV(s3eEdkThreadVoidFunc fn, int n_args, va_list args);
+# 698 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void s3eEdkThreadSetSuspended();
+# 709 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void s3eEdkThreadSetResumed();
+# 718 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkThreadSleep(uint32 ms);
+# 748 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkGlobalsGet(uint32 extID);
+
+
+typedef s3eResult (*s3eEdkInitFn)();
+
+
+typedef void (*s3eEdkTermFn)();
+
+
+
+
+extern "C" void s3eEdkRegister(const char* name,
+                    void* funcs,
+                    int size,
+                    int* funcAttrs,
+                    s3eEdkInitFn init,
+                    s3eEdkTermFn term,
+                    int globalDataSize);
+# 782 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+typedef enum s3eEdkErrorPriority
+{
+
+
+
+
+    S3E_EXT_ERROR_PRI_MINOR = 0,
+
+
+
+
+
+    S3E_EXT_ERROR_PRI_NORMAL = 1,
+
+
+
+
+
+    S3E_EXT_ERROR_PRI_MAJOR = 2,
+    S3E_EXT_ERROR_PRI_MAX = 3
+} s3eEdkErrorPriority;
+# 816 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" const char* s3eEdkErrorGetString(uint32 extID);
+# 831 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" int s3eEdkErrorGet(uint32 extID);
+# 847 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkErrorSet(uint32 extID, int32 error, s3eEdkErrorPriority priority);
+# 856 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+void s3eEdkErrorSetString(const char* fmt, ...);
+
+extern "C" void s3eEdkErrorSetStringV(const char* fmt, va_list args);
+# 878 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+extern "C" int s3eEdkGetAppVersionMajor();
+
+
+
+
+
+extern "C" int s3eEdkGetAppVersionMinor();
+# 903 "e:/marmalade/6.1/s3e/edk/h/s3eEdk.h"
+}
+# 15 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp" 2
+# 1 "../h/UserAgent.h" 1
+# 21 "../h/UserAgent.h"
+extern "C" {
+
+
+
+
+
+s3eBool UserAgentAvailable();
+
+const char* getUserAgent();
+
+}
+# 16 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp" 2
+
+extern s3eResult UserAgentInit();
+extern void UserAgentTerminate();
+
+
+void UserAgentRegisterExt()
+{
+
+    void* funcPtrs[1];
+    funcPtrs[0] = (void*)getUserAgent;
+
+
+
+
+    int flags[1] = { 0 };
+
+
+
+
+    s3eEdkRegister("UserAgent", funcPtrs, sizeof(funcPtrs), flags, UserAgentInit, UserAgentTerminate, 0);
+}
+# 54 "E:\\Apps\\AirPlay\\IwGame_Debug\\Libs\\UserAgent\\source\\generic\\UserAgent_register.cpp"
+extern "C" __attribute__ ((visibility("default"))) void RegisterExt()
+{
+    UserAgentRegisterExt();
+}

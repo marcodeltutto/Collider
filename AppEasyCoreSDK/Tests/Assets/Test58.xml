@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:/AppEasy/docs/XOML.xsd">
+
+	<!-- Create a scene -->
+	<Scene Name="Scene1" Current="true" ScriptEngine="lua">
+
+		<!-- Create a amrket with products -->
+		<Market Name="Market1" Vendor="googleplay" AndroidPublicKey="Add your Android public key">
+			<Product Name="zones3and4" iOSId="com.pocketeers.puzzlefriends.zones3and4" AndroidId="android.test.purchased" Price="0.99" />
+			<Product Name="coins10" iOSId="com.pocketeers.puzzlefriends.coins10" AndroidId="test5" Price="0.99" />
+		</Market>
+
+		<!-- Load script -->
+		<Script Name="Script1" Type="lua" />
+		<File Name="ScriptFile1" Location="Test58.lua" Script="Script1" />
+
+		<StackPanel Orientation="vertical" Position="0,100">
+			<Label Background="Button1Brush" Font="serif" Text="Query Info" Size="200,40" SelectedColour="128, 128, 128, 128" OnTapped="Tapped">
+				<Actions Name="Tapped">
+					<Action Method="CallScript" P1="QueryProduct" />
+				</Actions>
+			</Label>
+			<Label Background="Button1Brush" Font="serif" Text="Purchase" Size="200,40" SelectedColour="128, 128, 128, 128" OnTapped="Tapped">
+				<Actions Name="Tapped">
+					<Action Method="CallScript" P1="MakePurchase" />
+				</Actions>
+			</Label>
+			<Label Background="Button1Brush" Font="serif" Text="Consume" Size="200,40" SelectedColour="128, 128, 128, 128" OnTapped="Tapped">
+				<Actions Name="Tapped">
+					<Action Method="CallScript" P1="ConsumeProduct" />
+				</Actions>
+			</Label>
+			<Label Background="Button1Brush" Font="serif" Text="Restore purhases" Size="200,40" SelectedColour="128, 128, 128, 128" OnTapped="Tapped">
+				<Actions Name="Tapped">
+					<Action Method="CallScript" P1="RestorePurchases" />
+				</Actions>
+			</Label>
+			<Label Name="Message" Background="Button1Brush" Font="serif" Text="" Size="200,40" />
+		</StackPanel>
+		
+		<Label Font="serif" Text="Demonstration of in-app purchasing using the Market" BackgroundColour="80, 80, 80, 255" Background="Button1Brush" Size="-100, -10" Docking="top" AutoHeight="true" IgnoreCamera="true" />
+
+	</Scene>
+
+
+</xml>

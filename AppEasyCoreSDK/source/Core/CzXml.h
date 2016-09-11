@@ -23,6 +23,8 @@
 #include "CzUtil.h"
 #include "CzDataIO.h"
 
+#include <iostream>
+
 class CzXmlParser;
 class CzFile;
 struct CzXmlAttribute;
@@ -565,11 +567,17 @@ public:
 	}
 	CzXmlTagMarker*	AllocTag()			///< Allocates space for a new tag marker
 	{
-		if (TagPool == NULL)
-			return new CzXmlTagMarker();
+      if (TagPool == NULL){
+        std::cout << "TagPool is NULL!" << std::endl;
+
+        return new CzXmlTagMarker();
+
+      }
 		if (NextFreePoolTagIndex >= MaxPoolTags)
 		{
+          std::cout << "Ran out of tag markers, allocate more" << std::endl;
 			return new CzXmlTagMarker();
+          
 //			CzDebug::Log(CZ_DEBUG_CHANNEL_ERROR, "Ran out of tag markers, allocate more");
 //			return NULL;
 		}

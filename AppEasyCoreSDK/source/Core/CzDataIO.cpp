@@ -12,6 +12,7 @@
 //
 
 #include "CzDataIO.h"
+#include <iostream>
 
 //
 //
@@ -1328,6 +1329,7 @@ int CzDataInput::getNextTag(char tag_start_char, char tag_end_char, int range, i
 
 int CzDataInput::getNextTagOrValue(char tag_start_char, char tag_end_char, int range, int &start_pos)
 {
+  //range++; // marco hack
 	if (Position >= Length)
 	{
 		EndOfFile = true;
@@ -1345,9 +1347,11 @@ int CzDataInput::getNextTagOrValue(char tag_start_char, char tag_end_char, int r
 	while (range-- > 0)
 	{
 		char c = *data++;
+      //std::cout << "The character c is " << c << std::endl;
 
 		if (c == 0)
 		{
+          std::cout << "c == 0 " << c << std::endl;
 			if (!found_first)
 				return -2;
 			else
@@ -1356,13 +1360,21 @@ int CzDataInput::getNextTagOrValue(char tag_start_char, char tag_end_char, int r
 
 		if (c != ' ' && c != '\t' && c != '\n' && c != '\r')
 		{
-			if (!found_first)
+          
+          if (!found_first && c == tag_start_char)
+          {
+            found_first = true;
+            start_pos = Position;
+            tag_found = true;
+          }
+          
+			/*if (!found_first)
 			{
 				found_first = true;
 				start_pos = Position;
 				if (c == tag_start_char)
 					tag_found = true;
-			}
+			}*/
 			else
 			{
 				if (c == tag_end_char)

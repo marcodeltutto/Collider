@@ -11,10 +11,13 @@
 //
 //
 
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <cstdlib>
 
 #include "CzString.h" 
+
 
 //
 //
@@ -277,17 +280,31 @@ void CzString::reallocString(int len)
 }
 void CzString::allocString(int len)
 {
+  //std::cout << "In CzString::allocString  1" << std::endl;
+
 	FindIndex = 0;
 	Length = 0;
+  //std::cout << "In CzString::allocString  2" << std::endl;
+
 	if (Size > len + 1)
 	{
+      //std::cout << "In CzString::allocString  3" << std::endl;
+
 		Data[0] = 0;
 		return;
 	}
+  //std::cout << "In CzString::allocString  4" << std::endl;
+  //std::cout << "In CzString::allocString  -- len is "<< len << std::endl;
+
 	Size = len + 1;
 //	if (Size < 16) Size = 16;
 	free(Data);
+  //std::cout << "In CzString::allocString  5" << std::endl;
+  //std::cout << "In CzString::allocString  -- Size is "<< Size << std::endl;
+
 	Data = alloc(Size);
+  //std::cout << "In CzString::allocString  6" << std::endl;
+
 	Data[0] = 0;
 }
 void CzString::reset()
@@ -315,20 +332,44 @@ void CzString::setString(const char *str)
 }
 void CzString::setString(const char *str, int len)
 {
+  //debug std::cout << "In CzString::setString  -* len is        " << len << std::endl;
+  //std::cout << "In CzString::setString  -* the string is " << str << std::endl;
+
+  //std::cout << "In CzString::setString  1" << std::endl;
 	FindIndex = 0;
+  //std::cout << "In CzString::setString  2" << std::endl;
+
 	if (str == NULL)
 	{
+      //std::cout << "In CzString::setString  3" << std::endl;
+
 		free(Data);
 		Size = 0;
 		Length = 0;
+      //std::cout << "In CzString::setString  4" << std::endl;
+
 		return;
 	}
+  //std::cout << "In CzString::setString  5" << std::endl;
+
 	allocString(len);
+  //std::cout << "In CzString::setString  6" << std::endl;
+
 	memcpy(Data, str, len);
+  //std::cout << "In CzString::setString  7" << std::endl;
+
 	Data[len] = 0;
+  //std::cout << "In CzString::setString  ()() Data is " << Data << std::endl;
+
+  //std::cout << "In CzString::setString  8" << std::endl;
+
 	Length = len;
+  //std::cout << "In CzString::setString  9" << std::endl;
+
 	if (AutoHash)
 		DataHash = CzString::CalculateHash(Data);
+  //std::cout << "In CzString::setString  10" << std::endl;
+
 }
 
 CzString CzString::getSubString(int start, int max_chars)
@@ -1173,8 +1214,9 @@ void CzString::ReplaceHTMLCodes()
 	*nstr = 0;
 	
 	FindIndex = 0;
-	Length = (int)nstr - (int)Data;
-	
+	//Length = (int)nstr - (int)Data; // Marco: you will lose precision with this, use std::atoi instead.
+    Length = std::atoi(nstr) - std::atoi(Data);
+  
 	if (AutoHash)
 		DataHash = CzString::CalculateHash(Data);
 }

@@ -10,6 +10,7 @@
 // If you use this SDK in your product then please ensure that you credit AppEasy's usage appropriately. Please see www.appeasymobile.com for licensing details and support
 //
 //
+#include <iostream>
 
 #include "CzXoml.h"
 #include "CzHashes.h"
@@ -991,17 +992,27 @@ bool CzXoml::Process(IzXomlResource* parent, const char* filename, bool reset_xm
 {
 //	if (reset_xml_pools)
 //		CzXmlParser::PoolsReset();
+  std::cout << "Inside CzXoml::Process  1" << std::endl;
 	CzXmlParser*	xml = new CzXmlParser();
+  std::cout << "Inside CzXoml::Process  2" << std::endl;
 
 	// Load and parse the xml file
 	if (xml->Parse(filename, CzDecrypt::Enabled) == XmlErrorNone)
 	{
+      std::cout << "File " << filename << " has been parsed correclty." << std::endl;
+
 		// Process the XOML data
 		bool error = Process(parent, xml->getRoot()->getFirstNode());
+      std::cout << "The process has happend." << std::endl;
+
 		delete xml;
+      std::cout << "The xml parsed object has been deleted." << std::endl;
+
 		return error;
 	}
+
 	delete xml;
+
 
 	return false;
 }

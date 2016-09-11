@@ -20,6 +20,8 @@
 #include "CzHashes.h"
 #include "CzXomlResourceManager.h"
 
+#include <iostream>
+
 /**
  @fn	int CzFile::getFileSize()
 
@@ -147,7 +149,9 @@ bool CzFile::Open(const char* path, const char* mode, bool blocking)
 	// Check to see if the file is located on the web
 	if (isHttp(Filename.c_str(), Filename.getLength()))
 	{
-		Download();
+      std::cout << "The file is located on the web" << std::endl;
+      if(Download()) std::cout << "Download succeded" <<std::endl;
+      else std::cout << "Download failed" <<std::endl;
 
 		if (blocking)
 		{
@@ -342,6 +346,7 @@ bool CzFile::Download()
 	Request->setContentAvailableCallback(&FileRetrievedCallback, (void*)this);
 	CZ_HTTP_MANAGER->AddRequest(Request);
 
+  std::cout << "Download with URL: " << Filename.c_str() << std::endl;
 #if defined(_DEBUG)
 	CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "CzFile::Download with URL:", Filename.c_str());
 #endif	// _DEBUG

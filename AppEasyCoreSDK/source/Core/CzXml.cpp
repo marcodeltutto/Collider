@@ -18,6 +18,9 @@
 #include "CzDecrypt.h"
 #include "CzDebug.h"
 
+#include <string>
+#include <iostream>
+
 #define SHOW_ERRORS	1
 
 const char* CzXmlParserErrors[] = 
@@ -755,10 +758,21 @@ eCzXmlParseError CzXmlParser::Parse(CzFile *file, bool decrypt)
 	{
 		Filename = file->getFilename();
 		int size = file->getFileSize();
+      
+      /*std::string thisFileName = Filename.getString();
+      std::string webPath = "http";
+      if (std::string::npos != thisFileName.find(webPath)) {
+        
+        CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "", "DOING IT ", size);
+        CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "FILE NAME IS", thisFileName.c_str(), size);
+        size++;
+      }*/
+      
+      //size++; //Marco's hack
 		m_pDataInput = new CzDataInput();
 		m_pDataInput->Init(size);
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", size);
-		if (!file->Read(m_pDataInput->getData(), size))
+      //std::cout << "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt)  size is "<< size << std::endl;
+		if (!file->Read(m_pDataInput->getData(), size)) 
 			return XmlErrorFileError;
 
 		// Decrypt encrypted code
@@ -896,13 +910,13 @@ bool CzXmlParser::PreParse()
 	int num_tags, num_attribs;
 	m_pDataInput->CountXmlEntities(num_tags, num_attribs);
 	num_tags++;	// Add one on for root
-
+  //debug std::cout << "PreParse::::::  num_tags is " << num_tags << std::endl;
 	// Allocate buffers
 	TagPool = new CzXmlTagMarker[num_tags]();
 	NodePool = new CzXmlNode[num_tags]();
 	AttributePool = new CzXmlAttribute[num_attribs]();
-	MaxPoolTags = num_tags;
-	MaxPoolNodes = num_tags;
+    MaxPoolTags = num_tags;//marco hack
+    MaxPoolNodes = num_tags;//marco hack
 	MaxPoolAttributes = num_attribs;
 	NextFreePoolNodeIndex = 0;
 	NextFreePoolTagIndex = 0;
@@ -917,16 +931,25 @@ bool CzXmlParser::PreParse()
 
 		int tag_pos = 0;
 		int pos = m_pDataInput->getPos();
+      
+      //debug std::cout << "*** Starting with position : " << pos  << std::endl;
+      
 		if (pos >= m_pDataInput->getLength())
 			return true;
+      
+      //debug std::cout << "*** Remaining char to visit: " << m_pDataInput->Remaining()  << std::endl;
+      //debug std::cout << "*** We are at line number  : " << line_num  << std::endl;
 
 		int tag_len = m_pDataInput->getNextTagOrValue('<', '>', m_pDataInput->Remaining(), tag_pos);
+      //debug std::cout << "*** The length of this tag : " << tag_len  << std::endl;
+      //debug std::cout << "*** Now we are at position : " << m_pDataInput->getPos()  << std::endl;
+      
 		if (tag_len < 0)
 		{
 			if (tag_len == -1)
 			{
 				ShowError(XmlErrorMissingEndTag, line_num);
-				return false;
+				//return false;
 			}
 			else
 				return true;
@@ -948,6 +971,7 @@ bool CzXmlParser::PreParse()
 		if (tag_len > 0)
 		{
 			CzXmlTagMarker* tag_marker = AllocTag();
+          //debug std::cout << "AllocTag called. NextFreePoolTagIndex is now: " << NextFreePoolTagIndex << std::endl;
 			if (tag_marker == NULL)
 			{
 				return false;
@@ -956,6 +980,9 @@ bool CzXmlParser::PreParse()
 			tag_marker->Length = tag_len;
 			tag_marker->Line = line_num;
 			MarkerCount++;
+          //debug std::cout << "PreParse::::::  Tag created at position  " << tag_pos   << std::endl;
+          //debug std::cout << "PreParse::::::  MarkerCount is " << MarkerCount << std::endl;
+
 			
 //			CzString* tag = new CzString(m_pDataInput->getData(), tag_pos, tag_len);
 //			TempElements.push_back(tag);
@@ -970,48 +997,44 @@ bool CzXmlParser::PreParse()
 eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 {
 	CzXmlNodeList* parent_stack = new CzXmlNodeList();
-	
-  CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", 1);
-
   
 	parent_stack->push_back(parent);
 	int		count = NextFreePoolTagIndex;
 	int		tag_index = 0;
 	char*	c_data = m_pDataInput->getData();
-  CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", 2);
   
 
 	parent = parent_stack->back();
-  int mycount=0;
-  ShowError(XmlErrorInvalidTag, MarkerCount);
-  ShowError(XmlErrorInvalidTag, -99999);
+  
+  //debug std::cout << "*********************************************************** STARTING PARSING NOW" << std::endl;
+  //debug std::cout << "*****      MarkerCount is " << MarkerCount << std::endl;
+
 
 	while (tag_index < MarkerCount)
 	{
-      count++;
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO while loop: ", count);
+      //debug std::cout << "*****      Beginning of the while loop. tag_index = " << tag_index << std::endl;
+      
 		if (parent == NULL)
 			break;
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO while loop: ", count);
 
 		CzXmlTagMarker* marker = Marker + tag_index;
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO while loop: ", count);
 
 		const char* data = c_data + marker->Start;
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO while loop: ", count);
 
 		int len = marker->Length;
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO while loop: ", count);
+      
+      //debug std::cout << "*****      The position of the tag I'm loking for is " <<  marker->Start << " and the length of this tag is " << marker->Length << std::endl;
 
-      if (marker->Line > 1000000) break; // marco hack
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO we are at line ", marker->Line);
-      CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO  ", "MARCO  ", "MARCO MarkerCount is ", MarkerCount);
+
+      //if (marker->Line > 20000 || marker->Line < -1000000) {std::cout << "BREAKING - MARCO'S HACK" << std::endl; break;/*tag_index++;continue;*/} // marco hack
 
 
 		if (*data == '<' && *(data + len - 1) == '>')
 		{
+          //debug std::cout << "Found a < >."<< std::endl;
 			if (*(data + 1) == '/')
 			{
+              //debug std::cout << "It is and end tag."<< std::endl;
 
 				// Found an end tag, check that name matches parents
 				int et_offset = 0;
@@ -1028,6 +1051,7 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 				}
 				if (!parent->Name.Compare(data + et_offset + 2, et_len))
 				{
+
 /*					CzString error = "CzXmlParser::Parse - Mismatched end tag - ";
 					error += parent->Name.c_str();
 					error += " - at line ";
@@ -1039,6 +1063,7 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 				}
 				for (CzXmlNodeList::iterator it = parent_stack->begin(); it != parent_stack->end(); it++)
 				{
+
 					CzXmlNode* node = *it;
 					if (node == parent)
 					{
@@ -1052,8 +1077,9 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 			}
 			else
 			{
+
 				// Create a node
-              ShowError(XmlErrorInvalidTag, 888);
+                //debug std::cout << "Creating a node for tag_index " << tag_index << std::endl;
 				CzXmlNode* node = AllocNode();
 				node->Line = marker->Line + 1;
 				int offset;
@@ -1066,7 +1092,9 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 					ShowError(XmlErrorInvalidTag, marker->Line);
 					return XmlErrorInvalidTag;
 				}
+
 				node->Name.setString(data + offset + 1, nlen);
+              //debug std::cout << "This node has name: " << node->Name.getString() << std::endl;
 				if ((len - 2) > nlen)
 				{
 					eCzXmlParseError error = ParseAttributes(data + offset + nlen + 1, len - nlen - offset - 1, node);
@@ -1076,8 +1104,8 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 						return error;
 					}
 				}
+              //debug std::cout << "Adding this node to parent.Name " << parent->Name.getString() << std::endl;
 				parent->AddChild(node);
-              ShowError(XmlErrorInvalidTag, 988);
 
 				if (*(data + len - 2) != '/')		// Self closing tags dont get added as parents
 				{
@@ -1086,10 +1114,15 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 				}
 
 				// Check next line to see if it is a tag or a value
+              //debug std::cout << "I will now check if next line is a tag or a value." << std::endl;
+
 				tag_index++;
+              //debug std::cout << "tag_index is " << tag_index << "   NextFreePoolTagIndex - 1 is " << NextFreePoolTagIndex - 1 << std::endl;
 				if (tag_index != (NextFreePoolTagIndex - 1))
 				{
 					CzXmlTagMarker* marker2 = Marker + tag_index;
+                  //debug std::cout << "marker2->Start is " << marker2->Start << std::endl;
+
 					const char* data2 = c_data + marker2->Start;
 					int len2 = marker2->Length;
 
@@ -1098,21 +1131,59 @@ eCzXmlParseError CzXmlParser::Parse(CzXmlNode* parent)
 						// Found a value
 						node->Value.setString(data2, len2);
 						node->HasValue = true;
+                      //debug std::cout << "I've found a value.\nThis node has value: " << node->Value.getString() << std::endl;
 					}
 				}
+              // Marco: also look if I have a value without the < >. So go to the next character and see if it doesn't have a <.
+              const char* mydata = c_data + marker->Start + marker->Length;
+              CzXmlTagMarker* marker2 = Marker + tag_index;
+              bool flag = true;
+              if (*(mydata-2) != '/') { // if we are not after an end tag
+                for (int h = 0; flag; h++) { // explore the chars after this tag
+                  if (*(mydata+h) != '\n') { // only those different then newline
+                    if (*(mydata+h) == '<'){
+                      // Found a new tag. It is not a value
+                      flag = false;
+                      //debug std::cout << "Found a new tag. It is not a value *(mydata+h) = " << *(mydata+h) << std::endl;
+                    }
+                    if (*(mydata+h) != '<') {
+                      // Found a char after an end tag which is not a new tag. It must be a value
+                      flag = false;
+                      //debug std::cout << "Found a char after an end tag which is not a new tag. It must be a value. *(mydata+h) = " << *(mydata+h) << std::endl;
+                      //debug std::cout << "Found a char after an end tag which is not a new tag. It must be a value. *(mydata+h) = " << *(c_data + marker2->Start -1) << std::endl;
+                      //debug std::cout << "My estimated size is: "<< (c_data + marker2->Start -1) - (mydata+h) << std::endl;
+                      // Found a value
+                      int mylen = (c_data + marker2->Start) - (mydata+h);
+                      node->Value.setString(mydata+h, mylen);
+                      node->HasValue = true;
+                      //debug std::cout << "I've found a value.\nThis node has value: " << node->Value.getString() << std::endl;
+                    }
+                  }
+                }
+                
+              }
+              /* debug
+              std::cout << "Printing *(mydata-2): "<<*(mydata-2)<<std::endl;
+              std::cout << "Printing *(mydata-1): "<<*(mydata-1)<<std::endl;
+              std::cout << "Printing *(mydata): "<<*(mydata)<<std::endl;
+              std::cout << "Printing *(mydata+1): "<<*(mydata+1)<<std::endl;
+              std::cout << "Printing *(mydata+2): "<<*(mydata+2)<<std::endl;
+               */
 			}
 		}
-		else
+        else {
+          //debug std::cout << "NOT Found a < >. \nIncrementing tag_index++ and going on."<< std::endl;
 			tag_index++;
+        }
 	}
   
-  CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", 3);
+  //CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", 3);
 
 
 	parent_stack->clear();
 	delete parent_stack;
   
-  CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", 4);
+  //CzDebug::Log(CZ_DEBUG_CHANNEL_INFO, "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", "MARCO in CzXmlParser::Parse(CzFile *file, bool decrypt). size is ", 4);
 
 
 	return XmlErrorNone;

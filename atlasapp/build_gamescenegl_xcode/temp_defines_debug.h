@@ -88,6 +88,9 @@
 #ifndef IW_MKF_FREELICENSE
 #   define IW_MKF_FREELICENSE 1
 #endif
+#ifndef IW_MKF_GAMESCENEGL_DEPLOYMENT
+#   define IW_MKF_GAMESCENEGL_DEPLOYMENT 1
+#endif
 #ifndef IW_MKF_IW2D
 #   define IW_MKF_IW2D 1
 #endif

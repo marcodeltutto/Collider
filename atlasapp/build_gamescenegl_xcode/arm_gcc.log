@@ -1,0 +1,92 @@
+3
+4Building: /Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb
+3Running: /Applications/Marmalade.app/Contents/s3e/bin/mkb /Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb --buildenv=XCODE --debug --arm --compiler=gcc --no-ide --make --hub-data /Users/deltutto/My_Collider/atlasapp/project_GameSceneGL/mkb-build.txt
+3
+2S3E_DIR = /Applications/Marmalade.app/Contents/s3e
+2Building project: /Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb
+2MARMALADE_HOME: /Users/deltutto/Marmalade
+5/Applications/Marmalade.app/Contents/modules/iwbilling/iwbilling.mkf(62) : msg: Warning: Fortumo not included in IwBilling
+2/Users/deltutto/My_Collider/AppEasyCoreSDK/AppEasy.mkf(12) : msg: macro TARGET_PLATFORM is not documented: (first reference here)
+2/Users/deltutto/My_Collider/AppEasyCoreSDK/AppEasy.mkf(16) : msg: macro CZ_FACEBOOK_ENABLE is not documented: (first reference here)
+5warning: One or more macros were not documented
+2msg: A total of 1 problems with the documentation were found
+2Executing: '/Applications/Marmalade.app/Contents/s3e/bin/s3e_xcodebuild -project GameSceneGL.xcodeproj -configuration Debug ARM -sdk macosx10.11'
+52016-09-10 18:40:02.274 xcodebuild[6742:155961] [MT] PluginLoading: Required plug-in compatibility UUID ACA8656B-FEA8-4B6D-8E4A-93F4C95C362C for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Unity4XC.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+2Build settings from command line:
+2SDKROOT = macosx10.11
+2
+2=== BUILD TARGET GameSceneGL OF PROJECT GameSceneGL WITH CONFIGURATION Debug ARM ===
+2
+2Check dependencies
+2
+2PhaseScriptExecution /System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object0.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object0.sh\"
+2
+2PhaseScriptExecution /usr/bin/python build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object1.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object1.sh\"
+2x86: skipping for arm and aarch64 and NaCl builds
+2
+2PhaseScriptExecution /usr/bin/python build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object2.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object2.sh\"
+2skipping for debug builds
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object3.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object3.sh\"
+2x86: skipping for arm and aarch64 and NaCl builds
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object4.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object4.sh\"
+2skipping for debug builds
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object5.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object5.sh\"
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object6.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object6.sh\"
+2skipping for debug builds
+2
+2PhaseScriptExecution set build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object7.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object7.sh\"
+2NACL: skipping for ARM and x86 builds and aarch64
+2
+2PhaseScriptExecution set build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object8.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object8.sh\"
+2skipping for debug builds
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object9.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object9.sh\"
+2AARCH64: skipping for x86 and arm and NaCl builds
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object10.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object10.sh\"
+2skipping for debug builds
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object11.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object11.sh\"
+2NACL: skipping for ARM and x86 builds and aarch64
+2
+2PhaseScriptExecution s3e_plink build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object12.sh
+2cd /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode
+2/bin/sh -c \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/GameSceneGL.build/Debug\ ARM/GameSceneGL.build/Script-shell_script_object12.sh\"
+2skipping for debug builds
+2
+2** BUILD SUCCEEDED **
+2
+2Done, with 1 warnings.
+7Script Succeeded
+2Finished Running: Building
+2
+7Successfully built: GCC ARM at 10/09/2016 06:40PM
+2

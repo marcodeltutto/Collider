@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xml>
+<!-- 
+ extra games can be made available in the game instantly by adding to this file
+ the format required is:
+ <FromTemplate Template="selectionTemplate" name="uniqueIdentifier" label="Label Appears In Game" xml="http ://URL.to/XMLfile.xml" />
+ -->
+    <FromTemplate Template="selectionTemplate" name="Higgs" label="Higgs Game" xml="ScanningGame.xml" />
+    
+</xml>

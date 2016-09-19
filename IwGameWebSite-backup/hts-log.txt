@@ -1,0 +1,12 @@
+HTTrack3.48-3 launched on Fri, 05 Aug 2016 18:08:17 at http://www.drmop.com/index.php/marmalade-sdk/iwgame-engine/
+(httrack http://www.drmop.com/index.php/marmalade-sdk/iwgame-engine/ -O /Users/deltutto/Desktop/IwGameWebSite-backup )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:08:21	Error: 	"Not Found" (404) at link www.drmop.com/index.php/marmalade-sdk/iwgame-engine/http%3A%2F%2Fwww.drmop.com%2Findex.php%2Fmarmalade-sdk%2Fiwgame-engine%2F (from www.drmop.com/index.php/marmalade-sdk/iwgame-engine/)
+
+HTTrack Website Copier/3.48-3 mirror complete in 4 seconds : 4 links scanned, 2 files written (122847 bytes overall) [124556 bytes received at 31139 bytes/sec]
+(1 errors, 0 warnings, 0 messages)

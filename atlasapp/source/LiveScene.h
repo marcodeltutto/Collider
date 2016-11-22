@@ -39,9 +39,9 @@ public:
     void InitLinks();
   
     // Implementation of IIwGameXomlResource interface
-	int	LoadFromXoml(IzXomlResource, bool load_children, CzXmlNode* node)
+	int	LoadFromXoml(IzXomlResource* parent, bool load_children, CzXmlNode* node)
 	{
-		if (!CzScene::LoadFromXoml(Parent, load_children, node))
+		if (!CzScene::LoadFromXoml(parent/*Parent*/, load_children, node))
 			return false;
         
 		// Add our own custom attribute parsing

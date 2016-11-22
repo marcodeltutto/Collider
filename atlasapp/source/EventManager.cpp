@@ -49,12 +49,30 @@ bool EventManager::DownloadLiveEvents() {
     //p.Parse("http://atlas-live.cern.ch/lhsee/files.xml");
   
   //eCzXmlParseError err = p->Parse("http://atlas-live.cern.ch/lhsee/files.xml");
-  CzFile * mytest = new CzFile("files.xml");
+  CzFile * mytest = new CzFile("myfiles.xml"); // files.xml
   std::cout << mytest->getFileSize() << std::endl;
-  std::cout << "File exists? " << CzFile::FileExists("files.xml") <<std::endl;
-  eCzXmlParseError err = p->Parse(mytest);
+  std::cout << "File exists? " << CzFile::FileExists("myfiles.xml") <<std::endl;
+  std::cout << "Now parsing file: " << "allfiles.xml" << std::endl;
+
+  CzFile * theFile = new CzFile("http://atlas-live.cern.ch/lhsee/files.xml");
+  eCzXmlParseError err = p->Parse("http://atlas-live.cern.ch/lhsee/files.xml");
   if ( err == XmlErrorNone) {std::cout << "xml is ok" <<std::endl;}
   else std::cout << "xml is NOT ok. err is " << err << std::endl;
+  /*
+  std::cout << "************TRIAL***************" << std::endl;
+  
+  CzFile * myfile = new CzFile("http://atlas-live.cern.ch/lhsee/files.xml");
+  
+  std::cout << "Before opening, the size is " << myfile->getFileSize() << std::endl;
+  
+  myfile->Open("http://atlas-live.cern.ch/lhsee/files.xml", "", true);
+  
+  std::cout << "After opening, the size is  " << myfile->getFileSize() << std::endl;
+
+
+  std::cout << "********************************" << std::endl;
+   */
+  
   
   std::cout << "MARCO 4." << std::endl;
   
@@ -73,7 +91,7 @@ bool EventManager::DownloadLiveEvents() {
         std::cout << (*it)->getValue().c_str() << std::endl;
         addEvent((*it)->getValue().c_str(), "");
     }
-     
+     std::cout << "MARCO: done this " << nodes->size() << std::endl;
     return true;
 }
 

@@ -63,7 +63,9 @@ void LandingScreen::InitLinks() {
 }
 
 void LandingScreen::UpdateSelectionScreen() {
-        
+  
+  //std::cout << "%%%% Calling the function UpdateSelectionScreen()" << std::endl;
+  
     // 5381 is "" ? hmmm
     if(CzString::CalculateHash(gameId_var->getValue().c_str()) == 5381)
         return;
@@ -72,16 +74,20 @@ void LandingScreen::UpdateSelectionScreen() {
         currentGameId = CzString::CalculateHash(gameId_var->getValue().c_str());
         std::cout << gameId_var->getValue().c_str() << std::endl;
     }
-    
+  
+    //std::cout << "Got to here at list 1" << std::endl;
     GameState gameState = GAME->getSaveFile()->getGameState(currentGameId);
-    
+    //std::cout << "Got to here at list 2" << std::endl;
+
     CzXomlVariableInt* triesCounter = (CzXomlVariableInt*) selectionScene->getVariableManager()->findVariable("Attempts");
     std::stringstream ssatt;
     ssatt << gameState.tries;
     triesCounter->setValue(ssatt.str().c_str());
     
     bool checkTut = false;
-    
+    //std::cout << "Got to here at list 3" << std::endl;
+
+
     if(eventManager->isTutorial()) {
         checkTut = true;
         for(int i=0; i<gameState.nEvents;++i) {
@@ -107,8 +113,9 @@ void LandingScreen::UpdateSelectionScreen() {
     
     
     
-    
-    
+
+  //std::cout << "Got to here at list 4" << std::endl;
+
     CzUILabel* facebookButton = (CzUILabel*) selectionScene->findActor("facebookButton");
     CzUILabel* facebookShareButton = (CzUILabel*) congratsScene->findActor("facebookShareButton");
     CzUILabel* resetButton = (CzUILabel*) selectionScene->findActor("resetButton");
@@ -128,7 +135,9 @@ void LandingScreen::UpdateSelectionScreen() {
         facebookButton->setTappable(true);
         facebookButton->setColour(255, 255, 255, 255);
     }
-    
+
+  //std::cout << "Got to here at list 5" << std::endl;
+
     int correct = 0;
     bool higgs = false;
     for(int i=0; i<gameState.nEvents; ++i) {
@@ -142,16 +151,20 @@ void LandingScreen::UpdateSelectionScreen() {
             }
         }
     }
+
     if(gameState.toCheck || checkTut) {
         CzUILabel* scoreLabel = (CzUILabel*) congratsScene->findActor("score");
-        
         std::stringstream score;
         score << "You scored " << correct << "/" << gameState.nEvents << ". ";
-        if(correct/gameState.nEvents > 0.5)
+
+        if (gameState.nEvents != 0) {
+          if(correct/gameState.nEvents > 0.5)
             score << "Congratulations!";
-        else
+          else
             score << "Well done!";
-        
+        } else
+          score << "Error: gameState.nEvents is zero";
+
         if(higgs) {
             score.str("");
             score << "You scored " << correct << "/" << gameState.nEvents << " and found the Higgs! Congratulations!";
@@ -159,12 +172,19 @@ void LandingScreen::UpdateSelectionScreen() {
         
         scoreLabel->setText(score.str().c_str());
     }
+
+  //std::cout << "Just before Facebook session" << std::endl;
+
     if(facebookButton->isSelected() || facebookShareButton->isSelected()) {
         facebookButton->setSelected(false);
         facebookShareButton->setSelected(false);
-        
+      
+      //std::cout << "Facebook session 1" << std::endl;
+      
         if(!fbSession) fbSession = s3eFBInit("141331202732781");
-        
+      //std::cout << "Facebook session 2" << std::endl;
+
+      
         if(!s3eFBSession_LoggedIn(fbSession))
             s3eFBSession_Login(fbSession, NULL);
         
@@ -188,7 +208,7 @@ void LandingScreen::UpdateSelectionScreen() {
             caption << "I just completed \"" << gameName << "\" in Collider and found the Higgs boson! [score " << correct << "/" << gameState.nEvents << "]";
         }
         
-        
+
         std::cout << caption.str() << std::endl;
         
         if(s3eFBSession_LoggedIn(fbSession)) {
@@ -204,7 +224,7 @@ void LandingScreen::UpdateSelectionScreen() {
         }
      
     }
-    
+
     if((gameState.toCheck || checkTut) && resetGame->NativeValue) {
         resetGame->NativeValue = false;
         std::cout << "gameid = " << gameState.gameId << std::endl;

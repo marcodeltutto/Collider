@@ -178,12 +178,12 @@ void Animation::UpdateEvent(){
 	drawRadius += deltaRadius;
 
 	//update the ID tracks
-	//marco if (!idTracks) CIwGameError::LogError("Warning:: cannot update ID tracks animation since event has no ID tracks");
-	//marco else UpdateTracks(idTracks);
+  if (!idTracks) std::cout << "Warning:: cannot update ID tracks animation since event has no ID tracks" << std::endl;
+	else UpdateTracks(idTracks);
 
 	//std::cout <<"about to update muon tracks\n";
-	//marco if (!muonTracks) CIwGameError::LogError("Warning:: cannot update muon tracks animation since event has no muon tracks");
-	//marco else UpdateTracks(muonTracks);
+	if (!muonTracks) std::cout << "Warning:: cannot update muon tracks animation since event has no muon tracks" << std::endl;
+	else UpdateTracks(muonTracks);
 
 	if (ecalHisto) UpdateCaloTowers(ecalHisto);
 	if (hcalHisto) UpdateCaloTowers(hcalHisto);
@@ -195,6 +195,7 @@ void Animation::UpdateTracks(Tracks * tracks){
 	//all tracks in same vector
 	//input: numPoly:: vector of ints: number of poly points in each track
 	std::vector<int> * numPoly = &tracks->numPoly;
+    //std::cout << "KKKKKK" << numPoly->size() << std::endl;
 	//running total of indices used for each track
 	int globalTotal =0;
 	//loop over tracks
@@ -390,7 +391,7 @@ void Animation::InsertLastTrackVertex(Tracks * tracks, int iTrack, int iVert, fl
 
 void Animation::InitCaloTowersAnimation(CaloTowers * towers){
 	if (!towers){
-		//marco CIwGameError::LogError("Warning, cannot init calo Towers, towers == NULL!");
+      std::cout << "Warning, cannot init calo Towers, towers == NULL!" << std::endl;
 		return;
 	}
 #ifdef _DEBUG
@@ -410,7 +411,7 @@ void Animation::InitCaloTowersAnimation(CaloTowers * towers){
 void Animation::UpdateCaloTowers(CaloTowers * towers){
 	
 	if (!towers){
-		//marco CIwGameError::LogError("Warning, cannot init calo Towers, towers == NULL!");
+      std::cout << "Warning, cannot init calo Towers, towers == NULL!" << std::endl;
 		return;
 	}
 #ifdef _DEBUG

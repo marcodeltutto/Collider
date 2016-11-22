@@ -1,0 +1,1198 @@
+# coding=utf-8
+# Auto-generated scons script for building 'GameSceneGL'
+# for the '('S3E', 'SCONS', 'X86')' target
+#
+# ***WARNING***: if you edit this file your changes will be lost next time your
+# ***WARNING***: run the mkb.
+
+import os
+import sys
+import socket
+import SCons
+from os.path import join
+
+SetOption("implicit_cache" ,1)
+
+target_name = r'GameSceneGL'
+target_name_debug = r'GameSceneGL'
+target_name_rvct = r'GameSceneGL'
+target_name_debug_rvct = r'GameSceneGL'
+sdk_root = '/Applications/Marmalade.app/Contents'
+
+scons_version = SCons.__version__.split(".")[:2]
+scons_version = [int(x) for x in scons_version]
+strip = 1
+
+scons1_2 = scons_version >= [1,2]
+if not scons1_2:
+    BoolVariable = BoolOption
+    Variables = Options
+
+opts = Variables('build.conf')
+opts.Add('CC', 'The C compiler.')
+opts.Add('CXX', 'The C++ compiler.')
+if not scons1_2:
+    opts.AddVariables = opts.AddOptions
+opts.AddVariables(
+    BoolVariable('dist', 'use distcc compiler.', 0),
+    BoolVariable('debug', 'use debug defines.', 0),
+    BoolVariable('verbose', 'show command output', 0),
+    BoolVariable('profile', 'add profiling support to all generated code', 0),
+)
+
+def SplitN(str):
+    return filter(lambda x: x, str.split("\n"))
+
+includes = SplitN(r'''
+/Applications/Marmalade.app/Contents/extensions/s3eAmazonAds/h
+/Applications/Marmalade.app/Contents/modules/iwutil/h
+/Applications/Marmalade.app/Contents/modules/third_party/libjpeg/h
+/Applications/Marmalade.app/Contents/modules/third_party/zlib/h
+/Applications/Marmalade.app/Contents/modules/third_party/libpng/h
+/Applications/Marmalade.app/Contents/modules/derbh/h
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src
+/Applications/Marmalade.app/Contents/modules/iwgx/h
+/Applications/Marmalade.app/Contents/modules/iwgl/h
+/Applications/Marmalade.app/Contents/modules/iwgeom/h
+/Applications/Marmalade.app/Contents/modules/iwresmanager/h
+/Applications/Marmalade.app/Contents/extensions/PVRTexTool/h
+/Applications/Marmalade.app/Contents/modules/iw2d/h
+/Applications/Marmalade.app/Contents/modules/iwgxfont/h
+/Applications/Marmalade.app/Contents/modules/third_party/tiniconv/source
+/Applications/Marmalade.app/Contents/modules/iwhttp/h
+/Applications/Marmalade.app/Contents/extensions/s3eWebView/h
+/Applications/Marmalade.app/Contents/extensions/s3eFacebook/h
+/Applications/Marmalade.app/Contents/extensions/s3eIOSAppStoreBilling/h
+/Applications/Marmalade.app/Contents/extensions/s3eWindowsStoreBilling/h
+/Applications/Marmalade.app/Contents/modules/iwbilling/h
+/Applications/Marmalade.app/Contents/modules/iwbilling/source
+/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/h
+/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/h
+/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/h
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/h
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d
+/Applications/Marmalade.app/Contents/modules/third_party/sqlite/h
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lsqlite3/src
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Animation
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Audio
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Comms
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/Debug
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Brushes
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Ads
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Camera
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Market
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Social
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Video
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Social/Facebook
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Social/Scoreloop
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Loaders
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Modifiers
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Physics
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Programs
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Scenes
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML
+/Users/deltutto/My_Collider/atlasapp/source
+/Applications/Marmalade.app/Contents/s3e/h
+/Applications/Marmalade.app/Contents/s3e/h/ext
+/Applications/Marmalade.app/Contents/s3e/h/std
+/Applications/Marmalade.app/Contents/s3e/h/std/c++
+/Applications/Marmalade.app/Contents/s3e/h/ext_legacy
+/Applications/Marmalade.app/Contents/s3e/h/legacy
+''')
+
+libraries = SplitN(r'''
+iwutil
+jpeg
+z
+png
+derbh
+iwgx
+iwgl
+iwgeom
+iwresmanager
+iw2d
+iwgxfont_ttf
+tiniconv
+iwhttps
+sqlite
+s3e_cpp
+s3e
+s3e_api_iwgl
+supc++
+c
+m
+gcc
+dl
+''')
+
+libraries_d = SplitN(r'''
+iwutil_d
+jpeg_d
+z_d
+png_d
+derbh_d
+iwgx_d
+iwgl_d
+iwgeom_d
+iwresmanager_d
+iw2d_d
+iwgxfont_ttf_d
+tiniconv_d
+iwhttps_d
+sqlite_d
+s3e_cpp_d
+s3e_d
+s3e_api_iwgl_d
+supc++
+c
+m
+gcc
+dl
+''')
+
+libraries_rvct = SplitN(r'''
+iwutil.lib
+jpeg.lib
+z.lib
+png.lib
+derbh.lib
+iwgx.lib
+iwgl.lib
+iwgeom.lib
+iwresmanager.lib
+iw2d.lib
+iwgxfont_ttf.lib
+tiniconv.lib
+iwhttps.lib
+sqlite.lib
+s3e_cpp.lib
+s3e.lib
+s3e_api_iwgl.lib
+supc++
+c
+m
+gcc
+dl
+''')
+
+libraries_rvct_d = SplitN(r'''
+iwutil_d.lib
+jpeg_d.lib
+z_d.lib
+png_d.lib
+derbh_d.lib
+iwgx_d.lib
+iwgl_d.lib
+iwgeom_d.lib
+iwresmanager_d.lib
+iw2d_d.lib
+iwgxfont_ttf_d.lib
+tiniconv_d.lib
+iwhttps_d.lib
+sqlite_d.lib
+s3e_cpp_d.lib
+s3e_d.lib
+s3e_api_iwgl_d.lib
+supc++
+c
+m
+gcc
+dl
+''')
+
+extra_objects = SplitN(r'''
+
+''')
+
+libpath = SplitN(r'''
+/Applications/Marmalade.app/Contents/modules/iwutil/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/third_party/libjpeg/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/third_party/zlib/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/third_party/libpng/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/derbh/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iwgx/atitools
+/Applications/Marmalade.app/Contents/modules/iwgx/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iwgl/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iwgeom/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iwresmanager/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iw2d/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iwgxfont/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/third_party/tiniconv/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/iwhttp/lib/x86/android
+/Applications/Marmalade.app/Contents/modules/third_party/sqlite/lib/x86/android
+/Applications/Marmalade.app/Contents/s3e/lib/x86/android
+''')
+
+SoundEngine_sources = SplitN(r'''
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwResHandlerWAV.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundADPCM.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundData.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundGroup.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundInst.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundManager.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundPCM.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundParams.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundSpec.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/source/IwSoundWAV.cpp
+''')
+
+lua_vec_sources = SplitN(r'''
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lapi.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lauxlib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lbaselib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lcode.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ldblib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ldebug.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ldo.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ldump.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lfunc.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lgc.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lgcveclib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/linit.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/liolib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/llex.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lmathlib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lmem.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/loadlib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lobject.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lopcodes.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/loslib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lparser.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lstate.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lstring.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lstrlib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ltable.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ltablib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/ltm.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lundump.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lveclib.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lvm.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/lzio.c
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/src/print.c
+''')
+
+__Marmalade_Studio__sources = SplitN(r'''
+/Applications/Marmalade.app/Contents/modules/derbh/source/DerbhAutoInit.cpp
+''')
+
+box2d_sources = SplitN(r'''
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/Shapes/b2CircleShape.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/Shapes/b2EdgeShape.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/Shapes/b2LoopShape.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/Shapes/b2PolygonShape.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2BroadPhase.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2CollideCircle.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2CollideEdge.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2CollidePolygon.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2Collision.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2Distance.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2DynamicTree.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Collision/b2TimeOfImpact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Common/b2BlockAllocator.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Common/b2Draw.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Common/b2Math.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Common/b2Settings.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Common/b2StackAllocator.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Common/b2Timer.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2CircleContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2Contact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2ContactSolver.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2LoopAndCircleContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2LoopAndPolygonContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Contacts/b2PolygonContact.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2DistanceJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2FrictionJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2GearJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2Joint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2MouseJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2PulleyJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2RopeJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2WeldJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/Joints/b2WheelJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/b2Body.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/b2ContactManager.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/b2Fixture.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/b2Island.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/b2World.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Dynamics/b2WorldCallbacks.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/Box2D/Rope/b2Rope.cpp
+''')
+
+Source_sources = SplitN(r'''
+/Users/deltutto/My_Collider/atlasapp/source/ABoxFromXML.cpp
+/Users/deltutto/My_Collider/atlasapp/source/ACylinderFromXML.cpp
+/Users/deltutto/My_Collider/atlasapp/source/Animation.cpp
+/Users/deltutto/My_Collider/atlasapp/source/CaloTowers.cpp
+/Users/deltutto/My_Collider/atlasapp/source/ClassificationGame.cpp
+/Users/deltutto/My_Collider/atlasapp/source/ColourStore.cpp
+/Users/deltutto/My_Collider/atlasapp/source/EndcapFromXML.cpp
+/Users/deltutto/My_Collider/atlasapp/source/EventFromXML.cpp
+/Users/deltutto/My_Collider/atlasapp/source/EventManager.cpp
+/Users/deltutto/My_Collider/atlasapp/source/FileUtils.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GAMarmalade.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLArrow.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLCone.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLCube.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLCylinder.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLDonut.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLEndcap.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GLMesh.cpp
+/Users/deltutto/My_Collider/atlasapp/source/Game.cpp
+/Users/deltutto/My_Collider/atlasapp/source/GameLogicScene.cpp
+/Users/deltutto/My_Collider/atlasapp/source/IwGxScene.cpp
+/Users/deltutto/My_Collider/atlasapp/source/LandingScreen.cpp
+/Users/deltutto/My_Collider/atlasapp/source/LiveScene.cpp
+/Users/deltutto/My_Collider/atlasapp/source/Main.cpp
+/Users/deltutto/My_Collider/atlasapp/source/MeshGroup.cpp
+/Users/deltutto/My_Collider/atlasapp/source/Tracks.cpp
+/Users/deltutto/My_Collider/atlasapp/source/WebBrowser.cpp
+''')
+
+lsqlite3_sources = SplitN(r'''
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lsqlite3/src/lsqlite3.c
+''')
+
+Extensions_sources = SplitN(r'''
+/Applications/Marmalade.app/Contents/extensions/PVRTexTool/interface/PVRTexTool_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eAmazonAds/interface/s3eAmazonAds_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/interface/s3eAmazonInAppPurchasing_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/interface/s3eAndroidGooglePlayBilling_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eFacebook/interface/s3eFacebook_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eIOSAppStoreBilling/interface/s3eIOSAppStoreBilling_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/interface/s3eSamsungInAppPurchasing_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eWebView/interface/s3eWebView_interface.cpp
+/Applications/Marmalade.app/Contents/extensions/s3eWindowsStoreBilling/interface/s3eWindowsStoreBilling_interface.cpp
+''')
+
+AppEasy_sources = SplitN(r'''
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsActor.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsAnimation.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsComms.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsMarket.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsMedia.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsProgram.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsResource.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsScene.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsScript.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsShared.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsSys.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsTimer.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actions/CzActionsVariables.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/CzActor.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/CzActorConnector.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/CzActorImage.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/CzActorParticles.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/CzActorText.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/CzActorTilemap.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIBase.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIBigImage.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUICanvas.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIGrid.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIIcon.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIImageView.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUILabel.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIListBox.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUINavBar.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIPanel.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIPicker.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUISlider.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIStackPanel.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIStepper.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUITabBar.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUITextBox.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUITextView.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIToolBar.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIVideoOverlay.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIWebView.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Actors/UI/CzUIWrapPanel.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Animation/CzAnim.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Audio/CzAudio.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Comms/CzHttp.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Comms/CzRemoteReq.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzApp.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzDataIO.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzDecrypt.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzEvents.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzFile.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzHashes.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzInput.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzResources.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzSettings.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzString.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzTime.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzUtil.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/CzXml.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Core/Debug/CzDebug.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Brushes/CzBrush.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/CzCamera.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/CzFont.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/CzGeometry.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/CzImage.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzBitmapSprite.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzBitmapSprite9.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzDummySprite.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzRender.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzSprite.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzSpriteManager.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Display/Render/CzTextSprite.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Ads/CzAds.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Ads/CzAdsMediator.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Ads/CzAdsView.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Ads/CzAdsViewAnimator.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Camera/CzCam.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Market/CzMarket.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Extensions/Video/CzVideo.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Loaders/CzLoaderJPEG.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Loaders/CzLoaderPNG.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Loaders/CzLoaders.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzFrustrum.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzIVec2.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzMath.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzMatrix3.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzMatrix4.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzRect.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzSVec2.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzShapes.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzVec2.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzVec3.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Maths/CzVec4.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Modifiers/CzModifier.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Modifiers/CzModifierExt.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Physics/CzBox2d.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Physics/CzBox2dFixture.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Physics/CzBox2dJoint.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Physics/CzBox2dMaterial.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/CzPlatform.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformAds.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformAudio.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformCam.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformComms.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformDisplay.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformFacebook.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformFile.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformFont.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformImaging.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformInput.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformMain.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformMarket.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformOther.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformRender.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformSys.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformUI.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Platforms/Marm/CzPlatformVideo.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Programs/CzCommandsBase.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Programs/CzProgram.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Scenes/CzScene.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/CzScript.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaAction.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaActor.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaAds.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaBrush.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaCamera.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaDisplay.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaFacebook.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaFont.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaGen.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaHttp.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaImage.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaInput.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaMarket.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaMatrix.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaMedia.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaParticles.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaPhysics.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaProgram.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaResource.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaScene.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaShape.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaSys.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaTemplate.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaTimeline.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaTimer.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaUserProps.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaVariable.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzLuaXml.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/Script/lua/CzScriptLua.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzActions.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzStyles.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzTemplates.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzTimer.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzUserProperty.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXoml.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXomlActions.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXomlBindings.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXomlLoad.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXomlResource.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXomlResourceManager.cpp
+/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/source/XOML/CzXomlVariables.cpp
+''')
+
+iwbilling_sources = SplitN(r'''
+/Applications/Marmalade.app/Contents/modules/iwbilling/source/IwBilling.cpp
+/Applications/Marmalade.app/Contents/modules/iwbilling/source/IwBilling_Amazon.cpp
+/Applications/Marmalade.app/Contents/modules/iwbilling/source/IwBilling_GooglePlay.cpp
+/Applications/Marmalade.app/Contents/modules/iwbilling/source/IwBilling_Samsung.cpp
+/Applications/Marmalade.app/Contents/modules/iwbilling/source/IwBilling_Windows.cpp
+/Applications/Marmalade.app/Contents/modules/iwbilling/source/IwBilling_iOS.cpp
+''')
+
+
+# Map of all libraries that we need to build
+build_libs = {
+}
+
+
+build_libs_debug = {
+}
+
+
+# Map of all sources to build
+modules = {
+    'SoundEngine' : SoundEngine_sources,
+    'lua_vec' : lua_vec_sources,
+    '__Marmalade_Studio_' : __Marmalade_Studio__sources,
+    'box2d' : box2d_sources,
+    'Source' : Source_sources,
+    'lsqlite3' : lsqlite3_sources,
+    'Extensions' : Extensions_sources,
+    'AppEasy' : AppEasy_sources,
+    'iwbilling' : iwbilling_sources,
+
+}
+
+
+source_flags = {
+}
+
+# Environment variables set by the mkb system
+export_map = {
+    'GCC_THUMB_SUPPORT' : 'NO',
+}
+
+exports = Split("""
+S3E_DIR
+MARMALADE_ROOT
+P4PASSWD
+P4CONFIG
+P4USER
+P4CLIENT
+P4TICKETS
+ARMLMD_LICENSE_FILE
+LM_LICENSE_FILE
+CCACHE_LOGFILE
+CCACHE_TEMPDIR
+CCACHE_DIR
+HOME
+BTILDIR
+TEMP
+TMP
+LIB
+INCLUDE
+DMUCS_SERVER
+DISTCC_HOSTS
+DISTCC_VERBOSE
+CODESIGN_ALLOCATE
+IPHONEOS_DEPLOYMENT_TARGET
+MAXOSX_DEPLOYMENT_TARGET
+SYSTEMROOT
+SYSTEMDRIVE
+""")
+
+for export in exports:
+    if export not in export_map and export in os.environ:
+        export_map[export] = os.environ[export]
+
+arch = "X86"
+
+gcc_variants = ["gcc", "arm-none-linux-gnueabi-gcc", "arm-linux-gnu-gcc", "arm-none-eabi-gcc", "aarch64-none-elf-gcc", "clang", "i686-linux-android-gcc", "i386-linux-gnueabi-gcc", "x86_64-nacl-gcc", "arm-linux-androideabi-gcc"]
+
+#
+# Figure out what compiler to use
+#
+compiler = 'i686-linux-android-gcc'
+if 'compiler' in ARGUMENTS:
+    compiler = ARGUMENTS['compiler']
+
+if compiler == 'rvct':
+    target_name = target_name_rvct
+    target_name_debug = target_name_debug_rvct
+    includes += "."
+
+if compiler == 'msvc':
+    tools = ['msvc', 'mslink', 'mslib']
+else:
+    tools = ['gcc', 'g++', 'ar', 'link', 'as']
+
+
+paths = [
+    r'/Applications/Marmalade.app/Contents/tools/gcc/x86_64/nacl_osx/toolchain/mac_x86_glibc/bin',
+    r'/Applications/Marmalade.app/Contents/tools/gcc/arm/android_osx/bin',
+    r'/Applications/Marmalade.app/Contents/tools/gcc/x86/android_osx/bin',
+    r'/Applications/Xcode.app/Contents/Developer/usr/bin',
+    r'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin',
+    r'/opt/local/bin',
+]
+
+path = []
+
+def add_to_path(p, prepend=0):
+    global path
+    if prepend:
+        path.insert(0, p)
+    else:
+        path.append(p)
+
+if os.name == 'nt':
+    add_to_path("C:\windows\system32")
+
+if os.name == 'posix':
+    add_to_path("/bin")
+    add_to_path("/usr/bin")
+    add_to_path("/usr/sbin")
+
+for p in reversed(paths):
+    add_to_path(p, prepend=1)
+
+os.environ['PATH'] = os.pathsep.join(path)
+
+env=Environment(
+tools=tools,
+options=opts,
+ENV={'PATH':path},
+MSVC_VERSION="6.0",
+CPPPATH=includes,
+LIBPATH=libpath,
+PLFLAGS=[],
+STATIC_AND_SHARED_OBJECTS_ARE_THE_SAME='true',
+_CPPINCFLAGS='$( ${_concat(INCPREFIX, CPPPATH, INCSUFFIX, __env__)} $)',
+)
+
+
+Help(opts.GenerateHelpText(env))
+
+if env['debug']:
+    build_libs = build_libs_debug
+    temp_defines = 'temp_defines_debug.h'
+    builddir = "debug"
+    target_name = target_name_debug
+    libraries = libraries_d
+    libraries_rvct = libraries_rvct_d
+else:
+    temp_defines = 'temp_defines_release.h'
+    builddir = "release"
+
+if compiler == "rvct":
+    libraries = libraries_rvct
+    builddir += "_rvct"
+
+
+if 1:
+
+    env.Append(LINKFLAGS=['-Wl,--as-needed', '-m32', '--sysroot=/Applications/Marmalade.app/Contents/s3e/../tools/gcc/x86/android_osx/android-14/arch-x86', '-Wl,--no-undefined', '-shared', '-static-libgcc', '-nostdlib', '-fuse-ld=bfd', '-Wl,-init', '-Wl,iwcrt_android_x86_init', '-Wl,-fini', '-Wl,iwcrt_android_x86_fini', '-frtti', '-Wl,-Tandroid_x86_linker_script', '-Wl,-u_IwAppEntry', '-Wl,-u_IwAppVersionMajor', '-Wl,-u_IwAppVersionMinor', '-Wl,-init', '-Wl,iwcrt_android_x86_init'])
+    if env['debug']:
+        env.Append(CCFLAGS=['-g', '-O0', '-include', 'temp_defines_debug.h'])
+        env.Append(LINKFLAGS=['-Wl,-Map=GameSceneGL.map'])
+        env.Append(PLFLAGS=[])
+        env.Append(CONFIG='debug')
+    else:
+        env.Append(CCFLAGS=['-O3', '-include', 'temp_defines_release.h'])
+        env.Append(LINKFLAGS=['-Wl,-Map=GameSceneGL.map', '-s'])
+        env.Append(CONFIG='release')
+
+    env.Append(CCFLAGS=['-funsigned-char', '-fno-strict-aliasing', '-fno-stack-protector', '-fno-short-enums', '-fshort-wchar', '-Wall', '-fmessage-length=0', '-Wno-unused', '-Wno-parentheses', '-pipe', '-m32', '-fasynchronous-unwind-tables', '-fPIC', '-mstackrealign', '-Wno-switch', '-fvisibility=hidden', '-nostdinc'])
+    env.Append(CFLAGS=['-std=gnu99'])
+    env.Append(CXXFLAGS=['-Wno-reorder', '-fvisibility-inlines-hidden', '-fno-exceptions', '-frtti', '-std=gnu++98', '-nostdinc++'])
+    env['ARFLAGS'] = ['rc']
+    env['ASFLAGS'] = ['-m32', '-c', '-x', 'assembler-with-cpp']
+    env['ASPPFLAGS'] = ['-x', 'assembler-with-cpp']
+    env['STRIPFLAGS'] = []
+    env['OBJCOPYEXTRACTDBGFLAGS'] = []
+    env['OBJCOPYLINKDBGFLAGS'] = []
+    env['CXXCOM'] = '$CXX -o $TARGET -c $CCFLAGS $CXXFLAGS $_CCCOMCOM $SOURCES'
+    env['SHCXXCOM'] = '$SHCXX -o $TARGET -c $SHCCFLAGS $SHCXXFLAGS $_CCCOMCOM $SOURCES'
+    env['SHLINKFLAGS'] = '$LINKFLAGS'
+
+
+env.Append(ENV=export_map)
+
+if env['dist'] and compiler != "msvc":
+    if 'DISTCC_HOSTS' not in env['ENV']:
+        if env['verbose']:
+            print "not using distcc as DISTCC_HOSTS is not set"
+        env['dist'] = 0
+    elif not env.WhereIs("distcc"):
+        if env['verbose']:
+            print "not using distcc as distcc not found in PATH"
+        env['dist'] = 0
+
+if not env['verbose']:
+    env.Replace(
+    CXXCOMSTR   ='Compiling [$CXX] $SOURCE',
+    ASCOMSTR    ='Assembling [$AS] $SOURCE',
+    ASPPCOMSTR  ='Assembling (with cpp) [$AS] $SOURCE',
+    CCCOMSTR    ='Compiling [$CC] $SOURCE',
+    SHCXXCOMSTR ='Compiling [$CXX] $SOURCE',
+    SHCCCOMSTR  ='Compiling [$CC] $SOURCE',
+    LINKCOMSTR  ='Linking   [$LINK] $TARGET',
+    ARCOMSTR    ='Librarian [$AR] $TARGET',
+    SHLINKCOMSTR='Linking   [$SHLINK] $TARGET')
+
+if env['debug']:
+    strip = 0
+
+
+if env['PLATFORM'] == 'win32':
+    try:
+        import win32file
+        import win32event
+        import win32process
+        import win32security
+        import string
+
+        def my_spawn(sh, escape, cmd, args, spawnenv):
+            if cmd[0] == '"' and cmd[-1] != '"':
+               while 1:
+                   arg = args[1]
+                   cmd = cmd + " " + arg
+                   del(args[1])
+                   if arg.endswith('"'):
+                       break
+               args[0] = cmd
+
+            for var in spawnenv:
+                spawnenv[var] = spawnenv[var].encode('ascii', 'replace')
+
+            sAttrs = win32security.SECURITY_ATTRIBUTES()
+            StartupInfo = win32process.STARTUPINFO()
+            newargsl = map(escape, args[1:])
+
+            #Strip off excess intverted commas inserted by various bits trying to get windows paths right
+            #logic is 'while arg is surrounded by quotes, and there is a quote still in the rest of it,
+            #get rid of surrounding quotes
+            i = 0
+            for arg in newargsl:
+                 while len(arg)>= 2 and arg[0] == '"' and arg[-1] == '"' and '"' in arg[1:-1]:
+                    arg = arg[1:-1]
+                 newargsl[i] = arg
+                 i += 1
+
+            newargs = string.join(newargsl, ' ')
+
+            cmdline = cmd + " " + newargs
+
+            # CreateProcess has a hard limit on the length of command it will accept.
+            # In this case, attempt to use a command file. This only works for some tools.
+            if len(cmdline) >= 32767:
+                print "Command line exceeds 32k"
+                # gcc will only accept forward slashes in a command file
+                cmdline = cmdline.replace("\\", "/")
+                cmds = cmdline.split(" ", 1)
+                cmdpath = "spawn.cmd"
+                cmdline = "%s @%s" % (cmds[0], cmdpath)
+                cmdfile = open(cmdpath, "w")
+                cmdfile.write(cmds[1])
+                cmdfile.close()
+
+            # check for any special operating system commands
+            if cmd == 'del':
+                for arg in args[1:]:
+                    win32file.DeleteFile(arg)
+                exit_code = 0
+            else:
+                # otherwise execute the command.
+                try:
+                    hProcess, hThread, dwPid, dwTid = win32process.CreateProcess(None, cmdline, None, None, 1, 0, spawnenv, None, StartupInfo)
+                except:
+                    print "Couldn't run "+cmdline+"\n"
+                    return -1
+                win32event.WaitForSingleObject(hProcess, win32event.INFINITE)
+                exit_code = win32process.GetExitCodeProcess(hProcess)
+                win32file.CloseHandle(hProcess)
+                win32file.CloseHandle(hThread)
+            return exit_code
+
+        env['SPAWN'] = my_spawn
+    except ImportError:
+        pass
+
+
+def mod_target(target, source, env):
+    target = os.path.basename(str(target[0]))
+    target = [join(builddir, target)]
+    return (target, source)
+
+builders = {}
+
+
+import shlex
+
+def scanner(node, env, path, arg):
+    rtn = []
+    for command in arg:
+         command = shlex.split(command)
+         if 'python' in command[0].lower():
+            rtn.append(command[1])
+    return rtn
+
+action = []
+action.append(""""/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python" "/Applications/Marmalade.app/Contents/modules/iwgx/tools/compile_shaders.py" ${SOURCE}""")
+
+action.append(Touch('${TARGET}'))
+b = Builder(action=action, suffix=".stamp", emitter=mod_target, source_scanner=Scanner(function=scanner, argument=['"/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python" "/Applications/Marmalade.app/Contents/modules/iwgx/tools/compile_shaders.py" ${SOURCE}']))
+builders['VP'] = b
+env.Append(BUILDERS=builders)
+
+
+if compiler == 'rvct':
+    # Emitter specified tools:
+    env['CC']     = ''
+    env['CXX']    = ''
+    env['LINK']   = ''
+    env['AR']     = ''
+    env['AS']     = ''
+    env['STRIP']  = ''
+    env['RANLIB'] = ''
+    env['OBJCOPY'] = ''
+elif compiler == 'clang':
+    # Emitter specified tools:
+    env['CC']     = ''
+    env['CXX']    = ''
+    env['LINK']   = ''
+    env['AR']     = ''
+    env['AS']     = ''
+    env['STRIP']  = ''
+    env['RANLIB'] = ''
+    env['OBJCOPY'] = ''
+else:
+    # Emitter specified tools:
+    env['CC']     = 'i686-linux-android-gcc'
+    env['CXX']    = 'i686-linux-android-g++'
+    env['LINK']   = 'i686-linux-android-g++'
+    env['AR']     = 'i686-linux-android-ar'
+    env['AS']     = 'gcc'
+    env['STRIP']  = 'i686-linux-android-strip'
+    env['RANLIB'] = 'i686-linux-android-ranlib'
+    env['OBJCOPY'] = 'i686-linux-android-objcopy'
+
+# compiler settings for all ARM targets
+env['FROMELF'] = 'fromelf'
+
+if compiler == 'rvct':
+    env['ENV']['CCACHE_EXTENSION'] = 'c'
+    env['INCPREFIX'] = "-I"
+    env['OBJSUFFIX'] = ".o"
+    env['LIBSUFFIX'] = ".a"
+    env['LIBPREFIX'] = ""
+    env['CPPDEFPREFIX'] = "-D"
+    env['CPPFLAGS'] = ""
+    env['RANLIBCOM'] = ''
+    env['LIBLINKPREFIX'] = ""
+    env['SHCCFLAGS'] = "$CCFLAGS"
+    env['SHCXXFLAGS'] = "$CXXFLAGS"
+    env['LINKCOM'] = '$LINK -o $TARGET $LINKFLAGS $( $_LIBDIRFLAGS $) $_LIBFLAGS $_PDB $SOURCES'
+    env['SHLINKCOM'] = '$LINK -o $TARGET $LINKFLAGS $( $_LIBDIRFLAGS $) $_LIBFLAGS $_PDB $SOURCES'
+    env['CCCOMFLAGS'] = "-c $CPPFLAGS $_CPPINCFLAGS $_CPPDEFFLAGS -o$TARGET $SOURCES $CCPCHFLAGS $CCPDBFLAGS"
+    env['ARCOM'] = "${TEMPFILE('$AR $ARFLAGS $TARGET $SOURCES')}"
+    env['_LIBFLAGS'] = "$LIBS"
+    if libpath:
+        env['LINKFLAGS'] += Split('--userlibpath "%s"' % ','.join(libpath))
+    env['CXXFLAGS'] = ["--cpp"]
+    env['SHLINKFLAGS'] = "$LINKFLAGS"
+    env['LIBPATH'] = []
+    env['TEMPFILEPREFIX'] = '--via='
+
+if compiler == 'clang':
+    # Emitter specified tools:
+    env['CC']     = ''
+    env['CXX']    = ''
+    env['LINK']   = ''
+    env['AR']     = ''
+    env['AS']     = ''
+    env['STRIP']  = ''
+    env['RANLIB'] = ''
+    env['OBJCOPY'] = ''
+else:
+    # Emitter specified tools:
+    env['CC']     = 'i686-linux-android-gcc'
+    env['CXX']    = 'i686-linux-android-g++'
+    env['LINK']   = 'i686-linux-android-g++'
+    env['AR']     = 'i686-linux-android-ar'
+    env['AS']     = 'gcc'
+    env['STRIP']  = 'i686-linux-android-strip'
+    env['RANLIB'] = 'i686-linux-android-ranlib'
+    env['OBJCOPY'] = 'i686-linux-android-objcopy'
+
+
+if 'g++' in env['CXX']:
+    env['LINK'] = env['CXX']
+env['PROGSUFFIX'] = '.so'
+
+if 1:
+    # Emitter specified tools:
+    env['CC']     = 'i686-linux-android-gcc'
+    env['CXX']    = 'i686-linux-android-g++'
+    env['LINK']   = 'i686-linux-android-g++'
+
+if 1:
+    # Emitter specified tools:
+    env['AR']     = 'i686-linux-android-ar'
+    env['AS']     = 'gcc'
+    env['STRIP']  = 'i686-linux-android-strip'
+    env['RANLIB'] = 'i686-linux-android-ranlib'
+
+# Set a sensible default number of jobs, unless the user has specified
+# a non-default number on the commandline.
+if GetOption('num_jobs') == 1:
+    # setup distcc where available
+    if compiler in gcc_variants and env['dist']:
+        # when doing parallel build use 2 * number of hosts as the numbre
+        # if parallel jobs
+        jobs = len(export_map['DISTCC_HOSTS'].split()) * 2
+        print "Performing parallel build with %d jobs" % jobs
+        SetOption('num_jobs', jobs)
+        env['LD']  =  env['CC']
+        env['CC']  = 'distcc %s' % env['CC']
+        env['CXX'] = 'distcc %s' % env['CXX']
+        if 'DMUCS_SERVER' in os.environ:
+            env['CC']  = 'gethost %s' % env['CC']
+            env['CXX'] = 'gethost %s' % env['CXX']
+            SetOption('num_jobs', 6)
+    elif compiler == 'rvct':
+        pass
+    else:
+        try:
+            # we still use python2.5 on win32 and multiprocessing is
+            # not available.
+            import multiprocessing
+            maxjobs = multiprocessing.cpu_count() * 2
+        except:
+            maxjobs = 2
+            if sys.platform == 'win32':
+                try:
+                    maxjobs = int(os.environ['NUMBER_OF_PROCESSORS']) * 2
+                except (ValueError, KeyError):
+                    pass
+        SetOption('num_jobs', maxjobs)
+
+if env.WhereIs("ccache"):
+    env['CC']  = "ccache " + env['CC']
+    env['CXX'] = "ccache " + env['CXX']
+
+
+def remove(env, setting, flag):
+    if flag in env[setting]:
+        new_settings = list(env[setting])
+        while flag in new_settings:
+            new_settings.remove(flag)
+        env[setting] = new_settings
+
+if env['profile']:
+    env.Append(CXXFLAGS="-pg", LINKFLAGS="-pg")
+
+#
+# this is the code the tells scons that we want all object files
+# to go in our build dir.  Otherwise the object files end up in
+# the same place as the source.
+#
+
+if not os.path.dirname(target_name):
+    target_name = join(builddir, target_name)
+
+nowarn_env = env.Clone()
+arm_env = env.Clone()
+thumb_env = env.Clone()
+vfp_env = env.Clone()
+
+if '-Wall' in nowarn_env['CCFLAGS'] or '-Wc,-Wall' in nowarn_env['CCFLAGS']:
+    nowarn_env['CCFLAGS'] = list(nowarn_env['CCFLAGS'])
+    remove(nowarn_env, 'CCFLAGS', '-Wall')
+    remove(nowarn_env, 'CCFLAGS', '-Wc,-Wall')
+    nowarn_env.Append(CCFLAGS='-w')
+
+
+if env['verbose']:
+    print "CCFLAGS   = %s" % env['CCFLAGS']
+    print "CXXFLAGS  = %s" % env['CXXFLAGS']
+    #print "CPPFLAGS = %s" % env['CPPFLAGS']
+    print "LINKFLAGS = %s" % env['LINKFLAGS']
+    print "SHLINKFLAGS = %s" % env['SHLINKFLAGS']
+    print "CC        = %s" % env['CC']
+    print "CXX       = %s" % env['CXX']
+    if 'DISTCC_HOSTS' in env['ENV']:
+        print "DISTCC_HOSTS = %s" % env['ENV']['DISTCC_HOSTS']
+
+
+objectivec_env = env.Clone()
+objectivec_env.Append(CFLAGS=['-std=gnu99', '-x', 'objective-c'])
+
+objectivecpp_env = env.Clone()
+objectivecpp_env.Append(CXXFLAGS=['-x', 'objective-c++'])
+
+def get_env(source):
+    if source.endswith(".mm"):
+        return objectivecpp_env
+    if source.endswith(".m"):
+        return objectivec_env
+    flags = source_flags.get(source)
+    if flags:
+        if 'rvct' in flags and 'rvct' not in compiler:
+            return None
+        if 'gcc' in flags:
+            if "ARM" not in arch:
+                return None
+            if 'gcc' not in compiler and 'qcc' not in compiler:
+                return None
+
+        if 'gccnowarn' in flags:
+            return nowarn_env
+        if 'vfp' in flags:
+            return vfp_env
+        if 'arm' in flags:
+            return arm_env
+        if 'thumb' in flags:
+            return thumb_env
+    return env
+
+shared_objects = []
+objects = []
+objnames = []
+for module in modules:
+    for source in modules[module]:
+        basename = os.path.basename(source)
+        objname = os.path.splitext(basename)[0]
+        objname = join(builddir, objname)
+        if objname in objnames:
+            i = 1
+            orig = objname
+            while objname in objnames:
+                objname = orig + ("_%s" % i)
+                i += 1
+        objnames.append(objname)
+        use_env = get_env(source)
+        if use_env:
+            objects.append(use_env.Object(objname, source))
+            shared_objects.append(use_env.SharedObject(objname, source))
+
+lib_build_targets=[]
+libs = []
+for lib in build_libs:
+    objs = []
+    libname = os.path.basename(lib)
+    if libname in libraries:
+        libraries.remove(libname)
+    for source in build_libs[lib]:
+        basename = os.path.basename(source)
+        objname = os.path.splitext(basename)[0]
+        objname = join(builddir, "lib_" + os.path.basename(lib), objname)
+        use_env = get_env(source)
+        obj = use_env.Object(objname, source)
+        objs.append(obj)
+    library = env.Library(lib, objs)
+    env.Default(library)
+    libs.append(library)
+    if os.name == 'nt':
+        library = str(library[0]).replace('\\', '/')
+    lib_build_targets.append(library)
+
+libs = []
+for l in libraries:
+    if compiler == 'rvct':
+        if os.name == 'posix':
+            l = l.replace("(", "\(")
+            l = l.replace(")", "\)")
+    else:
+        # if we not using the arm compiler we strip of any extenation on library names
+        base, ext = os.path.splitext(l)
+        if ext in ['.lib', '.a']:
+            l = base
+    libs.append(l)
+
+libraries = libs
+
+env.Append(LIBS=libraries + lib_build_targets )
+
+#
+# Declare a program target for this project.
+#
+
+program = env.Program(target_name, objects + extra_objects)
+env.Depends(program, temp_defines)
+
+#
+# Declare a shared library target for this project.
+#
+
+shared_library = env.SharedLibrary(join(builddir, 'GameSceneGL'), shared_objects + extra_objects)
+env.Depends(shared_library, temp_defines)
+
+#
+# Declare a static library target for this project.
+#
+
+static_library = env.Library('GameSceneGL', objects + extra_objects)
+env.Depends(static_library, temp_defines)
+
+#
+# Declare the *default* target(s) for this build
+#
+
+
+mapfile = "GameSceneGL.map"
+env['LINKFLAGS'] = [f.replace(mapfile, join(builddir, mapfile)) for f in env['LINKFLAGS']]
+
+if compiler in gcc_variants:
+    env['_LIBFLAGS'] = []
+    for x in env['LIBS']:
+        parts = x.split()
+        if parts[0].startswith("-force_load"):
+            parts[1] += '.a'
+        if parts[0].startswith("-Wl,--whole-archive") or parts[0].startswith("-force_load"):
+            for l in parts:
+                env['_LIBFLAGS'].append(l)
+        else:
+            env['_LIBFLAGS'].append("-l"+x)
+
+    env['_LIBFLAGS'].insert(0, "-Wl,--start-group")
+    env['_LIBFLAGS'].append("-Wl,--end-group")
+
+default_target = program
+if default_target:
+    env.Default(default_target)
+    env.Depends(default_target, temp_defines)
+
+    # Uncoment this if you always want to link the final target
+    #env.AlwaysBuild(default_target)
+
+# Post-build actions
+
+def subst(action):
+    if default_target:
+        t = default_target[0].abspath
+        action = action.replace("$(TargetPath)", t)
+        action = action.replace("$(TargetDir)", join("/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_scons_x86_android", builddir))
+    action = action.replace("%S3E_DIR%", "/Applications/Marmalade.app/Contents/s3e")
+    return action
+
+action = env.Action(subst(r'/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python ./process_map.py "$(TargetPath)"'), chdir='/Applications/Marmalade.app/Contents/s3e/tools')
+env.AddPostAction(default_target, action)
+action = env.Action(subst(r'/Applications/Marmalade.app/Contents/s3e/bin/s3e_plink --license "$(TargetPath)" --arch=x86 --config=android --config="$CONFIG" --buildenv=SCONS --toolset=androidnative'))
+env.AddPostAction(default_target, action)

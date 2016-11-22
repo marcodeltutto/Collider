@@ -16,7 +16,7 @@
 --config-txt9="/Applications/Marmalade.app/Contents/modules/iwresmanager/docs/iwresmanager.config.txt"
 --config-txt10="/Applications/Marmalade.app/Contents/modules/iwutil/docs/iwutil.config.txt"
 --config-txt11="/Applications/Marmalade.app/Contents/s3e/s3e.config.txt"
---config-txt12="/Users/deltutto/My_Collider/AppEasyCoreSDK/Libs/SoundEngine/docs/iwsound.config.txt"
+--config-txt12="/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/docs/iwsound.config.txt"
 --config-txt13="/Users/deltutto/My_Collider/atlasapp/data/app.config.txt"
 --config-txt14="/Applications/Marmalade.app/Contents/s3e/s3e.config.txt"
 --s3e:app_version=1.0.5

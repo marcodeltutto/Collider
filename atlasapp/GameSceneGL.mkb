@@ -3,7 +3,7 @@ options
 {
 #	module_path="../IwGame"
 #	module_path="IwGame_v0370"
-	module_path="../AppEasyCoreSDK"
+	module_path="AppEasyCoreSDK"
 
 }
 
@@ -239,4 +239,11 @@ deployments
 	version-minor=0
 	version-revision=5
 	version-string='1.0.5'
+}
+
+#Hub deployment options, please do not add anything below this line
+subproject
+{
+    (.)
+    GameSceneGL_deployment
 }

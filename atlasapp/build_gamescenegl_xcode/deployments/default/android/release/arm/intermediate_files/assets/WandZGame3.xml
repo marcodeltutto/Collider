@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xml>
+    
+    <ClassificationGame name="W/Z Level 3" author="Tom McLaughlan" level="3">
+        
+        <Link title="Online Help" url="http://collider.physics.ox.ac.uk/analysis.html"/>
+        
+        
+        <Event type="W to muon+neutrino" file="WandZGame3/Android.JiveXML_191933_68687730.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame3/Android.JiveXML_191933_59449958.xml"/>
+        <Event type="Z to electron+positron" file="WandZGame3/Android.JiveXML_191933_59697574.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame3/Android.JiveXML_191933_68689373.xml"/>
+        <Event type="Background" file="WandZGame3/Android.Event_017.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame3/Android.JiveXML_191933_59449202.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame3/Android.JiveXML_191933_59450534.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame3/Android.JiveXML_191933_68689442.xml"/>
+        <Event type="Background" file="WandZGame3/Android.Event_015.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame3/Android.JiveXML_191933_59455768.xml"/>
+        <Event type="Z to muon+antimuon" file="WandZGame3/Android.JiveXML_191933_68904970.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame3/Android.JiveXML_191933_68703353.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame3/Android.JiveXML_191933_59487014.xml"/>
+        <Event type="Background" file="WandZGame3/Android.Event_025.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame3/Android.JiveXML_191933_68703647.xml"/>
+        
+        
+        
+    </ClassificationGame>
+    
+</xml>

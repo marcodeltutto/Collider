@@ -1,1 +1,1 @@
-<File /Users/deltutto/My_Collider/atlasapp/Readme.txt does not exist. Restore file, then re-open the project to restore tab contents. Alternatively, edit this text to create and modify the file.>Ciao
+This is the Collider Marmalade project.

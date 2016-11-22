@@ -339,7 +339,10 @@ void IwGxScene::XOMLcleanup(){
 	toBeCleaned.clear();
 
 }
+
+
 void IwGxScene::testInit(){
+  std::cout << "Starting GameScene::testInit()" << std::endl;
 #ifdef _DEBUG
 	CIwGameError::LogError("starting GameScene::testInit()");
 #endif
@@ -437,6 +440,7 @@ void IwGxScene::testInit(){
 	//IW_GAME_XOML->Process(this,"minerva_higgs_event.xml",false);
 	//LoadThisFile("test_event_2tracks.xml");
 	animation.Init(eventMeshes.worldScale,this);
+    std::cout <<" !!!!! starting animation in init with toBeCleaned.size() = "<<toBeCleaned.size()<<"!!!!!\n";
 #ifdef _DEBUG
 	std::cout <<" !!!!! starting animation in init with toBeCleaned.size() = "<<toBeCleaned.size()<<"!!!!!\n";
 #endif
@@ -1155,19 +1159,21 @@ void IwGxScene::StreamFromHTTP(const std::string& url) {
     next_ev->setValue("false");
     prev_ev->setValue("false");
     
-    std::cout << "set ev " << set_ev->NativeValue << std::endl;
+    std::cout << "1 set ev " << set_ev->NativeValue << std::endl;
     
     if(set_ev->NativeValue != -1){
-        std::cout << set_ev->NativeValue << std::endl;
+        std::cout << "2 set ev " << set_ev->NativeValue << std::endl;
         eventManager->setEvent(set_ev->NativeValue);
         set_ev->NativeValue = -1;
-        std::cout << set_ev->NativeValue << std::endl;
+        std::cout << "3 set ev " << set_ev->NativeValue << std::endl;
     }
     
     std::string ev = eventManager->getCurrentEvent();
-    std::cout << ev << std::endl;
+    std::cout << "ev is " << ev << std::endl;
     
     LoadThisFile(ev.c_str());
+    std::cout << "File loaded: " << ev << std::endl;
+  
 }
 
 //iOS runs the GL viewport opposite to Android :-#

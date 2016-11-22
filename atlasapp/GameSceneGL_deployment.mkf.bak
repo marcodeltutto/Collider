@@ -1,0 +1,13 @@
+#Deployment options edited by the Hub
+#It is recommended to use the Configurations tab within the Hub to make edits
+#Manual edits to this file will cause the project to need to be reloaded
+
+deployments
+{
+    ["deployToiOS"]
+    #platforms iphone
+    arch = "ARM"
+    iphone-nosign = "1"
+    iphone-sign-for-distribution = "0"
+
+}

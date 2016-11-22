@@ -95,7 +95,9 @@ int EventFromXML::LoadFromXoml(IzXomlResource* parent, bool load_children, CzXml
 			//Is this node a track node?
 			bool isIdTrks = false;
 			bool isMuonTrks = false;
+            std::cout << ">>> Just before if this is a track. " << std::endl;
 			if (CzString::CalculateHash((*it)->Name.getString())== trks.getHash()){
+                std::cout << ">>> This is a track. " << std::endl;
 				int nTrk = 0;
 				for (CzXmlNode::_AttribIterator it_at = (*it)->attribs_begin(); it_at != (*it)->attribs_end(); it_at++){
 					//CIwGameError::LogError("!!! track_at ",(*it_at)->Name.c_str());
@@ -104,18 +106,18 @@ int EventFromXML::LoadFromXoml(IzXomlResource* parent, bool load_children, CzXml
 					if ((*it_at)->Name.getHash()==count_key.getHash()){ 
 						nTrk = (*it_at)->getValueAsInt();
 						//CIwGameError::LogError("!!! track_at ",(*it_at)->Name.c_str());
-                                                std::cout << "!!! track_at " << (*it_at)->Name.c_str() << std::endl;
+                        std::cout << "!!! track_at " << (*it_at)->Name.c_str() << std::endl;
 					}
 					if ((*it_at)->Value.getHash()==idtrks_key.getHash() || (*it_at)->Value.getHash()==idtrks_key_2.getHash()){
 						isIdTrks = true;
 						//CIwGameError::LogError("!!! track_at ",(*it_at)->Name.c_str());
-                                                std::cout << "!!! track_at " << (*it_at)->Name.c_str() << std::endl;
+                        std::cout << "!!! track_at " << (*it_at)->Name.c_str() << std::endl;
 					}
 					else if ((*it_at)->Value.getHash()==muontrks_key.getHash() || (*it_at)->Value.getHash()==muontrks_key_2.getHash())
                         isMuonTrks = true;
 				}
 				//CIwGameError::LogError("!!! made it ",(*it)->Name.c_str());
-                                std::cout << "!!! made it " << (*it)->Name.c_str() << std::endl;
+                std::cout << "!!! made it " << (*it)->Name.c_str() << std::endl;
 				//if (!(isIdTrks||isMuonTrks)) continue;
 
 				Tracks * temp_tracks = 0;
@@ -151,8 +153,8 @@ int EventFromXML::LoadFromXoml(IzXomlResource* parent, bool load_children, CzXml
                     temp_tracks->Init(nTrk, _name, 270.0, 107.23, 40, ptcut);
 				//CIwGameError::LogError("!!! made it here too, ntrk =",CIwGameString(nTrk).c_str());
 				//CIwGameError::LogError("!!! made it here too, trkack name =",CIwGameString(_name).c_str());
-                                std::cout << "!!! made it here too, ntrk =" << CzString(nTrk).c_str() << std::endl;
-                                std::cout << "!!! made it here too, trkack name =" << CzString(_name).c_str() << std::endl;
+                std::cout << "!!! made it here too, ntrk = " << CzString(nTrk).c_str() << std::endl;
+                std::cout << "!!! made it here too, trkack name = " << CzString(_name).c_str() << std::endl;
 
 				for (CzXmlNode::_Iterator it2 = (*it)->begin(); it2 != (*it)->end(); it2++)
 				{
@@ -341,6 +343,7 @@ int EventFromXML::LoadFromXoml(IzXomlResource* parent, bool load_children, CzXml
 
 	//have MET
 	if (eventHasMET){
+      std::cout <<"********** have MET" << std::endl;
 		GLArrow * mArrow  = new GLArrow();
 		mArrow->Init(0.8,0.2,scene_meshes->worldScale);
 		mArrow->set(MET_etx,MET_ety);
@@ -352,6 +355,7 @@ int EventFromXML::LoadFromXoml(IzXomlResource* parent, bool load_children, CzXml
     
 	//have id tracks?
 	if (idTracks->pt.size()>0){
+      std::cout <<"********** " << std::endl;
 		idTracks->genHelixInfo();
 		idTracks->genPolyLinePoints(idTracks->nPoly);
 		idTracks->setVertices();
@@ -362,11 +366,13 @@ int EventFromXML::LoadFromXoml(IzXomlResource* parent, bool load_children, CzXml
 #ifdef _DEBUG
 		std::cout <<"!!!!! have "<<muonTracks->pt.size()<<" muon tracks, npoly X,Y,Z= "<<muonTracks->polyX.size()<<","<<muonTracks->polyY.size() <<","<<muonTracks->polyZ.size() <<" numPoly 0 = "<<muonTracks->numPoly.at(0) <<" numPoly 1 = "<<muonTracks->numPoly.at(1) <<std::endl;
 #endif
+      std::cout <<"!!!!! have "<<muonTracks->pt.size()<<" muon tracks, npoly X,Y,Z= "<<muonTracks->polyX.size()<<","<<muonTracks->polyY.size() <<","<<muonTracks->polyZ.size() <<" numPoly 0 = "<<muonTracks->numPoly.at(0) << std::endl;
 		muonTracks->z_max = 1000*1000;
 		muonTracks->rho_max2 = 140*140;
 		muonTracks->setVertices();
 	}
-    
+  
+    // Create cone, usually for electron-like tracks
     for (unsigned int i=0; i<el_pt.size();++i){
         if(el_pt[i] < 15.0)
             continue;

@@ -4,9 +4,9 @@
 # tool during the build process.
 
 config = {}
-cmdline = ['/Applications/Marmalade.app/Contents/s3e/makefile_builder/mkb.py', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb', '--deploy-only', '--buildenv=SCONS', '--x86', '--android-x86']
+cmdline = ['/Applications/Marmalade.app/Contents/s3e/makefile_builder/mkb.py', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb', '--buildenv=SCONS', '--release', '--x86', '--android-x86', '--no-ide', '--make', '--hub-data', '/Users/deltutto/My_Collider/atlasapp/project_GameSceneGL/mkb-build.txt', '--deploy-only']
 mkb = '/Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb'
-mkf = ['/Applications/Marmalade.app/Contents/s3e/s3e-default.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonAds/s3eAmazonAds.mkf', '/Applications/Marmalade.app/Contents/modules/iwutil/iwutil.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/libjpeg/libjpeg.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/libpng/libpng.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/zlib/zlib.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/amazon-ads-android-sdk/amazon-ads-android-sdk.mkf', '/Applications/Marmalade.app/Contents/platform_libs/iphone/amazon-ads-ios-sdk/amazon-ads-ios-sdk.mkf', '/Applications/Marmalade.app/Contents/modules/derbh/derbh.mkf', '/Users/deltutto/My_Collider/AppEasyCoreSDK/AppEasy.mkf', '/Users/deltutto/My_Collider/AppEasyCoreSDK/Libs/lua-vec/lua-vec.mkf', '/Applications/Marmalade.app/Contents/modules/iwgx/iwgx.mkf', '/Applications/Marmalade.app/Contents/modules/iwgl/iwgl.mkf', '/Applications/Marmalade.app/Contents/modules/iwgeom/iwgeom.mkf', '/Applications/Marmalade.app/Contents/modules/iwresmanager/iwresmanager.mkf', '/Applications/Marmalade.app/Contents/extensions/PVRTexTool/PVRTexTool.mkf', '/Applications/Marmalade.app/Contents/modules/iw2d/iw2d.mkf', '/Applications/Marmalade.app/Contents/modules/iwgxfont/iwgxfont.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/tiniconv/tiniconv.mkf', '/Applications/Marmalade.app/Contents/modules/iwhttp/iwhttp.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eWebView/s3eWebView.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/android-support-v4/android-support-v4.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/s3eFacebook.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/marmalade-facebook-android-sdk/marmalade-facebook-android-sdk.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/bolts-android/bolts-android.mkf', '/Applications/Marmalade.app/Contents/platform_libs/iphone/marmalade-facebook-iphone-sdk/marmalade-facebook-iphone-sdk.mkf', '/Applications/Marmalade.app/Contents/modules/iwbilling/iwbilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eIOSAppStoreBilling/s3eIOSAppStoreBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eWindowsStoreBilling/s3eWindowsStoreBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/s3eAmazonInAppPurchasing.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/amazon-in-app-purchasing-android-sdk/amazon-in-app-purchasing-android-sdk.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/s3eAndroidGooglePlayBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/s3eSamsungInAppPurchasing.mkf', '/Users/deltutto/My_Collider/AppEasyCoreSDK/Libs/SoundEngine/SoundEngine.mkf', '/Users/deltutto/My_Collider/AppEasyCoreSDK/Libs/box2d/box2d.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/sqlite/sqlite.mkf', '/Users/deltutto/My_Collider/AppEasyCoreSDK/Libs/lsqlite3/lsqlite3.mkf', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL_deployment.mkf']
+mkf = ['/Applications/Marmalade.app/Contents/s3e/s3e-default.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonAds/s3eAmazonAds.mkf', '/Applications/Marmalade.app/Contents/modules/iwutil/iwutil.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/libjpeg/libjpeg.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/libpng/libpng.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/zlib/zlib.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/amazon-ads-android-sdk/amazon-ads-android-sdk.mkf', '/Applications/Marmalade.app/Contents/platform_libs/iphone/amazon-ads-ios-sdk/amazon-ads-ios-sdk.mkf', '/Applications/Marmalade.app/Contents/modules/derbh/derbh.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/AppEasy.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/lua-vec.mkf', '/Applications/Marmalade.app/Contents/modules/iwgx/iwgx.mkf', '/Applications/Marmalade.app/Contents/modules/iwgl/iwgl.mkf', '/Applications/Marmalade.app/Contents/modules/iwgeom/iwgeom.mkf', '/Applications/Marmalade.app/Contents/modules/iwresmanager/iwresmanager.mkf', '/Applications/Marmalade.app/Contents/extensions/PVRTexTool/PVRTexTool.mkf', '/Applications/Marmalade.app/Contents/modules/iw2d/iw2d.mkf', '/Applications/Marmalade.app/Contents/modules/iwgxfont/iwgxfont.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/tiniconv/tiniconv.mkf', '/Applications/Marmalade.app/Contents/modules/iwhttp/iwhttp.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eWebView/s3eWebView.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/android-support-v4/android-support-v4.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/s3eFacebook.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/marmalade-facebook-android-sdk/marmalade-facebook-android-sdk.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/bolts-android/bolts-android.mkf', '/Applications/Marmalade.app/Contents/platform_libs/iphone/marmalade-facebook-iphone-sdk/marmalade-facebook-iphone-sdk.mkf', '/Applications/Marmalade.app/Contents/modules/iwbilling/iwbilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eIOSAppStoreBilling/s3eIOSAppStoreBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eWindowsStoreBilling/s3eWindowsStoreBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/s3eAmazonInAppPurchasing.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/amazon-in-app-purchasing-android-sdk/amazon-in-app-purchasing-android-sdk.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/s3eAndroidGooglePlayBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/s3eSamsungInAppPurchasing.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/SoundEngine.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/box2d.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/sqlite/sqlite.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lsqlite3/lsqlite3.mkf', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL_deployment.mkf']
 
 class DeployConfig(object):
     pass
@@ -127,6 +127,7 @@ class DefaultConfig(DeployConfig):
     android_manifest = '/Users/deltutto/My_Collider/atlasapp/AndroidManifest.xml'
     blackberry_extra_descriptor = []
     android_ext_target_sdk_version = [17]
+    iphone_nosign = 1
     android_extra_manifest = ['/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/source/android/ExtraManifests.xml', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/source/android/ExtraManifests.xml']
     wp81_ext_sdk_ref = []
     tvos_link_libdir = []
@@ -134,7 +135,8 @@ class DefaultConfig(DeployConfig):
     android_icon_mdpi = '/Users/deltutto/My_Collider/atlasapp/data/icon48.png'
     iphone_enable_4inch_retina = 1
     android_extra_application_attributes_manifest = []
-    iphone_sign_for_distribution = 1
+    iphone_sign_for_distribution = 0
+    icon = '/Users/deltutto/My_Collider/atlasapp/data/icon48.png'
     win10_ext_capabilities = []
     iphone_icon_high_res = '/Users/deltutto/My_Collider/atlasapp/data/icon114.png'
     linux_ext_lib = []
@@ -200,7 +202,7 @@ class DefaultConfig(DeployConfig):
     iphone_icon = '/Users/deltutto/My_Collider/atlasapp/data/icon57.png'
     ws81_ext_capabilities = []
     iphone_link_libs = []
-    android_extra_strings = []
+    android_extra_strings = ['(facebook_app_id,1159270594165661)']
     target = {
          'gcc_x86' : {
                    'debug'   : r'/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_scons_x86/debug/GameSceneGL.so',
@@ -244,12 +246,3 @@ class DefaultConfig(DeployConfig):
     assets = assets['Default']
 
 default = DefaultConfig()
-
-######### Configuration: deployToiOS
-
-c = DeployConfig()
-config['deployToiOS'] = c
-c.arch = ['arm']
-c.target_folder = 'deployToiOS'
-c.iphone_nosign = 1
-c.iphone_sign_for_distribution = 0

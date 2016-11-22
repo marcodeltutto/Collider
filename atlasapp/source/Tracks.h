@@ -17,9 +17,9 @@
 
 /** @brief
  This class is used to render the ID and muon tracks in the event display.  It is the only class that inherits from GLMesh with a more complicated Draw function. 
- For each reconstructed track, a vector if vertices is created, the indices used are a static array that simply joins adjacent vertices (0,1,1,2,2,3 etc.).
+ For each reconstructed track, a vector of vertices is created, the indices used are a static array that simply joins adjacent vertices (0,1,1,2,2,3 etc.).
 
- The input from the EventFromXML for a Tracks instance are vectors of the helix parameters of each track in the event (i.e. 5 vectors (q/pt, cot(theta),phi0,d0 and z0). For each set of helix parameters the position of set of vertices are calculated for the track from the center of the coordinate system to the edge of the fiducial volume if the Inner Detector (for details of the algforithm see Chris Boddy's thesis http://www-pnp.physics.ox.ac.uk/~boddy/files/thesis.pdf, Section 4.5.1).
+ The input from the EventFromXML for a Tracks instance are vectors of the helix parameters of each track in the event (i.e. 5 vectors (q/pt, cot(theta),phi0,d0 and z0). For each set of helix parameters the position of set of vertices are calculated for the track from the center of the coordinate system to the edge of the fiducial volume if the Inner Detector (for details of the algorithm see Chris Boddy's thesis http://www-pnp.physics.ox.ac.uk/~boddy/files/thesis.pdf, Section 4.5.1).
 
  A separate vector is used for each track to make the animation of tracks easier to implement. 
  */

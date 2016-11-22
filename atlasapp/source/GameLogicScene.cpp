@@ -123,7 +123,7 @@ void GameLogicScene::CheckTutorialSelection() {
       }
     }
   }
-  std::cout << "in check not if" << std::endl;
+  //std::cout << "in check not if" << std::endl;
 }
 
 void GameLogicScene::CheckMassSelection() {

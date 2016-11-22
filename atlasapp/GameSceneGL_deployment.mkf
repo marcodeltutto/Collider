@@ -1,0 +1,13 @@
+#Deployment options edited by the Hub
+#It is recommended to use the Configurations tab within the Hub to make edits
+#Manual edits to this file will cause the project to need to be reloaded
+
+deployments
+{
+    #platforms android iphone osx win10 win32 wp8 wp81 ws80 ws81
+    icon = "data/icon48.png"
+    android-extra-strings = "(facebook_app_id,1159270594165661)"
+    iphone-sign-for-distribution = "0"
+    iphone-nosign = "1"
+
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.mclaughlan.collider"
+      android:versionCode="1000005"
+      android:versionName="1.0.5"
+      android:installLocation="auto"
+      >
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity android:name=".Main"
+                  android:label="@string/app_name"
+                  android:configChanges="locale|keyboardHidden|orientation"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="com.ideaworks3d.marmalade.VFSProvider"
+                  android:authorities="zzzzc4031ac0aafda353253ead42427826f3.VFSProvider"
+                  android:exported="false"
+                  android:multiprocess="true"
+        >
+        </provider>
+        <activity android:name="com.amazon.device.ads.AdActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+<activity
+    android:name="com.ideaworks3d.marmalade.s3eWebView.s3eWebViewActivity"
+    android:parentActivityName="com.ideaworks3d.marmalade.LoaderActivity"
+    android:configChanges="touchscreen|locale|keyboardHidden|orientation|screenSize"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    android:launchMode="singleTask"
+    android:hardwareAccelerated="true">
+    <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.ideaworks3d.marmalade.LoaderActivity" />
+</activity>
+<activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" />
+<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+<receiver android:name="com.amazon.device.iap.ResponseReceiver">
+	<intent-filter>
+		<action android:name="com.amazon.inapp.purchasing.NOTIFY"
+			android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+	</intent-filter>
+</receiver>
+<activity android:name="com.ideaworks3d.marmalade.s3eAndroidGooglePlayBilling.PurchaseProxy" android:theme="@style/Theme.Transparent"></activity>
+
+<activity 
+ android:name="com.sec.android.iap.lib.activity.InboxActivity" 
+ android:theme="@style/Theme.Empty" 
+ android:configChanges="orientation|screenSize"/> 
+ 
+<activity 
+ android:name="com.sec.android.iap.lib.activity.PaymentActivity" 
+ android:theme="@style/Theme.Empty" 
+ android:configChanges="orientation|screenSize"/>  
+<activity 
+ android:name="com.sec.android.iap.lib.activity.ItemActivity" 
+ android:theme="@style/Theme.Empty" 
+ android:configChanges="orientation|screenSize"/>
+
+
+    </application>
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8"/>
+	<!-- Required by Marmalade internally. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.SET_ORIENTATION"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- The following permissions are optional unless required by your application: -->
+    <!-- Required if using the sdcard (AndroidUseSdcard=1). -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- Required by s3eAndroidLVL.mkb to check licensing. -->
+    <!-- uses-permission android:name="com.android.vending.CHECK_LICENSE" / -->
+    <!-- Required by s3eAndroidZeroConf to allow multicast receive -->
+    <!-- uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/ -->
+    
+    <uses-permission android:name="com.android.vending.BILLING" />
+<uses-permission android:name="com.sec.android.iap.permission.BILLING"/> 
+<uses-permission android:name="android.permission.INTERNET"/>
+
+
+</manifest>

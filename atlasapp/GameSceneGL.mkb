@@ -197,24 +197,25 @@ assets
 deployments
 {
 	["Default"]
-	android-aliasname='txmandroid'
+	android-aliasname='ColliderOxfordPhysics'
 	android-icon='data/icon48.png'
 	android-icon-hdpi='data/icon72_and.png'
 	android-icon-ldpi='data/icon36.png'
 	android-icon-mdpi='data/icon48.png'
 	android-keypass='OxfordPhysicsThing'
-	android-keystore='my-release-key.keystore'
+	android-keystore='collider-release-key.keystore'
 	android-manifest='AndroidManifest.xml'
-	android-pkgname='com.mclaughlan.collider'
+	android-pkgname='com.deltutto.collider'
 	android-storepass='OxfordPhysicsThing'
+             android-extra-strings='(facebook_app_id,1159270594165661)'
 	app-icf='data/app.icf'
 	assets='Default'
 	caption='Collider'
 	copyright='University of Oxford'
 	embed-icf=1
-	iphone-appid='com.mclaughlan.collider'
+	iphone-appid='com.deltutto.collider'
 	iphone-bundle-localisations='en'
-	iphone-bundle-url-name='com.mclaughlan.collider'
+	iphone-bundle-url-name='com.deltutto.collider'
 	iphone-bundle-url-schemes='fb141331202732781'
 	iphone-enable-4inch-retina=1
 	iphone-icon='data/icon57.png'

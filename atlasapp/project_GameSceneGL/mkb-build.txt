@@ -1,1 +1,1 @@
-SCONS;build_gamescenegl_scons_x86_android;
+XCODE;build_gamescenegl_xcode;

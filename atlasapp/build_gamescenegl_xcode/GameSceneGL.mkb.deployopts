@@ -1,6 +1,0 @@
-build "ARM GCC Release"
-outdir "/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode"
-!task !name "Default:android" "Package and Install"
-!config !name "Default"
-!config <os> "win32" "android"
-configlist "Default",

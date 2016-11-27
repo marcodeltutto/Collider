@@ -1,0 +1,188 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .hero-unit-bg {
+        padding: 48px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 30px;
+        color: #eeeeee;
+        text-shadow: 3px 3px 4px #000000;
+        background-image: url("../img/banner.png");
+        background-size: 1280px 800px;
+        background-repeat:no-repeat;
+        background-color: #333333;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .hero-unit-bg h1 {
+        margin-bottom: 0;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -1px;
+        color: inherit;
+    }
+
+    .hero-unit-bg p {
+        margin: 0 0 10px;
+        margin-bottom: 20px;
+        font-size: 21px;
+        font-weight: 200;
+        line-height: 30px;
+    }
+
+    .hero-unit-bg li {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-unit-bg {
+        padding: 32px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 26px;
+        color: #eeeeee;
+        text-shadow: 3px 3px 4px #000000;
+        background-image: url("../img/banner.png");
+        background-size: 1280px 800px;
+        background-repeat:no-repeat;
+        background-color: #333333;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .hero-unit-bg h1 {
+        margin-bottom: 0;
+        font-size: 38px;
+        line-height: 1;
+        letter-spacing: -1px;
+        color: inherit;
+    }
+
+    .hero-unit-bg p {
+        margin: 0 0 10px;
+        margin-bottom: 20px;
+        font-size: 21px;
+        font-weight: 200;
+        line-height: 30px;
+    }
+
+    .hero-unit-bg li {
+        line-height: 26px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-unit-huge {
+        padding: 80px;
+        margin-bottom: 60px;
+        font-size: 24px;
+        font-weight: 200;
+        text-align: center;
+        line-height: 40px;
+        color: #eeeeee;
+        text-shadow: 3px 3px 4px #000000;
+        background-image: url("../img/banner.png");
+        background-size: 1280px 800px;
+        background-repeat:no-repeat;
+        background-color: #333333;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+
+    .hero-unit-huge h1 {
+        margin-bottom: 0;
+        font-size: 100px;
+        line-height: 1;
+        letter-spacing: -1px;
+        color: inherit;
+    }
+
+    .hero-unit-huge li {
+        line-height: 40px;
+    }
+    .btn-huge {
+        padding: 16px 24px;
+        font-size: 24px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    .btn-huge [class^="icon-"],
+    .btn-huge [class*=" icon-"] {
+        margin-top: 4px;
+    }
+}
+@media (max-width: 767px) {
+    .hero-unit-huge {
+        padding: 60px;
+        margin-bottom: 32px;
+        font-size: 16px;
+        font-weight: 200;
+        text-align: center;
+        line-height: 40px;
+        color: #eeeeee;
+        text-shadow: 3px 3px 4px #000000;
+        background-image: url("../img/banner.png");
+        background-size: 1280px 800px;
+        background-repeat:no-repeat;
+        background-color: #333333;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+
+    .hero-unit-huge h1 {
+        margin-bottom: 0;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -1px;
+        color: inherit;
+    }
+
+    .hero-unit-huge li {
+        line-height: 32px;
+    }
+
+    .btn-huge {
+        padding: 12px 18px;
+        font-size: 16px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    .btn-huge [class^="icon-"],
+    .btn-huge [class*=" icon-"] {
+        margin-top: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

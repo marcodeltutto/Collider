@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Collider - The Large Hadron Collider Mobile Phone App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./index.html">Collider</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Particle Physics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./sm.html">The Standard Model</a></li>
+                                    <li><a href="./higgs.html">The Higgs Boson</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About ATLAS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./atlas.html">General Information</a></li>
+                                    <li><a href="./atlas-detail.html">ATLAS Subdetectors</a></li>
+                                    <li class="active"><a href="./detecting.html">Detecting Particles</a></li>
+                                    <li><a href="./analysis.html">Reconstructing Events</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./credits.html">Credits</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+<div class="container">
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit-bg">
+        <h1>Detecting Particles</h1>
+        <p>Different particles leave different signatures in the ATLAS subdetectors.</p>
+    </div>
+
+    <!-- Example row of columns -->
+        <div class="row">
+        <div class="span8 offset2">
+            <h1 class="text-center">How ATLAS Detects Particles</h1>
+			<p class="lead text-center">ATLAS is one of the particle detector systems in the LHC. It is made of different layers which detect different types of particle.
+            A new particle created in the high energy collision will travel out through the different layers of ATLAS, interacting with the detector as it passes. Different particles interact differently, and we use this difference to help us distinguish one type of particle from another.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="span10 offset1">
+            <p class="text-center"><img class="img-polaroid" src="./img/layers.png"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="span12">
+            <h1 class="text-center">Different particles in Collider</h1>
+        </div>
+        <div class="span3">
+            <h2 class="text-center">Electron</h2>
+            <p class="text-center"><img src="./img/electron.png" class="img-polaroid"></p>
+            <p class="text-center"><a href="./sm.html#electron">Electrons</a> have a track and EM calorimeter energy deposit. <strong>Collider</strong> will draw a cone around recognised electrons.</p>
+        </div>
+        <div class="span3">
+            <h2 class="text-center">Muon</h2>
+            <p class="text-center"><img src="./img/muon.png" class="img-polaroid"></p>
+            <p class="text-center"><a href="./sm.html#muon">Muons</a> have a track extending from the Inner Detector to the <a href="./atlas-detail.html#muons">Muon Spectrometer</a>. Muons may leave small energy deposits in the calorimeter.</p>
+        </div>
+        <div class="span3">
+            <h2 class="text-center">Jet</h2>
+            <p class="text-center"><img src="./img/jet.png" class="img-polaroid"></p>
+            <p class="text-center">Jets contain multiple tracks leading to varying amounts of energy deposited in both <a href="./atlas-detail.html#ecal">calorimeters</a>. Jets may be produced by <a href="./sm.html#quarks">quarks</a> or <a href="./sm.html#gluon">gluons</a>.</p>
+        </div>
+        <div class="span3">
+            <h2 class="text-center">Neutrino</h2>
+            <p class="text-center"><img src="./img/neutrino.png" class="img-polaroid"></p>
+            <p class="text-center"><a href="./sm.html#neutrino">Neutrinos</a> are not detected in ATLAS, though by looking for missing energy, we can infer when they are produced. Missing energy is shown as a pink arrow.</p>
+        </div>
+    </div>
+    <hr>
+
+    <footer>
+        <p>&copy; University of Oxford, 2016</p>
+    </footer>
+
+</div> <!-- /container -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-42555369-1', 'ox.ac.uk');
+          ga('send', 'pageview');
+
+        </script>
+</body>
+</html>

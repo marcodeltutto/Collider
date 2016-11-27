@@ -81,7 +81,7 @@ class DefaultConfig(DeployConfig):
     priv_sign_key = 0
     caption = 'Collider'
     long_caption = 'collider'
-    version = [1, 0, 5]
+    version = [1, 1, 0]
     config = ['/Users/deltutto/My_Collider/atlasapp/data/app.icf']
     data_dir = '/Users/deltutto/My_Collider/atlasapp/data'
     mkb_dir = '/Users/deltutto/My_Collider/atlasapp'
@@ -93,7 +93,7 @@ class DefaultConfig(DeployConfig):
     iphone_provisioning_profile = '/Users/deltutto/My_Collider/atlasapp/profiles/ColliderAppStore.mobileprovision'
     wp81_extra_pri = []
     ws8_ext_capabilities = []
-    provider = 'mclaughlan'
+    provider = 'deltutto'
     android_pkgname = 'com.deltutto.collider'
     ws8_ext_native_only_dll = []
     win10_ext_uap_capabilities = []
@@ -166,7 +166,7 @@ class DefaultConfig(DeployConfig):
     android_supports_gl_texture = []
     ws8_ext_sdk_ref = []
     tvos_asset_catalog = []
-    version_string = '1.0.5'
+    version_string = '1.1.0'
     iphone_signing_identity = 'iPhone Distribution: ian mcarthur'
     iphone_no_splash = 1
     osx_extra_plist = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/osx/Info.plist']

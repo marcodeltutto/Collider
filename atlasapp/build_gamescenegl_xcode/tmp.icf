@@ -18,7 +18,7 @@ CacheTextureMaxSize=2048
 [Util]
 {}
 [s3e]
-SysAppVersion=1.0.5
+SysAppVersion=1.1.0
 SysAppCaption="Collider"
 AndroidExtSo="libs3eWebView.so;libs3eFacebook.so;libs3eAmazonInAppPurchasing.so;libs3eAndroidGooglePlayBilling.so;libs3eSamsungInAppPurchasing.so"
 {}

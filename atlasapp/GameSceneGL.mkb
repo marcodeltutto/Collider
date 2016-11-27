@@ -237,9 +237,9 @@ deployments
 	name='collider'
 	provider='mclaughlan'
 	version-major=1
-	version-minor=0
-	version-revision=5
-	version-string='1.0.5'
+	version-minor=1
+	version-revision=0
+	version-string='1.1.0'
 }
 
 #Hub deployment options, please do not add anything below this line

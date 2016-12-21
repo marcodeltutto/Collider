@@ -12,4 +12,4 @@ PATH="/usr/bin":$PATH
 PATH="/Applications/Xcode.app/Contents/Developer/usr/bin":$PATH
 PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin":$PATH
 PATH="/opt/local/bin":$PATH
-s3e_plink -o "/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e" "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}" --arch=armv8-a --compiler=gcc -u -d --usemap="/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map" --buildenv=XCODE_8.1 --config=aarch64 --config=debug
+s3e_plink -o "/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e" "${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}" --arch=armv8-a --compiler=gcc -u -d --usemap="/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map" --buildenv=XCODE_8.2.1 --config=aarch64 --config=debug

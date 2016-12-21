@@ -4,7 +4,7 @@
 # tool during the build process.
 
 config = {}
-cmdline = ['/Applications/Marmalade.app/Contents/s3e/makefile_builder/mkb.py', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb', '--deploy-only', '--buildenv=XCODE', '--arm', '--compiler=gcc']
+cmdline = ['/Applications/Marmalade.app/Contents/s3e/makefile_builder/mkb.py', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb', '--deploy-only', '--hub-data', '/Users/deltutto/My_Collider/atlasapp/project_GameSceneGL/mkb-osx.txt', '--buildenv=XCODE']
 mkb = '/Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb'
 mkf = ['/Applications/Marmalade.app/Contents/s3e/s3e-default.mkf', '/Applications/Marmalade.app/Contents/modules/derbh/derbh.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/AppEasy.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lua-vec/lua-vec.mkf', '/Applications/Marmalade.app/Contents/modules/iwgx/iwgx.mkf', '/Applications/Marmalade.app/Contents/modules/iwgl/iwgl.mkf', '/Applications/Marmalade.app/Contents/modules/iwutil/iwutil.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/libjpeg/libjpeg.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/libpng/libpng.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/zlib/zlib.mkf', '/Applications/Marmalade.app/Contents/modules/iwgeom/iwgeom.mkf', '/Applications/Marmalade.app/Contents/modules/iwresmanager/iwresmanager.mkf', '/Applications/Marmalade.app/Contents/extensions/PVRTexTool/PVRTexTool.mkf', '/Applications/Marmalade.app/Contents/modules/iw2d/iw2d.mkf', '/Applications/Marmalade.app/Contents/modules/iwgxfont/iwgxfont.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/tiniconv/tiniconv.mkf', '/Applications/Marmalade.app/Contents/modules/iwhttp/iwhttp.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eWebView/s3eWebView.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/android-support-v4/android-support-v4.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/s3eFacebook.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/marmalade-facebook-android-sdk/marmalade-facebook-android-sdk.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/bolts-android/bolts-android.mkf', '/Applications/Marmalade.app/Contents/platform_libs/iphone/marmalade-facebook-iphone-sdk/marmalade-facebook-iphone-sdk.mkf', '/Applications/Marmalade.app/Contents/modules/iwbilling/iwbilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eIOSAppStoreBilling/s3eIOSAppStoreBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eWindowsStoreBilling/s3eWindowsStoreBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/s3eAmazonInAppPurchasing.mkf', '/Applications/Marmalade.app/Contents/platform_libs/android/amazon-in-app-purchasing-android-sdk/amazon-in-app-purchasing-android-sdk.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/s3eAndroidGooglePlayBilling.mkf', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/s3eSamsungInAppPurchasing.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/SoundEngine/SoundEngine.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/box2d/box2d.mkf', '/Applications/Marmalade.app/Contents/modules/third_party/sqlite/sqlite.mkf', '/Users/deltutto/My_Collider/atlasapp/AppEasyCoreSDK/Libs/lsqlite3/lsqlite3.mkf', '/Users/deltutto/My_Collider/atlasapp/GameSceneGL_deployment.mkf']
 
@@ -90,7 +90,6 @@ class DefaultConfig(DeployConfig):
     android_keystore = '/Users/deltutto/My_Collider/atlasapp/collider-release-key.keystore'
     osx_ext_dll = ['/Applications/Marmalade.app/Contents/extensions/PVRTexTool/lib/osx/libPVRTexTool.dylib', '/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/osx/libs3eWebView.dylib']
     iphone_extra_string = []
-    iphone_provisioning_profile = '/Users/deltutto/My_Collider/atlasapp/profiles/ColliderAppStore.mobileprovision'
     wp81_extra_pri = []
     ws8_ext_capabilities = []
     provider = 'deltutto'
@@ -103,18 +102,13 @@ class DefaultConfig(DeployConfig):
     win10_ext_native_dll = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/win10/s3eWebViewExtension.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/win10/s3eFacebookExtension.dll']
     ws81_ext_native_only_dll = []
     android_external_res = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/android/res', '/Applications/Marmalade.app/Contents/platform_libs/android/marmalade-facebook-android-sdk/third_party/facebook/res', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/source/android/res', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/source/android/res']
-    iphone_icon_ipad = '/Users/deltutto/My_Collider/atlasapp/data/icon72.png'
     win32_ext_dll = ['/Applications/Marmalade.app/Contents/extensions/PVRTexTool/lib/win32/PVRTexTool.dll', '/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/win32/s3eWebView.dll']
-    iphone_icon_ipad_high_res = '/Users/deltutto/My_Collider/atlasapp/data/icon144.png'
     tvos_link_libdirs = []
     android_icon_hdpi = '/Users/deltutto/My_Collider/atlasapp/data/icon72_and.png'
     wp8_ext_capabilities = []
     ws8_extra_res = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/ws8/WebViewModal.xaml=>', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_ws8_lib/Facebook_Client']
-    iphone_bundle_localisations = 'en'
     iphone_extra_plugins = []
-    iphone_info_plist = '/Users/deltutto/My_Collider/atlasapp/Info.plist'
     ws81_ext_managed_dll = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/ws81/s3eWebViewManaged.winmd', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/ws81/s3eFacebookManaged.winmd', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_ws81_lib/Facebook.Client.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_ws8_lib/Facebook.dll']
-    iphone_icon_ipad_search_high_res = '/Users/deltutto/My_Collider/atlasapp/data/icon100.png'
     iphone_link_libdir = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/iphone', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/iphone', '/Applications/Marmalade.app/Contents/extensions/s3eIOSAppStoreBilling/lib/iphone']
     wp81_ext_capabilities = []
     android_extra_application_manifest = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/android/extra_app_manifest.xml', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/source/android/extra_app_manifest.xml', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/source/android/AmazonInAppPurchasingManifestSnippet.xml', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/source/android/ExtraAppManifests.xml', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/source/android/ExtraAppManifests.xml']
@@ -123,7 +117,6 @@ class DefaultConfig(DeployConfig):
     android_keypass = 'OxfordPhysicsThing'
     iphone_link_libdirs = []
     android_external_assets = []
-    iphone_icon_settings_high_res = '/Users/deltutto/My_Collider/atlasapp/data/icon58.png'
     android_manifest = '/Users/deltutto/My_Collider/atlasapp/AndroidManifest.xml'
     blackberry_extra_descriptor = []
     android_ext_target_sdk_version = []
@@ -132,12 +125,8 @@ class DefaultConfig(DeployConfig):
     tvos_link_libdir = []
     wp81_ext_device_capabilities = []
     android_icon_mdpi = '/Users/deltutto/My_Collider/atlasapp/data/icon48.png'
-    iphone_enable_4inch_retina = 1
     android_extra_application_attributes_manifest = []
-    iphone_sign_for_distribution = 1
-    icon = '/Users/deltutto/My_Collider/atlasapp/data/icon72.png'
     win10_ext_capabilities = []
-    iphone_icon_high_res = '/Users/deltutto/My_Collider/atlasapp/data/icon114.png'
     linux_ext_lib = []
     copyright = 'University of Oxford'
     android_activity_hardware_accelerate = 1
@@ -149,8 +138,6 @@ class DefaultConfig(DeployConfig):
     ws8_ext_sdk_manifest_part = []
     ws8_ext_device_capabilities = []
     ws81_extra_pri = []
-    iphone_prerendered_icon = 1
-    iphone_appid = 'com.deltutto.collider'
     android_external_jars = ['/Applications/Marmalade.app/Contents/platform_libs/android/android-support-v4/android-support-v4.jar', '/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/android/s3eWebView.jar', '/Applications/Marmalade.app/Contents/platform_libs/android/bolts-android/bolts-android-1.1.2.jar', '/Applications/Marmalade.app/Contents/platform_libs/android/marmalade-facebook-android-sdk/lib/android/marmalade-facebook-android-sdk-3.23.1.jar', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/android/s3eFacebook.jar', '/Applications/Marmalade.app/Contents/platform_libs/android/amazon-in-app-purchasing-android-sdk/third_party/lib/in-app-purchasing-2.0.61.jar', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/lib/android/s3eAmazonInAppPurchasing.jar', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/lib/android/s3eAndroidGooglePlayBilling.jar', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/lib/android/s3eSamsungInAppPurchasing.jar', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/lib/android/iap2.0_lib.jar']
     win8_winrt_extra_res = []
     wp81_ext_sdk_manifest_part = []
@@ -167,15 +154,11 @@ class DefaultConfig(DeployConfig):
     ws8_ext_sdk_ref = []
     tvos_asset_catalog = []
     version_string = '1.1.0'
-    iphone_signing_identity = 'iPhone Distribution: ian mcarthur'
-    iphone_no_splash = 1
     osx_extra_plist = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/osx/Info.plist']
     wp8_ext_native_dll = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/wp8/s3eWebViewExtension.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/wp8/s3eFacebookExtension.dll']
     win10_ext_sdk_manifest_part = []
-    iphone_icon_ipad_search = '/Users/deltutto/My_Collider/atlasapp/data/icon50.png'
     tvos_extra_plist = []
     win10_extra_pri = []
-    iphone_bundle_url_name = 'com.deltutto.collider'
     win10_ext_device_capabilities = []
     win8_phone_extra_res = []
     win8_store_extra_res = ['/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_ws81_lib/Facebook.Client']
@@ -184,21 +167,17 @@ class DefaultConfig(DeployConfig):
     ws81_ext_sdk_ref = []
     wp8_extra_res = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/wp8/WebBrowserModal.xaml=>']
     android_icon_ldpi = '/Users/deltutto/My_Collider/atlasapp/data/icon36.png'
-    manufacturer = 'mclaughlan'
-    itunes_artwork = '/Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png'
+    manufacturer = 'deltutto'
     ws81_ext_native_dll = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/ws81/s3eWebViewExtension.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/ws81/s3eFacebookExtension.dll']
     ws8_extra_pri = []
     wp8_ext_managed_dll = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/wp8/s3eWebViewManaged.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/wp8/s3eFacebookManaged.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_wp8_lib/Facebook.Client.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_wp8_lib/Facebook.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/third-party/facebook_wp8_lib/System.Net.Http.dll']
     android_extra_packages = ['com.facebook.android']
     android_icon = '/Users/deltutto/My_Collider/atlasapp/data/icon48.png'
-    iphone_icon_settings = '/Users/deltutto/My_Collider/atlasapp/data/icon29.png'
     android_so = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/android/libs3eWebView.so', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/android/libs3eFacebook.so', '/Applications/Marmalade.app/Contents/extensions/s3eAmazonInAppPurchasing/lib/android/libs3eAmazonInAppPurchasing.so', '/Applications/Marmalade.app/Contents/extensions/s3eAndroidGooglePlayBilling/lib/android/libs3eAndroidGooglePlayBilling.so', '/Applications/Marmalade.app/Contents/extensions/s3eSamsungInAppPurchasing/lib/android/libs3eSamsungInAppPurchasing.so']
     wp8_ext_sdk_ref = []
-    iphone_bundle_url_schemes = 'fb141331202732781'
     osx_extra_res = []
     ws81_extra_res = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/source/ws8/WebViewModal.xaml=>']
     wp81_ext_native_dll = ['/Applications/Marmalade.app/Contents/extensions/s3eWebView/lib/wp81/s3eWebViewExtension.dll', '/Applications/Marmalade.app/Contents/extensions/s3eFacebook/lib/wp81/s3eFacebookExtension.dll']
-    iphone_icon = '/Users/deltutto/My_Collider/atlasapp/data/icon57.png'
     ws81_ext_capabilities = []
     iphone_link_libs = []
     android_extra_strings = ['(facebook_app_id,1159270594165661)']

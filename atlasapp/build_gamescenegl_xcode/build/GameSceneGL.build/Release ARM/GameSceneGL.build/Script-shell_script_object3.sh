@@ -12,4 +12,4 @@ PATH="/usr/bin":$PATH
 PATH="/Applications/Xcode.app/Contents/Developer/usr/bin":$PATH
 PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin":$PATH
 PATH="/opt/local/bin":$PATH
-s3e_plink --license "/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s86" --buildenv=XCODE_8.1 --arch=x86 --config=debug
+s3e_plink --license "/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s86" --buildenv=XCODE_8.2.1 --arch=x86 --config=debug

@@ -5,8 +5,8 @@
 deployments
 {
     #platforms android iphone osx win10 win32 wp8 wp81 ws80 ws81
-    provider = "deltutto"
-    version-string = "1.1.0"
-    icon = "data/icon72.png"
+    icon = "data/icon512_ios.png"
+    iphone-sign-for-distribution = "1"
+    iphone-provisioning-profile = "../../Downloads/ColliderDevelopmentProvisiongProfile.mobileprovision"
 
 }

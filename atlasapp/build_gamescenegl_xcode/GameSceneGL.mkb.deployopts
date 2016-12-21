@@ -1,0 +1,6 @@
+build "ARM GCC Release"
+outdir "/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode"
+!task !name "Default:iphone" "Package"
+!config !name "Default"
+!config <os> "win32" "iphone"
+configlist "Default",

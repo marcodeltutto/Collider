@@ -1,0 +1,46 @@
+<xml>
+    <Template Name="creditTemplate">
+        <Label Name="credit$index$" Size="-95,-15" Font="gulim" TextColour="255, 255, 255, 255" Text="$pos$ : $name$" Margin="8,8,8,8" AlignH="right" />
+    </Template>
+    <Scene Name="CreditsScene" Style="GenericSceneStyle" Camera="CreditsCam" Colour="255,255,255,255" Batch="false" Current="false" AllowFocus="true" VirtualTransform="800, 480" Visible="true">
+        <Camera Name="CreditsCam" Position="-10000,0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" VelocityDamping="0.8, 0.8" IgnoreActors="false" />
+        
+        <Label Name="blackBackground" Size="-100,-100" Background="BlackBox" Text="" Font="gulim" />
+        
+        <StackPanel Name="TitleBackdrop" Size="-100,-100" Orientation="horizontal" AlignH="centre" AlignV="center" Docking="bottomleft">
+            <Label Name="TitleBG" Background="TitleBackdrop" Size="-100,-100" Text="" Font="gulim"/>
+        </StackPanel>
+        
+        <StackPanel Name="popupGame"  Size="-70, -15" BackgroundColour="0,0,0,255"  SelectedColour="0,0,0,255" Orientation="vertical" Docking="topleft" Margin="32,32,32,32" AlignV="top">
+            <Label Name="gameName" Size="-100,-100" draggable="false" Text="Credits" AlignH="centre" GridPos="0,0" Font="gulim_large" TextMargin="32,32,32,32"/>
+        </StackPanel>
+        
+        <ListBox Name="GameListBox" Size="-75, -80" Docking="bottomright" AlignV="middle"
+            MultiSelect="false" HitTest="true" Draggable="false"
+            Orientation="vertical" ClipMargin="5, 5, 5, 5" UseParentOpacity="false" Margin="5, 5, 64, 5" >
+            
+            <FromTemplate Template="creditTemplate" pos="Coding" name="Tom McLaughlan & Chris Boddy"/>
+            <FromTemplate Template="creditTemplate" pos="Design" name="Alan Barr & Tom McLaughlan"/>
+
+        </ListBox>
+        
+        <!-- this makes a cross to close the window -->
+        <StackPanel Name="SP2" Size="80, 80" Orientation="vertical" AlignH="centre" AlignV="center" SizeToContent="none" Docking="topleft">
+            <Label Name="MenuButton" Background="Back" Size="64, 64" SelectedColour="128, 255, 200, 128" Text="" Font="gulim"
+                OnBeginTouch="backBeginTouch" OnEndTouch="backEndTouch" OnTapped="backAction">
+                
+                <Actions Name="backBeginTouch">
+                    <Action Method="SetTimeline" Param1="buttonin_anim" />
+                    <Action Method="PlaySound" Param1="ui_tap" />
+                </Actions>
+                <Actions Name="backEndTouch">
+                    <Action Method="SetTimeline" Param1="buttonout_anim" />
+                </Actions>
+                <Actions Name="backAction">
+                    <Action Method="SetTimeline" Param1="fly_out" Param2="CreditsScene" />
+                    <Action Method="SetTimeline" Param1="fly_in2" Param2="LandingScreen" />
+                </Actions>
+            </Label>
+        </StackPanel>
+    </Scene>
+</xml>

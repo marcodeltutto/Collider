@@ -1,0 +1,42 @@
+3
+4Making Deployment: /Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb
+3Running: /Applications/Marmalade.app/Contents/s3e/bin/s3e_deploy /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/deploy_config.py -n --targetdir ../deployments/Collider.3.arm --os iphone --arch arm --gcc --release-loader
+3
+2Marmalade Deployment Tool v1.3
+2Copyright (C) 2001-2012 Marmalade
+2calling /Applications/Marmalade.app/Contents/s3e/bin/iwlicense--platcheck=iphone
+2deploying collider [1.1.0] [arm-release] for 'iphone' to folder: '../deployments/Collider.3.arm/intermediate_files'
+2--> copying files ...
+2No splashscreens found
+2--> updating s3e binary: compression=none signing=0 config-embedding=1
+2[execute] s3e_mod
+2--> performing custom deployment steps for: 'iphone'
+2Deploying Launch Images
+2Generating mandatory Launch image iPhone 5/5C/5S portrait
+2Generating mandatory Launch image iPhone 5/5C/5S landscape
+2Generating mandatory Launch image iPhone 6 portrait
+2Generating mandatory Launch image iPhone 6 Plus portrait
+5WARNING: Using default deployment icon(s)
+2Deploying icons
+2Generating mandatory App icon iPhone 4/4S/5/5C/5S/6 (iOS 7 and later)
+2Generating mandatory App icon iPad2/iPad Mini (iOS 7 and later)
+2Including /Applications/Marmalade.app/Contents/extensions/s3eFacebook/s3eFacebook.plist in Info.plist
+2Linking iOS loader with extension library s3eWebView
+2Linking iOS loader with extension library s3eFacebook
+2Linking iOS loader with extension library s3eIOSAppStoreBilling
+2[execute] ld64
+2[execute] mod_apple_loader.pyc
+2writing modified loader [5076616]: collider.app/collider
+2
+2Embedding provisioning profile /Users/deltutto/Downloads/ColliderDevelopmentProvisiongProfile.mobileprovision
+2Signing for development
+2Codesigning main bundle: collider.app
+2Processing com.deltutto.collider
+2Provisioning profile is for: 6562ZBA75T.com.deltutto.collider
+2Creating .app zip: ../deployments/Collider.3.arm/collider.app.zip
+2Creating ipa: ../deployments/Collider.3.arm/collider.ipa
+8SUCCESS (WITH WARNINGS): Package written to '/Users/deltutto/My_Collider/atlasapp/deployments/Collider.3.arm' [took 7.05s]
+2Script Succeeded
+2Finished Running: Making Deployment
+2
+2

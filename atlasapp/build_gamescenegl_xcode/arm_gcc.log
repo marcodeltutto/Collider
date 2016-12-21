@@ -11,7 +11,7 @@
 5warning: One or more macros were not documented
 2msg: A total of 1 problems with the documentation were found
 2Executing: '/Applications/Marmalade.app/Contents/s3e/bin/s3e_xcodebuild -project GameSceneGL.xcodeproj -configuration Release ARM -sdk macosx10.12'
-52016-11-23 00:33:58.257 xcodebuild[40994:2296990] [MT] PluginLoading: Required plug-in compatibility UUID DA4FDFD8-C509-4D8B-8B55-84A7B66AE701 for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Unity4XC.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+52016-12-21 00:04:16.813 xcodebuild[19131:11799675] [MT] PluginLoading: Required plug-in compatibility UUID E0A62D1F-3C18-4D74-BFE5-A4167D643966 for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Unity4XC.xcplugin' not present in DVTPlugInCompatibilityUUIDs
 2Build settings from command line:
 2SDKROOT = macosx10.12
 2
@@ -88,5 +88,5 @@
 7Script Succeeded
 2Finished Running: Building
 2
-7Successfully built: GCC ARM at 23/11/2016 12:34AM
+7Successfully built: GCC ARM at 21/12/2016 12:04AM
 2

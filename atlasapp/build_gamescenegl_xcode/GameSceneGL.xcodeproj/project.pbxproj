@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildRule section */
 
-8000000000000000000009d7 /* PBXBuildRule */ = {
+8000000000000000000009d9 /* PBXBuildRule */ = {
         isa = PBXBuildRule;
         compilerSpec = com.apple.compilers.proxy.script;
         filePatterns = "*.vp";
@@ -1094,133 +1094,134 @@
 		A000000000000000000008d3 /* "/Users/deltutto/My_Collider/atlasapp/data/app.config.txt" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008d4; };
 		A000000000000000000008d5 /* "/Users/deltutto/My_Collider/atlasapp/data/app.icf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008d6; };
 		A000000000000000000008d7 /* "/Users/deltutto/My_Collider/atlasapp/data/back.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008d8; };
-		A000000000000000000008d9 /* "/Users/deltutto/My_Collider/atlasapp/data/box.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008da; };
-		A000000000000000000008db /* "/Users/deltutto/My_Collider/atlasapp/data/boxoutline.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008dc; };
-		A000000000000000000008dd /* "/Users/deltutto/My_Collider/atlasapp/data/boxunder.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008de; };
-		A000000000000000000008df /* "/Users/deltutto/My_Collider/atlasapp/data/ColourScene.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e0; };
-		A000000000000000000008e1 /* "/Users/deltutto/My_Collider/atlasapp/data/Common.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e2; };
-		A000000000000000000008e3 /* "/Users/deltutto/My_Collider/atlasapp/data/Credits.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e4; };
-		A000000000000000000008e5 /* "/Users/deltutto/My_Collider/atlasapp/data/cross.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e6; };
-		A000000000000000000008e7 /* "/Users/deltutto/My_Collider/atlasapp/data/Custom.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e8; };
-		A000000000000000000008e9 /* "/Users/deltutto/My_Collider/atlasapp/data/development.icf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008ea; };
-		A000000000000000000008eb /* "/Users/deltutto/My_Collider/atlasapp/data/electron.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008ec; };
-		A000000000000000000008ed /* "/Users/deltutto/My_Collider/atlasapp/data/empty.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008ee; };
-		A000000000000000000008ef /* "/Users/deltutto/My_Collider/atlasapp/data/eventDisplay.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f0; };
-		A000000000000000000008f1 /* "/Users/deltutto/My_Collider/atlasapp/data/files.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f2; };
-		A000000000000000000008f3 /* "/Users/deltutto/My_Collider/atlasapp/data/Fonts.group" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f4; };
-		A000000000000000000008f5 /* "/Users/deltutto/My_Collider/atlasapp/data/GameScene.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f6; };
-		A000000000000000000008f7 /* "/Users/deltutto/My_Collider/atlasapp/data/Gulim.gxfont" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f8; };
-		A000000000000000000008f9 /* "/Users/deltutto/My_Collider/atlasapp/data/Gulim.ttf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008fa; };
-		A000000000000000000008fb /* "/Users/deltutto/My_Collider/atlasapp/data/Gulim_old.ttf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008fc; };
-		A000000000000000000008fd /* "/Users/deltutto/My_Collider/atlasapp/data/higgs1.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008fe; };
-		A000000000000000000008ff /* "/Users/deltutto/My_Collider/atlasapp/data/higgs2.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000900; };
-		A00000000000000000000901 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs3.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000902; };
-		A00000000000000000000903 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs4.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000904; };
-		A00000000000000000000905 /* "/Users/deltutto/My_Collider/atlasapp/data/Higgs4l_events.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000906; };
-		A00000000000000000000907 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs5.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000908; };
-		A00000000000000000000909 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs6.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000090a; };
-		A0000000000000000000090b /* "/Users/deltutto/My_Collider/atlasapp/data/higgs7.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000090c; };
-		A0000000000000000000090d /* "/Users/deltutto/My_Collider/atlasapp/data/higgs8.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000090e; };
-		A0000000000000000000090f /* "/Users/deltutto/My_Collider/atlasapp/data/higgs9.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000910; };
-		A00000000000000000000911 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs_hunt_events.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000912; };
-		A00000000000000000000913 /* "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000914; };
-		A00000000000000000000915 /* "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000916; };
-		A00000000000000000000917 /* "/Users/deltutto/My_Collider/atlasapp/data/home.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000918; };
-		A00000000000000000000919 /* "/Users/deltutto/My_Collider/atlasapp/data/HUDScene.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000091a; };
-		A0000000000000000000091b /* "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_config.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000091c; };
-		A0000000000000000000091d /* "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_game.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000091e; };
-		A0000000000000000000091f /* "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_intro.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000920; };
-		A00000000000000000000921 /* "/Users/deltutto/My_Collider/atlasapp/data/icon100.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000922; };
-		A00000000000000000000923 /* "/Users/deltutto/My_Collider/atlasapp/data/icon100_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000924; };
-		A00000000000000000000925 /* "/Users/deltutto/My_Collider/atlasapp/data/icon1024.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000926; };
-		A00000000000000000000927 /* "/Users/deltutto/My_Collider/atlasapp/data/icon1024_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000928; };
-		A00000000000000000000929 /* "/Users/deltutto/My_Collider/atlasapp/data/icon114.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000092a; };
-		A0000000000000000000092b /* "/Users/deltutto/My_Collider/atlasapp/data/icon114_ios.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000092c; };
-		A0000000000000000000092d /* "/Users/deltutto/My_Collider/atlasapp/data/icon128.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000092e; };
-		A0000000000000000000092f /* "/Users/deltutto/My_Collider/atlasapp/data/icon144.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000930; };
-		A00000000000000000000931 /* "/Users/deltutto/My_Collider/atlasapp/data/icon144_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000932; };
-		A00000000000000000000933 /* "/Users/deltutto/My_Collider/atlasapp/data/icon29.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000934; };
-		A00000000000000000000935 /* "/Users/deltutto/My_Collider/atlasapp/data/icon29_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000936; };
-		A00000000000000000000937 /* "/Users/deltutto/My_Collider/atlasapp/data/icon32.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000938; };
-		A00000000000000000000939 /* "/Users/deltutto/My_Collider/atlasapp/data/icon36.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000093a; };
-		A0000000000000000000093b /* "/Users/deltutto/My_Collider/atlasapp/data/icon48.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000093c; };
-		A0000000000000000000093d /* "/Users/deltutto/My_Collider/atlasapp/data/icon50.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000093e; };
-		A0000000000000000000093f /* "/Users/deltutto/My_Collider/atlasapp/data/icon50_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000940; };
-		A00000000000000000000941 /* "/Users/deltutto/My_Collider/atlasapp/data/icon512.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000942; };
-		A00000000000000000000943 /* "/Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000944; };
-		A00000000000000000000945 /* "/Users/deltutto/My_Collider/atlasapp/data/icon57.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000946; };
-		A00000000000000000000947 /* "/Users/deltutto/My_Collider/atlasapp/data/icon57_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000948; };
-		A00000000000000000000949 /* "/Users/deltutto/My_Collider/atlasapp/data/icon58.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000094a; };
-		A0000000000000000000094b /* "/Users/deltutto/My_Collider/atlasapp/data/icon58_ios.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000094c; };
-		A0000000000000000000094d /* "/Users/deltutto/My_Collider/atlasapp/data/icon64.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000094e; };
-		A0000000000000000000094f /* "/Users/deltutto/My_Collider/atlasapp/data/icon72.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000950; };
-		A00000000000000000000951 /* "/Users/deltutto/My_Collider/atlasapp/data/icon72_and.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000952; };
-		A00000000000000000000953 /* "/Users/deltutto/My_Collider/atlasapp/data/icon72ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000954; };
-		A00000000000000000000955 /* "/Users/deltutto/My_Collider/atlasapp/data/icons" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000956; };
-		A00000000000000000000957 /* "/Users/deltutto/My_Collider/atlasapp/data/ident.free" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000958; };
-		A00000000000000000000959 /* "/Users/deltutto/My_Collider/atlasapp/data/images" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000095a; };
-		A0000000000000000000095b /* "/Users/deltutto/My_Collider/atlasapp/data/jet.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000095c; };
-		A0000000000000000000095d /* "/Users/deltutto/My_Collider/atlasapp/data/LandingMenu.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000095e; };
-		A0000000000000000000095f /* "/Users/deltutto/My_Collider/atlasapp/data/LandingScreen.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000960; };
-		A00000000000000000000961 /* "/Users/deltutto/My_Collider/atlasapp/data/LiveScene.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000962; };
-		A00000000000000000000963 /* "/Users/deltutto/My_Collider/atlasapp/data/MassGame.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000964; };
-		A00000000000000000000965 /* "/Users/deltutto/My_Collider/atlasapp/data/MassGame2.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000966; };
-		A00000000000000000000967 /* "/Users/deltutto/My_Collider/atlasapp/data/menu.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000968; };
-		A00000000000000000000969 /* "/Users/deltutto/My_Collider/atlasapp/data/MenuScene.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000096a; };
-		A0000000000000000000096b /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_008.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000096c; };
-		A0000000000000000000096d /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_036.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000096e; };
-		A0000000000000000000096f /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_052.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000970; };
-		A00000000000000000000971 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_143.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000972; };
-		A00000000000000000000973 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_144.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000974; };
-		A00000000000000000000975 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_146.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000976; };
-		A00000000000000000000977 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_153.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000978; };
-		A00000000000000000000979 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_156.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000097a; };
-		A0000000000000000000097b /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_157.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000097c; };
-		A0000000000000000000097d /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_159.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000097e; };
-		A0000000000000000000097f /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_160.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000980; };
-		A00000000000000000000981 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_166.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000982; };
-		A00000000000000000000983 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_167.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000984; };
-		A00000000000000000000985 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_232.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000986; };
-		A00000000000000000000987 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_higgs_event.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000988; };
-		A00000000000000000000989 /* "/Users/deltutto/My_Collider/atlasapp/data/muon.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000098a; };
-		A0000000000000000000098b /* "/Users/deltutto/My_Collider/atlasapp/data/neutrino.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000098c; };
-		A0000000000000000000098d /* "/Users/deltutto/My_Collider/atlasapp/data/next.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000098e; };
-		A0000000000000000000098f /* "/Users/deltutto/My_Collider/atlasapp/data/off" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000990; };
-		A00000000000000000000991 /* "/Users/deltutto/My_Collider/atlasapp/data/pointleft.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000992; };
-		A00000000000000000000993 /* "/Users/deltutto/My_Collider/atlasapp/data/pointright.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000994; };
-		A00000000000000000000995 /* "/Users/deltutto/My_Collider/atlasapp/data/prev.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000996; };
-		A00000000000000000000997 /* "/Users/deltutto/My_Collider/atlasapp/data/PtSlider.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000998; };
-		A00000000000000000000999 /* "/Users/deltutto/My_Collider/atlasapp/data/qmark.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000099a; };
-		A0000000000000000000099b /* "/Users/deltutto/My_Collider/atlasapp/data/refresh.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000099c; };
-		A0000000000000000000099d /* "/Users/deltutto/My_Collider/atlasapp/data/ScanningGame.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000099e; };
-		A0000000000000000000099f /* "/Users/deltutto/My_Collider/atlasapp/data/Scene1.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a0; };
-		A000000000000000000009a1 /* "/Users/deltutto/My_Collider/atlasapp/data/SceneGL.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a2; };
-		A000000000000000000009a3 /* "/Users/deltutto/My_Collider/atlasapp/data/singletest.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a4; };
-		A000000000000000000009a5 /* "/Users/deltutto/My_Collider/atlasapp/data/slide.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a6; };
-		A000000000000000000009a7 /* "/Users/deltutto/My_Collider/atlasapp/data/slide_groove.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a8; };
-		A000000000000000000009a9 /* "/Users/deltutto/My_Collider/atlasapp/data/splash.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009aa; };
-		A000000000000000000009ab /* "/Users/deltutto/My_Collider/atlasapp/data/sprites.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ac; };
-		A000000000000000000009ad /* "/Users/deltutto/My_Collider/atlasapp/data/test_detectors.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ae; };
-		A000000000000000000009af /* "/Users/deltutto/My_Collider/atlasapp/data/test_event.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b0; };
-		A000000000000000000009b1 /* "/Users/deltutto/My_Collider/atlasapp/data/test_Event_1muonTrack.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b2; };
-		A000000000000000000009b3 /* "/Users/deltutto/My_Collider/atlasapp/data/test_event_2tracks.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b4; };
-		A000000000000000000009b5 /* "/Users/deltutto/My_Collider/atlasapp/data/test_image.jpg" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b6; };
-		A000000000000000000009b7 /* "/Users/deltutto/My_Collider/atlasapp/data/TestList.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b8; };
-		A000000000000000000009b9 /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.gxfont" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ba; };
-		A000000000000000000009bb /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.tga" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009bc; };
-		A000000000000000000009bd /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.gxfont" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009be; };
-		A000000000000000000009bf /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.tga" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c0; };
-		A000000000000000000009c1 /* "/Users/deltutto/My_Collider/atlasapp/data/ui.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c2; };
-		A000000000000000000009c3 /* "/Users/deltutto/My_Collider/atlasapp/data/UIStyle.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c4; };
-		A000000000000000000009c5 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c6; };
-		A000000000000000000009c7 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c8; };
-		A000000000000000000009c9 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ca; };
-		A000000000000000000009cb /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009cc; };
-		A000000000000000000009cd /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ce; };
-		A000000000000000000009cf /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d0; };
-		A000000000000000000009d1 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d2; };
-		A000000000000000000009d3 /* "/Users/deltutto/My_Collider/atlasapp/data/WebBrowserScene.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d4; };
-		A000000000000000000009d5 /* s3e.icf */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d6;  };
+		A000000000000000000008d9 /* "/Users/deltutto/My_Collider/atlasapp/data/banner.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008da; };
+		A000000000000000000008db /* "/Users/deltutto/My_Collider/atlasapp/data/box.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008dc; };
+		A000000000000000000008dd /* "/Users/deltutto/My_Collider/atlasapp/data/boxoutline.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008de; };
+		A000000000000000000008df /* "/Users/deltutto/My_Collider/atlasapp/data/boxunder.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e0; };
+		A000000000000000000008e1 /* "/Users/deltutto/My_Collider/atlasapp/data/ColourScene.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e2; };
+		A000000000000000000008e3 /* "/Users/deltutto/My_Collider/atlasapp/data/Common.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e4; };
+		A000000000000000000008e5 /* "/Users/deltutto/My_Collider/atlasapp/data/Credits.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e6; };
+		A000000000000000000008e7 /* "/Users/deltutto/My_Collider/atlasapp/data/cross.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008e8; };
+		A000000000000000000008e9 /* "/Users/deltutto/My_Collider/atlasapp/data/Custom.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008ea; };
+		A000000000000000000008eb /* "/Users/deltutto/My_Collider/atlasapp/data/development.icf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008ec; };
+		A000000000000000000008ed /* "/Users/deltutto/My_Collider/atlasapp/data/electron.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008ee; };
+		A000000000000000000008ef /* "/Users/deltutto/My_Collider/atlasapp/data/empty.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f0; };
+		A000000000000000000008f1 /* "/Users/deltutto/My_Collider/atlasapp/data/eventDisplay.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f2; };
+		A000000000000000000008f3 /* "/Users/deltutto/My_Collider/atlasapp/data/files.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f4; };
+		A000000000000000000008f5 /* "/Users/deltutto/My_Collider/atlasapp/data/Fonts.group" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f6; };
+		A000000000000000000008f7 /* "/Users/deltutto/My_Collider/atlasapp/data/GameScene.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008f8; };
+		A000000000000000000008f9 /* "/Users/deltutto/My_Collider/atlasapp/data/Gulim.gxfont" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008fa; };
+		A000000000000000000008fb /* "/Users/deltutto/My_Collider/atlasapp/data/Gulim.ttf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008fc; };
+		A000000000000000000008fd /* "/Users/deltutto/My_Collider/atlasapp/data/Gulim_old.ttf" */ = {isa = PBXBuildFile; fileRef = B000000000000000000008fe; };
+		A000000000000000000008ff /* "/Users/deltutto/My_Collider/atlasapp/data/higgs1.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000900; };
+		A00000000000000000000901 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs2.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000902; };
+		A00000000000000000000903 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs3.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000904; };
+		A00000000000000000000905 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs4.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000906; };
+		A00000000000000000000907 /* "/Users/deltutto/My_Collider/atlasapp/data/Higgs4l_events.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000908; };
+		A00000000000000000000909 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs5.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000090a; };
+		A0000000000000000000090b /* "/Users/deltutto/My_Collider/atlasapp/data/higgs6.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000090c; };
+		A0000000000000000000090d /* "/Users/deltutto/My_Collider/atlasapp/data/higgs7.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000090e; };
+		A0000000000000000000090f /* "/Users/deltutto/My_Collider/atlasapp/data/higgs8.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000910; };
+		A00000000000000000000911 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs9.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000912; };
+		A00000000000000000000913 /* "/Users/deltutto/My_Collider/atlasapp/data/higgs_hunt_events.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000914; };
+		A00000000000000000000915 /* "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000916; };
+		A00000000000000000000917 /* "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000918; };
+		A00000000000000000000919 /* "/Users/deltutto/My_Collider/atlasapp/data/home.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000091a; };
+		A0000000000000000000091b /* "/Users/deltutto/My_Collider/atlasapp/data/HUDScene.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000091c; };
+		A0000000000000000000091d /* "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_config.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000091e; };
+		A0000000000000000000091f /* "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_game.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000920; };
+		A00000000000000000000921 /* "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_intro.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000922; };
+		A00000000000000000000923 /* "/Users/deltutto/My_Collider/atlasapp/data/icon100.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000924; };
+		A00000000000000000000925 /* "/Users/deltutto/My_Collider/atlasapp/data/icon100_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000926; };
+		A00000000000000000000927 /* "/Users/deltutto/My_Collider/atlasapp/data/icon1024.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000928; };
+		A00000000000000000000929 /* "/Users/deltutto/My_Collider/atlasapp/data/icon1024_ios.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000092a; };
+		A0000000000000000000092b /* "/Users/deltutto/My_Collider/atlasapp/data/icon114.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000092c; };
+		A0000000000000000000092d /* "/Users/deltutto/My_Collider/atlasapp/data/icon114_ios.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000092e; };
+		A0000000000000000000092f /* "/Users/deltutto/My_Collider/atlasapp/data/icon128.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000930; };
+		A00000000000000000000931 /* "/Users/deltutto/My_Collider/atlasapp/data/icon144.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000932; };
+		A00000000000000000000933 /* "/Users/deltutto/My_Collider/atlasapp/data/icon144_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000934; };
+		A00000000000000000000935 /* "/Users/deltutto/My_Collider/atlasapp/data/icon29.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000936; };
+		A00000000000000000000937 /* "/Users/deltutto/My_Collider/atlasapp/data/icon29_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000938; };
+		A00000000000000000000939 /* "/Users/deltutto/My_Collider/atlasapp/data/icon32.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000093a; };
+		A0000000000000000000093b /* "/Users/deltutto/My_Collider/atlasapp/data/icon36.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000093c; };
+		A0000000000000000000093d /* "/Users/deltutto/My_Collider/atlasapp/data/icon48.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000093e; };
+		A0000000000000000000093f /* "/Users/deltutto/My_Collider/atlasapp/data/icon50.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000940; };
+		A00000000000000000000941 /* "/Users/deltutto/My_Collider/atlasapp/data/icon50_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000942; };
+		A00000000000000000000943 /* "/Users/deltutto/My_Collider/atlasapp/data/icon512.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000944; };
+		A00000000000000000000945 /* "/Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000946; };
+		A00000000000000000000947 /* "/Users/deltutto/My_Collider/atlasapp/data/icon57.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000948; };
+		A00000000000000000000949 /* "/Users/deltutto/My_Collider/atlasapp/data/icon57_ios.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000094a; };
+		A0000000000000000000094b /* "/Users/deltutto/My_Collider/atlasapp/data/icon58.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000094c; };
+		A0000000000000000000094d /* "/Users/deltutto/My_Collider/atlasapp/data/icon58_ios.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000094e; };
+		A0000000000000000000094f /* "/Users/deltutto/My_Collider/atlasapp/data/icon64.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000950; };
+		A00000000000000000000951 /* "/Users/deltutto/My_Collider/atlasapp/data/icon72.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000952; };
+		A00000000000000000000953 /* "/Users/deltutto/My_Collider/atlasapp/data/icon72_and.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000954; };
+		A00000000000000000000955 /* "/Users/deltutto/My_Collider/atlasapp/data/icon72ios.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000956; };
+		A00000000000000000000957 /* "/Users/deltutto/My_Collider/atlasapp/data/icons" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000958; };
+		A00000000000000000000959 /* "/Users/deltutto/My_Collider/atlasapp/data/ident.free" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000095a; };
+		A0000000000000000000095b /* "/Users/deltutto/My_Collider/atlasapp/data/images" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000095c; };
+		A0000000000000000000095d /* "/Users/deltutto/My_Collider/atlasapp/data/jet.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000095e; };
+		A0000000000000000000095f /* "/Users/deltutto/My_Collider/atlasapp/data/LandingMenu.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000960; };
+		A00000000000000000000961 /* "/Users/deltutto/My_Collider/atlasapp/data/LandingScreen.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000962; };
+		A00000000000000000000963 /* "/Users/deltutto/My_Collider/atlasapp/data/LiveScene.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000964; };
+		A00000000000000000000965 /* "/Users/deltutto/My_Collider/atlasapp/data/MassGame.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000966; };
+		A00000000000000000000967 /* "/Users/deltutto/My_Collider/atlasapp/data/MassGame2.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000968; };
+		A00000000000000000000969 /* "/Users/deltutto/My_Collider/atlasapp/data/menu.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000096a; };
+		A0000000000000000000096b /* "/Users/deltutto/My_Collider/atlasapp/data/MenuScene.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000096c; };
+		A0000000000000000000096d /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_008.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000096e; };
+		A0000000000000000000096f /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_036.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000970; };
+		A00000000000000000000971 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_052.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000972; };
+		A00000000000000000000973 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_143.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000974; };
+		A00000000000000000000975 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_144.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000976; };
+		A00000000000000000000977 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_146.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000978; };
+		A00000000000000000000979 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_153.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000097a; };
+		A0000000000000000000097b /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_156.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000097c; };
+		A0000000000000000000097d /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_157.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000097e; };
+		A0000000000000000000097f /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_159.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000980; };
+		A00000000000000000000981 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_160.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000982; };
+		A00000000000000000000983 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_166.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000984; };
+		A00000000000000000000985 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_167.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000986; };
+		A00000000000000000000987 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_232.xml" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000988; };
+		A00000000000000000000989 /* "/Users/deltutto/My_Collider/atlasapp/data/minerva_higgs_event.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000098a; };
+		A0000000000000000000098b /* "/Users/deltutto/My_Collider/atlasapp/data/muon.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000098c; };
+		A0000000000000000000098d /* "/Users/deltutto/My_Collider/atlasapp/data/neutrino.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000098e; };
+		A0000000000000000000098f /* "/Users/deltutto/My_Collider/atlasapp/data/next.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000990; };
+		A00000000000000000000991 /* "/Users/deltutto/My_Collider/atlasapp/data/off" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000992; };
+		A00000000000000000000993 /* "/Users/deltutto/My_Collider/atlasapp/data/pointleft.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000994; };
+		A00000000000000000000995 /* "/Users/deltutto/My_Collider/atlasapp/data/pointright.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000996; };
+		A00000000000000000000997 /* "/Users/deltutto/My_Collider/atlasapp/data/prev.png" */ = {isa = PBXBuildFile; fileRef = B00000000000000000000998; };
+		A00000000000000000000999 /* "/Users/deltutto/My_Collider/atlasapp/data/PtSlider.xml" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000099a; };
+		A0000000000000000000099b /* "/Users/deltutto/My_Collider/atlasapp/data/qmark.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000099c; };
+		A0000000000000000000099d /* "/Users/deltutto/My_Collider/atlasapp/data/refresh.png" */ = {isa = PBXBuildFile; fileRef = B0000000000000000000099e; };
+		A0000000000000000000099f /* "/Users/deltutto/My_Collider/atlasapp/data/ScanningGame.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a0; };
+		A000000000000000000009a1 /* "/Users/deltutto/My_Collider/atlasapp/data/Scene1.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a2; };
+		A000000000000000000009a3 /* "/Users/deltutto/My_Collider/atlasapp/data/SceneGL.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a4; };
+		A000000000000000000009a5 /* "/Users/deltutto/My_Collider/atlasapp/data/singletest.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a6; };
+		A000000000000000000009a7 /* "/Users/deltutto/My_Collider/atlasapp/data/slide.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009a8; };
+		A000000000000000000009a9 /* "/Users/deltutto/My_Collider/atlasapp/data/slide_groove.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009aa; };
+		A000000000000000000009ab /* "/Users/deltutto/My_Collider/atlasapp/data/splash.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ac; };
+		A000000000000000000009ad /* "/Users/deltutto/My_Collider/atlasapp/data/sprites.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ae; };
+		A000000000000000000009af /* "/Users/deltutto/My_Collider/atlasapp/data/test_detectors.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b0; };
+		A000000000000000000009b1 /* "/Users/deltutto/My_Collider/atlasapp/data/test_event.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b2; };
+		A000000000000000000009b3 /* "/Users/deltutto/My_Collider/atlasapp/data/test_Event_1muonTrack.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b4; };
+		A000000000000000000009b5 /* "/Users/deltutto/My_Collider/atlasapp/data/test_event_2tracks.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b6; };
+		A000000000000000000009b7 /* "/Users/deltutto/My_Collider/atlasapp/data/test_image.jpg" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009b8; };
+		A000000000000000000009b9 /* "/Users/deltutto/My_Collider/atlasapp/data/TestList.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ba; };
+		A000000000000000000009bb /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.gxfont" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009bc; };
+		A000000000000000000009bd /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.tga" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009be; };
+		A000000000000000000009bf /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.gxfont" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c0; };
+		A000000000000000000009c1 /* "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.tga" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c2; };
+		A000000000000000000009c3 /* "/Users/deltutto/My_Collider/atlasapp/data/ui.png" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c4; };
+		A000000000000000000009c5 /* "/Users/deltutto/My_Collider/atlasapp/data/UIStyle.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c6; };
+		A000000000000000000009c7 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009c8; };
+		A000000000000000000009c9 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ca; };
+		A000000000000000000009cb /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009cc; };
+		A000000000000000000009cd /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009ce; };
+		A000000000000000000009cf /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d0; };
+		A000000000000000000009d1 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d2; };
+		A000000000000000000009d3 /* "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d4; };
+		A000000000000000000009d5 /* "/Users/deltutto/My_Collider/atlasapp/data/WebBrowserScene.xml" */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d6; };
+		A000000000000000000009d7 /* s3e.icf */ = {isa = PBXBuildFile; fileRef = B000000000000000000009d8;  };
 
 
 /* End PBXBuildFile section */
@@ -2297,133 +2298,134 @@
 		B000000000000000000008d4 /* /Users/deltutto/My_Collider/atlasapp/data/app.config.txt */ = {isa = PBXFileReference; lastKnownFileType = file; name = "app.config.txt"; path = "/Users/deltutto/My_Collider/atlasapp/data/app.config.txt";  sourceTree = "<absolute>"; };
 		B000000000000000000008d6 /* /Users/deltutto/My_Collider/atlasapp/data/app.icf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "app.icf"; path = "/Users/deltutto/My_Collider/atlasapp/data/app.icf";  sourceTree = "<absolute>"; };
 		B000000000000000000008d8 /* /Users/deltutto/My_Collider/atlasapp/data/back.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "back.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/back.png";  sourceTree = "<absolute>"; };
-		B000000000000000000008da /* /Users/deltutto/My_Collider/atlasapp/data/box.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "box.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/box.png";  sourceTree = "<absolute>"; };
-		B000000000000000000008dc /* /Users/deltutto/My_Collider/atlasapp/data/boxoutline.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "boxoutline.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/boxoutline.png";  sourceTree = "<absolute>"; };
-		B000000000000000000008de /* /Users/deltutto/My_Collider/atlasapp/data/boxunder.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "boxunder.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/boxunder.png";  sourceTree = "<absolute>"; };
-		B000000000000000000008e0 /* /Users/deltutto/My_Collider/atlasapp/data/ColourScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ColourScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/ColourScene.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008e2 /* /Users/deltutto/My_Collider/atlasapp/data/Common.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Common.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Common.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008e4 /* /Users/deltutto/My_Collider/atlasapp/data/Credits.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Credits.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Credits.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008e6 /* /Users/deltutto/My_Collider/atlasapp/data/cross.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "cross.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/cross.png";  sourceTree = "<absolute>"; };
-		B000000000000000000008e8 /* /Users/deltutto/My_Collider/atlasapp/data/Custom.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Custom.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Custom.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008ea /* /Users/deltutto/My_Collider/atlasapp/data/development.icf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "development.icf"; path = "/Users/deltutto/My_Collider/atlasapp/data/development.icf";  sourceTree = "<absolute>"; };
-		B000000000000000000008ec /* /Users/deltutto/My_Collider/atlasapp/data/electron.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "electron.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/electron.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008ee /* /Users/deltutto/My_Collider/atlasapp/data/empty.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "empty.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/empty.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008f0 /* /Users/deltutto/My_Collider/atlasapp/data/eventDisplay.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "eventDisplay.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/eventDisplay.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008f2 /* /Users/deltutto/My_Collider/atlasapp/data/files.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "files.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/files.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008f4 /* /Users/deltutto/My_Collider/atlasapp/data/Fonts.group */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fonts.group"; path = "/Users/deltutto/My_Collider/atlasapp/data/Fonts.group";  sourceTree = "<absolute>"; };
-		B000000000000000000008f6 /* /Users/deltutto/My_Collider/atlasapp/data/GameScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GameScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/GameScene.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000008f8 /* /Users/deltutto/My_Collider/atlasapp/data/Gulim.gxfont */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gulim.gxfont"; path = "/Users/deltutto/My_Collider/atlasapp/data/Gulim.gxfont";  sourceTree = "<absolute>"; };
-		B000000000000000000008fa /* /Users/deltutto/My_Collider/atlasapp/data/Gulim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gulim.ttf"; path = "/Users/deltutto/My_Collider/atlasapp/data/Gulim.ttf";  sourceTree = "<absolute>"; };
-		B000000000000000000008fc /* /Users/deltutto/My_Collider/atlasapp/data/Gulim_old.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gulim_old.ttf"; path = "/Users/deltutto/My_Collider/atlasapp/data/Gulim_old.ttf";  sourceTree = "<absolute>"; };
-		B000000000000000000008fe /* /Users/deltutto/My_Collider/atlasapp/data/higgs1.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs1.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs1.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000900 /* /Users/deltutto/My_Collider/atlasapp/data/higgs2.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs2.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs2.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000902 /* /Users/deltutto/My_Collider/atlasapp/data/higgs3.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs3.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs3.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000904 /* /Users/deltutto/My_Collider/atlasapp/data/higgs4.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs4.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs4.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000906 /* /Users/deltutto/My_Collider/atlasapp/data/Higgs4l_events.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Higgs4l_events.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Higgs4l_events.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000908 /* /Users/deltutto/My_Collider/atlasapp/data/higgs5.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs5.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs5.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000090a /* /Users/deltutto/My_Collider/atlasapp/data/higgs6.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs6.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs6.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000090c /* /Users/deltutto/My_Collider/atlasapp/data/higgs7.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs7.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs7.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000090e /* /Users/deltutto/My_Collider/atlasapp/data/higgs8.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs8.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs8.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000910 /* /Users/deltutto/My_Collider/atlasapp/data/higgs9.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs9.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs9.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000912 /* /Users/deltutto/My_Collider/atlasapp/data/higgs_hunt_events.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs_hunt_events.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs_hunt_events.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000914 /* A00000000000000000000913 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "HiggsGame"; path = "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame";  sourceTree = "<absolute>"; };
-		B00000000000000000000916 /* /Users/deltutto/My_Collider/atlasapp/data/HiggsGame.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HiggsGame.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000918 /* /Users/deltutto/My_Collider/atlasapp/data/home.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "home.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/home.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000091a /* /Users/deltutto/My_Collider/atlasapp/data/HUDScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HUDScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/HUDScene.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000091c /* /Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_config.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hunt_higgs_config.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_config.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000091e /* /Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_game.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hunt_higgs_game.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_game.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000920 /* /Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_intro.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hunt_higgs_intro.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_intro.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000922 /* /Users/deltutto/My_Collider/atlasapp/data/icon100.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon100.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon100.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000924 /* /Users/deltutto/My_Collider/atlasapp/data/icon100_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon100_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon100_ios.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000926 /* /Users/deltutto/My_Collider/atlasapp/data/icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon1024.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon1024.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000928 /* /Users/deltutto/My_Collider/atlasapp/data/icon1024_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon1024_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon1024_ios.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000092a /* /Users/deltutto/My_Collider/atlasapp/data/icon114.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon114.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon114.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000092c /* /Users/deltutto/My_Collider/atlasapp/data/icon114_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon114_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon114_ios.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000092e /* /Users/deltutto/My_Collider/atlasapp/data/icon128.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon128.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon128.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000930 /* /Users/deltutto/My_Collider/atlasapp/data/icon144.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon144.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon144.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000932 /* /Users/deltutto/My_Collider/atlasapp/data/icon144_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon144_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon144_ios.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000934 /* /Users/deltutto/My_Collider/atlasapp/data/icon29.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon29.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon29.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000936 /* /Users/deltutto/My_Collider/atlasapp/data/icon29_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon29_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon29_ios.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000938 /* /Users/deltutto/My_Collider/atlasapp/data/icon32.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon32.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon32.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000093a /* /Users/deltutto/My_Collider/atlasapp/data/icon36.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon36.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon36.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000093c /* /Users/deltutto/My_Collider/atlasapp/data/icon48.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon48.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon48.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000093e /* /Users/deltutto/My_Collider/atlasapp/data/icon50.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon50.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon50.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000940 /* /Users/deltutto/My_Collider/atlasapp/data/icon50_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon50_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon50_ios.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000942 /* /Users/deltutto/My_Collider/atlasapp/data/icon512.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon512.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon512.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000944 /* /Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon512_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000946 /* /Users/deltutto/My_Collider/atlasapp/data/icon57.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon57.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon57.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000948 /* /Users/deltutto/My_Collider/atlasapp/data/icon57_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon57_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon57_ios.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000094a /* /Users/deltutto/My_Collider/atlasapp/data/icon58.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon58.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon58.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000094c /* /Users/deltutto/My_Collider/atlasapp/data/icon58_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon58_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon58_ios.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000094e /* /Users/deltutto/My_Collider/atlasapp/data/icon64.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon64.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon64.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000950 /* /Users/deltutto/My_Collider/atlasapp/data/icon72.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon72.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon72.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000952 /* /Users/deltutto/My_Collider/atlasapp/data/icon72_and.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon72_and.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon72_and.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000954 /* /Users/deltutto/My_Collider/atlasapp/data/icon72ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon72ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon72ios.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000956 /* A00000000000000000000955 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "icons"; path = "/Users/deltutto/My_Collider/atlasapp/data/icons";  sourceTree = "<absolute>"; };
-		B00000000000000000000958 /* /Users/deltutto/My_Collider/atlasapp/data/ident.free */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ident.free"; path = "/Users/deltutto/My_Collider/atlasapp/data/ident.free";  sourceTree = "<absolute>"; };
-		B0000000000000000000095a /* A00000000000000000000959 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "images"; path = "/Users/deltutto/My_Collider/atlasapp/data/images";  sourceTree = "<absolute>"; };
-		B0000000000000000000095c /* /Users/deltutto/My_Collider/atlasapp/data/jet.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "jet.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/jet.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000095e /* /Users/deltutto/My_Collider/atlasapp/data/LandingMenu.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LandingMenu.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/LandingMenu.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000960 /* /Users/deltutto/My_Collider/atlasapp/data/LandingScreen.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LandingScreen.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/LandingScreen.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000962 /* /Users/deltutto/My_Collider/atlasapp/data/LiveScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LiveScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/LiveScene.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000964 /* /Users/deltutto/My_Collider/atlasapp/data/MassGame.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MassGame.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/MassGame.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000966 /* /Users/deltutto/My_Collider/atlasapp/data/MassGame2.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MassGame2.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/MassGame2.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000968 /* /Users/deltutto/My_Collider/atlasapp/data/menu.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "menu.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/menu.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000096a /* /Users/deltutto/My_Collider/atlasapp/data/MenuScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MenuScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/MenuScene.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000096c /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_008.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_008.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_008.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000096e /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_036.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_036.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_036.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000970 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_052.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_052.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_052.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000972 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_143.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_143.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_143.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000974 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_144.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_144.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_144.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000976 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_146.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_146.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_146.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000978 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_153.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_153.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_153.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000097a /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_156.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_156.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_156.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000097c /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_157.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_157.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_157.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000097e /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_159.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_159.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_159.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000980 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_160.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_160.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_160.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000982 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_166.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_166.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_166.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000984 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_167.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_167.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_167.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000986 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_232.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_232.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_232.xml";  sourceTree = "<absolute>"; };
-		B00000000000000000000988 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_higgs_event.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_higgs_event.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_higgs_event.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000098a /* /Users/deltutto/My_Collider/atlasapp/data/muon.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "muon.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/muon.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000098c /* /Users/deltutto/My_Collider/atlasapp/data/neutrino.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "neutrino.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/neutrino.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000098e /* /Users/deltutto/My_Collider/atlasapp/data/next.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "next.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/next.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000990 /* /Users/deltutto/My_Collider/atlasapp/data/off */ = {isa = PBXFileReference; lastKnownFileType = file; name = "off"; path = "/Users/deltutto/My_Collider/atlasapp/data/off";  sourceTree = "<absolute>"; };
-		B00000000000000000000992 /* /Users/deltutto/My_Collider/atlasapp/data/pointleft.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pointleft.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/pointleft.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000994 /* /Users/deltutto/My_Collider/atlasapp/data/pointright.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pointright.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/pointright.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000996 /* /Users/deltutto/My_Collider/atlasapp/data/prev.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "prev.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/prev.png";  sourceTree = "<absolute>"; };
-		B00000000000000000000998 /* /Users/deltutto/My_Collider/atlasapp/data/PtSlider.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PtSlider.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/PtSlider.xml";  sourceTree = "<absolute>"; };
-		B0000000000000000000099a /* /Users/deltutto/My_Collider/atlasapp/data/qmark.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "qmark.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/qmark.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000099c /* /Users/deltutto/My_Collider/atlasapp/data/refresh.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "refresh.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/refresh.png";  sourceTree = "<absolute>"; };
-		B0000000000000000000099e /* /Users/deltutto/My_Collider/atlasapp/data/ScanningGame.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ScanningGame.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/ScanningGame.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009a0 /* /Users/deltutto/My_Collider/atlasapp/data/Scene1.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Scene1.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Scene1.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009a2 /* /Users/deltutto/My_Collider/atlasapp/data/SceneGL.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SceneGL.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/SceneGL.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009a4 /* /Users/deltutto/My_Collider/atlasapp/data/singletest.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "singletest.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/singletest.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009a6 /* /Users/deltutto/My_Collider/atlasapp/data/slide.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "slide.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/slide.png";  sourceTree = "<absolute>"; };
-		B000000000000000000009a8 /* /Users/deltutto/My_Collider/atlasapp/data/slide_groove.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "slide_groove.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/slide_groove.png";  sourceTree = "<absolute>"; };
-		B000000000000000000009aa /* /Users/deltutto/My_Collider/atlasapp/data/splash.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "splash.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/splash.png";  sourceTree = "<absolute>"; };
-		B000000000000000000009ac /* /Users/deltutto/My_Collider/atlasapp/data/sprites.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sprites.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/sprites.png";  sourceTree = "<absolute>"; };
-		B000000000000000000009ae /* /Users/deltutto/My_Collider/atlasapp/data/test_detectors.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_detectors.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_detectors.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009b0 /* /Users/deltutto/My_Collider/atlasapp/data/test_event.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_event.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_event.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009b2 /* /Users/deltutto/My_Collider/atlasapp/data/test_Event_1muonTrack.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_Event_1muonTrack.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_Event_1muonTrack.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009b4 /* /Users/deltutto/My_Collider/atlasapp/data/test_event_2tracks.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_event_2tracks.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_event_2tracks.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009b6 /* /Users/deltutto/My_Collider/atlasapp/data/test_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_image.jpg"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_image.jpg";  sourceTree = "<absolute>"; };
-		B000000000000000000009b8 /* /Users/deltutto/My_Collider/atlasapp/data/TestList.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TestList.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/TestList.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009ba /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.gxfont */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_12.gxfont"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.gxfont";  sourceTree = "<absolute>"; };
-		B000000000000000000009bc /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_12.tga"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.tga";  sourceTree = "<absolute>"; };
-		B000000000000000000009be /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.gxfont */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_14.gxfont"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.gxfont";  sourceTree = "<absolute>"; };
-		B000000000000000000009c0 /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_14.tga"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.tga";  sourceTree = "<absolute>"; };
-		B000000000000000000009c2 /* /Users/deltutto/My_Collider/atlasapp/data/ui.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ui.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/ui.png";  sourceTree = "<absolute>"; };
-		B000000000000000000009c4 /* /Users/deltutto/My_Collider/atlasapp/data/UIStyle.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UIStyle.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/UIStyle.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009c6 /* A000000000000000000009c5 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame";  sourceTree = "<absolute>"; };
-		B000000000000000000009c8 /* A000000000000000000009c7 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame1"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1";  sourceTree = "<absolute>"; };
-		B000000000000000000009ca /* /Users/deltutto/My_Collider/atlasapp/data/WandZGame1.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WandZGame1.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009cc /* A000000000000000000009cb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame2"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2";  sourceTree = "<absolute>"; };
-		B000000000000000000009ce /* /Users/deltutto/My_Collider/atlasapp/data/WandZGame2.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WandZGame2.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009d0 /* A000000000000000000009cf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame3"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3";  sourceTree = "<absolute>"; };
-		B000000000000000000009d2 /* /Users/deltutto/My_Collider/atlasapp/data/WandZGame3.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WandZGame3.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009d4 /* /Users/deltutto/My_Collider/atlasapp/data/WebBrowserScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WebBrowserScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WebBrowserScene.xml";  sourceTree = "<absolute>"; };
-		B000000000000000000009d6 /* s3e.icf */ = {isa = PBXFileReference; lastKnownFileType = file; name = s3e.icf; path = "/Applications/Marmalade.app/Contents/s3e/s3e.icf";  sourceTree = "<absolute>"; };
+		B000000000000000000008da /* /Users/deltutto/My_Collider/atlasapp/data/banner.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "banner.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/banner.png";  sourceTree = "<absolute>"; };
+		B000000000000000000008dc /* /Users/deltutto/My_Collider/atlasapp/data/box.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "box.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/box.png";  sourceTree = "<absolute>"; };
+		B000000000000000000008de /* /Users/deltutto/My_Collider/atlasapp/data/boxoutline.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "boxoutline.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/boxoutline.png";  sourceTree = "<absolute>"; };
+		B000000000000000000008e0 /* /Users/deltutto/My_Collider/atlasapp/data/boxunder.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "boxunder.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/boxunder.png";  sourceTree = "<absolute>"; };
+		B000000000000000000008e2 /* /Users/deltutto/My_Collider/atlasapp/data/ColourScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ColourScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/ColourScene.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008e4 /* /Users/deltutto/My_Collider/atlasapp/data/Common.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Common.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Common.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008e6 /* /Users/deltutto/My_Collider/atlasapp/data/Credits.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Credits.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Credits.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008e8 /* /Users/deltutto/My_Collider/atlasapp/data/cross.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "cross.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/cross.png";  sourceTree = "<absolute>"; };
+		B000000000000000000008ea /* /Users/deltutto/My_Collider/atlasapp/data/Custom.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Custom.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Custom.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008ec /* /Users/deltutto/My_Collider/atlasapp/data/development.icf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "development.icf"; path = "/Users/deltutto/My_Collider/atlasapp/data/development.icf";  sourceTree = "<absolute>"; };
+		B000000000000000000008ee /* /Users/deltutto/My_Collider/atlasapp/data/electron.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "electron.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/electron.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008f0 /* /Users/deltutto/My_Collider/atlasapp/data/empty.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "empty.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/empty.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008f2 /* /Users/deltutto/My_Collider/atlasapp/data/eventDisplay.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "eventDisplay.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/eventDisplay.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008f4 /* /Users/deltutto/My_Collider/atlasapp/data/files.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "files.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/files.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008f6 /* /Users/deltutto/My_Collider/atlasapp/data/Fonts.group */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fonts.group"; path = "/Users/deltutto/My_Collider/atlasapp/data/Fonts.group";  sourceTree = "<absolute>"; };
+		B000000000000000000008f8 /* /Users/deltutto/My_Collider/atlasapp/data/GameScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GameScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/GameScene.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000008fa /* /Users/deltutto/My_Collider/atlasapp/data/Gulim.gxfont */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gulim.gxfont"; path = "/Users/deltutto/My_Collider/atlasapp/data/Gulim.gxfont";  sourceTree = "<absolute>"; };
+		B000000000000000000008fc /* /Users/deltutto/My_Collider/atlasapp/data/Gulim.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gulim.ttf"; path = "/Users/deltutto/My_Collider/atlasapp/data/Gulim.ttf";  sourceTree = "<absolute>"; };
+		B000000000000000000008fe /* /Users/deltutto/My_Collider/atlasapp/data/Gulim_old.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gulim_old.ttf"; path = "/Users/deltutto/My_Collider/atlasapp/data/Gulim_old.ttf";  sourceTree = "<absolute>"; };
+		B00000000000000000000900 /* /Users/deltutto/My_Collider/atlasapp/data/higgs1.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs1.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs1.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000902 /* /Users/deltutto/My_Collider/atlasapp/data/higgs2.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs2.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs2.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000904 /* /Users/deltutto/My_Collider/atlasapp/data/higgs3.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs3.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs3.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000906 /* /Users/deltutto/My_Collider/atlasapp/data/higgs4.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs4.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs4.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000908 /* /Users/deltutto/My_Collider/atlasapp/data/Higgs4l_events.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Higgs4l_events.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Higgs4l_events.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000090a /* /Users/deltutto/My_Collider/atlasapp/data/higgs5.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs5.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs5.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000090c /* /Users/deltutto/My_Collider/atlasapp/data/higgs6.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs6.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs6.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000090e /* /Users/deltutto/My_Collider/atlasapp/data/higgs7.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs7.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs7.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000910 /* /Users/deltutto/My_Collider/atlasapp/data/higgs8.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs8.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs8.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000912 /* /Users/deltutto/My_Collider/atlasapp/data/higgs9.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs9.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs9.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000914 /* /Users/deltutto/My_Collider/atlasapp/data/higgs_hunt_events.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "higgs_hunt_events.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/higgs_hunt_events.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000916 /* A00000000000000000000915 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "HiggsGame"; path = "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame";  sourceTree = "<absolute>"; };
+		B00000000000000000000918 /* /Users/deltutto/My_Collider/atlasapp/data/HiggsGame.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HiggsGame.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/HiggsGame.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000091a /* /Users/deltutto/My_Collider/atlasapp/data/home.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "home.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/home.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000091c /* /Users/deltutto/My_Collider/atlasapp/data/HUDScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HUDScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/HUDScene.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000091e /* /Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_config.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hunt_higgs_config.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_config.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000920 /* /Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_game.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hunt_higgs_game.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_game.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000922 /* /Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_intro.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hunt_higgs_intro.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/hunt_higgs_intro.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000924 /* /Users/deltutto/My_Collider/atlasapp/data/icon100.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon100.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon100.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000926 /* /Users/deltutto/My_Collider/atlasapp/data/icon100_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon100_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon100_ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000928 /* /Users/deltutto/My_Collider/atlasapp/data/icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon1024.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon1024.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000092a /* /Users/deltutto/My_Collider/atlasapp/data/icon1024_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon1024_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon1024_ios.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000092c /* /Users/deltutto/My_Collider/atlasapp/data/icon114.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon114.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon114.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000092e /* /Users/deltutto/My_Collider/atlasapp/data/icon114_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon114_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon114_ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000930 /* /Users/deltutto/My_Collider/atlasapp/data/icon128.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon128.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon128.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000932 /* /Users/deltutto/My_Collider/atlasapp/data/icon144.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon144.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon144.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000934 /* /Users/deltutto/My_Collider/atlasapp/data/icon144_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon144_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon144_ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000936 /* /Users/deltutto/My_Collider/atlasapp/data/icon29.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon29.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon29.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000938 /* /Users/deltutto/My_Collider/atlasapp/data/icon29_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon29_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon29_ios.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000093a /* /Users/deltutto/My_Collider/atlasapp/data/icon32.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon32.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon32.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000093c /* /Users/deltutto/My_Collider/atlasapp/data/icon36.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon36.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon36.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000093e /* /Users/deltutto/My_Collider/atlasapp/data/icon48.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon48.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon48.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000940 /* /Users/deltutto/My_Collider/atlasapp/data/icon50.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon50.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon50.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000942 /* /Users/deltutto/My_Collider/atlasapp/data/icon50_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon50_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon50_ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000944 /* /Users/deltutto/My_Collider/atlasapp/data/icon512.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon512.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon512.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000946 /* /Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon512_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon512_ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000948 /* /Users/deltutto/My_Collider/atlasapp/data/icon57.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon57.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon57.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000094a /* /Users/deltutto/My_Collider/atlasapp/data/icon57_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon57_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon57_ios.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000094c /* /Users/deltutto/My_Collider/atlasapp/data/icon58.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon58.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon58.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000094e /* /Users/deltutto/My_Collider/atlasapp/data/icon58_ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon58_ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon58_ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000950 /* /Users/deltutto/My_Collider/atlasapp/data/icon64.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon64.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon64.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000952 /* /Users/deltutto/My_Collider/atlasapp/data/icon72.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon72.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon72.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000954 /* /Users/deltutto/My_Collider/atlasapp/data/icon72_and.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon72_and.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon72_and.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000956 /* /Users/deltutto/My_Collider/atlasapp/data/icon72ios.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon72ios.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/icon72ios.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000958 /* A00000000000000000000957 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "icons"; path = "/Users/deltutto/My_Collider/atlasapp/data/icons";  sourceTree = "<absolute>"; };
+		B0000000000000000000095a /* /Users/deltutto/My_Collider/atlasapp/data/ident.free */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ident.free"; path = "/Users/deltutto/My_Collider/atlasapp/data/ident.free";  sourceTree = "<absolute>"; };
+		B0000000000000000000095c /* A0000000000000000000095b */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "images"; path = "/Users/deltutto/My_Collider/atlasapp/data/images";  sourceTree = "<absolute>"; };
+		B0000000000000000000095e /* /Users/deltutto/My_Collider/atlasapp/data/jet.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "jet.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/jet.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000960 /* /Users/deltutto/My_Collider/atlasapp/data/LandingMenu.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LandingMenu.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/LandingMenu.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000962 /* /Users/deltutto/My_Collider/atlasapp/data/LandingScreen.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LandingScreen.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/LandingScreen.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000964 /* /Users/deltutto/My_Collider/atlasapp/data/LiveScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LiveScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/LiveScene.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000966 /* /Users/deltutto/My_Collider/atlasapp/data/MassGame.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MassGame.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/MassGame.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000968 /* /Users/deltutto/My_Collider/atlasapp/data/MassGame2.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MassGame2.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/MassGame2.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000096a /* /Users/deltutto/My_Collider/atlasapp/data/menu.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "menu.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/menu.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000096c /* /Users/deltutto/My_Collider/atlasapp/data/MenuScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MenuScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/MenuScene.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000096e /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_008.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_008.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_008.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000970 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_036.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_036.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_036.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000972 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_052.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_052.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_052.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000974 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_143.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_143.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_143.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000976 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_144.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_144.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_144.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000978 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_146.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_146.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_146.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000097a /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_153.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_153.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_153.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000097c /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_156.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_156.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_156.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000097e /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_157.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_157.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_157.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000980 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_159.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_159.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_159.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000982 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_160.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_160.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_160.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000984 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_166.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_166.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_166.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000986 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_167.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_167.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_167.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000988 /* /Users/deltutto/My_Collider/atlasapp/data/minerva_event_232.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_event_232.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_event_232.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000098a /* /Users/deltutto/My_Collider/atlasapp/data/minerva_higgs_event.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "minerva_higgs_event.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/minerva_higgs_event.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000098c /* /Users/deltutto/My_Collider/atlasapp/data/muon.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "muon.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/muon.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000098e /* /Users/deltutto/My_Collider/atlasapp/data/neutrino.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "neutrino.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/neutrino.xml";  sourceTree = "<absolute>"; };
+		B00000000000000000000990 /* /Users/deltutto/My_Collider/atlasapp/data/next.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "next.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/next.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000992 /* /Users/deltutto/My_Collider/atlasapp/data/off */ = {isa = PBXFileReference; lastKnownFileType = file; name = "off"; path = "/Users/deltutto/My_Collider/atlasapp/data/off";  sourceTree = "<absolute>"; };
+		B00000000000000000000994 /* /Users/deltutto/My_Collider/atlasapp/data/pointleft.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pointleft.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/pointleft.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000996 /* /Users/deltutto/My_Collider/atlasapp/data/pointright.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pointright.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/pointright.png";  sourceTree = "<absolute>"; };
+		B00000000000000000000998 /* /Users/deltutto/My_Collider/atlasapp/data/prev.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "prev.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/prev.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000099a /* /Users/deltutto/My_Collider/atlasapp/data/PtSlider.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PtSlider.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/PtSlider.xml";  sourceTree = "<absolute>"; };
+		B0000000000000000000099c /* /Users/deltutto/My_Collider/atlasapp/data/qmark.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "qmark.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/qmark.png";  sourceTree = "<absolute>"; };
+		B0000000000000000000099e /* /Users/deltutto/My_Collider/atlasapp/data/refresh.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "refresh.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/refresh.png";  sourceTree = "<absolute>"; };
+		B000000000000000000009a0 /* /Users/deltutto/My_Collider/atlasapp/data/ScanningGame.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ScanningGame.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/ScanningGame.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009a2 /* /Users/deltutto/My_Collider/atlasapp/data/Scene1.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Scene1.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/Scene1.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009a4 /* /Users/deltutto/My_Collider/atlasapp/data/SceneGL.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SceneGL.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/SceneGL.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009a6 /* /Users/deltutto/My_Collider/atlasapp/data/singletest.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "singletest.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/singletest.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009a8 /* /Users/deltutto/My_Collider/atlasapp/data/slide.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "slide.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/slide.png";  sourceTree = "<absolute>"; };
+		B000000000000000000009aa /* /Users/deltutto/My_Collider/atlasapp/data/slide_groove.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "slide_groove.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/slide_groove.png";  sourceTree = "<absolute>"; };
+		B000000000000000000009ac /* /Users/deltutto/My_Collider/atlasapp/data/splash.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "splash.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/splash.png";  sourceTree = "<absolute>"; };
+		B000000000000000000009ae /* /Users/deltutto/My_Collider/atlasapp/data/sprites.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sprites.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/sprites.png";  sourceTree = "<absolute>"; };
+		B000000000000000000009b0 /* /Users/deltutto/My_Collider/atlasapp/data/test_detectors.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_detectors.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_detectors.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009b2 /* /Users/deltutto/My_Collider/atlasapp/data/test_event.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_event.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_event.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009b4 /* /Users/deltutto/My_Collider/atlasapp/data/test_Event_1muonTrack.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_Event_1muonTrack.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_Event_1muonTrack.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009b6 /* /Users/deltutto/My_Collider/atlasapp/data/test_event_2tracks.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_event_2tracks.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_event_2tracks.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009b8 /* /Users/deltutto/My_Collider/atlasapp/data/test_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = file; name = "test_image.jpg"; path = "/Users/deltutto/My_Collider/atlasapp/data/test_image.jpg";  sourceTree = "<absolute>"; };
+		B000000000000000000009ba /* /Users/deltutto/My_Collider/atlasapp/data/TestList.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TestList.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/TestList.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009bc /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.gxfont */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_12.gxfont"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.gxfont";  sourceTree = "<absolute>"; };
+		B000000000000000000009be /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_12.tga"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_12.tga";  sourceTree = "<absolute>"; };
+		B000000000000000000009c0 /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.gxfont */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_14.gxfont"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.gxfont";  sourceTree = "<absolute>"; };
+		B000000000000000000009c2 /* /Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = "trebuchet_14.tga"; path = "/Users/deltutto/My_Collider/atlasapp/data/trebuchet_14.tga";  sourceTree = "<absolute>"; };
+		B000000000000000000009c4 /* /Users/deltutto/My_Collider/atlasapp/data/ui.png */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ui.png"; path = "/Users/deltutto/My_Collider/atlasapp/data/ui.png";  sourceTree = "<absolute>"; };
+		B000000000000000000009c6 /* /Users/deltutto/My_Collider/atlasapp/data/UIStyle.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UIStyle.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/UIStyle.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009c8 /* A000000000000000000009c7 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame";  sourceTree = "<absolute>"; };
+		B000000000000000000009ca /* A000000000000000000009c9 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame1"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1";  sourceTree = "<absolute>"; };
+		B000000000000000000009cc /* /Users/deltutto/My_Collider/atlasapp/data/WandZGame1.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WandZGame1.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame1.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009ce /* A000000000000000000009cd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame2"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2";  sourceTree = "<absolute>"; };
+		B000000000000000000009d0 /* /Users/deltutto/My_Collider/atlasapp/data/WandZGame2.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WandZGame2.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame2.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009d2 /* A000000000000000000009d1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WandZGame3"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3";  sourceTree = "<absolute>"; };
+		B000000000000000000009d4 /* /Users/deltutto/My_Collider/atlasapp/data/WandZGame3.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WandZGame3.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WandZGame3.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009d6 /* /Users/deltutto/My_Collider/atlasapp/data/WebBrowserScene.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WebBrowserScene.xml"; path = "/Users/deltutto/My_Collider/atlasapp/data/WebBrowserScene.xml";  sourceTree = "<absolute>"; };
+		B000000000000000000009d8 /* s3e.icf */ = {isa = PBXFileReference; lastKnownFileType = file; name = s3e.icf; path = "/Applications/Marmalade.app/Contents/s3e/s3e.icf";  sourceTree = "<absolute>"; };
 
 /* End PBXFileReference section */
 
@@ -4593,6 +4595,7 @@
 				B000000000000000000009d2,
 				B000000000000000000009d4,
 				B000000000000000000009d6,
+				B000000000000000000009d8,
             );
             name = Resources;
             sourceTree = "<group>";
@@ -4720,7 +4723,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s86\" --buildenv=XCODE_8.1 --arch=x86 --config=debug";
+s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s86\" --buildenv=XCODE_8.2.1 --arch=x86 --config=debug";
             showEnvVarsInLog = 0;
         };
         shell_script_object4 /* ShellScript */ = {
@@ -4748,7 +4751,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s86\" --buildenv=XCODE_8.1 --arch=x86 --config=release";
+s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s86\" --buildenv=XCODE_8.2.1 --arch=x86 --config=release";
             showEnvVarsInLog = 0;
         };
         shell_script_object5 /* ShellScript */ = {
@@ -4776,7 +4779,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv6 --compiler=gcc -u -d --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.1 --config=debug";
+s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv6 --compiler=gcc -u -d --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.2.1 --config=debug";
             showEnvVarsInLog = 0;
         };
         shell_script_object6 /* ShellScript */ = {
@@ -4804,7 +4807,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv6 --compiler=gcc -u --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.1 --config=release";
+s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv6 --compiler=gcc -u --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.2.1 --config=release";
             showEnvVarsInLog = 0;
         };
         shell_script_object7 /* ShellScript */ = {
@@ -4894,7 +4897,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv8-a --compiler=gcc -u -d --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.1 --config=aarch64 --config=debug";
+s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv8-a --compiler=gcc -u -d --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.2.1 --config=aarch64 --config=debug";
             showEnvVarsInLog = 0;
         };
         shell_script_object10 /* ShellScript */ = {
@@ -4922,7 +4925,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv8-a --compiler=gcc -u --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.1 --config=aarch64 --config=release";
+s3e_plink -o \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.s3e\" \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" --arch=armv8-a --compiler=gcc -u --usemap=\"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.map\" --buildenv=XCODE_8.2.1 --config=aarch64 --config=release";
             showEnvVarsInLog = 0;
         };
         shell_script_object11 /* ShellScript */ = {
@@ -4950,7 +4953,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.so.s64\" --buildenv=XCODE_8.1 --config=NACL --config=X86_64 --config=debug";
+s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.so.s64\" --buildenv=XCODE_8.2.1 --config=NACL --config=X86_64 --config=debug";
             showEnvVarsInLog = 0;
         };
         shell_script_object12 /* ShellScript */ = {
@@ -4978,7 +4981,7 @@ PATH=\"/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/usr/bin\":$PATH
 PATH=\"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\":$PATH
 PATH=\"/opt/local/bin\":$PATH
-s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.so.s64\" --buildenv=XCODE_8.1 --config=NACL --config=X86_64 --config=release";
+s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/build/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/GameSceneGL.so.s64\" --buildenv=XCODE_8.2.1 --config=NACL --config=X86_64 --config=release";
             showEnvVarsInLog = 0;
         };
 /* End PBXShellScriptBuildPhase section */
@@ -5006,7 +5009,7 @@ s3e_plink --license \"/Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xco
 				shell_script_object11 /* s3e_plink */,
 				shell_script_object12 /* s3e_plink */,
             );
-            buildRules = (8000000000000000000009d7
+            buildRules = (8000000000000000000009d9
             );
             dependencies = (
                 

@@ -18,7 +18,7 @@ CacheTextureMaxSize=2048
 [Util]
 {}
 [s3e]
-SysAppVersion=1.1.0
+SysAppVersion=1.1.1
 SysAppCaption="Collider"
 {}
 [S3E]

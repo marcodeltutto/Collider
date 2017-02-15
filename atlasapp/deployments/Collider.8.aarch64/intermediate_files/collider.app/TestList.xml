@@ -1,0 +1,9 @@
+<xml>
+    <ClassificationGame name="Tutorial" tutorial="true" author="Tom McLaughlan" level="1">
+        <Link title="Online Help" url="http://collider.physics.ox.ac.uk/detecting.html"/>
+        <Event type="Electron" file="electron.xml"/>
+        <Event type="Muon" file="muon.xml"/>
+        <Event type="Jet" file="jet.xml"/>
+        <Event type="Neutrino" file="neutrino.xml"/>
+    </ClassificationGame>
+</xml>

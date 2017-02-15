@@ -1,0 +1,42 @@
+3
+4Making Deployment: /Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb
+3Running: /Applications/Marmalade.app/Contents/s3e/bin/s3e_deploy /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/deploy_config.py -n --targetdir ../deployments/Collider.6.aarch64 --os iphone --arch aarch64 --gcc --release-loader
+3
+2Marmalade Deployment Tool v1.3
+2Copyright (C) 2001-2012 Marmalade
+2calling /Applications/Marmalade.app/Contents/s3e/bin/iwlicense--platcheck=iphone
+2deploying collider [1.1.0] [aarch64-release] for 'iphone' to folder: '../deployments/Collider.6.aarch64/intermediate_files'
+2--> copying files ...
+2No splashscreens found
+2--> updating s3e binary: compression=none signing=0 config-embedding=1
+2[execute] s3e_mod
+2--> performing custom deployment steps for: 'iphone'
+2Deploying Launch Images
+2Generating mandatory Launch image iPhone 5/5C/5S portrait
+2Generating mandatory Launch image iPhone 5/5C/5S landscape
+2Generating mandatory Launch image iPhone 6 portrait
+2Generating mandatory Launch image iPhone 6 Plus portrait
+2Deploying icons
+2Generating mandatory App icon iPhone 4/4S/5/5C/5S/6 (iOS 7 and later)
+2Generating mandatory App icon iPad2/iPad Mini (iOS 7 and later)
+2Including /Applications/Marmalade.app/Contents/extensions/s3eFacebook/s3eFacebook.plist in Info.plist
+5WARNING: 64bit only builds requires MinimumOSVersion to be higher than 8.0 for app store submission
+2Linking iOS loader with extension library s3eWebView
+2Linking iOS loader with extension library s3eFacebook
+2Linking iOS loader with extension library s3eIOSAppStoreBilling
+2[execute] ld64
+2[execute] mod_apple_loader.pyc
+2writing modified loader [5168080]: collider.app/collider
+2
+2Embedding provisioning profile /Users/deltutto/Downloads/ColliderDistributionProvisiongProfile.mobileprovision
+2Signing for distribution (for App Store or AdHoc distribution)
+2Codesigning main bundle: collider.app
+2Processing com.deltutto.collider
+2Provisioning profile is for: 6562ZBA75T.com.deltutto.collider
+2Creating .app zip: ../deployments/Collider.6.aarch64/collider.app.zip
+2Creating ipa: ../deployments/Collider.6.aarch64/collider.ipa
+8SUCCESS (WITH WARNINGS): Package written to '/Users/deltutto/My_Collider/atlasapp/deployments/Collider.6.aarch64' [took 12.41s]
+2Script Succeeded
+2Finished Running: Making Deployment
+2
+2

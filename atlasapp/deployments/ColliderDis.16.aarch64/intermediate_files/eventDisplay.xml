@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xml>
+
+  <!--<IwGxScene Name="IwGxScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true" AllowSuspend="false">-->
+    <IwGxScene Name="IwGxScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true" AllowSuspend="false">
+  <!--<Scene Name="IwGxScene" Style="GenericSceneStyle" Camera="Cam" Extents="-1000, -400, 2000, 800" Current="true" Batch="false" ClipStatic="true" AllowSuspend="false">-->
+    <!-- Create a camera -->
+    <Camera Name="Cam" Position="0, 0" Angle="0" Scale="1.0" TouchPanX="false" TouchPanY="false" VelocityDamping="0.8, 0.8" IgnoreActors="false" />
+        
+
+        
+        
+    <!--<LoadXOML File="test_detectors.xml" />-->
+
+    <!--<Label Background="ShowMenu" Size="-10, -20" SelectedColour="128, 255, 200, 128" Text="Show Menu" Font="trebuchet_12"  HitTest="true" />-->
+
+
+        <Label Name="pauseLabel" Size="-17,-15" Colour="255,255,255,255" Text="Display Paused" Font="gulim" Docking="top" />
+
+      
+      
+      
+    </IwGxScene>
+    
+      <!--</Scene>-->
+</xml>

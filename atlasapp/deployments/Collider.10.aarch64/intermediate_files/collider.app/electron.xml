@@ -1,0 +1,47 @@
+<xml><Event version="17.2.1.4" runNumber="203258" eventNumber="105740575" dataTime="2012-05-12 18:19:47 UTC">
+<LAr3DEt>
+21.0</LAr3DEt>
+<LAr3Dphi>
+19</LAr3Dphi>
+<LAr3Dpsi>
+26</LAr3Dpsi>
+
+<TILE3DEt>
+</TILE3DEt>
+<TILE3Dphi>
+</TILE3Dphi>
+<TILE3Dpsi>
+</TILE3Dpsi>
+
+<Track count="1" storeGateKey="Tracks">
+    
+    <cotTheta>
+        -1.66
+    </cotTheta>
+    <d0>
+        0.005
+    </d0>
+    <nPixHits>
+        3    </nPixHits>
+    <nSCTHits>
+        14
+    </nSCTHits>
+    <nTRTHits>
+        6
+    </nTRTHits>
+    <phi0>
+        -2.45
+    </phi0>
+    <pt>
+        -38.6556
+    </pt>
+    <z0>
+        0.012
+    </z0>
+</Track>
+<Electron count="1" storeGateKey="ElectronCollection">
+    <eta>-1.35</eta>
+    <phi>-2.45</phi>
+    <pt>42.123</pt>
+</Electron>
+</Event></xml>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<xml>
+    
+    <ClassificationGame name="W/Z Level 2" author="Tom McLaughlan" level="2">
+        
+        <Link title="Online Help" url="http://collider.physics.ox.ac.uk/analysis.html/"/>
+        
+        
+        <Event type="Z to muon+antimuon" file="WandZGame2/Android.JiveXML_191933_68698433.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame2/Android.JiveXML_191933_59457152.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame2/Android.JiveXML_191933_59474340.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame2/Android.JiveXML_191933_68701330.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame2/Android.JiveXML_191933_59475302.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame2/Android.JiveXML_191933_68700225.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame2/Android.JiveXML_191933_68700643.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame2/Android.JiveXML_191933_59476224.xml"/>
+        <Event type="W to electron+neutrino" file="WandZGame2/Android.JiveXML_191933_59478940.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame2/Android.JiveXML_191933_68697897.xml"/>
+        <Event type="Z to electron+positron" file="WandZGame2/Android.JiveXML_191933_59481408.xml"/>
+        <Event type="W to muon+neutrino" file="WandZGame2/Android.JiveXML_191933_68697813.xml"/>
+        
+        
+    </ClassificationGame>
+    
+</xml>

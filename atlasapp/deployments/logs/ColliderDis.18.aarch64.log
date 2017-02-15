@@ -1,0 +1,11 @@
+3
+4Making Deployment: /Users/deltutto/My_Collider/atlasapp/GameSceneGL.mkb
+3Running: /Applications/Marmalade.app/Contents/s3e/bin/s3e_deploy /Users/deltutto/My_Collider/atlasapp/build_gamescenegl_xcode/deploy_config.py -n --targetdir ../deployments/ColliderDis.18.aarch64 --os iphone --arch aarch64 --gcc --release-loader
+3
+2Marmalade Deployment Tool v1.3
+2Copyright (C) 2001-2012 Marmalade
+5Cannot find SDK license(4). Please obtain a license.
+6Script failed with exit code: 1
+2Finished Running: Making Deployment
+2
+2

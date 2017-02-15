@@ -5,8 +5,27 @@
 deployments
 {
     #platforms android iphone osx win10 win32 wp8 wp81 ws80 ws81
+    version-string = "1.1.1"
     icon = "data/icon512_ios.png"
+    iphone-bundle-url-schemes = "fb141331202732781"
+    iphone-extra-sections = "0"
+    iphone-minimum-ios-version = "8.0"
+    iphone-icon-dir = "data"
+    iphone-icon = "data/icon57.png"
+    iphone-icon-ipad = "data/icon72.png"
+    iphone-icon-ipad-ios7 = "data/icon76.png"
+    iphone-icon-high-res = "data/icon114.png"
+    iphone-icon-high-res-ios7 = "data/icon120.png"
+    iphone-icon-ipad-high-res = "data/icon144.png"
+    iphone-icon-ipad-high-res-ios7 = "data/icon152.png"
+    iphone-icon-settings = "data/icon29.png"
+    iphone-icon-settings-high-res = "data/icon58.png"
+    iphone-icon-ipad-search = "data/icon50.png"
+    iphone-icon-ipad-search-ios7 = "data/icon40.png"
+    iphone-icon-ipad-search-high-res = "data/icon100.png"
+    iphone-icon-ipad-search-high-res-ios7 = "data/icon80.png"
     iphone-sign-for-distribution = "1"
-    iphone-provisioning-profile = "../../Downloads/ColliderDevelopmentProvisiongProfile.mobileprovision"
+    iphone-disable-testflight = "0"
+    iphone-provisioning-profile = "../../Downloads/ColliderDistributionProvisioningProfile.mobileprovision"
 
 }
